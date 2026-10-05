@@ -28,3 +28,9 @@
 
 /* Focus follows the reading zone, without reflowing era columns. */
 .year{transform-origin:left bottom;transform:scale(1);transition:transform 260ms cubic-bezier(.22,1,.36,1),color 200ms ease-out}.year.active{transform:scale(1.22)}.collapsed .year.active{transform:scale(1.12)}@media(prefers-reduced-motion:reduce){.year{transition:none}}
+
+/* Outlined Archivo wordmark: the asset includes half-cap-height clear space. */
+header{mix-blend-mode:normal;color:#000}
+.brand{display:flex;flex-shrink:0;gap:0;background:#fff;line-height:0;min-height:44px}
+.brand-wordmark{display:block;width:auto;height:48px;max-width:none}
+@media(max-width:700px){.brand-wordmark{height:40px}.mt-header{gap:12px}}

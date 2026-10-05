@@ -1,0 +1,7 @@
+import React,{useEffect,useRef} from 'react';
+export function WorkDetail({selected,region,onClose}) {
+ const dialog=useRef(null),opener=useRef(document.activeElement);
+ useEffect(()=>{const node=dialog.current;node.showModal();return()=>{node.close();if(opener.current?.isConnected)opener.current.focus({preventScroll:true});};},[]);
+ const portrait=selected.height>selected.width;
+ return <dialog ref={dialog} className="detail" onCancel={onClose} aria-label="作品详情"><button className="close" aria-label="关闭详情" onClick={onClose} autoFocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><div className="modal-grid"><div className="modal-image"><div className={'poster '+(portrait?'portrait':'landscape')}><img src={selected.image} alt={selected.name+'官方宣传图'}/></div></div><article><p className="meta">{region} / {selected.period}</p><h2>{selected.name}</h2><div className="red-rule"/><strong className="detail-year">{selected.date}</strong><p className="description">{selected.description}</p>{selected.date==='UNKNOWN'&&<p className="description">具体年份 UNKNOWN。</p>}<dl><div><dt>MEDIUM</dt><dd>{selected.medium}</dd></div><div><dt>IMAGE SOURCE</dt><dd><a href={selected.source} target="_blank" rel="noreferrer">官方 / 发行方页面 ↗</a></dd></div></dl></article></div></dialog>;
+}

@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "start": "node server/start.mjs",
-    "test:cms": "node --test tests/cms.test.mjs"
+    "test:cms": "node --test tests/cms.test.mjs",
+    "test:multitrack": "node --test tests/multitrack.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "5.0.4",

@@ -36,3 +36,13 @@
 |异国迷宫的十字路口|[来源](https://www.b-ch.com/titles/3035/)|[图像](https://image2.b-ch.com/ttl2/3035/3035001a.jpg?impolicy=fitin&ww=960&hh=540)|
 |红猪|[来源](https://www.ghibli.jp/works/porco/)|[图像](https://www.ghibli.jp/images/porco.jpg)|
 |GOSICK|[来源](https://www.tv-tokyo.co.jp/anime/gosick/)|[图像](https://www.tv-tokyo.co.jp/anime/gosick/images/top_main.jpg)|
+
+## 新增五部作品（2026-10-05）
+
+|作品|官方来源|图片来源|
+|---|---|---|
+|王者天下|[官方页面](https://kingdom-anime.com/introduction/)|[宣传图](https://kingdom-anime.com/images/ogp19.jpg)|
+|中华小当家|[官方页面](https://www.nippon-animation.co.jp/work/1773/)|[宣传图](https://www.nippon-animation.co.jp/nasys/wp-content/uploads/2014/12/chuka_img.jpg)|
+|昭和元禄落语心中|[官方页面](https://www.deen.co.jp/works-archives/rakugo)|[宣传图](https://www.deen.co.jp/deen/wp-content/uploads/2016/01/rakugo-key.png)|
+|大奥|[官方页面](https://www.deen.co.jp/works/oooku)|[宣传图](https://www.deen.co.jp/deen/wp-content/uploads/2023/05/oooku_kv_l_500px.jpg)|
+|窗边的小豆豆|[官方页面](https://shin-ei-animation.jp/works/tottochan/)|[宣传图](https://shin-ei-animation.jp/wp/wp-content/uploads/2023/10/news_231020_eyecatch.jpg)|
