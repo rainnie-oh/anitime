@@ -1,10 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "./App.jsx";
+import Public from "./Public.jsx";
+import Admin from "./Admin.jsx";
 import "./styles.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    {location.pathname.startsWith('/admin')?<Admin/>:<Public/>}
   </React.StrictMode>,
 );

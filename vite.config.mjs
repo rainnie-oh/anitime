@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import {cmsPlugin} from "./server/cms.mjs";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
@@ -9,11 +10,12 @@ export default defineConfig({
     include: ["react", "react-dom/client"],
   },
   server: {
-    host: "0.0.0.0",
+    host: "127.0.0.1",
+    fs: { deny: ['.env', '.env.*', '**/.git/**', '**/.cms/**', '**/server/**'] },
     allowedHosts: ["terminal.local"],
     warmup: {
       clientFiles: ["./src/main.jsx"],
     },
   },
-  plugins: [react()],
+  plugins: [react(),cmsPlugin()],
 });

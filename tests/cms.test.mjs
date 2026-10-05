@@ -1,0 +1,20 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {Readable} from 'node:stream';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {createCMS} from '../server/cms.mjs';import {formatDate,dateError} from '../src/date.mjs';
+test('date formats and validation',()=>{assert.equal(formatDate({type:'range',start:-453,end:-221}),'公元前453—公元前221年');assert.equal(formatDate({type:'decade',start:1940}),'1940年代');assert.equal(formatDate({type:'year',start:1878,approx:true}),'约1878年');assert.ok(dateError({type:'range',start:2000,end:1900}));assert.ok(dateError({type:'decade',start:1942}));});
+test('authenticated lifecycle, isolation, revision conflicts and persistence',async t=>{
+ const directory=fs.mkdtempSync(path.join(os.tmpdir(),'anitime-test-'));let middleware=createCMS({directory});t.after(()=>fs.rmSync(directory,{recursive:true,force:true}));const origin='http://localhost:4173';let cookie='';
+ const call=async(url,body,authenticated=true,requestOrigin=origin)=>{const req=Readable.from(body?[JSON.stringify(body)]:[]);Object.assign(req,{url,method:body?'POST':'GET',headers:{host:'localhost:4173',origin:requestOrigin,...(authenticated?{cookie}:{})},socket:{remoteAddress:'127.0.0.1'}});const headers={};let result;const res={setHeader:(k,v)=>headers[k]=v,writeHead:(status,h)=>{res.status=status;Object.assign(headers,h)},end:text=>{result={status:res.status,data:JSON.parse(text),cookie:headers['Set-Cookie']}}};await middleware(req,res);return result;};
+ assert.equal((await call('/api/admin')).status,401);
+ const setup=await call('/api/setup',{password:'only-for-automated-tests'});assert.equal(setup.status,200);cookie=setup.cookie.split(';')[0];assert.equal((await call('/api/setup',{password:'only-for-automated-tests'})).status,409);
+ let db=(await call('/api/admin')).data;const work={...db.works[0],name:'测试未发布',id:undefined,notes:'PRIVATE'};
+ assert.equal((await call('/api/work',{revision:db.revision,action:'save',work},false)).status,401);
+ db=(await call('/api/work',{revision:db.revision,action:'save',work})).data;let draft=db.works.at(-1);assert.equal(draft.published,null);assert.ok(!(await call('/api/public')).data.works.some(w=>w.name===draft.name));
+ assert.equal((await call('/api/work',{revision:1,action:'publish',work:draft})).status,409);
+ db=(await call('/api/work',{revision:db.revision,action:'publish',work:draft})).data;draft=db.works.at(-1);let publicWork=(await call('/api/public')).data.works.find(w=>w.id===draft.id);assert.equal(publicWork.name,draft.name);assert.equal(publicWork.notes,undefined);
+ db=(await call('/api/work',{revision:db.revision,action:'save',work:{...draft,name:'新的草稿标题'}})).data;assert.equal((await call('/api/public')).data.works.find(w=>w.id===draft.id).name,'测试未发布');
+ db=(await call('/api/work',{revision:db.revision,action:'trash',work:draft})).data;assert.ok(!(await call('/api/public')).data.works.some(w=>w.id===draft.id));
+ db=(await call('/api/work',{revision:db.revision,action:'restore',work:draft})).data;assert.equal(db.works.at(-1).published,null);assert.equal(JSON.parse(fs.readFileSync(path.join(directory,'content.json'))).revision,db.revision);
+ assert.equal((await call('/api/logout',{},true,'https://example.com')).status,403);
+ middleware=createCMS({directory});assert.equal((await call('/api/admin')).status,401);
+ const signed=await call('/api/login',{password:'only-for-automated-tests'});cookie=signed.cookie.split(';')[0];assert.equal((await call('/api/admin')).data.revision,db.revision);
+ await call('/api/logout',{});assert.equal((await call('/api/admin')).status,401);
+});
