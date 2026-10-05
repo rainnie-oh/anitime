@@ -1,0 +1,884 @@
+{
+  "regions": [
+    "日本",
+    "欧洲",
+    "中国"
+  ],
+  "periods": [
+    {
+      "id": "jp-0",
+      "region": "日本",
+      "name": "平安",
+      "range": "794—1185",
+      "start": 794,
+      "end": 1185,
+      "title": "贵族文化与武家兴起",
+      "description": "京都成为文化中心，宫廷文学与审美留下长久影响。"
+    },
+    {
+      "id": "jp-1",
+      "region": "日本",
+      "name": "镰仓・南北朝",
+      "range": "1185—1392",
+      "start": 1185,
+      "end": 1392,
+      "title": "从幕府到乱世",
+      "description": "武家政权建立，朝廷与幕府之间的权力关系不断变化。"
+    },
+    {
+      "id": "jp-2",
+      "region": "日本",
+      "name": "战国",
+      "range": "1467—1603",
+      "start": 1467,
+      "end": 1603,
+      "title": "群雄并起的时代",
+      "description": "地方势力竞逐，战争与交流改变了日本社会。"
+    },
+    {
+      "id": "jp-3",
+      "region": "日本",
+      "name": "江户",
+      "range": "1603—1868",
+      "start": 1603,
+      "end": 1868,
+      "title": "武家秩序与市井生活",
+      "description": "长期的幕府统治之下，城市文化发展；幕末迎来新的转折。"
+    },
+    {
+      "id": "jp-4",
+      "region": "日本",
+      "name": "明治",
+      "range": "1868—1912",
+      "start": 1868,
+      "end": 1912,
+      "title": "旧时代的余音，新时代的开端",
+      "description": "明治维新后，社会制度与日常生活快速改变。武士、铁路与西洋文化在这里相遇。"
+    },
+    {
+      "id": "jp-5",
+      "region": "日本",
+      "name": "大正",
+      "range": "1912—1926",
+      "start": 1912,
+      "end": 1926,
+      "title": "传统与现代交叠",
+      "description": "都市文化与新的生活方式兴起，传统社会仍延续着自己的节奏。"
+    },
+    {
+      "id": "jp-6",
+      "region": "日本",
+      "name": "昭和",
+      "range": "1926—1989",
+      "start": 1926,
+      "end": 1989,
+      "title": "战争、日常与重建",
+      "description": "从战前都市到战争中的生活，再到战后的社会变化。"
+    },
+    {
+      "id": "jp-7",
+      "region": "日本",
+      "name": "平成",
+      "range": "1989—2019",
+      "start": 1989,
+      "end": 2019,
+      "title": "熟悉的现代，也成为历史",
+      "description": "从1990年代的餐饮文化，到新世纪的都市生活。"
+    },
+    {
+      "id": "eu-0",
+      "region": "欧洲",
+      "name": "维京时代",
+      "range": "约793—1066",
+      "start": 793,
+      "end": 1066,
+      "title": "北海连接的世界",
+      "description": "航海、贸易与征服，将北欧与英格兰联系在一起。"
+    },
+    {
+      "id": "eu-1",
+      "region": "欧洲",
+      "name": "中世纪晚期",
+      "range": "1337—1487",
+      "start": 1337,
+      "end": 1487,
+      "title": "王权、教会与战争",
+      "description": "百年战争与玫瑰战争，塑造法国和英格兰的权力格局。"
+    },
+    {
+      "id": "eu-2",
+      "region": "欧洲",
+      "name": "文艺复兴",
+      "range": "约1400—1600",
+      "start": 1400,
+      "end": 1600,
+      "title": "画坊里的新世界",
+      "description": "艺术、城市与赞助制度交织，佛罗伦萨成为重要文化中心。"
+    },
+    {
+      "id": "eu-3",
+      "region": "欧洲",
+      "name": "法国革命前后",
+      "range": "1701—1799",
+      "start": 1701,
+      "end": 1799,
+      "title": "宫廷与街头",
+      "description": "旧制度的阶层秩序，在社会变革中遭遇冲击。"
+    },
+    {
+      "id": "eu-4",
+      "region": "欧洲",
+      "name": "19世纪",
+      "range": "1801—1900",
+      "start": 1801,
+      "end": 1900,
+      "title": "工业城市中的相遇",
+      "description": "英国维多利亚时代与法国城市生活并行发展。"
+    },
+    {
+      "id": "eu-5",
+      "region": "欧洲",
+      "name": "战间期",
+      "range": "1918—1939",
+      "start": 1918,
+      "end": 1939,
+      "title": "两场战争之间",
+      "description": "第一次世界大战之后，欧洲的社会与技术继续发生变化。"
+    },
+    {
+      "id": "cn-warring",
+      "region": "中国",
+      "name": "战国",
+      "range": "前453—前221",
+      "start": -453,
+      "end": -221,
+      "title": "诸侯与统一",
+      "description": "战国时期，各国之间的竞争与交流推动社会变革。"
+    },
+    {
+      "id": "cn-qing",
+      "region": "中国",
+      "name": "清朝",
+      "range": "1644—1912",
+      "start": 1644,
+      "end": 1912,
+      "title": "晚清社会与日常",
+      "description": "传统社会与近代变革交织。"
+    }
+  ],
+  "works": [
+    {
+      "id": "work-0",
+      "name": "源氏物语千年纪",
+      "original": "源氏物語千年紀 Genji",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-0"
+      ],
+      "date": {
+        "type": "unknown"
+      },
+      "source": "https://www.tms-e.co.jp/alltitles/2000s/636101.html",
+      "description": "以平安时代的贵族社会与宫廷生活为背景，改编自《源氏物语》。具体故事年份未明确。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/00.webp",
+      "imageSource": "https://www.tms-e.co.jp/media/002/202006/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E%E5%8D%83%E5%B9%B4%E7%B4%80Genji_636101_201202_113255.jpg",
+      "width": 450,
+      "height": 252
+    },
+    {
+      "id": "work-1",
+      "name": "平家物语",
+      "original": "平家物語",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-0"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.asmik-ace.co.jp/works/lineup/7351/",
+      "description": "以12世纪后半的源平争乱为背景，透过平家的兴衰呈现贵族与武家秩序的转折。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/01.webp",
+      "imageSource": "https://www.asmik-ace.co.jp/wp-content/uploads/2021/12/heike_main_WEBtateolNEW-1.jpg",
+      "width": 516,
+      "height": 729
+    },
+    {
+      "id": "work-2",
+      "name": "擅长逃跑的殿下",
+      "original": "逃げ上手の若君",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-1"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1333
+      },
+      "source": "https://nigewaka.run/",
+      "description": "故事始于1333年镰仓幕府覆灭之际，围绕北条时行展开，结合史实人物与戏剧化演绎。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/02.webp",
+      "imageSource": "https://nigewaka.run/ogp.png",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-3",
+      "name": "犬王",
+      "original": "犬王",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-1"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.aniplex.co.jp/lineup/inuoh/",
+      "description": "以室町时代的猿乐与琵琶法师文化为背景，将平家传说与虚构的音乐演出交织。",
+      "medium": "剧场版",
+      "nature": "真实历史背景",
+      "image": "/covers/03.webp",
+      "imageSource": "https://www.aniplex.co.jp/SYS/CONTENTS/keyvisual_inuoh/w700",
+      "width": 700,
+      "height": 990
+    },
+    {
+      "id": "work-4",
+      "name": "信长协奏曲",
+      "original": "信長協奏曲",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-2"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.fujitv.com/animation/nobunaga-concerto/",
+      "description": "现代高中生穿越至1549年的战国日本，与织田信长交换身份，重新走进历史事件。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/04.webp",
+      "imageSource": "https://www.fujitv.com/wp-content/uploads/2018/07/a_14_02.jpg",
+      "width": 380,
+      "height": 261
+    },
+    {
+      "id": "work-5",
+      "name": "犬夜叉",
+      "original": "犬夜叉",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-2"
+      ],
+      "date": {
+        "type": "unknown"
+      },
+      "source": "https://www.ytv.co.jp/inuyasha/",
+      "description": "现代少女与战国时代相连，妖怪传说与乡村、武士社会并置；具体年份未明确。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/05.webp",
+      "imageSource": "https://www.ytv.co.jp/inuyasha/ogp.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-6",
+      "name": "多罗罗",
+      "original": "どろろ",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-2"
+      ],
+      "date": {
+        "type": "unknown"
+      },
+      "source": "https://dororo-anime.com/",
+      "description": "以战国乱世为背景，通过武士、村落与战乱中的民众描绘时代；包含大量妖怪与虚构设定。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/06.webp",
+      "imageSource": "https://dororo-anime.com/og3.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-7",
+      "name": "薄樱鬼",
+      "original": "薄桜鬼",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-3"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.deen.co.jp/works-archives/hakuouki",
+      "description": "以幕末京都与新选组为背景，将真实组织和历史人物融入带有幻想元素的故事。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/07.webp",
+      "imageSource": "https://www.deen.co.jp/deen/wp-content/uploads/2016/01/hakuouki-key.jpg",
+      "width": 370,
+      "height": 500
+    },
+    {
+      "id": "work-8",
+      "name": "甲贺忍法帖",
+      "original": "バジリスク ～甲賀忍法帖～",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-3"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1614
+      },
+      "source": "https://www.gonzo.co.jp/works/basilisk/",
+      "description": "以1614年德川政权下的继承纷争为故事设定，围绕甲贺与伊贺忍者展开虚构叙事。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/08.webp",
+      "imageSource": "https://www.gonzo.co.jp/uploads/2014/06/0501_img5.jpg",
+      "width": 250,
+      "height": 354
+    },
+    {
+      "id": "work-9",
+      "name": "浪客剑心",
+      "original": "るろうに剣心",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-4"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1878
+      },
+      "source": "https://rurouni-kenshin.com/",
+      "description": "主线始于明治十一年（1878年），在维新后的东京描绘旧武士与新社会的相遇。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/09.webp",
+      "imageSource": "https://rurouni-kenshin.com/assets2/img/img_kv03.jpg",
+      "width": 990,
+      "height": 1400
+    },
+    {
+      "id": "work-10",
+      "name": "黄金神威",
+      "original": "ゴールデンカムイ",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-4"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.kamuy-anime.com/",
+      "description": "以日俄战争后的北海道为主要舞台，涉及退伍军人、阿伊努文化与当地自然环境。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/10.webp",
+      "imageSource": "https://www.kamuy-anime.com/core_sys/images/main/top/main_img26.jpg",
+      "width": 1036,
+      "height": 1400
+    },
+    {
+      "id": "work-11",
+      "name": "鬼灭之刃",
+      "original": "鬼滅の刃",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-5"
+      ],
+      "date": {
+        "type": "unknown"
+      },
+      "source": "https://kimetsu.com/anime/",
+      "description": "以大正时代日本为背景，传统山村与近代城市并存；具体年份未明确，鬼与鬼杀队为虚构设定。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/11.webp",
+      "imageSource": "https://kimetsu.com/anime/portal/assets/img/img_kv_1.jpg",
+      "width": 990,
+      "height": 1400
+    },
+    {
+      "id": "work-12",
+      "name": "大正处女御伽话",
+      "original": "大正オトメ御伽話",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-5"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://taisho-otome.com/",
+      "description": "故事从大正十年（1921年）展开，以千叶的乡间生活呈现当时的家庭观念与社会风貌。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/12.webp",
+      "imageSource": "https://taisho-otome.com/wp/wp-content/themes/taisho-otome/img/common/img_ogp.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-13",
+      "name": "起风了",
+      "original": "風立ちぬ",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-5"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.ghibli.jp/works/kazetachinu/",
+      "description": "以大正至昭和战前的日本为背景，结合飞机设计者堀越二郎的经历与虚构情节。",
+      "medium": "剧场版",
+      "nature": "真实历史背景",
+      "image": "/covers/13.webp",
+      "imageSource": "https://www.ghibli.jp/images/kazetachinu.jpg",
+      "width": 750,
+      "height": 1061
+    },
+    {
+      "id": "work-14",
+      "name": "萤火虫之墓",
+      "original": "火垂るの墓",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1945
+      },
+      "source": "https://www.ghibli.jp/works/hotarunohaka/",
+      "description": "以1945年战争末期的神户及周边为背景，描绘空袭与物资匮乏下的日常生活。",
+      "medium": "剧场版",
+      "nature": "真实历史背景",
+      "image": "/covers/14.webp",
+      "imageSource": "https://www.ghibli.jp/images/hotarunohaka.jpg",
+      "width": 750,
+      "height": 1061
+    },
+    {
+      "id": "work-15",
+      "name": "在这世界的角落",
+      "original": "この世界の片隅に",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://konosekai.jp/",
+      "description": "以1930至1940年代的广岛与吴市为舞台，从普通家庭的衣食住行观察战争中的社会。",
+      "medium": "剧场版",
+      "nature": "真实历史背景",
+      "image": "/covers/15.webp",
+      "imageSource": "https://konosekai.jp/wp-content/themes/konosekai/images/ogp.jpg",
+      "width": 600,
+      "height": 315
+    },
+    {
+      "id": "work-16",
+      "name": "代号D机关",
+      "original": "ジョーカー・ゲーム",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://jokergame.jp/",
+      "description": "故事始于1937年的日本，以虚构的间谍培训组织连接战前国际关系与情报活动。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/16.webp",
+      "imageSource": "https://jokergame.jp/imgs/topimg_sp.jpg",
+      "width": 640,
+      "height": 916
+    },
+    {
+      "id": "work-17",
+      "name": "来自虞美人之坡",
+      "original": "コクリコ坂から",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1963
+      },
+      "source": "https://www.ghibli.jp/works/kokurikozaka/",
+      "description": "以1963年的横滨为舞台，在东京奥运会前夕的社会变化中描绘高中生的校园生活。",
+      "medium": "剧场版",
+      "nature": "真实历史背景",
+      "image": "/covers/17.webp",
+      "imageSource": "https://www.ghibli.jp/images/kokurikozaka.jpg",
+      "width": 750,
+      "height": 1061
+    },
+    {
+      "id": "work-18",
+      "name": "坂道上的阿波罗",
+      "original": "坂道のアポロン",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.noitamina-apollon.com/",
+      "description": "以1966年起的长崎县佐世保为背景，将爵士乐、港口城市与高中生活联系起来。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/18.webp",
+      "imageSource": "https://www.noitamina-apollon.com/images/thum.jpg",
+      "width": 300,
+      "height": 400
+    },
+    {
+      "id": "work-19",
+      "name": "炒翻天",
+      "original": "鉄鍋のジャン！",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1995
+      },
+      "source": "https://tetsujan.com/",
+      "description": "原作以1995年的日本为舞台，围绕中华料理与厨师较量展开；动画为漫画改编，收录为现代年代锚点。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/19.webp",
+      "imageSource": "https://tetsujan.com/core_sys/images/others/ogp.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-20",
+      "name": "咒术回战",
+      "original": "呪術廻戦",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2018
+      },
+      "source": "https://www.mbs.jp/jujutsukaisen/",
+      "description": "主线设于2018年的日本都市，诅咒与咒术师为虚构设定；部分回忆篇发生于更早年份。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/20.webp",
+      "imageSource": "https://www.mbs.jp/jujutsukaisen/images/og-image_260108_new.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-21",
+      "name": "冰海战记",
+      "original": "ヴィンランド・サガ",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-0"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://vinlandsaga.jp/",
+      "description": "以11世纪初的北欧与英格兰为主要舞台，结合维京人的航海、战争与真实历史人物。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/21.webp",
+      "imageSource": "https://vinlandsaga.jp/ogp.jpg?v2",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-22",
+      "name": "纯洁的玛利亚",
+      "original": "純潔のマリア",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-1"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://junketsu-maria.tv/",
+      "description": "以百年战争末期的法国为背景，将佣兵、教会与村落生活融入魔女题材的幻想叙事。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/22.webp",
+      "imageSource": "https://junketsu-maria.tv/img/ogp.jpg",
+      "width": 200,
+      "height": 200
+    },
+    {
+      "id": "work-23",
+      "name": "蔷薇王的葬列",
+      "original": "薔薇王の葬列",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-1"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://baraou-anime.com/",
+      "description": "以15世纪后半英格兰的玫瑰战争为背景，改编莎士比亚相关戏剧，对人物与历史有所重构。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/23.webp",
+      "imageSource": "https://baraou-anime.com/images/ogimage.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-24",
+      "name": "阿尔蒂",
+      "original": "アルテ",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-2"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.ytv.co.jp/arte/",
+      "description": "以16世纪初佛罗伦萨为舞台，通过画坊学徒生活呈现文艺复兴时期的艺术与社会秩序。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/24.webp",
+      "imageSource": "https://www.ytv.co.jp/arte/images/sp/img_mv.jpg",
+      "width": 750,
+      "height": 902
+    },
+    {
+      "id": "work-25",
+      "name": "凡尔赛玫瑰",
+      "original": "ベルサイユのばら",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-3"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.tms-e.co.jp/alltitles/1970s/028101.html",
+      "description": "以18世纪法国王室与革命前后的社会为背景，将虚构人物与玛丽·安托瓦内特等历史人物并置。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/25.webp",
+      "imageSource": "https://www.tms-e.co.jp/media/002/202006/%E3%83%98%E3%82%99%E3%83%AB%E3%82%B5%E3%82%A4%E3%83%A6%E3%81%AE%E3%81%AF%E3%82%99%E3%82%89_028101.jpg",
+      "width": 450,
+      "height": 252
+    },
+    {
+      "id": "work-26",
+      "name": "黑执事",
+      "original": "黒執事",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-4"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.kuroshitsuji.tv/emeraldwitch/",
+      "description": "以19世纪末的英国为背景，维多利亚时代的阶级与城市生活融合恶魔等幻想元素。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/26.webp",
+      "imageSource": "https://www.kuroshitsuji.tv/emeraldwitch/assets/og/ogp2.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-27",
+      "name": "忧国的莫里亚蒂",
+      "original": "憂国のモリアーティ",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-4"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://moriarty-anime.com/",
+      "description": "以19世纪末英国为背景，通过侦探题材呈现阶级差异、帝国秩序与伦敦城市生活。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/27.webp",
+      "imageSource": "https://moriarty-anime.com/5W6pzO2m/wp-content/themes/moriani_tpl_v7/assets/img/ogp_01.png",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-28",
+      "name": "英国恋物语艾玛",
+      "original": "英國戀物語エマ",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-4"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.emma-victorian.com/",
+      "description": "以19世纪末英国为舞台，从女仆与上流社会的生活呈现维多利亚时代的阶级与礼俗。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/28.webp",
+      "imageSource": "https://www.emma-victorian.com/images/main_image.jpg",
+      "width": 380,
+      "height": 530
+    },
+    {
+      "id": "work-29",
+      "name": "异国迷宫的十字路口",
+      "original": "異国迷路のクロワーゼ",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-4"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "source": "https://www.b-ch.com/titles/3035/",
+      "description": "以19世纪后半巴黎为背景，通过日本少女在商店街的生活呈现日法文化的相遇。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/29.webp",
+      "imageSource": "https://image2.b-ch.com/ttl2/3035/3035001a.jpg?impolicy=fitin&ww=960&hh=540",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "work-30",
+      "name": "红猪",
+      "original": "紅の豚",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-5"
+      ],
+      "date": {
+        "type": "decade",
+        "start": 1920
+      },
+      "source": "https://www.ghibli.jp/works/porco/",
+      "description": "以1920年代的亚得里亚海为舞台，结合战后飞行文化与意大利社会背景；角色与部分地理设定为虚构。",
+      "medium": "剧场版",
+      "nature": "真实历史背景",
+      "image": "/covers/30.webp",
+      "imageSource": "https://www.ghibli.jp/images/porco.jpg",
+      "width": 750,
+      "height": 1061
+    },
+    {
+      "id": "work-31",
+      "name": "GOSICK",
+      "original": "GOSICK -ゴシック-",
+      "regions": [
+        "欧洲"
+      ],
+      "periodIds": [
+        "eu-5"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1924
+      },
+      "source": "https://www.tv-tokyo.co.jp/anime/gosick/",
+      "description": "故事设于1924年、欧洲虚构国家苏瓦尔；时代有明确锚点，国家与主要事件为架空设定。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/31.webp",
+      "imageSource": "https://www.tv-tokyo.co.jp/anime/gosick/images/top_main.jpg",
+      "width": 1000,
+      "height": 822
+    }
+  ]
+}

@@ -18,6 +18,10 @@ npm run test:sites
 
 技术栈：React 19、Vite 6、CSS。
 
-作品数据位于 `src/works.json`，时期分组位于 `src/App.jsx`。宣传素材来源见 [ASSET_SOURCES.md](ASSET_SOURCES.md)，图像版权归原权利人。
+作品数据与时期分组位于 `src/catalog.json`。宣传素材来源见 [ASSET_SOURCES.md](ASSET_SOURCES.md)，图像版权归原权利人。
 
 此版本保留 40% 视窗位置触发 Focus、年份缩放过渡及原滚动缓动，为后续迭代的基线。
+
+## 前台独立版本
+
+本仓库只包含对外时间线。作品由 `src/catalog.json` 的已发布快照提供，不需要CMS服务、管理账号或API。管理面板及未发布草稿不包含在此版本中。
