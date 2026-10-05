@@ -879,6 +879,121 @@
       "imageSource": "https://www.tv-tokyo.co.jp/anime/gosick/images/top_main.jpg",
       "width": 1000,
       "height": 822
+    },
+    {
+      "id": "work-32",
+      "name": "王者天下",
+      "original": "キングダム",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-warring"
+      ],
+      "date": {
+        "type": "year",
+        "start": -245
+      },
+      "source": "https://kingdom-anime.com/introduction/",
+      "description": "故事始于公元前245年的秦国，以少年信与嬴政的经历呈现战国末期的战争与统一进程。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/kingdom.jpg",
+      "imageSource": "https://kingdom-anime.com/images/ogp19.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "work-33",
+      "name": "中华小当家",
+      "original": "中華一番！",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-qing"
+      ],
+      "date": {
+        "type": "century",
+        "start": 19
+      },
+      "source": "https://www.nippon-animation.co.jp/work/1773/",
+      "description": "以19世纪清末中国为背景，跟随少年厨师的修行与料理竞赛，展现各地饮食文化。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/chuka.jpg",
+      "imageSource": "https://www.nippon-animation.co.jp/nasys/wp-content/uploads/2014/12/chuka_img.jpg",
+      "width": 1022,
+      "height": 1177
+    },
+    {
+      "id": "work-34",
+      "name": "昭和元禄落语心中",
+      "original": "昭和元禄落語心中",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "period",
+        "start": null
+      },
+      "source": "https://www.deen.co.jp/works-archives/rakugo",
+      "description": "以昭和时期的落语界为舞台，通过几代艺人的师承与舞台生活，呈现传统曲艺的传承。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "image": "/covers/rakugo.png",
+      "imageSource": "https://www.deen.co.jp/deen/wp-content/uploads/2016/01/rakugo-key.png",
+      "width": 400,
+      "height": 569
+    },
+    {
+      "id": "work-35",
+      "name": "大奥",
+      "original": "大奥",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-3"
+      ],
+      "date": {
+        "type": "period",
+        "start": null
+      },
+      "source": "https://www.deen.co.jp/works/oooku",
+      "description": "以江户幕府为历史锚点，虚构疫病导致男女社会角色逆转，描绘将军与大奥制度。",
+      "medium": "网络动画",
+      "nature": "历史改写",
+      "image": "/covers/ooku.jpg",
+      "imageSource": "https://www.deen.co.jp/deen/wp-content/uploads/2023/05/oooku_kv_l_500px.jpg",
+      "width": 338,
+      "height": 500
+    },
+    {
+      "id": "work-36",
+      "name": "窗边的小豆豆",
+      "original": "窓ぎわのトットちゃん",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "decade",
+        "start": 1940
+      },
+      "source": "https://shin-ei-animation.jp/works/tottochan/",
+      "description": "以1940年代日本为背景，描绘黑柳彻子在东京巴学园的童年与战时社会中的校园生活。",
+      "medium": "剧场版",
+      "nature": "真实历史背景",
+      "image": "/covers/tottochan.jpg",
+      "imageSource": "https://shin-ei-animation.jp/wp/wp-content/uploads/2023/10/news_231020_eyecatch.jpg",
+      "width": 350,
+      "height": 290
     }
   ]
 }
