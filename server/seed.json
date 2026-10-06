@@ -1,7 +1,7 @@
 {
   "regions": [
     "日本",
-    "欧洲",
+    "欧美",
     "中国"
   ],
   "periods": [
@@ -87,7 +87,7 @@
     },
     {
       "id": "eu-0",
-      "region": "欧洲",
+      "region": "欧美",
       "name": "维京时代",
       "range": "约793—1066",
       "start": 793,
@@ -97,7 +97,7 @@
     },
     {
       "id": "eu-1",
-      "region": "欧洲",
+      "region": "欧美",
       "name": "中世纪晚期",
       "range": "1337—1487",
       "start": 1337,
@@ -107,7 +107,7 @@
     },
     {
       "id": "eu-2",
-      "region": "欧洲",
+      "region": "欧美",
       "name": "文艺复兴",
       "range": "约1400—1600",
       "start": 1400,
@@ -117,7 +117,7 @@
     },
     {
       "id": "eu-3",
-      "region": "欧洲",
+      "region": "欧美",
       "name": "法国革命前后",
       "range": "1701—1799",
       "start": 1701,
@@ -127,7 +127,7 @@
     },
     {
       "id": "eu-4",
-      "region": "欧洲",
+      "region": "欧美",
       "name": "19世纪",
       "range": "1801—1900",
       "start": 1801,
@@ -137,13 +137,13 @@
     },
     {
       "id": "eu-5",
-      "region": "欧洲",
+      "region": "欧美",
       "name": "战间期",
       "range": "1918—1939",
       "start": 1918,
       "end": 1939,
       "title": "两场战争之间",
-      "description": "第一次世界大战之后，欧洲的社会与技术继续发生变化。"
+      "description": "两次世界大战之间的欧美社会，包括美国禁酒令时期的城市与帮派。"
     },
     {
       "id": "cn-warring",
@@ -164,6 +164,56 @@
       "end": 1912,
       "title": "晚清社会与日常",
       "description": "传统社会与近代变革交织。"
+    },
+    {
+      "id": "eu-coldwar",
+      "region": "欧美",
+      "name": "冷战时期",
+      "range": "1947—1991",
+      "start": 1947,
+      "end": 1991,
+      "title": "东西对立下的日常",
+      "description": "战后国际格局与1960—1970年代的社会风貌。"
+    },
+    {
+      "id": "eu-modern",
+      "region": "欧美",
+      "name": "20世纪末",
+      "range": "1980—2000",
+      "start": 1980,
+      "end": 2000,
+      "title": "冷战落幕与社会转型",
+      "description": "德国统一前后，中欧社会在旧秩序与新生活之间转变。"
+    },
+    {
+      "id": "cn-qin",
+      "region": "中国",
+      "name": "秦代",
+      "range": "前221—前207",
+      "start": -221,
+      "end": -207,
+      "title": "统一帝国与诸子百家",
+      "description": "秦统一六国之后的帝国秩序与秦末动荡。"
+    },
+    {
+      "id": "cn-three",
+      "region": "中国",
+      "name": "汉末・三国",
+      "range": "184—280",
+      "start": 184,
+      "end": 280,
+      "title": "群雄逐鹿与三国归晋",
+      "description": "从汉末群雄兴起到魏蜀吴鼎立，再到西晋统一。"
+    },
+    {
+      "id": "eu-21",
+      "region": "欧美",
+      "name": "21世纪",
+      "range": "2001—2026",
+      "start": 2001,
+      "end": 2026,
+      "title": "当代城市与日常",
+      "description": "新世纪的欧美社会与城市生活。"
     }
   ],
   "works": [
@@ -178,7 +228,7 @@
         "jp-0"
       ],
       "date": {
-        "type": "unknown"
+        "type": "period"
       },
       "image": "/covers/00.webp",
       "imageSource": "https://www.tms-e.co.jp/media/002/202006/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E%E5%8D%83%E5%B9%B4%E7%B4%80Genji_636101_201202_113255.jpg",
@@ -192,8 +242,8 @@
       "nature": "真实历史背景",
       "evidenceUrl": "",
       "evidence": "",
-      "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.809Z",
+      "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-0",
         "name": "源氏物语千年纪",
@@ -205,7 +255,7 @@
           "jp-0"
         ],
         "date": {
-          "type": "unknown"
+          "type": "period"
         },
         "image": "/covers/00.webp",
         "imageSource": "https://www.tms-e.co.jp/media/002/202006/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E%E5%8D%83%E5%B9%B4%E7%B4%80Genji_636101_201202_113255.jpg",
@@ -219,8 +269,8 @@
         "nature": "真实历史背景",
         "evidenceUrl": "",
         "evidence": "",
-        "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.809Z"
+        "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -249,7 +299,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：12世纪后半。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-1",
         "name": "平家物语",
@@ -276,7 +326,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：12世纪后半。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -306,7 +356,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-2",
         "name": "擅长逃跑的殿下",
@@ -334,7 +384,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -363,7 +413,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：14世纪。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-3",
         "name": "犬王",
@@ -390,7 +440,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：14世纪。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -419,7 +469,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：1549年起。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-4",
         "name": "信长协奏曲",
@@ -446,7 +496,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：1549年起。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -460,7 +510,7 @@
         "jp-2"
       ],
       "date": {
-        "type": "unknown"
+        "type": "period"
       },
       "image": "/covers/05.webp",
       "imageSource": "https://www.ytv.co.jp/inuyasha/ogp.jpg",
@@ -474,8 +524,8 @@
       "nature": "真实历史背景",
       "evidenceUrl": "",
       "evidence": "",
-      "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-5",
         "name": "犬夜叉",
@@ -487,7 +537,7 @@
           "jp-2"
         ],
         "date": {
-          "type": "unknown"
+          "type": "period"
         },
         "image": "/covers/05.webp",
         "imageSource": "https://www.ytv.co.jp/inuyasha/ogp.jpg",
@@ -501,8 +551,8 @@
         "nature": "真实历史背景",
         "evidenceUrl": "",
         "evidence": "",
-        "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -516,7 +566,7 @@
         "jp-2"
       ],
       "date": {
-        "type": "unknown"
+        "type": "period"
       },
       "image": "/covers/06.webp",
       "imageSource": "https://dororo-anime.com/og3.jpg",
@@ -530,8 +580,8 @@
       "nature": "真实历史背景",
       "evidenceUrl": "",
       "evidence": "",
-      "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-6",
         "name": "多罗罗",
@@ -543,7 +593,7 @@
           "jp-2"
         ],
         "date": {
-          "type": "unknown"
+          "type": "period"
         },
         "image": "/covers/06.webp",
         "imageSource": "https://dororo-anime.com/og3.jpg",
@@ -557,8 +607,8 @@
         "nature": "真实历史背景",
         "evidenceUrl": "",
         "evidence": "",
-        "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -587,7 +637,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：幕末。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-7",
         "name": "薄樱鬼",
@@ -614,7 +664,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：幕末。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -644,7 +694,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-8",
         "name": "甲贺忍法帖",
@@ -672,7 +722,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -702,7 +752,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-9",
         "name": "浪客剑心",
@@ -730,7 +780,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -759,7 +809,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：日俄战争后。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-10",
         "name": "黄金神威",
@@ -786,7 +836,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：日俄战争后。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -800,7 +850,7 @@
         "jp-5"
       ],
       "date": {
-        "type": "unknown"
+        "type": "period"
       },
       "image": "/covers/11.webp",
       "imageSource": "https://kimetsu.com/anime/portal/assets/img/img_kv_1.jpg",
@@ -814,8 +864,8 @@
       "nature": "真实历史背景",
       "evidenceUrl": "",
       "evidence": "",
-      "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-11",
         "name": "鬼灭之刃",
@@ -827,7 +877,7 @@
           "jp-5"
         ],
         "date": {
-          "type": "unknown"
+          "type": "period"
         },
         "image": "/covers/11.webp",
         "imageSource": "https://kimetsu.com/anime/portal/assets/img/img_kv_1.jpg",
@@ -841,8 +891,8 @@
         "nature": "真实历史背景",
         "evidenceUrl": "",
         "evidence": "",
-        "notes": "导入时原年代描述：UNKNOWN。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "notes": "已知历史时期，具体年份未明确；按所属时期定位。",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -871,7 +921,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：1921年起。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-12",
         "name": "大正处女御伽话",
@@ -898,7 +948,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：1921年起。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -927,7 +977,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：跨大正、昭和。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-13",
         "name": "起风了",
@@ -954,7 +1004,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：跨大正、昭和。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -984,7 +1034,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-14",
         "name": "萤火虫之墓",
@@ -1012,7 +1062,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1041,7 +1091,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：1930—1940年代。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-15",
         "name": "在这世界的角落",
@@ -1068,7 +1118,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：1930—1940年代。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1097,7 +1147,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：1937年起。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-16",
         "name": "代号D机关",
@@ -1124,7 +1174,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：1937年起。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1154,7 +1204,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-17",
         "name": "来自虞美人之坡",
@@ -1182,7 +1232,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1211,7 +1261,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：1966年起。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-18",
         "name": "坂道上的阿波罗",
@@ -1238,7 +1288,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：1966年起。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1268,7 +1318,7 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-19",
         "name": "炒翻天",
@@ -1296,12 +1346,12 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
       "id": "work-20",
-      "name": "咒术回战",
+      "name": "咒术回战 第一季",
       "original": "呪術廻戦",
       "regions": [
         "日本"
@@ -1320,16 +1370,16 @@
       "width": 1200,
       "height": 630,
       "medium": "TV动画",
-      "description": "主线设于2018年的日本都市，诅咒与咒术师为虚构设定；部分回忆篇发生于更早年份。",
+      "description": "2018年，虎杖悠仁吞下两面宿傩的手指，进入东京都立咒术高等专门学校。此条目仅收录第一季主线。",
       "status": "published",
       "nature": "真实历史背景",
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-20",
-        "name": "咒术回战",
+        "name": "咒术回战 第一季",
         "original": "呪術廻戦",
         "regions": [
           "日本"
@@ -1348,21 +1398,29 @@
         "width": 1200,
         "height": 630,
         "medium": "TV动画",
-        "description": "主线设于2018年的日本都市，诅咒与咒术师为虚构设定；部分回忆篇发生于更早年份。",
+        "description": "2018年，虎杖悠仁吞下两面宿傩的手指，进入东京都立咒术高等专门学校。此条目仅收录第一季主线。",
         "status": "published",
         "nature": "真实历史背景",
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
-      }
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "seriesId": "jujutsu-kaisen",
+        "seriesName": "咒术回战",
+        "edition": "TV版 · 第一季",
+        "cardStyle": "poster"
+      },
+      "seriesId": "jujutsu-kaisen",
+      "seriesName": "咒术回战",
+      "edition": "TV版 · 第一季",
+      "cardStyle": "poster"
     },
     {
       "id": "work-21",
       "name": "冰海战记",
       "original": "ヴィンランド・サガ",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-0"
@@ -1383,13 +1441,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：11世纪初。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-21",
         "name": "冰海战记",
         "original": "ヴィンランド・サガ",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-0"
@@ -1410,7 +1468,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：11世纪初。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1418,7 +1476,7 @@
       "name": "纯洁的玛利亚",
       "original": "純潔のマリア",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-1"
@@ -1439,13 +1497,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：百年战争末期。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-22",
         "name": "纯洁的玛利亚",
         "original": "純潔のマリア",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-1"
@@ -1466,7 +1524,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：百年战争末期。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1474,7 +1532,7 @@
       "name": "蔷薇王的葬列",
       "original": "薔薇王の葬列",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-1"
@@ -1495,13 +1553,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：15世纪后半。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-23",
         "name": "蔷薇王的葬列",
         "original": "薔薇王の葬列",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-1"
@@ -1522,7 +1580,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：15世纪后半。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1530,7 +1588,7 @@
       "name": "阿尔蒂",
       "original": "アルテ",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-2"
@@ -1551,13 +1609,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：16世纪初。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-24",
         "name": "阿尔蒂",
         "original": "アルテ",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-2"
@@ -1578,7 +1636,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：16世纪初。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1586,7 +1644,7 @@
       "name": "凡尔赛玫瑰",
       "original": "ベルサイユのばら",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-3"
@@ -1607,13 +1665,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：18世纪。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-25",
         "name": "凡尔赛玫瑰",
         "original": "ベルサイユのばら",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-3"
@@ -1634,7 +1692,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：18世纪。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1642,7 +1700,7 @@
       "name": "黑执事",
       "original": "黒執事",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-4"
@@ -1663,13 +1721,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：19世纪末。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-26",
         "name": "黑执事",
         "original": "黒執事",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-4"
@@ -1690,7 +1748,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：19世纪末。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1698,7 +1756,7 @@
       "name": "忧国的莫里亚蒂",
       "original": "憂国のモリアーティ",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-4"
@@ -1719,13 +1777,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：19世纪末。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-27",
         "name": "忧国的莫里亚蒂",
         "original": "憂国のモリアーティ",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-4"
@@ -1746,7 +1804,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：19世纪末。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1754,7 +1812,7 @@
       "name": "英国恋物语艾玛",
       "original": "英國戀物語エマ",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-4"
@@ -1775,13 +1833,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "导入时原年代描述：19世纪末。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-28",
         "name": "英国恋物语艾玛",
         "original": "英國戀物語エマ",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-4"
@@ -1802,7 +1860,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "导入时原年代描述：19世纪末。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1810,13 +1868,16 @@
       "name": "异国迷宫的十字路口",
       "original": "異国迷路のクロワーゼ",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-4"
       ],
       "date": {
-        "type": "period"
+        "type": "range",
+        "start": 1870,
+        "end": 1889,
+        "approx": true
       },
       "image": "/covers/29.webp",
       "imageSource": "https://image2.b-ch.com/ttl2/3035/3035001a.jpg?impolicy=fitin&ww=960&hh=540",
@@ -1825,25 +1886,28 @@
       "width": 960,
       "height": 540,
       "medium": "TV动画",
-      "description": "以19世纪后半巴黎为背景，通过日本少女在商店街的生活呈现日法文化的相遇。",
+      "description": "19世纪后半叶，日本少女汤音来到巴黎，在拱廊街的铁器店生活与工作。街区日常展现了东西方文化的相遇。",
       "status": "published",
       "nature": "真实历史背景",
       "evidenceUrl": "",
-      "evidence": "",
+      "evidence": "19世纪后半叶；按用户提供的约1870—1880年代作为参考范围。",
       "notes": "导入时原年代描述：19世纪后半。精确定位待复核。",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-29",
         "name": "异国迷宫的十字路口",
         "original": "異国迷路のクロワーゼ",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-4"
         ],
         "date": {
-          "type": "period"
+          "type": "range",
+          "start": 1870,
+          "end": 1889,
+          "approx": true
         },
         "image": "/covers/29.webp",
         "imageSource": "https://image2.b-ch.com/ttl2/3035/3035001a.jpg?impolicy=fitin&ww=960&hh=540",
@@ -1852,13 +1916,13 @@
         "width": 960,
         "height": 540,
         "medium": "TV动画",
-        "description": "以19世纪后半巴黎为背景，通过日本少女在商店街的生活呈现日法文化的相遇。",
+        "description": "19世纪后半叶，日本少女汤音来到巴黎，在拱廊街的铁器店生活与工作。街区日常展现了东西方文化的相遇。",
         "status": "published",
         "nature": "真实历史背景",
         "evidenceUrl": "",
-        "evidence": "",
+        "evidence": "19世纪后半叶；按用户提供的约1870—1880年代作为参考范围。",
         "notes": "导入时原年代描述：19世纪后半。精确定位待复核。",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1866,7 +1930,7 @@
       "name": "红猪",
       "original": "紅の豚",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-5"
@@ -1888,13 +1952,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-30",
         "name": "红猪",
         "original": "紅の豚",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-5"
@@ -1916,7 +1980,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -1924,7 +1988,7 @@
       "name": "GOSICK",
       "original": "GOSICK -ゴシック-",
       "regions": [
-        "欧洲"
+        "欧美"
       ],
       "periodIds": [
         "eu-5"
@@ -1946,13 +2010,13 @@
       "evidenceUrl": "",
       "evidence": "",
       "notes": "",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": {
         "id": "work-31",
         "name": "GOSICK",
         "original": "GOSICK -ゴシック-",
         "regions": [
-          "欧洲"
+          "欧美"
         ],
         "periodIds": [
           "eu-5"
@@ -1974,7 +2038,7 @@
         "evidenceUrl": "",
         "evidence": "",
         "notes": "",
-        "updatedAt": "2026-10-05T06:26:06.815Z"
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00"
       }
     },
     {
@@ -2003,7 +2067,7 @@
       "evidence": "官方第一季第一话简介明确开篇为公元前245年、中国春秋战国时期。",
       "notes": "年份为开篇锚点，不代表全系列仅发生在一年；封面为系列官网第六季宣传图。",
       "status": "draft",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": null
     },
     {
@@ -2032,7 +2096,7 @@
       "evidence": "制作公司作品简介明确为19世纪、清朝末期的中国。",
       "notes": "收录1997年TV动画《中華一番！》，不与后续《真・中華一番！》混用。料理竞赛与人物为戏剧化设定。",
       "status": "draft",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": null
     },
     {
@@ -2061,7 +2125,7 @@
       "evidence": "动画制作公司明确说明故事以昭和落语界为舞台。",
       "notes": "1926—1989是昭和时期范围，不是已核实的全剧起止年；官网未提供精确剧情跨度。",
       "status": "draft",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": null
     },
     {
@@ -2090,7 +2154,7 @@
       "evidence": "制作公司简介以德川幕府为背景，并明确三代家光之后将军由女性继承的历史改写设定。",
       "notes": "收录2023年Netflix动画，非真人剧；江户分期范围不等于动画覆盖范围，不套用漫画全篇年代。",
       "status": "draft",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": null
     },
     {
@@ -2119,9 +2183,1573 @@
       "evidence": "Netflix电影简介明确为1940年代的日本；制作公司介绍巴学园的童年故事。",
       "notes": "收录2023年剧场动画；保留1940年代精度，不将未经核实的年份作为全片起止。",
       "status": "draft",
-      "updatedAt": "2026-10-05T06:26:06.815Z",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "published": null
+    },
+    {
+      "id": "cms-kaigyoku",
+      "name": "咒术回战 怀玉·玉折",
+      "original": "呪術廻戦 懐玉・玉折",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2006
+      },
+      "image": "/covers/20.webp",
+      "imageSource": "https://www.mbs.jp/jujutsukaisen/images/og-image_260108_new.jpg",
+      "source": "https://www.mbs.jp/jujutsukaisen/",
+      "imageKind": "官方宣传图",
+      "width": 1200,
+      "height": 630,
+      "medium": "TV动画",
+      "description": "故事回到2006年，学生时代的五条悟与夏油杰执行星浆体护卫任务。作为独立回忆篇收录，结尾延伸至2007年。",
+      "status": "published",
+      "nature": "真实历史背景",
+      "evidenceUrl": "",
+      "evidence": "以2006年作为怀玉篇起点；玉折尾声延伸至2007年。",
+      "notes": "从2018年主线拆分；沿用系列官方宣传图。",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "published": {
+        "id": "cms-kaigyoku",
+        "name": "咒术回战 怀玉·玉折",
+        "original": "呪術廻戦 懐玉・玉折",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2006
+        },
+        "image": "/covers/20.webp",
+        "imageSource": "https://www.mbs.jp/jujutsukaisen/images/og-image_260108_new.jpg",
+        "source": "https://www.mbs.jp/jujutsukaisen/",
+        "imageKind": "官方宣传图",
+        "width": 1200,
+        "height": 630,
+        "medium": "TV动画",
+        "description": "故事回到2006年，学生时代的五条悟与夏油杰执行星浆体护卫任务。作为独立回忆篇收录，结尾延伸至2007年。",
+        "status": "published",
+        "nature": "真实历史背景",
+        "evidenceUrl": "",
+        "evidence": "以2006年作为怀玉篇起点；玉折尾声延伸至2007年。",
+        "notes": "从2018年主线拆分；沿用系列官方宣传图。",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "seriesId": "jujutsu-kaisen",
+        "seriesName": "咒术回战",
+        "edition": "TV版 · 怀玉·玉折",
+        "cardStyle": "poster"
+      },
+      "seriesId": "jujutsu-kaisen",
+      "seriesName": "咒术回战",
+      "edition": "TV版 · 怀玉·玉折",
+      "cardStyle": "poster"
+    },
+    {
+      "id": "cms-denki",
+      "name": "20世纪电气目录",
+      "original": "二十世紀電氣目録 -ユーレカ・エヴリカ-",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-4"
+      ],
+      "date": {
+        "type": "century",
+        "start": 20,
+        "part": "前期",
+        "approx": true
+      },
+      "source": "https://denkimokuroku.jp/",
+      "description": "故事发生在20世纪初、走上另一条发展道路的京都。蒸汽技术占据主导，少年少女追寻电气时代的梦想。",
+      "medium": "TV动画",
+      "nature": "架空历史",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://denkimokuroku.jp/",
+      "evidence": "动画官网明确为20世纪初的架空京都；按明治附近归组，不将小说年代直接当作动画确切年份。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-denki.webp",
+      "imageSource": "https://denkimokuroku.jp/_assets_official/images/top/_01-kv1.webp",
+      "width": 960,
+      "height": 1358,
+      "published": {
+        "id": "cms-denki",
+        "name": "20世纪电气目录",
+        "original": "二十世紀電氣目録 -ユーレカ・エヴリカ-",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-4"
+        ],
+        "date": {
+          "type": "century",
+          "start": 20,
+          "part": "前期",
+          "approx": true
+        },
+        "source": "https://denkimokuroku.jp/",
+        "description": "故事发生在20世纪初、走上另一条发展道路的京都。蒸汽技术占据主导，少年少女追寻电气时代的梦想。",
+        "medium": "TV动画",
+        "nature": "架空历史",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://denkimokuroku.jp/",
+        "evidence": "动画官网明确为20世纪初的架空京都；按明治附近归组，不将小说年代直接当作动画确切年份。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-denki.webp",
+        "imageSource": "https://denkimokuroku.jp/_assets_official/images/top/_01-kv1.webp",
+        "width": 960,
+        "height": 1358
+      }
+    },
+    {
+      "id": "cms-monster",
+      "name": "MONSTER（怪物）",
+      "original": "MONSTER",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-modern"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1986,
+        "end": 1998
+      },
+      "source": "https://www.ntv.co.jp/monster/",
+      "description": "浦泽直树原作。1986年，天马贤三在西德杜塞尔多夫救下少年约翰；九年后，追查连环杀人案的旅程扩展至德国与捷克。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://www.ntv.co.jp/monster/",
+      "evidence": "1986年序章，1995年起为主要追踪线，尾声至1998年；不是动画播出年份。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-monster.jpg",
+      "imageSource": "https://www.ntv.co.jp/monster/images/og_image.jpg",
+      "width": 700,
+      "height": 394,
+      "published": {
+        "id": "cms-monster",
+        "name": "MONSTER（怪物）",
+        "original": "MONSTER",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-modern"
+        ],
+        "date": {
+          "type": "range",
+          "start": 1986,
+          "end": 1998
+        },
+        "source": "https://www.ntv.co.jp/monster/",
+        "description": "浦泽直树原作。1986年，天马贤三在西德杜塞尔多夫救下少年约翰；九年后，追查连环杀人案的旅程扩展至德国与捷克。",
+        "medium": "TV动画",
+        "nature": "真实历史背景",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://www.ntv.co.jp/monster/",
+        "evidence": "1986年序章，1995年起为主要追踪线，尾声至1998年；不是动画播出年份。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-monster.jpg",
+        "imageSource": "https://www.ntv.co.jp/monster/images/og_image.jpg",
+        "width": 700,
+        "height": 394
+      }
+    },
+    {
+      "id": "cms-spy",
+      "name": "间谍过家家",
+      "original": "SPY×FAMILY",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-coldwar"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1960,
+        "end": 1979,
+        "approx": true
+      },
+      "source": "https://spy-family.net/",
+      "description": "间谍、杀手与读心少女组成临时家庭，生活在东西对立的架空国家。社会风貌参考20世纪60至70年代的冷战欧洲。",
+      "medium": "TV动画",
+      "nature": "架空世界",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://spy-family.net/",
+      "evidence": "依用户提供的1960—1970年代参考范围录入；并非作品内公历确切年份。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-spy.jpg",
+      "imageSource": "https://www.witstudio.co.jp/wordpress/wp-content/uploads/2026/06/spy_mv.jpg",
+      "width": 1416,
+      "height": 2000,
+      "published": {
+        "id": "cms-spy",
+        "name": "间谍过家家",
+        "original": "SPY×FAMILY",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-coldwar"
+        ],
+        "date": {
+          "type": "range",
+          "start": 1960,
+          "end": 1979,
+          "approx": true
+        },
+        "source": "https://spy-family.net/",
+        "description": "间谍、杀手与读心少女组成临时家庭，生活在东西对立的架空国家。社会风貌参考20世纪60至70年代的冷战欧洲。",
+        "medium": "TV动画",
+        "nature": "架空世界",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://spy-family.net/",
+        "evidence": "依用户提供的1960—1970年代参考范围录入；并非作品内公历确切年份。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-spy.jpg",
+        "imageSource": "https://www.witstudio.co.jp/wordpress/wp-content/uploads/2026/06/spy_mv.jpg",
+        "width": 1416,
+        "height": 2000
+      }
+    },
+    {
+      "id": "cms-wolf",
+      "name": "狼与香辛料",
+      "original": "狼と香辛料",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-1"
+      ],
+      "date": {
+        "type": "century",
+        "start": 14,
+        "approx": true
+      },
+      "source": "https://spicy-wolf.com/",
+      "description": "行商人罗伦斯与狼神赫萝穿行于城镇和商路。架空世界参考中世纪中北欧的贸易、货币与教会社会。",
+      "medium": "TV动画",
+      "nature": "架空世界",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://spicy-wolf.com/",
+      "evidence": "依用户提供的14世纪前后作为参考时代；不是现实欧洲的确切年代。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-wolf.jpg",
+      "imageSource": "https://spicy-wolf.com/assets/images/top/main_photo.jpg",
+      "width": 394,
+      "height": 460,
+      "published": {
+        "id": "cms-wolf",
+        "name": "狼与香辛料",
+        "original": "狼と香辛料",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-1"
+        ],
+        "date": {
+          "type": "century",
+          "start": 14,
+          "approx": true
+        },
+        "source": "https://spicy-wolf.com/",
+        "description": "行商人罗伦斯与狼神赫萝穿行于城镇和商路。架空世界参考中世纪中北欧的贸易、货币与教会社会。",
+        "medium": "TV动画",
+        "nature": "架空世界",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://spicy-wolf.com/",
+        "evidence": "依用户提供的14世纪前后作为参考时代；不是现实欧洲的确切年代。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-wolf.jpg",
+        "imageSource": "https://spicy-wolf.com/assets/images/top/main_photo.jpg",
+        "width": 394,
+        "height": 460
+      }
+    },
+    {
+      "id": "cms-xiaofugui",
+      "name": "神厨小福贵",
+      "original": "神厨小福贵",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-qing"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1900,
+        "approx": true
+      },
+      "source": "https://tv.cctv.com/2013/03/13/VIDA1363161490356157.shtml",
+      "description": "清朝末年，小福贵为营救爷爷苦练厨艺，进入宫廷并卷入政治纷争。故事以八国联军侵华、慈禧出逃前后为背景，含虚构情节。",
+      "medium": "TV动画",
+      "nature": "历史演绎",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://tv.cctv.com/2013/03/13/VIDA1363161490356157.shtml",
+      "evidence": "清末，约1900年前后；仅作故事起点定位，不表示全部情节发生于同一年。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-xiaofugui.jpg",
+      "imageSource": "https://p2.img.cctvpic.com/imagepic//C27175/ibugu/images/img1305541392002897.jpg",
+      "width": 138,
+      "height": 188,
+      "published": {
+        "id": "cms-xiaofugui",
+        "name": "神厨小福贵",
+        "original": "神厨小福贵",
+        "regions": [
+          "中国"
+        ],
+        "periodIds": [
+          "cn-qing"
+        ],
+        "date": {
+          "type": "year",
+          "start": 1900,
+          "approx": true
+        },
+        "source": "https://tv.cctv.com/2013/03/13/VIDA1363161490356157.shtml",
+        "description": "清朝末年，小福贵为营救爷爷苦练厨艺，进入宫廷并卷入政治纷争。故事以八国联军侵华、慈禧出逃前后为背景，含虚构情节。",
+        "medium": "TV动画",
+        "nature": "历史演绎",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://tv.cctv.com/2013/03/13/VIDA1363161490356157.shtml",
+        "evidence": "清末，约1900年前后；仅作故事起点定位，不表示全部情节发生于同一年。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-xiaofugui.jpg",
+        "imageSource": "https://p2.img.cctvpic.com/imagepic//C27175/ibugu/images/img1305541392002897.jpg",
+        "width": 138,
+        "height": 188
+      }
+    },
+    {
+      "id": "cms-sanguo",
+      "name": "三国演义（动画片）",
+      "original": "三国演义",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-three"
+      ],
+      "date": {
+        "type": "range",
+        "start": 184,
+        "end": 280,
+        "approx": true
+      },
+      "source": "https://tv.cctv.com/2013/03/13/VIDA1363161129452904.shtml",
+      "description": "2009年中日合制52集动画，改编自罗贯中《三国演义》，讲述汉末群雄至三国归晋的兴亡，包含桃园结义、赤壁之战与诸葛亮北伐等故事。",
+      "medium": "TV动画",
+      "nature": "历史演绎",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://tv.cctv.com/2013/03/13/VIDA1363161129452904.shtml",
+      "evidence": "选用2009年二维动画版；184—280为汉末三国叙事参考范围，并非每集精确起止考证。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-sanguo.jpg",
+      "imageSource": "https://p2.img.cctvpic.com/imagepic//C30893/ibugu/images/img1315968058742152.jpg",
+      "width": 151,
+      "height": 193,
+      "published": {
+        "id": "cms-sanguo",
+        "name": "三国演义（动画片）",
+        "original": "三国演义",
+        "regions": [
+          "中国"
+        ],
+        "periodIds": [
+          "cn-three"
+        ],
+        "date": {
+          "type": "range",
+          "start": 184,
+          "end": 280,
+          "approx": true
+        },
+        "source": "https://tv.cctv.com/2013/03/13/VIDA1363161129452904.shtml",
+        "description": "2009年中日合制52集动画，改编自罗贯中《三国演义》，讲述汉末群雄至三国归晋的兴亡，包含桃园结义、赤壁之战与诸葛亮北伐等故事。",
+        "medium": "TV动画",
+        "nature": "历史演绎",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://tv.cctv.com/2013/03/13/VIDA1363161129452904.shtml",
+        "evidence": "选用2009年二维动画版；184—280为汉末三国叙事参考范围，并非每集精确起止考证。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-sanguo.jpg",
+        "imageSource": "https://p2.img.cctvpic.com/imagepic//C30893/ibugu/images/img1315968058742152.jpg",
+        "width": 151,
+        "height": 193
+      }
+    },
+    {
+      "id": "cms-qin",
+      "name": "秦时明月",
+      "original": "秦时明月",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-qin"
+      ],
+      "date": {
+        "type": "range",
+        "start": -221,
+        "end": -207,
+        "approx": true
+      },
+      "source": "https://donghua.cctv.com/special/qsmy/shouye/",
+      "description": "秦统一六国之后，荆天明随盖聂踏入江湖，与诸子百家及秦帝国势力相遇。以秦代为历史框架，结合武侠、机关术与幻想。",
+      "medium": "TV动画",
+      "nature": "历史幻想",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://donghua.cctv.com/special/qsmy/shouye/",
+      "evidence": "以秦代前221—前207年为参考背景区间；不是动画主线的确切起止年份。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-qin.jpg",
+      "imageSource": "https://p1.img.cctvpic.com/photoAlbum/page/performance/img/2013/9/27/1380249122870_697.jpg",
+      "width": 300,
+      "height": 400,
+      "published": {
+        "id": "cms-qin",
+        "name": "秦时明月",
+        "original": "秦时明月",
+        "regions": [
+          "中国"
+        ],
+        "periodIds": [
+          "cn-qin"
+        ],
+        "date": {
+          "type": "range",
+          "start": -221,
+          "end": -207,
+          "approx": true
+        },
+        "source": "https://donghua.cctv.com/special/qsmy/shouye/",
+        "description": "秦统一六国之后，荆天明随盖聂踏入江湖，与诸子百家及秦帝国势力相遇。以秦代为历史框架，结合武侠、机关术与幻想。",
+        "medium": "TV动画",
+        "nature": "历史幻想",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://donghua.cctv.com/special/qsmy/shouye/",
+        "evidence": "以秦代前221—前207年为参考背景区间；不是动画主线的确切起止年份。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-qin.jpg",
+        "imageSource": "https://p1.img.cctvpic.com/photoAlbum/page/performance/img/2013/9/27/1380249122870_697.jpg",
+        "width": 300,
+        "height": 400
+      }
+    },
+    {
+      "id": "cms-hyouka",
+      "name": "冰菓",
+      "original": "氷菓",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2012
+      },
+      "source": "https://www.kyotoanimation.co.jp/works/hyouka/",
+      "description": "折木奉太郎加入神山高中古典部，与千反田爱瑠等人解开校园日常中的谜团。这里采用动画版的2012年背景。",
+      "medium": "TV动画",
+      "nature": "现代虚构",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://www.kyotoanimation.co.jp/works/hyouka/",
+      "evidence": "依用户指定的动画版2012年录入，区别于原作的2000年设定。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-hyouka.jpg",
+      "imageSource": "https://www.kyotoanimation.co.jp/img/works/key_visual/hyouka.jpg",
+      "width": 426,
+      "height": 600,
+      "published": {
+        "id": "cms-hyouka",
+        "name": "冰菓",
+        "original": "氷菓",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2012
+        },
+        "source": "https://www.kyotoanimation.co.jp/works/hyouka/",
+        "description": "折木奉太郎加入神山高中古典部，与千反田爱瑠等人解开校园日常中的谜团。这里采用动画版的2012年背景。",
+        "medium": "TV动画",
+        "nature": "现代虚构",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://www.kyotoanimation.co.jp/works/hyouka/",
+        "evidence": "依用户指定的动画版2012年录入，区别于原作的2000年设定。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-hyouka.jpg",
+        "imageSource": "https://www.kyotoanimation.co.jp/img/works/key_visual/hyouka.jpg",
+        "width": 426,
+        "height": 600
+      }
+    },
+    {
+      "id": "cms-steins",
+      "name": "命运石之门",
+      "original": "STEINS;GATE",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2010,
+        "month": 7,
+        "day": 28
+      },
+      "source": "https://kadokawa-animation.jp/lineup/steinsgate",
+      "description": "2010年7月28日，秋叶原的一场发表会与一封短信成为世界线变化的起点。冈部伦太郎与伙伴们卷入时间机器实验。",
+      "medium": "TV动画",
+      "nature": "现代科幻",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://kadokawa-animation.jp/lineup/steinsgate",
+      "evidence": "此日期为故事开端；作品涉及多条世界线与后续日期，不代表全篇只发生在当天。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-steins.jpg",
+      "imageSource": "https://kadokawa-animation.jp/wp-content/uploads/2026/04/4007601.jpg",
+      "width": 684,
+      "height": 1000,
+      "published": {
+        "id": "cms-steins",
+        "name": "命运石之门",
+        "original": "STEINS;GATE",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2010,
+          "month": 7,
+          "day": 28
+        },
+        "source": "https://kadokawa-animation.jp/lineup/steinsgate",
+        "description": "2010年7月28日，秋叶原的一场发表会与一封短信成为世界线变化的起点。冈部伦太郎与伙伴们卷入时间机器实验。",
+        "medium": "TV动画",
+        "nature": "现代科幻",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://kadokawa-animation.jp/lineup/steinsgate",
+        "evidence": "此日期为故事开端；作品涉及多条世界线与后续日期，不代表全篇只发生在当天。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-steins.jpg",
+        "imageSource": "https://kadokawa-animation.jp/wp-content/uploads/2026/04/4007601.jpg",
+        "width": 684,
+        "height": 1000
+      }
+    },
+    {
+      "id": "cms-91days",
+      "name": "91Days",
+      "original": "91Days",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-5"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1920,
+        "end": 1933,
+        "approx": true
+      },
+      "source": "https://sh-anime.shochiku.co.jp/91days/story/",
+      "description": "美国禁酒令时期，阿维里奥回到黑手党控制的城镇劳雷斯，接近仇人家族并展开复仇。酒类走私与帮派冲突构成故事背景。",
+      "medium": "TV动画",
+      "nature": "真实历史背景",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://sh-anime.shochiku.co.jp/91days/story/",
+      "evidence": "官网确认美国禁酒令时期；以1920—1933年作为参考范围，不将其误写为故事持续时长。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-91days.jpg",
+      "imageSource": "https://sh-anime.shochiku.co.jp/91days/sp_img/top/mv_normal.jpg",
+      "width": 640,
+      "height": 497,
+      "published": {
+        "id": "cms-91days",
+        "name": "91Days",
+        "original": "91Days",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-5"
+        ],
+        "date": {
+          "type": "range",
+          "start": 1920,
+          "end": 1933,
+          "approx": true
+        },
+        "source": "https://sh-anime.shochiku.co.jp/91days/story/",
+        "description": "美国禁酒令时期，阿维里奥回到黑手党控制的城镇劳雷斯，接近仇人家族并展开复仇。酒类走私与帮派冲突构成故事背景。",
+        "medium": "TV动画",
+        "nature": "真实历史背景",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://sh-anime.shochiku.co.jp/91days/story/",
+        "evidence": "官网确认美国禁酒令时期；以1920—1933年作为参考范围，不将其误写为故事持续时长。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-91days.jpg",
+        "imageSource": "https://sh-anime.shochiku.co.jp/91days/sp_img/top/mv_normal.jpg",
+        "width": 640,
+        "height": 497
+      }
+    },
+    {
+      "id": "cms-baccano",
+      "name": "永生之酒",
+      "original": "BACCANO! -バッカーノ!-",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-5"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1930,
+        "end": 1932
+      },
+      "source": "https://www.baccano.jp/intro/index.html",
+      "description": "禁酒令时期的美国，黑手党、盗贼与不死者的命运交错。动画主要并行描绘1930、1931及1932年的事件。",
+      "medium": "TV动画",
+      "nature": "历史幻想",
+      "imageKind": "官方宣传图",
+      "evidenceUrl": "https://www.baccano.jp/intro/index.html",
+      "evidence": "主线1930—1932年；另有1711年的不死者起源回溯，不合并成跨越两百年的连续主线。",
+      "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+      "status": "published",
+      "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+      "image": "/covers/cms-baccano.jpg",
+      "imageSource": "https://www.baccano.jp/img/main_noflash.jpg",
+      "width": 949,
+      "height": 405,
+      "published": {
+        "id": "cms-baccano",
+        "name": "永生之酒",
+        "original": "BACCANO! -バッカーノ!-",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-5"
+        ],
+        "date": {
+          "type": "range",
+          "start": 1930,
+          "end": 1932
+        },
+        "source": "https://www.baccano.jp/intro/index.html",
+        "description": "禁酒令时期的美国，黑手党、盗贼与不死者的命运交错。动画主要并行描绘1930、1931及1932年的事件。",
+        "medium": "TV动画",
+        "nature": "历史幻想",
+        "imageKind": "官方宣传图",
+        "evidenceUrl": "https://www.baccano.jp/intro/index.html",
+        "evidence": "主线1930—1932年；另有1711年的不死者起源回溯，不合并成跨越两百年的连续主线。",
+        "notes": "2026-10-05 内容补充；参考年代不等于确切公历设定。",
+        "status": "published",
+        "updatedAt": "2026-10-05T14:38:45.996497+00:00",
+        "image": "/covers/cms-baccano.jpg",
+        "imageSource": "https://www.baccano.jp/img/main_noflash.jpg",
+        "width": 949,
+        "height": 405
+      }
+    },
+    {
+      "id": "series-pb",
+      "name": "JOJO · 幻影之血",
+      "original": "JOJO · 幻影之血",
+      "seriesId": "jojo",
+      "seriesName": "JOJO",
+      "edition": "第1部",
+      "cardStyle": "poster",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-4"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1880,
+        "end": 1889,
+        "approx": false
+      },
+      "source": "https://jojo-portal.com/anime/pb-bt/",
+      "description": "19世纪末的英国，乔纳森·乔斯达与迪奥的相遇开启了围绕石鬼面的家族故事。少年时代与成年后的事件分阶段展开。",
+      "evidence": "1880年代至1889年；不将更早的石鬼面序幕纳入主线跨度。",
+      "evidenceUrl": "https://jojowiki.com/Timeline",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-pb.jpg",
+      "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/1st/assets/images/common/index/img_kv_01.jpg?5654550",
+      "width": 460,
+      "height": 651,
+      "published": {
+        "id": "series-pb",
+        "name": "JOJO · 幻影之血",
+        "original": "JOJO · 幻影之血",
+        "seriesId": "jojo",
+        "seriesName": "JOJO",
+        "edition": "第1部",
+        "cardStyle": "poster",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-4"
+        ],
+        "date": {
+          "type": "range",
+          "start": 1880,
+          "end": 1889,
+          "approx": false
+        },
+        "source": "https://jojo-portal.com/anime/pb-bt/",
+        "description": "19世纪末的英国，乔纳森·乔斯达与迪奥的相遇开启了围绕石鬼面的家族故事。少年时代与成年后的事件分阶段展开。",
+        "evidence": "1880年代至1889年；不将更早的石鬼面序幕纳入主线跨度。",
+        "evidenceUrl": "https://jojowiki.com/Timeline",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-pb.jpg",
+        "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/1st/assets/images/common/index/img_kv_01.jpg?5654550",
+        "width": 460,
+        "height": 651
+      }
+    },
+    {
+      "id": "series-bt",
+      "name": "JOJO · 战斗潮流",
+      "original": "JOJO · 战斗潮流",
+      "seriesId": "jojo",
+      "seriesName": "JOJO",
+      "edition": "第2部",
+      "cardStyle": "poster",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-5"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1938,
+        "end": 1939,
+        "approx": false
+      },
+      "source": "https://jojo-portal.com/anime/pb-bt/",
+      "description": "二战前夕，乔瑟夫·乔斯达从纽约出发，卷入与柱之男有关的事件，旅程延伸至欧洲。",
+      "evidence": "主线1938—1939年；尾声通往下一代的片段不单独扩大本部跨度。",
+      "evidenceUrl": "https://jojowiki.com/Timeline",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-bt.jpg",
+      "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/1st/assets/images/common/index/img_kv_02.jpg?5654550",
+      "width": 460,
+      "height": 650,
+      "published": {
+        "id": "series-bt",
+        "name": "JOJO · 战斗潮流",
+        "original": "JOJO · 战斗潮流",
+        "seriesId": "jojo",
+        "seriesName": "JOJO",
+        "edition": "第2部",
+        "cardStyle": "poster",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-5"
+        ],
+        "date": {
+          "type": "range",
+          "start": 1938,
+          "end": 1939,
+          "approx": false
+        },
+        "source": "https://jojo-portal.com/anime/pb-bt/",
+        "description": "二战前夕，乔瑟夫·乔斯达从纽约出发，卷入与柱之男有关的事件，旅程延伸至欧洲。",
+        "evidence": "主线1938—1939年；尾声通往下一代的片段不单独扩大本部跨度。",
+        "evidenceUrl": "https://jojowiki.com/Timeline",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-bt.jpg",
+        "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/1st/assets/images/common/index/img_kv_02.jpg?5654550",
+        "width": 460,
+        "height": 650
+      }
+    },
+    {
+      "id": "series-sc",
+      "name": "JOJO · 星尘斗士",
+      "original": "JOJO · 星尘斗士",
+      "seriesId": "jojo",
+      "seriesName": "JOJO",
+      "edition": "第3部 · TV版",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1987,
+        "end": 1988,
+        "approx": false
+      },
+      "source": "https://jojo-portal.com/anime/sc/",
+      "description": "空条承太郎从日本出发，与伙伴们前往埃及寻找DIO。此处以TV动画的1987—1988年口径定位，旅程同时经过亚洲多地。",
+      "evidence": "采用动画1987—1988年口径；漫画修订资料常用1988—1989年。当前地域按日本出发点收录，并不表示全篇只发生在日本。",
+      "evidenceUrl": "https://jojowiki.com/Timeline/Inconsistencies",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-sc.png",
+      "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/2nd/assets/images/common/index/img_kv.png?4303416",
+      "width": 460,
+      "height": 645,
+      "published": {
+        "id": "series-sc",
+        "name": "JOJO · 星尘斗士",
+        "original": "JOJO · 星尘斗士",
+        "seriesId": "jojo",
+        "seriesName": "JOJO",
+        "edition": "第3部 · TV版",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-6"
+        ],
+        "date": {
+          "type": "range",
+          "start": 1987,
+          "end": 1988,
+          "approx": false
+        },
+        "source": "https://jojo-portal.com/anime/sc/",
+        "description": "空条承太郎从日本出发，与伙伴们前往埃及寻找DIO。此处以TV动画的1987—1988年口径定位，旅程同时经过亚洲多地。",
+        "evidence": "采用动画1987—1988年口径；漫画修订资料常用1988—1989年。当前地域按日本出发点收录，并不表示全篇只发生在日本。",
+        "evidenceUrl": "https://jojowiki.com/Timeline/Inconsistencies",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-sc.png",
+        "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/2nd/assets/images/common/index/img_kv.png?4303416",
+        "width": 460,
+        "height": 645
+      }
+    },
+    {
+      "id": "series-du",
+      "name": "JOJO · 不灭钻石",
+      "original": "JOJO · 不灭钻石",
+      "seriesId": "jojo",
+      "seriesName": "JOJO",
+      "edition": "第4部",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1999,
+        "approx": false
+      },
+      "source": "https://jojo-portal.com/anime/du/",
+      "description": "1999年，日本杜王町。东方仗助与伙伴们在看似平静的小镇中遭遇新的替身使者。",
+      "evidence": "动画官网明确1999年，杜王町为虚构日本城镇。",
+      "evidenceUrl": "https://jojo-portal.com/anime/du/",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-du.jpg",
+      "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/3rd/assets/images/common/index/img_kv.jpg?1494360",
+      "width": 460,
+      "height": 643,
+      "published": {
+        "id": "series-du",
+        "name": "JOJO · 不灭钻石",
+        "original": "JOJO · 不灭钻石",
+        "seriesId": "jojo",
+        "seriesName": "JOJO",
+        "edition": "第4部",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 1999,
+          "approx": false
+        },
+        "source": "https://jojo-portal.com/anime/du/",
+        "description": "1999年，日本杜王町。东方仗助与伙伴们在看似平静的小镇中遭遇新的替身使者。",
+        "evidence": "动画官网明确1999年，杜王町为虚构日本城镇。",
+        "evidenceUrl": "https://jojo-portal.com/anime/du/",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-du.jpg",
+        "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/3rd/assets/images/common/index/img_kv.jpg?1494360",
+        "width": 460,
+        "height": 643
+      }
+    },
+    {
+      "id": "series-gw",
+      "name": "JOJO · 黄金之风",
+      "original": "JOJO · 黄金之风",
+      "seriesId": "jojo",
+      "seriesName": "JOJO",
+      "edition": "第5部",
+      "cardStyle": "poster",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-21"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2001,
+        "approx": false
+      },
+      "source": "https://jojo-portal.com/anime/gw/",
+      "description": "2001年的意大利，乔鲁诺·乔巴拿加入帮派，沿着那不勒斯至罗马的旅程追寻自己的理想。",
+      "evidence": "主线2001年；以故事背景而非2018年动画开播时间定位。",
+      "evidenceUrl": "https://jojowiki.com/Timeline",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-gw.jpg",
+      "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/4th/assets/images/common/index/img_kv.jpg?5752453",
+      "width": 460,
+      "height": 650,
+      "published": {
+        "id": "series-gw",
+        "name": "JOJO · 黄金之风",
+        "original": "JOJO · 黄金之风",
+        "seriesId": "jojo",
+        "seriesName": "JOJO",
+        "edition": "第5部",
+        "cardStyle": "poster",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-21"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2001,
+          "approx": false
+        },
+        "source": "https://jojo-portal.com/anime/gw/",
+        "description": "2001年的意大利，乔鲁诺·乔巴拿加入帮派，沿着那不勒斯至罗马的旅程追寻自己的理想。",
+        "evidence": "主线2001年；以故事背景而非2018年动画开播时间定位。",
+        "evidenceUrl": "https://jojowiki.com/Timeline",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-gw.jpg",
+        "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/4th/assets/images/common/index/img_kv.jpg?5752453",
+        "width": 460,
+        "height": 650
+      }
+    },
+    {
+      "id": "series-so",
+      "name": "JOJO · 石之海",
+      "original": "JOJO · 石之海",
+      "seriesId": "jojo",
+      "seriesName": "JOJO",
+      "edition": "第6部",
+      "cardStyle": "poster",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-21"
+      ],
+      "date": {
+        "type": "range",
+        "start": 2011,
+        "end": 2012,
+        "approx": false
+      },
+      "source": "https://jojo-portal.com/anime/so/",
+      "description": "美国佛罗里达州，空条徐伦被送进绿海豚街监狱。家族命运与新的替身事件在这里交织。",
+      "evidence": "主线始于2011年，延伸至2012年；不将后续世界变化视为普通公历延续。",
+      "evidenceUrl": "https://jojowiki.com/Timeline",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-so.png",
+      "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/so/assets/images/common/ogp_06.png",
+      "width": 1200,
+      "height": 630,
+      "published": {
+        "id": "series-so",
+        "name": "JOJO · 石之海",
+        "original": "JOJO · 石之海",
+        "seriesId": "jojo",
+        "seriesName": "JOJO",
+        "edition": "第6部",
+        "cardStyle": "poster",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-21"
+        ],
+        "date": {
+          "type": "range",
+          "start": 2011,
+          "end": 2012,
+          "approx": false
+        },
+        "source": "https://jojo-portal.com/anime/so/",
+        "description": "美国佛罗里达州，空条徐伦被送进绿海豚街监狱。家族命运与新的替身事件在这里交织。",
+        "evidence": "主线始于2011年，延伸至2012年；不将后续世界变化视为普通公历延续。",
+        "evidenceUrl": "https://jojowiki.com/Timeline",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-so.png",
+        "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/so/assets/images/common/ogp_06.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "id": "series-sbr",
+      "name": "JOJO · 飙马野郎",
+      "original": "JOJO · 飙马野郎",
+      "seriesId": "jojo",
+      "seriesName": "JOJO",
+      "edition": "第7部 · 独立世界线",
+      "cardStyle": "poster",
+      "regions": [
+        "欧美"
+      ],
+      "periodIds": [
+        "eu-4"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1890,
+        "approx": false
+      },
+      "source": "https://jojo-portal.com/anime/sbr/",
+      "description": "1890年的美国，乔尼·乔斯达与杰洛·齐贝林参加横跨北美大陆的赛马。属于与前六部不同的世界线。",
+      "evidence": "动画官网明确起点为1890年美国；按比赛起点定位。",
+      "evidenceUrl": "https://jojo-portal.com/anime/sbr/",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "网络动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-sbr.png",
+      "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/sbr/assets/images/common/ogp4.png?20261700",
+      "width": 1200,
+      "height": 630,
+      "published": {
+        "id": "series-sbr",
+        "name": "JOJO · 飙马野郎",
+        "original": "JOJO · 飙马野郎",
+        "seriesId": "jojo",
+        "seriesName": "JOJO",
+        "edition": "第7部 · 独立世界线",
+        "cardStyle": "poster",
+        "regions": [
+          "欧美"
+        ],
+        "periodIds": [
+          "eu-4"
+        ],
+        "date": {
+          "type": "year",
+          "start": 1890,
+          "approx": false
+        },
+        "source": "https://jojo-portal.com/anime/sbr/",
+        "description": "1890年的美国，乔尼·乔斯达与杰洛·齐贝林参加横跨北美大陆的赛马。属于与前六部不同的世界线。",
+        "evidence": "动画官网明确起点为1890年美国；按比赛起点定位。",
+        "evidenceUrl": "https://jojo-portal.com/anime/sbr/",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "网络动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-sbr.png",
+        "imageSource": "https://jojo-portal.com/wp-content/themes/jojo-portal/sbr/assets/images/common/ogp4.png?20261700",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "id": "series-mono-tv",
+      "name": "怪化猫 · 江户诸篇",
+      "original": "怪化猫 · 江户诸篇",
+      "seriesId": "mononoke",
+      "seriesName": "怪化猫",
+      "edition": "TV版 · 座敷童子／海坊主／无脸怪／鵺",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-3"
+      ],
+      "date": {
+        "type": "period",
+        "approx": true
+      },
+      "source": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/",
+      "description": "卖药郎行走于参考江户社会的怪异世界。包含座敷童子、海坊主、无脸怪与鵺四篇；同属近世背景，具体年份与四篇之间的年代先后未明确。",
+      "evidence": "参考江户背景归组，不为四篇编造具体年份；本节点是TV版最早可定位的时期组。",
+      "evidenceUrl": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-mono-tv.jpg",
+      "imageSource": "https://lineup.toei-anim.co.jp/upload/save_image/148/story_img_1.jpg",
+      "width": 270,
+      "height": 385,
+      "published": {
+        "id": "series-mono-tv",
+        "name": "怪化猫 · 江户诸篇",
+        "original": "怪化猫 · 江户诸篇",
+        "seriesId": "mononoke",
+        "seriesName": "怪化猫",
+        "edition": "TV版 · 座敷童子／海坊主／无脸怪／鵺",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-3"
+        ],
+        "date": {
+          "type": "period",
+          "approx": true
+        },
+        "source": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/",
+        "description": "卖药郎行走于参考江户社会的怪异世界。包含座敷童子、海坊主、无脸怪与鵺四篇；同属近世背景，具体年份与四篇之间的年代先后未明确。",
+        "evidence": "参考江户背景归组，不为四篇编造具体年份；本节点是TV版最早可定位的时期组。",
+        "evidenceUrl": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-mono-tv.jpg",
+        "imageSource": "https://lineup.toei-anim.co.jp/upload/save_image/148/story_img_1.jpg",
+        "width": 270,
+        "height": 385
+      }
+    },
+    {
+      "id": "series-mono-bakeneko",
+      "name": "怪化猫 · 化猫",
+      "original": "怪化猫 · 化猫",
+      "seriesId": "mononoke",
+      "seriesName": "怪化猫",
+      "edition": "TV版 · 第10—12集",
+      "cardStyle": "chapter",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-5"
+      ],
+      "date": {
+        "type": "period",
+        "approx": true
+      },
+      "source": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/episode/10/",
+      "description": "故事转入近代城市，一列新开通的地下铁带出被隐瞒的往事。以大正时期为参考定位，具体公历年份尚未明确。",
+      "evidence": "官方剧情明确地下铁与近代城市；暂按大正风貌就近归组，具体公历年份未确认。不同于2006年《怪～ayakashi～》的化猫篇。",
+      "evidenceUrl": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/episode/10/",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "TV动画",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-mono-tv.jpg",
+      "imageSource": "https://lineup.toei-anim.co.jp/upload/save_image/148/story_img_1.jpg",
+      "width": 270,
+      "height": 385,
+      "published": {
+        "id": "series-mono-bakeneko",
+        "name": "怪化猫 · 化猫",
+        "original": "怪化猫 · 化猫",
+        "seriesId": "mononoke",
+        "seriesName": "怪化猫",
+        "edition": "TV版 · 第10—12集",
+        "cardStyle": "chapter",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-5"
+        ],
+        "date": {
+          "type": "period",
+          "approx": true
+        },
+        "source": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/episode/10/",
+        "description": "故事转入近代城市，一列新开通的地下铁带出被隐瞒的往事。以大正时期为参考定位，具体公历年份尚未明确。",
+        "evidence": "官方剧情明确地下铁与近代城市；暂按大正风貌就近归组，具体公历年份未确认。不同于2006年《怪～ayakashi～》的化猫篇。",
+        "evidenceUrl": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/episode/10/",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "TV动画",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-mono-tv.jpg",
+        "imageSource": "https://lineup.toei-anim.co.jp/upload/save_image/148/story_img_1.jpg",
+        "width": 270,
+        "height": 385
+      }
+    },
+    {
+      "id": "series-mono-film1",
+      "name": "怪化猫 剧场版 · 唐伞",
+      "original": "怪化猫 剧场版 · 唐伞",
+      "seriesId": "mononoke",
+      "seriesName": "怪化猫",
+      "edition": "剧场版 · 第1章",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-3"
+      ],
+      "date": {
+        "type": "period",
+        "approx": true
+      },
+      "source": "https://www.mononoke-movie.com/about/?season=1",
+      "description": "独立剧场版三部曲的大奥故事。新人女中进入封闭的大奥，卖药郎追查唐伞怪异。架空的大奥参考江户社会，并非确切历史事件。",
+      "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+      "evidenceUrl": "https://www.mononoke-movie.com/about/?season=1",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "剧场版",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-mono-film1.jpg",
+      "imageSource": "https://www.mononoke-movie.com/assets/img/top/first/visual1.jpg",
+      "width": 1900,
+      "height": 1906,
+      "published": {
+        "id": "series-mono-film1",
+        "name": "怪化猫 剧场版 · 唐伞",
+        "original": "怪化猫 剧场版 · 唐伞",
+        "seriesId": "mononoke",
+        "seriesName": "怪化猫",
+        "edition": "剧场版 · 第1章",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-3"
+        ],
+        "date": {
+          "type": "period",
+          "approx": true
+        },
+        "source": "https://www.mononoke-movie.com/about/?season=1",
+        "description": "独立剧场版三部曲的大奥故事。新人女中进入封闭的大奥，卖药郎追查唐伞怪异。架空的大奥参考江户社会，并非确切历史事件。",
+        "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+        "evidenceUrl": "https://www.mononoke-movie.com/about/?season=1",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "剧场版",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-mono-film1.jpg",
+        "imageSource": "https://www.mononoke-movie.com/assets/img/top/first/visual1.jpg",
+        "width": 1900,
+        "height": 1906
+      }
+    },
+    {
+      "id": "series-mono-film2",
+      "name": "怪化猫 剧场版 · 火鼠",
+      "original": "怪化猫 剧场版 · 火鼠",
+      "seriesId": "mononoke",
+      "seriesName": "怪化猫",
+      "edition": "剧场版 · 第2章",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-3"
+      ],
+      "date": {
+        "type": "period",
+        "approx": true
+      },
+      "source": "https://www.mononoke-movie.com/about/?season=2",
+      "description": "独立剧场版三部曲的大奥故事。唐伞事件之后，新的纷争与火鼠怪异在大奥出现。架空的大奥参考江户社会，并非确切历史事件。",
+      "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+      "evidenceUrl": "https://www.mononoke-movie.com/about/?season=2",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "剧场版",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-mono-film2.jpg",
+      "imageSource": "https://www.mononoke-movie.com/assets/img/top/second/visual2.jpg",
+      "width": 1900,
+      "height": 1906,
+      "published": {
+        "id": "series-mono-film2",
+        "name": "怪化猫 剧场版 · 火鼠",
+        "original": "怪化猫 剧场版 · 火鼠",
+        "seriesId": "mononoke",
+        "seriesName": "怪化猫",
+        "edition": "剧场版 · 第2章",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-3"
+        ],
+        "date": {
+          "type": "period",
+          "approx": true
+        },
+        "source": "https://www.mononoke-movie.com/about/?season=2",
+        "description": "独立剧场版三部曲的大奥故事。唐伞事件之后，新的纷争与火鼠怪异在大奥出现。架空的大奥参考江户社会，并非确切历史事件。",
+        "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+        "evidenceUrl": "https://www.mononoke-movie.com/about/?season=2",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "剧场版",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-mono-film2.jpg",
+        "imageSource": "https://www.mononoke-movie.com/assets/img/top/second/visual2.jpg",
+        "width": 1900,
+        "height": 1906
+      }
+    },
+    {
+      "id": "series-mono-film3",
+      "name": "怪化猫 剧场版 · 蛇神",
+      "original": "怪化猫 剧场版 · 蛇神",
+      "seriesId": "mononoke",
+      "seriesName": "怪化猫",
+      "edition": "剧场版 · 第3章",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-3"
+      ],
+      "date": {
+        "type": "period",
+        "approx": true
+      },
+      "source": "https://www.mononoke-movie.com/about/?season=3",
+      "description": "独立剧场版三部曲的大奥故事。卖药郎继续追寻大奥的秘密，面对蛇神带来的危机。架空的大奥参考江户社会，并非确切历史事件。",
+      "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+      "evidenceUrl": "https://www.mononoke-movie.com/about/?season=3",
+      "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+      "medium": "剧场版",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+      "image": "/covers/series-mono-film3.jpg",
+      "imageSource": "https://www.mononoke-movie.com/assets/img/top/third/visual3-2.jpg",
+      "width": 1900,
+      "height": 2000,
+      "published": {
+        "id": "series-mono-film3",
+        "name": "怪化猫 剧场版 · 蛇神",
+        "original": "怪化猫 剧场版 · 蛇神",
+        "seriesId": "mononoke",
+        "seriesName": "怪化猫",
+        "edition": "剧场版 · 第3章",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-3"
+        ],
+        "date": {
+          "type": "period",
+          "approx": true
+        },
+        "source": "https://www.mononoke-movie.com/about/?season=3",
+        "description": "独立剧场版三部曲的大奥故事。卖药郎继续追寻大奥的秘密，面对蛇神带来的危机。架空的大奥参考江户社会，并非确切历史事件。",
+        "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+        "evidenceUrl": "https://www.mononoke-movie.com/about/?season=3",
+        "notes": "故事年代与播出年份分开；来源与不确定性见年代依据。",
+        "medium": "剧场版",
+        "nature": "架空",
+        "imageKind": "官方宣传图",
+        "status": "published",
+        "updatedAt": "2026-10-05T15:05:23.344597+00:00",
+        "image": "/covers/series-mono-film3.jpg",
+        "imageSource": "https://www.mononoke-movie.com/assets/img/top/third/visual3-2.jpg",
+        "width": 1900,
+        "height": 2000
+      }
     }
   ],
-  "revision": 2
+  "revision": 4,
+  "history": [
+    {
+      "at": "2026-10-05T15:05:23.344597+00:00",
+      "action": "content-update",
+      "name": "系列与篇章：JOJO、怪化猫",
+      "id": "series-20261005"
+    },
+    {
+      "at": "2026-10-05T14:38:45.996497+00:00",
+      "action": "content-update",
+      "name": "补充作品、年代定位及欧美地域",
+      "id": "batch-20261005"
+    }
+  ]
 }

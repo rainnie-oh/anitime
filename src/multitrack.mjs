@@ -42,12 +42,12 @@ export function periodGroups(catalog,region) {
   const related=periods.filter(p=>work.periodIds.includes(p.id));
   const span=dateSpan(work.date);
   const item={work,periods:related,span};
-  if(work.date?.type==='unknown'||(!span&&!related.length)){undated.works.push(item);continue;}
+  if(!span&&!related.length){undated.works.push(item);continue;}
   const period=related.find(p=>span&&span[0]>=p.start&&span[0]<p.end)||related[0]||periods.find(p=>span&&span[0]>=p.start&&span[0]<p.end);
   if(period)groups.find(g=>g.id===period.id).works.push(item);
   else if(span)groups.push({id:'date-'+work.id,region,name:yearLabel(span[0]),start:span[0],end:Math.max(span[0]+1,span[1]),works:[item]});
  }
- for(const group of groups)group.works.sort((a,b)=>(a.span?.[0]??group.start)-(b.span?.[0]??group.start));
+ for(const group of groups)group.works.sort((a,b)=>(a.span?.[0]??(group.start+group.end)/2)-(b.span?.[0]??(group.start+group.end)/2));
  return [...groups,...(undated.works.length?[undated]:[])];
 }
 
@@ -84,4 +84,16 @@ export function collectionGeometry(group,expanded,scrollX) {
  const width=expanded?Math.min(group.width,columns*160+(columns-1)*16):Math.min(group.width,group.works.length*52-12);
  const left=Math.max(group.left,Math.min(scrollX+96,group.left+group.width-width));
  return {left,width,columns};
+}
+
+// Compress gaps while reserving readable room for every series card.
+export function makeSeriesScale(catalog,viewport=1280) {
+ const groups=catalog.regions.flatMap(r=>periodGroups(catalog,r)).filter(g=>g.works.length&&!g.undated);
+ if(!groups.length)return makeScale(catalog);
+ const ticks=[...new Set(groups.flatMap(g=>[g.start,g.end]))].sort((a,b)=>a-b);
+ const widths=ticks.slice(1).map((end,i)=>Math.max(80,...groups.filter(g=>g.start<=ticks[i]&&g.end>=end).map(g=>(g.works.length*156+24)*(end-ticks[i])/(g.end-g.start))));
+ const factor=Math.max(1,(viewport-144)/widths.reduce((a,b)=>a+b,0));
+ const positions=[72];widths.forEach(w=>positions.push(positions.at(-1)+w*factor));
+ const interpolate=(value,from,to)=>{let i=0;while(i<from.length-2&&value>from[i+1])i++;return to[i]+(value-from[i])/(from[i+1]-from[i])*(to[i+1]-to[i]);};
+ return {ticks,x:y=>interpolate(y,ticks,positions),yearAt:x=>Math.round(interpolate(x,positions,ticks)),end:positions.at(-1),width:Math.max(viewport,positions.at(-1)+72)};
 }

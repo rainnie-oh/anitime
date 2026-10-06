@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {seriesFields} from '../src/series.mjs';
 import path from 'node:path';
 import {randomBytes,scryptSync,timingSafeEqual} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
@@ -52,6 +53,8 @@ export function createCMS({directory=path.join(root,'.cms')}={}){
      if(!old)fail('作品不存在',404);w={...old};if(action==='trash')w.status='trash';if(action==='restore'){w.status='draft';w.published=null;}if(action==='unpublish'){w.status='draft';w.published=null;}
     }else{
      const fields=['name','original','regions','periodIds','date','source','description','medium','nature','image','imageSource','width','height','evidenceUrl','evidence','notes'];w=Object.fromEntries(fields.map(k=>[k,input.work[k]]));
+     try{Object.assign(w,seriesFields(input.work));}catch(e){fail(e.message);}
+     if(w.seriesId&&db.works.some(x=>x.id!==old?.id&&x.seriesId===w.seriesId&&x.seriesName!==w.seriesName))fail('同一系列标识应使用相同的系列名称');
      if(typeof w.name!=='string'||!w.name.trim())fail('请填写中文名');w.name=w.name.trim();if(w.name.includes('|'))fail('作品名不能包含竖线字符');
      for(const k of ['original','source','description','medium','nature','image','imageSource','evidenceUrl','evidence','notes']){if(typeof w[k]!=='string'||w[k].length>10000)fail('字段格式无效');}
      if(db.works.some(x=>x.id!==old?.id&&x.name===w.name))fail('作品名称已存在');

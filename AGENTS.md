@@ -49,3 +49,12 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - Multitrack navigation arrows must reuse the original SVG chevrons (without horizontal shafts), never Unicode text arrows.
 - Period count badges use zero border radius and align to the period text baseline with a small optical correction; avoid vertical-align:middle with mixed font sizes.
+
+## Series timeline
+- Series links sit below card dates and isolate the series; clearing restores the prior browsing position and region. Keep node appearance and interaction consistent in filtered and full views.
+- Separate adaptations/parts with their own posters (including TV versus films). A shared-poster anthology uses a poster at its earliest story era and text nodes for later eras, retaining series identity. Order by story era, not broadcast order.
+- Use approximate period labels for inferred eras; never invent an exact year for placement. Do not connect distant nodes with century-spanning lines.
+
+- Series navigation is inline: the series link becomes 返回 when active; no top filter banner. Multitrack series mode compresses unused years to fit the cards and retains unrelated regions as blurred, faded context. Animate entry/return and restore the prior browsing position.
+
+- Active series has exactly one return link beside the expanded region heading, with its series name. Hide all card and detail series links while filtered. The heading stays independent of horizontal timeline scrolling.
