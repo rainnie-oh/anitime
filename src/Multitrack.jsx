@@ -3,6 +3,7 @@ import {filterSeries} from './series.mjs';
 import {formatDate} from './date.mjs';
 import {makeScale,periodGroups,arrangeGroups,yearLabel,wheelIntent,workCollections,collectionGeometry,makeSeriesScale} from './multitrack.mjs';
 import {WorkDetail} from './WorkDetail.jsx';
+import {resolveAsset} from './asset.mjs';
 import './multitrack.css';
 import './series.css';
 const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -69,7 +70,7 @@ export function Multitrack({catalog}) {
   const work=item.work,portrait=work.height>work.width,chapter=work.cardStyle==='chapter',open=region===focus;
   return <article key={work.id} className={'mt-work '+(chapter?'chapter':portrait?'portrait':'landscape')} data-motion={'work-'+work.id} data-node-style={chapter?'chapter':'poster'}>
    <button className="mt-work-open" data-work={work.id} aria-label={`${work.name}，${formatDate(work.date,item.periods)}${open?'':'，展开'+region}`} title={work.name} onFocus={e=>{const rect=e.currentTarget.getBoundingClientRect(),bounds=tracks.current.getBoundingClientRect();if(rect.right<bounds.left||rect.left>bounds.right)moveTo(Math.max(0,group.left-96));}} onClick={()=>pick(region,item,group)}>
-    {!chapter&&<span className="mt-art"><img src={work.image} alt="" loading="eager" decoding="async"/></span>}
+    {!chapter&&<span className="mt-art"><img src={resolveAsset(work.image)} alt="" loading="eager" decoding="async"/></span>}
     {(open||chapter)&&<span className="mt-caption">{work.edition&&<small>{work.edition}</small>}<b>{work.name}</b><span>{formatDate(work.date,item.periods)}</span></span>}
    </button>
    {open&&!seriesId&&work.seriesId&&<a className="series-link" href={seriesId===work.seriesId?'#timeline':'#series-'+work.seriesId} aria-label={seriesId===work.seriesId?`返回全部作品：${work.name}`:`只看${work.seriesName}系列：${work.name}`} onClick={e=>{e.preventDefault();filterBySeries(work,region);}}>{seriesId===work.seriesId?'返回':`${work.seriesName}系列 ↗`}</a>}
@@ -81,7 +82,7 @@ export function Multitrack({catalog}) {
  const displayWidth=mode==='overview'?overviewWidth:scale.width;
  const displayGroups=region=>mode==='overview'?allGroups[region].map((g,i,list)=>{const left=g.undated?overviewWidth-120:overviewX(g.start);const next=list[i+1];const right=next?(next.undated?overviewWidth-120:overviewX(next.start)):overviewWidth;return {...g,left,width:Math.max(48,Math.min(140,right-left-12)),row:0};}):allGroups[region];
  return <main className={'multitrack '+(mode==='overview'?'mt-overview-mode':'')+(seriesId?' has-series-filter':'')} ref={root}>
-  <header className="mt-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();switchMode('overview');}}><img className="brand-wordmark" src="/brand/anitime-white.svg" alt="ANITIME" width="166" height="48" /></a><nav aria-label="展开地域">{regions.map(region=><button key={region} aria-pressed={region===focus} disabled={!!seriesId&&!visibleCatalog.regions.includes(region)} onClick={()=>choose(region)}>{region}</button>)}</nav><nav aria-label="模式"><button aria-pressed={mode==='overview'} onClick={()=>switchMode('overview')}>OVERVIEW</button><button aria-pressed={mode==='detail'} onClick={()=>switchMode('detail')}>TIMELINE</button></nav></header>
+  <header className="mt-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();switchMode('overview');}}><img className="brand-wordmark" src={resolveAsset('/brand/anitime-white.svg')} alt="ANITIME" width="166" height="48" /></a><nav aria-label="展开地域">{regions.map(region=><button key={region} aria-pressed={region===focus} disabled={!!seriesId&&!visibleCatalog.regions.includes(region)} onClick={()=>choose(region)}>{region}</button>)}</nav><nav aria-label="模式"><button aria-pressed={mode==='overview'} onClick={()=>switchMode('overview')}>OVERVIEW</button><button aria-pressed={mode==='detail'} onClick={()=>switchMode('detail')}>TIMELINE</button></nav></header>
   <div className="mt-context" aria-hidden="true" />
   <>
    <div className="mt-ruler" ref={ruler} onScroll={track} tabIndex={0} aria-label="共享年份尺"><div style={{width:displayWidth}}>{scale.ticks.map((t,i)=><span className={mode==='detail'&&t===focusedTick?'is-focused':''} aria-current={mode==='detail'&&t===focusedTick?'true':undefined} data-motion={'tick-'+t} key={t} style={{left:mode==='overview'?overviewX(t):scale.x(t),visibility:mode==='overview'&&i%4!==0&&i!==scale.ticks.length-1?'hidden':undefined}}>{yearLabel(t)}</span>)}</div></div>
