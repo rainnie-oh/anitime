@@ -113,3 +113,33 @@
 @media(max-width:700px){.mt-ruler,.mt-tracks{margin-inline:0}.mt-lane-heading,.mt-overview-mode .mt-lane-heading{padding-left:20px}.mt-empty{padding-left:20px}}
 .mt-count{border-radius:0}
 .mt-overview-mode .mt-period-heading .mt-count{vertical-align:baseline;position:relative;top:-1px;height:18px;min-width:18px;line-height:16px;padding-inline:4px;display:inline-block;text-align:center}
+
+.mt-work-open{display:block;width:100%;text-align:left}
+.mt-caption small{font-size:9px;font-weight:500;color:#737373}
+.mt-work.chapter{border-top:1px solid #d4d4d4;min-height:100px;padding-top:8px}
+.mt-work.chapter .mt-caption{margin-top:0}
+.mt-work.chapter .mt-caption b{-webkit-line-clamp:unset}
+.compact .mt-work.chapter{width:112px;max-width:112px;flex-basis:112px;min-height:44px;padding-top:4px}
+.compact .chapter .mt-caption small{display:none}
+.compact .chapter .mt-caption{font-size:9px;gap:2px}
+.has-series-filter .mt-context{visibility:visible;overflow:visible}
+.mt-context .series-status{display:flex}
+.mt-context .series-status strong{font-size:14px;letter-spacing:0;color:#111;line-height:1.4}
+.mt-work-viewport{height:clamp(310px,34dvh,340px)}
+@media(max-width:700px){.series-link{min-height:44px}.mt-work-viewport{height:320px}}
+
+/* Series keeps geographic context while compressing unused years. */
+.mt-lane{transition:opacity .42s ease,filter .42s ease}
+.mt-lane.series-muted{opacity:.18;filter:blur(2px);pointer-events:none}
+.has-series-filter .mt-context{visibility:hidden}
+.has-series-filter .mt-work-group{gap:16px}
+.has-series-filter .expanded .mt-work .mt-art{max-height:180px}
+.has-series-filter .mt-work-viewport{height:310px}
+@media(prefers-reduced-motion:reduce){.mt-lane{transition:none}}
+
+.has-series-filter .expanded .mt-lane-heading{padding-right:50px;flex-wrap:wrap;gap:0 12px;min-height:40px}
+.mt-lane-heading .mt-series-name{font-size:11px;color:#737373;letter-spacing:0}
+.mt-lane-heading .series-return{margin-left:auto;margin-top:0;font-size:11px;gap:5px;min-height:40px;white-space:nowrap}
+.series-return svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5}
+@media(max-width:700px){.has-series-filter .expanded .mt-lane-heading{padding-right:20px}.mt-lane-heading .series-return{min-height:44px}}
+@media(max-width:360px){.mt-lane-heading .series-return{flex-basis:100%;margin-left:0}}

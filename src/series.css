@@ -1,0 +1,20 @@
+
+/* Series identity stays stable before and after filtering. */
+.series-link{display:block;min-height:40px;text-align:left;font-size:11px;line-height:1.4;color:#666;padding:7px 0;text-wrap:pretty;transition:color 150ms ease-out}
+.series-link:hover,.series-link[aria-pressed=true]{color:#e53e3e}
+.series-link:focus-visible,.mt-work-open:focus-visible,.series-status button:focus-visible{outline:2px solid #e53e3e;outline-offset:3px}
+.series-status{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:#666}
+.series-status strong{font-size:14px;color:#111;font-weight:600;letter-spacing:0;line-height:1.4}
+.series-status button{min-height:44px;padding:0 12px;color:#e53e3e;font-size:12px;white-space:nowrap}
+.detail-edition{font-size:12px;color:#666;margin-top:12px}
+@media(prefers-reduced-motion:reduce){.series-link{transition:none}}
+
+.single-series-status{position:fixed;z-index:5;top:92px;left:50px;background:#fff;padding:0 8px}
+.single-work-open{display:block;width:100%;text-align:left}
+.single-work-open .caption{display:grid;gap:4px}
+.single-work-open .caption>span,.single-work-open .caption>small{font-size:10px;color:#737373}
+.work.chapter{border-top:1px solid #d4d4d4;padding-top:12px}
+.single-work-open:focus-visible{outline:2px solid #e53e3e;outline-offset:3px}
+@media(max-width:700px){.single-series-status{left:20px;top:105px;max-width:calc(100% - 40px)}}
+
+.series-link{text-decoration:none;display:inline-flex;align-items:center;cursor:pointer}

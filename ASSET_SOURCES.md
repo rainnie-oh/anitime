@@ -46,3 +46,31 @@
 |昭和元禄落语心中|[官方页面](https://www.deen.co.jp/works-archives/rakugo)|[宣传图](https://www.deen.co.jp/deen/wp-content/uploads/2016/01/rakugo-key.png)|
 |大奥|[官方页面](https://www.deen.co.jp/works/oooku)|[宣传图](https://www.deen.co.jp/deen/wp-content/uploads/2023/05/oooku_kv_l_500px.jpg)|
 |窗边的小豆豆|[官方页面](https://shin-ei-animation.jp/works/tottochan/)|[宣传图](https://shin-ei-animation.jp/wp/wp-content/uploads/2023/10/news_231020_eyecatch.jpg)|
+
+## 2026-10-05 CMS 内容补充
+
+- 20世纪电气目录：https://denkimokuroku.jp/_assets_official/images/top/_01-kv1.webp
+- MONSTER（怪物）：https://www.ntv.co.jp/monster/images/og_image.jpg
+- 间谍过家家：https://www.witstudio.co.jp/wordpress/wp-content/uploads/2026/06/spy_mv.jpg
+- 狼与香辛料：https://spicy-wolf.com/assets/images/top/main_photo.jpg
+- 神厨小福贵：https://p2.img.cctvpic.com/imagepic//C27175/ibugu/images/img1305541392002897.jpg
+- 三国演义（动画片）：https://p2.img.cctvpic.com/imagepic//C30893/ibugu/images/img1315968058742152.jpg
+- 秦时明月：https://p1.img.cctvpic.com/photoAlbum/page/performance/img/2013/9/27/1380249122870_697.jpg
+- 冰菓：https://www.kyotoanimation.co.jp/img/works/key_visual/hyouka.jpg
+- 命运石之门：https://kadokawa-animation.jp/wp-content/uploads/2026/04/4007601.jpg
+- 91Days：https://sh-anime.shochiku.co.jp/91days/sp_img/top/mv_normal.jpg
+- 永生之酒：https://www.baccano.jp/img/main_noflash.jpg
+
+## 2026-10-05 系列海报
+
+- pb: https://jojo-portal.com/wp-content/themes/jojo-portal/1st/assets/images/common/index/img_kv_01.jpg?5654550
+- bt: https://jojo-portal.com/wp-content/themes/jojo-portal/1st/assets/images/common/index/img_kv_02.jpg?5654550
+- sc: https://jojo-portal.com/wp-content/themes/jojo-portal/2nd/assets/images/common/index/img_kv.png?4303416
+- du: https://jojo-portal.com/wp-content/themes/jojo-portal/3rd/assets/images/common/index/img_kv.jpg?1494360
+- gw: https://jojo-portal.com/wp-content/themes/jojo-portal/4th/assets/images/common/index/img_kv.jpg?5752453
+- so: https://jojo-portal.com/wp-content/themes/jojo-portal/so/assets/images/common/ogp_06.png
+- sbr: https://jojo-portal.com/wp-content/themes/jojo-portal/sbr/assets/images/common/ogp4.png?20261700
+- mono-tv: https://lineup.toei-anim.co.jp/upload/save_image/148/story_img_1.jpg
+- mono-film1: https://www.mononoke-movie.com/assets/img/top/first/visual1.jpg
+- mono-film2: https://www.mononoke-movie.com/assets/img/top/second/visual2.jpg
+- mono-film3: https://www.mononoke-movie.com/assets/img/top/third/visual3-2.jpg
