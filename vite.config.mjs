@@ -3,7 +3,7 @@ import {cmsPlugin} from "./server/cms.mjs";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: process.env.BASE_URL || './',
+  base: process.env.BASE_URL || '/anitime/',
   build: {
     outDir: "dist/client",
   },
