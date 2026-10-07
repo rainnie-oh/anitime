@@ -214,6 +214,66 @@
       "end": 2026,
       "title": "当代城市与日常",
       "description": "新世纪的欧美社会与城市生活。"
+    },
+    {
+      "id": "cn-sui",
+      "region": "中国",
+      "name": "隋朝",
+      "start": 581,
+      "end": 618,
+      "range": "581—618",
+      "title": "统一与动荡",
+      "description": "隋朝完成统一，隋炀帝时期的大型工程与战争加剧社会动荡。"
+    },
+    {
+      "id": "cn-wuzhou",
+      "region": "中国",
+      "name": "唐・武周",
+      "start": 690,
+      "end": 705,
+      "range": "690—705",
+      "title": "武周与洛阳",
+      "description": "武则天建立武周，洛阳成为政治中心；此处用于相关架空故事的时代定位。"
+    },
+    {
+      "id": "jp-reiwa",
+      "region": "日本",
+      "name": "令和",
+      "start": 2019,
+      "end": 2026,
+      "range": "2019—2026",
+      "title": "当代日本",
+      "description": "当代城市、地方生活与社会记忆交织。"
+    },
+    {
+      "id": "cn-late-ming",
+      "region": "中国",
+      "name": "明末",
+      "start": 1601,
+      "end": 1644,
+      "range": "1601—1644",
+      "title": "明末社会与传奇",
+      "description": "用于明确设定于17世纪明末的故事；导航边界不等于剧情年份。"
+    },
+    {
+      "id": "cn-tang",
+      "region": "中国",
+      "name": "唐代",
+      "start": 618,
+      "end": 907,
+      "range": "618—907",
+      "title": "盛唐气象与时代变迁",
+      "description": "诗歌、都市与边塞共同构成唐代故事的历史背景。"
+    },
+    {
+      "id": "cn-republic",
+      "region": "中国",
+      "name": "民国",
+      "start": 1912,
+      "end": 1949,
+      "range": "1912—1949",
+      "title": "近代城市与社会生活",
+      "description": "近代中国的城市变迁与普通人的生活。"
     }
   ],
   "works": [
@@ -1847,6 +1907,464 @@
       "imageSource": "https://www.mononoke-movie.com/assets/img/top/third/visual3-2.jpg",
       "width": 1900,
       "height": 2000
+    },
+    {
+      "id": "add-biao",
+      "name": "镖人",
+      "original": "镖人",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-sui"
+      ],
+      "date": {
+        "type": "year",
+        "start": 607
+      },
+      "medium": "网络动画",
+      "source": "https://wetv.vip/zh-cn/play/yznc7ghpuuezbgo",
+      "description": "大业三年，镖客刀马行走于西域大漠，接下一趟前往长安的护送任务，卷入乱世纷争。",
+      "evidence": "用户提供607年（大业三年），与作品资料一致；不将动画播出年作为故事年代。",
+      "evidenceUrl": "https://zh.wikipedia.org/wiki/鏢人",
+      "edition": "动画版",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-biao.jpg",
+      "imageSource": "https://vcover-hz-pic.wetvinfo.com/vcover_hz_pic/0/yznc7ghpuuezbgo1730718315560_nzPxbgu-/0",
+      "width": 1908,
+      "height": 1080
+    },
+    {
+      "id": "add-dali",
+      "name": "大理寺日志",
+      "original": "大理寺日志",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-wuzhou"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "medium": "网络动画",
+      "source": "https://www.bilibili.com/bangumi/media/md28227527/",
+      "description": "武明空统治下的洛阳，白猫少卿李饼带领大理寺众人追查奇案，守护心中的正义。",
+      "evidence": "发行方简介写唐朝武明空统治时期；参照武周690—705年定位，未指定某一年。",
+      "evidenceUrl": "https://www.bilibili.com/bangumi/media/md28227527/",
+      "edition": "动画版",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-dali.jpg",
+      "imageSource": "https://i0.hdslb.com/bfs/bangumi/image/08ee22bd12db1c9d8a878c3c6f665bc3f5758fa0.jpg",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "id": "add-suzume",
+      "name": "铃芽之旅",
+      "original": "すずめの戸締まり",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-reiwa"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2023,
+        "month": 9,
+        "day": 25
+      },
+      "medium": "剧场版",
+      "source": "https://suzume-tojimari-movie.jp/",
+      "description": "少女铃芽与闭门师草太相遇，踏上穿越日本、关闭灾厄之门的旅程。",
+      "evidence": "2023年9月25日为主线旅程起点，影片中的文化祭海报、日历及手机日期可互相印证；并非整部故事只发生在一天。",
+      "evidenceUrl": "https://www.gcores.com/articles/163919",
+      "edition": "",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-suzume.jpg",
+      "imageSource": "https://suzume-tojimari-movie.jp/assets/images/ver3/top/v-sp.jpg",
+      "width": 750,
+      "height": 1140
+    },
+    {
+      "id": "add-kurumi",
+      "name": "FX战士久留美",
+      "original": "FX戦士くるみちゃん",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "range",
+        "start": 2014,
+        "end": 2015,
+        "approx": true
+      },
+      "medium": "TV动画",
+      "source": "https://fxkurumi-info.com/",
+      "description": "大学生久留美进入外汇交易市场，试图挽回母亲曾经失去的两千万日元，却面对不断变化的风险与人性。",
+      "evidence": "依用户提供及原作时间线，以约2014—2015年定位；动画官网未直接确认完整改编内容的年份范围。",
+      "evidenceUrl": "https://w.atwiki.jp/aniwotawiki/pages/51907.html",
+      "edition": "TV动画",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-kurumi.jpg",
+      "imageSource": "https://fxkurumi-info.com/assets/img/top/visual/visual1.jpg",
+      "width": 1200,
+      "height": 1200
+    },
+    {
+      "id": "add-digimon",
+      "name": "数码宝贝大冒险",
+      "original": "デジモンアドベンチャー",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1999,
+        "month": 8,
+        "day": 1
+      },
+      "medium": "TV动画",
+      "source": "https://lineup.toei-anim.co.jp/ja/tv/dejimon/",
+      "description": "1999年夏令营中的七名孩子进入数码世界，与各自的数码宝贝伙伴共同冒险。",
+      "evidence": "1999年8月1日为初代TV版冒险起点；与2020年重启版区分。",
+      "evidenceUrl": "https://wikimon.net/Odaiba_Memorial",
+      "edition": "初代TV版（1999版）",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方剧照",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-digimon.jpg",
+      "imageSource": "https://lineup.toei-anim.co.jp/upload/save_image/112/story_img_1.jpg",
+      "width": 556,
+      "height": 402
+    },
+    {
+      "id": "add-atom",
+      "name": "铁臂阿童木",
+      "original": "鉄腕アトム",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2003,
+        "month": 4,
+        "day": 7
+      },
+      "medium": "TV动画",
+      "source": "https://tezukaosamu.net/jp/anime/30.html",
+      "description": "拥有十万马力的少年机器人阿童木，在人类与机器人的世界中追求理解与和平。以原作设定的诞生日作为时间定位。",
+      "evidence": "手塚官方原作页明确2003年4月7日为阿童木诞生日；该日期是原作参考事件，不代表1963版每集的剧情日期。",
+      "evidenceUrl": "https://tezukaosamu.net/jp/manga/291.html",
+      "edition": "1963版 · 原作诞生日定位",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方剧照",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-atom.jpg",
+      "imageSource": "https://tezukaosamu.net/jp/anime/img/30/a0030_001.jpg",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": "add-mahoyo",
+      "name": "魔法使之夜",
+      "original": "魔法使いの夜",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-6"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1985,
+        "end": 1989,
+        "approx": true
+      },
+      "medium": "剧场版",
+      "source": "https://mahoyo-movie.com/",
+      "description": "山坡上的洋馆住着两位魔女。见习魔法使苍崎青子与久远寺有珠的生活，因为少年静希草十郎的到来而改变。",
+      "evidence": "原作官方明确1980年代后半，转写为约1985—1989年；电影官网未确认确切年份，暂不采用1989单年。",
+      "evidenceUrl": "https://typemoon.com/contents/z4fb2s/",
+      "edition": "剧场动画 · 原作年代参考",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-mahoyo.jpg",
+      "imageSource": "https://mahoyo-movie.com/assets/siteinfo/og_image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "add-kara",
+      "name": "空之境界",
+      "original": "空の境界",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1995,
+        "end": 1999
+      },
+      "medium": "剧场版",
+      "source": "https://www.karanokyoukai.com/",
+      "description": "两仪式与黑桐干也在一连串异常事件中相遇、分离与重逢，追索生死之间的边界。",
+      "evidence": "官方放送故事介绍列1995年初遇及1999年2月事件；本条收录主线七章，不含《未来福音》的后续年代。",
+      "evidenceUrl": "https://www.karanokyoukai.com/onair/index.html",
+      "edition": "剧场版 · 主线七章",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:00:00+08:00",
+      "image": "/covers/eight-kara.jpg",
+      "imageSource": "https://www.karanokyoukai.com/img/main/a1.jpg",
+      "width": 608,
+      "height": 857
+    },
+    {
+      "id": "add-six-xia",
+      "name": "中华小子",
+      "original": "中华小子",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-late-ming"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "medium": "TV动画",
+      "source": "https://shaoer.cntv.cn/chinacartoon/zhonghuaxiaozi/videopage/index.shtml",
+      "description": "明朝末年，少林寺的三名少年踏上对抗黑狐王的冒险之旅。",
+      "evidence": "央视简介明确十七世纪、明朝末年；时期边界用于导航，不代表剧情起止年份。",
+      "evidenceUrl": "https://shaoer.cntv.cn/chinacartoon/zhonghuaxiaozi/videopage/index.shtml",
+      "edition": "中法合拍",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:45:45.222437+00:00",
+      "image": "/covers/six-xia.jpg",
+      "imageSource": "https://p4.img.cctvpic.com/imagepic/donghua/C17023/ibugu/images/img1266916518815638.jpg",
+      "width": 130,
+      "height": 180
+    },
+    {
+      "id": "add-six-wei",
+      "name": "围棋少年",
+      "original": "围棋少年",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-late-ming"
+      ],
+      "date": {
+        "type": "period"
+      },
+      "medium": "TV动画",
+      "source": "https://big5.cctv.com/gate/big5/www.cctv.cn/program/dhc/topic/cartoon/C14451/20050817/100836.shtml",
+      "description": "明末江南，围棋少年江流儿在乱世中磨炼棋艺，结识伙伴，追寻棋道。",
+      "evidence": "央视故事简介明确明朝末年，未确认具体年份。",
+      "evidenceUrl": "https://big5.cctv.com/gate/big5/www.cctv.cn/program/dhc/topic/cartoon/C14451/20050817/100836.shtml",
+      "edition": "2005年动画版",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方剧照",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:45:45.222437+00:00",
+      "image": "/covers/six-wei.jpg",
+      "imageSource": "https://www.cctv.cn/program/dhc/topic/cartoon/C14451/20050817/images/100836_d1.jpg",
+      "width": 500,
+      "height": 400
+    },
+    {
+      "id": "add-six-chang",
+      "name": "长安三万里",
+      "original": "长安三万里",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-tang"
+      ],
+      "date": {
+        "type": "century",
+        "start": 8
+      },
+      "medium": "剧场版",
+      "source": "https://www.qdsnqwhg.cn/html/ysxs/2023/0726/2636.html",
+      "description": "高适回望与李白相识相交的往事，在盛唐至安史之乱前后的山河中，重现诗人们的人生与理想。",
+      "evidence": "根据高适、李白生平及盛唐至安史之乱前后的叙事定位8世纪；回忆横跨数十年，不以某次战役年份代表全片。",
+      "evidenceUrl": "https://www.qdsnqwhg.cn/html/ysxs/2023/0726/2636.html",
+      "edition": "",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "真实历史背景",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:45:45.222437+00:00",
+      "image": "/covers/six-chang.jpg",
+      "imageSource": "https://www.guanhai.com.cn/a/10001/202307/25c0084ff679496b56febb5259a073bd.jpeg",
+      "width": 1080,
+      "height": 1725
+    },
+    {
+      "id": "add-six-san",
+      "name": "三毛流浪记",
+      "original": "三毛流浪记",
+      "regions": [
+        "中国"
+      ],
+      "periodIds": [
+        "cn-republic"
+      ],
+      "date": {
+        "type": "range",
+        "start": 1930,
+        "end": 1944,
+        "approx": true
+      },
+      "medium": "TV动画",
+      "source": "https://shaoer.cntv.cn/program/sanmao/index.shtml",
+      "description": "20世纪30年代至40年代初的上海，孤儿三毛在街头艰难谋生，仍保有善良与对生活的希望。",
+      "evidence": "用户指定30年代至40年代初；央视简介明确旧中国三十年代上海。约1930—1944为年代范围的宽泛转写，不是剧情已证实起止年。",
+      "evidenceUrl": "https://shaoer.cntv.cn/program/sanmao/index.shtml",
+      "edition": "2006年央视动画版",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "真实历史背景",
+      "imageKind": "官方剧照",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:45:45.222437+00:00",
+      "image": "/covers/six-san.jpg",
+      "imageSource": "https://p2.img.cctvpic.com/nettv/children/program/sanmao/20101104/images/100937_1288863897186.jpg",
+      "width": 176,
+      "height": 220
+    },
+    {
+      "id": "add-six-canaan",
+      "name": "CANAAN",
+      "original": "CANAAN",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "century",
+        "start": 21
+      },
+      "medium": "TV动画",
+      "source": "https://www.pa-works.jp/works/canaan/",
+      "description": "少女雇佣兵迦南与摄影师大泽玛丽亚在上海重逢，卷入围绕反恐峰会展开的阴谋。",
+      "evidence": "故事发生于《428》事件两年后，主要舞台为上海；未确认绝对年份。按现代背景暂置平成，2009年为播出年，不当作故事年。",
+      "evidenceUrl": "https://www.pa-works.jp/works/canaan/",
+      "edition": "",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:45:45.222437+00:00",
+      "image": "/covers/six-canaan.jpg",
+      "imageSource": "https://www.pa-works.jp/wp-content/uploads/2010/07/02_cannan-209x300.jpg",
+      "width": 209,
+      "height": 300
+    },
+    {
+      "id": "add-six-kong",
+      "name": "派对咖孔明",
+      "original": "パリピ孔明",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-reiwa"
+      ],
+      "date": {
+        "type": "century",
+        "start": 21
+      },
+      "medium": "TV动画",
+      "source": "https://paripikoumei-anime.com/tv/story/",
+      "description": "诸葛孔明转生到万圣节的现代涩谷，成为歌手月见英子的军师，以谋略助她追逐音乐梦想。",
+      "evidence": "动画官方仅明确现代涩谷与万圣节，未明确平成或令和。暂置令和附近，卡片保留21世纪；不引用真人剧2023年的设定。",
+      "evidenceUrl": "https://paripikoumei-anime.com/tv/story/",
+      "edition": "TV动画版",
+      "seriesId": "",
+      "seriesName": "",
+      "cardStyle": "poster",
+      "nature": "架空",
+      "imageKind": "官方宣传图",
+      "status": "published",
+      "updatedAt": "2026-10-07T00:45:45.222437+00:00",
+      "image": "/covers/six-kong.jpg",
+      "imageSource": "https://paripikoumei-anime.com/tv/assets/images/top/kv.jpg?220115",
+      "width": 1280,
+      "height": 1630
     }
   ]
 }
