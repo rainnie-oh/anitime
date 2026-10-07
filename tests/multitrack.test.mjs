@@ -22,3 +22,12 @@ test('series scale fits its cards and keeps chronological coordinates',async()=>
  assert.ok(scale.x(1912)-scale.x(1868)>=80);
  assert.ok(scale.x(1926)>scale.x(1912));
 });
+
+test('approved typography reserves close year labels and keeps custom cards inside periods',()=>{
+ const data={...catalog,periods:[...catalog.periods,{id:'short',region:'中国',start:1899,end:1900}]};
+ const scale=makeScale(data,{minTickGap:132,cardWidth:164,cardGap:12});
+ assert.ok(scale.x(1900)-scale.x(1899)>=132);
+ assert.equal(scale.yearAt(scale.x(1899)),1899);
+ const group={left:100,width:510,works:Array.from({length:20},()=>({}))};
+ for(const scrollX of [0,300,900]){const box=collectionGeometry(group,true,scrollX,{cardWidth:164,cardGap:12});assert.ok(box.left>=100);assert.ok(box.left+box.width<=610);}
+});

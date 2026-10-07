@@ -58,3 +58,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Series navigation is inline: the series link becomes 返回 when active; no top filter banner. Multitrack series mode compresses unused years to fit the cards and retains unrelated regions as blurred, faded context. Animate entry/return and restore the prior browsing position.
 
 - Active series has exactly one return link beside the expanded region heading, with its series name. Hide all card and detail series links while filtered. The heading stays independent of horizontal timeline scrolling.
+
+## Swiss design experiment
+- Use Swiss principles to improve alignment, typographic hierarchy and purposeful spacing, while preserving timeline browsing and informative artwork. Do not impose a twelve-column grid on historical coordinates or enlarge every gap indiscriminately.
+- Approved multitrack styling: top whitespace 64px, period type 14px, caption type 12px, year type 42px, time width 105%, artwork 164px and collection gap 12px. Dashboard is removed; both Timeline and Overview share these fixed tokens. Keep functional state feedback and readable year spacing.
+- This experiment belongs to the multitrack-view worktree and /multitrack page. Preserve shared year coordinates, compact baselines, bounded collections, outlined brand wordmark and quiet hover feedback.
+
+## Work detail layouts
+- Default to the restored original work detail. Offer only one alternate layout based on the supplied Mavericks reference: a white editorial sheet on gray surround, title at left center, date/description bottom left, image center, region/period/media upper right, century center right and source link bottom right. The prior four-layout experiment was rejected; do not reuse it.
