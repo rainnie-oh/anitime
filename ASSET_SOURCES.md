@@ -74,3 +74,21 @@
 - mono-film1: https://www.mononoke-movie.com/assets/img/top/first/visual1.jpg
 - mono-film2: https://www.mononoke-movie.com/assets/img/top/second/visual2.jpg
 - mono-film3: https://www.mononoke-movie.com/assets/img/top/third/visual3-2.jpg
+
+## Additional China and Japan works
+- biao: https://vcover-hz-pic.wetvinfo.com/vcover_hz_pic/0/yznc7ghpuuezbgo1730718315560_nzPxbgu-/0
+- dali: https://i0.hdslb.com/bfs/bangumi/image/08ee22bd12db1c9d8a878c3c6f665bc3f5758fa0.jpg
+- suzume: https://suzume-tojimari-movie.jp/assets/images/ver3/top/v-sp.jpg
+- kurumi: https://fxkurumi-info.com/assets/img/top/visual/visual1.jpg
+- digimon: https://lineup.toei-anim.co.jp/upload/save_image/112/story_img_1.jpg
+- atom: https://tezukaosamu.net/jp/anime/img/30/a0030_001.jpg
+- mahoyo: https://mahoyo-movie.com/assets/siteinfo/og_image.jpg
+- kara: https://www.karanokyoukai.com/img/main/a1.jpg
+
+## Six additional animation works (2026-10-07)
+- 中华小子: https://p4.img.cctvpic.com/imagepic/donghua/C17023/ibugu/images/img1266916518815638.jpg (source: https://shaoer.cntv.cn/chinacartoon/zhonghuaxiaozi/videopage/index.shtml)
+- 围棋少年: https://www.cctv.cn/program/dhc/topic/cartoon/C14451/20050817/images/100836_d1.jpg (source: https://big5.cctv.com/gate/big5/www.cctv.cn/program/dhc/topic/cartoon/C14451/20050817/100836.shtml)
+- 长安三万里: https://www.guanhai.com.cn/a/10001/202307/25c0084ff679496b56febb5259a073bd.jpeg (source: https://www.qdsnqwhg.cn/html/ysxs/2023/0726/2636.html)
+- 三毛流浪记: https://p2.img.cctvpic.com/nettv/children/program/sanmao/20101104/images/100937_1288863897186.jpg (source: https://shaoer.cntv.cn/program/sanmao/index.shtml)
+- CANAAN: https://www.pa-works.jp/wp-content/uploads/2010/07/02_cannan-209x300.jpg (source: https://www.pa-works.jp/works/canaan/)
+- 派对咖孔明: https://paripikoumei-anime.com/tv/assets/images/top/kv.jpg?220115 (source: https://paripikoumei-anime.com/tv/story/)

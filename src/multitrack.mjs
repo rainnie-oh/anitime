@@ -8,7 +8,7 @@ export function dateSpan(date = {}) {
  if (date.type === 'century') { const start=n>0?(n-1)*100+1:n*100; return [start,start+99]; }
  return null;
 }
-export function makeScale(catalog) {
+export function makeScale(catalog,{minTickGap=72,cardWidth=160,cardGap=16}={}) {
  const occupied=catalog.regions.flatMap(region=>periodGroups(catalog,region)).filter(g=>!g.undated&&g.works.length);
  const start=occupied.length?Math.min(...occupied.map(g=>g.start)):Math.min(...catalog.periods.map(p=>p.start));
  const values=catalog.periods.flatMap(p=>[p.start,p.end]).filter(year=>year>=start);
@@ -19,12 +19,12 @@ export function makeScale(catalog) {
  // Period boundaries set the rhythm; exact work dates interpolate within it.
  const ticks=[...new Set([...catalog.periods.flatMap(p=>[p.start,p.end]).filter(year=>year>=start),boundaries[0],boundaries.at(-1)])].filter(Number.isFinite).sort((a,b)=>a-b);
  const positions=[96];
- for(let i=1;i<ticks.length;i++)positions.push(positions[i-1]+Math.max(72,Math.min(420,(ticks[i]-ticks[i-1])*1.4)));
+ for(let i=1;i<ticks.length;i++)positions.push(positions[i-1]+Math.max(minTickGap,Math.min(420,(ticks[i]-ticks[i-1])*1.4)));
  // Reserve enough horizontal room to read period collections; every region shares these widths.
  for(const region of catalog.regions){for(const group of periodGroups(catalog,region)){
   if(group.undated||!group.works.length)continue;
   const a=ticks.indexOf(group.start),b=ticks.indexOf(group.end);if(a<0||b<=a)continue;
-  const required=Math.min(3,group.works.length)*176+32;
+  const required=Math.min(3,group.works.length)*(cardWidth+cardGap)+32;
   const missing=required-(positions[b]-positions[a]);
   if(missing>0)for(let i=a+1;i<positions.length;i++)positions[i]+=missing*Math.min(1,(i-a)/(b-a));
  }}
@@ -79,9 +79,9 @@ export function workCollections(groups) {
  return collections;
 }
 
-export function collectionGeometry(group,expanded,scrollX) {
- const columns=expanded?Math.min(3,group.works.length,Math.max(1,Math.floor(group.width/176))):1;
- const width=expanded?Math.min(group.width,columns*160+(columns-1)*16):Math.min(group.width,group.works.length*52-12);
+export function collectionGeometry(group,expanded,scrollX,{cardWidth=160,cardGap=16}={}) {
+ const columns=expanded?Math.min(3,group.works.length,Math.max(1,Math.floor((group.width+cardGap)/(cardWidth+cardGap)))):1;
+ const width=expanded?Math.min(group.width,columns*cardWidth+(columns-1)*cardGap):Math.min(group.width,group.works.length*52-12);
  const left=Math.max(group.left,Math.min(scrollX+96,group.left+group.width-width));
  return {left,width,columns};
 }
