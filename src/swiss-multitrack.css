@@ -13,3 +13,10 @@
 @media(max-width:700px){.mt-design-workspace .multitrack{grid-template-rows:100px var(--design-axis) 62px minmax(0,1fr) 72px}.mt-design-workspace .mt-overview-mode{grid-template-rows:100px var(--design-axis) 62px minmax(0,1fr) 0}.mt-design-workspace nav{font-size:11px;gap:12px}.mt-design-workspace .mt-footer{padding-inline:20px}}
 
 .mt-design-workspace .expanded .mt-period-heading p{font-size:max(11px,calc(var(--design-text) - 2px))}
+/* Keep the name and count on one shared baseline, with room reserved in the scale. */
+.mt-design-workspace .mt-overview-mode .mt-period-heading{overflow:visible;padding:0}
+.mt-design-workspace .mt-overview-mode .mt-period-heading h3{display:flex;align-items:baseline;gap:8px;white-space:nowrap;text-wrap:nowrap;line-height:1.5}
+.mt-design-workspace .mt-overview-mode .mt-period-heading h3>span{flex-shrink:0}
+.mt-design-workspace .mt-overview-mode .mt-period-heading i{display:block;align-self:center;margin:0;width:6px;height:6px;flex-shrink:0}
+.mt-design-workspace .mt-overview-mode .mt-period-heading .mt-count{position:static;display:inline-block;flex-shrink:0;margin:0;vertical-align:baseline}
+.mt-design-workspace .mt-overview-mode .mt-lane-heading{background:#fff;z-index:3}
