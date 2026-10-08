@@ -1,8 +1,8 @@
 {
   "regions": [
     "日本",
-    "欧美",
-    "中国"
+    "歐美",
+    "中國"
   ],
   "periods": [
     {
@@ -12,38 +12,38 @@
       "range": "794—1185",
       "start": 794,
       "end": 1185,
-      "title": "贵族文化与武家兴起",
-      "description": "京都成为文化中心，宫廷文学与审美留下长久影响。"
+      "title": "貴族文化與武家興起",
+      "description": "京都成爲文化中心，宮廷文學與審美留下長久影響。"
     },
     {
       "id": "jp-1",
       "region": "日本",
-      "name": "镰仓・南北朝",
+      "name": "鎌倉・南北朝",
       "range": "1185—1392",
       "start": 1185,
       "end": 1392,
-      "title": "从幕府到乱世",
-      "description": "武家政权建立，朝廷与幕府之间的权力关系不断变化。"
+      "title": "從幕府到亂世",
+      "description": "武家政權建立，朝廷與幕府之間的權力關係不斷變化。"
     },
     {
       "id": "jp-2",
       "region": "日本",
-      "name": "战国",
+      "name": "戰國",
       "range": "1467—1603",
       "start": 1467,
       "end": 1603,
-      "title": "群雄并起的时代",
-      "description": "地方势力竞逐，战争与交流改变了日本社会。"
+      "title": "羣雄並起的時代",
+      "description": "地方勢力競逐，戰爭與交流改變了日本社會。"
     },
     {
       "id": "jp-3",
       "region": "日本",
-      "name": "江户",
+      "name": "江戶",
       "range": "1603—1868",
       "start": 1603,
       "end": 1868,
-      "title": "武家秩序与市井生活",
-      "description": "长期的幕府统治之下，城市文化发展；幕末迎来新的转折。"
+      "title": "武家秩序與市井生活",
+      "description": "長期的幕府統治之下，城市文化發展；幕末迎來新的轉折。"
     },
     {
       "id": "jp-4",
@@ -52,8 +52,8 @@
       "range": "1868—1912",
       "start": 1868,
       "end": 1912,
-      "title": "旧时代的余音，新时代的开端",
-      "description": "明治维新后，社会制度与日常生活快速改变。武士、铁路与西洋文化在这里相遇。"
+      "title": "舊時代的餘音，新時代的開端",
+      "description": "明治維新後，社會制度與日常生活快速改變。武士、鐵路與西洋文化在這裏相遇。"
     },
     {
       "id": "jp-5",
@@ -62,8 +62,8 @@
       "range": "1912—1926",
       "start": 1912,
       "end": 1926,
-      "title": "传统与现代交叠",
-      "description": "都市文化与新的生活方式兴起，传统社会仍延续着自己的节奏。"
+      "title": "傳統與現代交疊",
+      "description": "都市文化與新的生活方式興起，傳統社會仍延續着自己的節奏。"
     },
     {
       "id": "jp-6",
@@ -72,8 +72,8 @@
       "range": "1926—1989",
       "start": 1926,
       "end": 1989,
-      "title": "战争、日常与重建",
-      "description": "从战前都市到战争中的生活，再到战后的社会变化。"
+      "title": "戰爭、日常與重建",
+      "description": "從戰前都市到戰爭中的生活，再到戰後的社會變化。"
     },
     {
       "id": "jp-7",
@@ -82,158 +82,158 @@
       "range": "1989—2019",
       "start": 1989,
       "end": 2019,
-      "title": "熟悉的现代，也成为历史",
-      "description": "从1990年代的餐饮文化，到新世纪的都市生活。"
+      "title": "熟悉的現代，也成爲歷史",
+      "description": "從1990年代的餐飲文化，到新世紀的都市生活。"
     },
     {
       "id": "eu-0",
-      "region": "欧美",
-      "name": "维京时代",
-      "range": "约793—1066",
+      "region": "歐美",
+      "name": "維京時代",
+      "range": "約793—1066",
       "start": 793,
       "end": 1066,
-      "title": "北海连接的世界",
-      "description": "航海、贸易与征服，将北欧与英格兰联系在一起。"
+      "title": "北海連接的世界",
+      "description": "航海、貿易與征服，將北歐與英格蘭聯繫在一起。"
     },
     {
       "id": "eu-1",
-      "region": "欧美",
-      "name": "中世纪晚期",
+      "region": "歐美",
+      "name": "中世紀晚期",
       "range": "1337—1487",
       "start": 1337,
       "end": 1487,
-      "title": "王权、教会与战争",
-      "description": "百年战争与玫瑰战争，塑造法国和英格兰的权力格局。"
+      "title": "王權、教會與戰爭",
+      "description": "百年戰爭與玫瑰戰爭，塑造法國和英格蘭的權力格局。"
     },
     {
       "id": "eu-2",
-      "region": "欧美",
-      "name": "文艺复兴",
-      "range": "约1400—1600",
+      "region": "歐美",
+      "name": "文藝復興",
+      "range": "約1400—1600",
       "start": 1400,
       "end": 1600,
-      "title": "画坊里的新世界",
-      "description": "艺术、城市与赞助制度交织，佛罗伦萨成为重要文化中心。"
+      "title": "畫坊裏的新世界",
+      "description": "藝術、城市與贊助制度交織，佛羅倫薩成爲重要文化中心。"
     },
     {
       "id": "eu-3",
-      "region": "欧美",
-      "name": "法国革命前后",
+      "region": "歐美",
+      "name": "法國革命前後",
       "range": "1701—1799",
       "start": 1701,
       "end": 1799,
-      "title": "宫廷与街头",
-      "description": "旧制度的阶层秩序，在社会变革中遭遇冲击。"
+      "title": "宮廷與街頭",
+      "description": "舊制度的階層秩序，在社會變革中遭遇衝擊。"
     },
     {
       "id": "eu-4",
-      "region": "欧美",
-      "name": "19世纪",
+      "region": "歐美",
+      "name": "19世紀",
       "range": "1801—1900",
       "start": 1801,
       "end": 1900,
-      "title": "工业城市中的相遇",
-      "description": "英国维多利亚时代与法国城市生活并行发展。"
+      "title": "工業城市中的相遇",
+      "description": "英國維多利亞時代與法國城市生活並行發展。"
     },
     {
       "id": "eu-5",
-      "region": "欧美",
-      "name": "战间期",
+      "region": "歐美",
+      "name": "戰間期",
       "range": "1918—1939",
       "start": 1918,
       "end": 1939,
-      "title": "两场战争之间",
-      "description": "两次世界大战之间的欧美社会，包括美国禁酒令时期的城市与帮派。"
+      "title": "兩場戰爭之間",
+      "description": "兩次世界大戰之間的歐美社會，包括美國禁酒令時期的城市與幫派。"
     },
     {
       "id": "cn-warring",
-      "region": "中国",
-      "name": "战国",
+      "region": "中國",
+      "name": "戰國",
       "range": "前453—前221",
       "start": -453,
       "end": -221,
-      "title": "诸侯与统一",
-      "description": "战国时期，各国之间的竞争与交流推动社会变革。"
+      "title": "諸侯與統一",
+      "description": "戰國時期，各國之間的競爭與交流推動社會變革。"
     },
     {
       "id": "cn-qing",
-      "region": "中国",
+      "region": "中國",
       "name": "清朝",
       "range": "1644—1912",
       "start": 1644,
       "end": 1912,
-      "title": "晚清社会与日常",
-      "description": "传统社会与近代变革交织。"
+      "title": "晚清社會與日常",
+      "description": "傳統社會與近代變革交織。"
     },
     {
       "id": "eu-coldwar",
-      "region": "欧美",
-      "name": "冷战时期",
+      "region": "歐美",
+      "name": "冷戰時期",
       "range": "1947—1991",
       "start": 1947,
       "end": 1991,
-      "title": "东西对立下的日常",
-      "description": "战后国际格局与1960—1970年代的社会风貌。"
+      "title": "東西對立下的日常",
+      "description": "戰後國際格局與1960—1970年代的社會風貌。"
     },
     {
       "id": "eu-modern",
-      "region": "欧美",
-      "name": "20世纪末",
+      "region": "歐美",
+      "name": "20世紀末",
       "range": "1980—2000",
       "start": 1980,
       "end": 2000,
-      "title": "冷战落幕与社会转型",
-      "description": "德国统一前后，中欧社会在旧秩序与新生活之间转变。"
+      "title": "冷戰落幕與社會轉型",
+      "description": "德國統一前後，中歐社會在舊秩序與新生活之間轉變。"
     },
     {
       "id": "cn-qin",
-      "region": "中国",
+      "region": "中國",
       "name": "秦代",
       "range": "前221—前207",
       "start": -221,
       "end": -207,
-      "title": "统一帝国与诸子百家",
-      "description": "秦统一六国之后的帝国秩序与秦末动荡。"
+      "title": "統一帝國與諸子百家",
+      "description": "秦統一六國之後的帝國秩序與秦末動盪。"
     },
     {
       "id": "cn-three",
-      "region": "中国",
-      "name": "汉末・三国",
+      "region": "中國",
+      "name": "漢末・三國",
       "range": "184—280",
       "start": 184,
       "end": 280,
-      "title": "群雄逐鹿与三国归晋",
-      "description": "从汉末群雄兴起到魏蜀吴鼎立，再到西晋统一。"
+      "title": "羣雄逐鹿與三國歸晉",
+      "description": "從漢末羣雄興起到魏蜀吳鼎立，再到西晉統一。"
     },
     {
       "id": "eu-21",
-      "region": "欧美",
-      "name": "21世纪",
+      "region": "歐美",
+      "name": "21世紀",
       "range": "2001—2026",
       "start": 2001,
       "end": 2026,
-      "title": "当代城市与日常",
-      "description": "新世纪的欧美社会与城市生活。"
+      "title": "當代城市與日常",
+      "description": "新世紀的歐美社會與城市生活。"
     },
     {
       "id": "cn-sui",
-      "region": "中国",
+      "region": "中國",
       "name": "隋朝",
       "start": 581,
       "end": 618,
       "range": "581—618",
-      "title": "统一与动荡",
-      "description": "隋朝完成统一，隋炀帝时期的大型工程与战争加剧社会动荡。"
+      "title": "統一與動盪",
+      "description": "隋朝完成統一，隋煬帝時期的大型工程與戰爭加劇社會動盪。"
     },
     {
       "id": "cn-wuzhou",
-      "region": "中国",
+      "region": "中國",
       "name": "唐・武周",
       "start": 690,
       "end": 705,
       "range": "690—705",
-      "title": "武周与洛阳",
-      "description": "武则天建立武周，洛阳成为政治中心；此处用于相关架空故事的时代定位。"
+      "title": "武周與洛陽",
+      "description": "武則天建立武周，洛陽成爲政治中心；此處用於相關架空故事的時代定位。"
     },
     {
       "id": "jp-reiwa",
@@ -242,44 +242,44 @@
       "start": 2019,
       "end": 2026,
       "range": "2019—2026",
-      "title": "当代日本",
-      "description": "当代城市、地方生活与社会记忆交织。"
+      "title": "當代日本",
+      "description": "當代城市、地方生活與社會記憶交織。"
     },
     {
       "id": "cn-late-ming",
-      "region": "中国",
+      "region": "中國",
       "name": "明末",
       "start": 1601,
       "end": 1644,
       "range": "1601—1644",
-      "title": "明末社会与传奇",
-      "description": "用于明确设定于17世纪明末的故事；导航边界不等于剧情年份。"
+      "title": "明末社會與傳奇",
+      "description": "用於明確設定於17世紀明末的故事；導航邊界不等於劇情年份。"
     },
     {
       "id": "cn-tang",
-      "region": "中国",
+      "region": "中國",
       "name": "唐代",
       "start": 618,
       "end": 907,
       "range": "618—907",
-      "title": "盛唐气象与时代变迁",
-      "description": "诗歌、都市与边塞共同构成唐代故事的历史背景。"
+      "title": "盛唐氣象與時代變遷",
+      "description": "詩歌、都市與邊塞共同構成唐代故事的歷史背景。"
     },
     {
       "id": "cn-republic",
-      "region": "中国",
-      "name": "民国",
+      "region": "中國",
+      "name": "民國",
       "start": 1912,
       "end": 1949,
       "range": "1912—1949",
-      "title": "近代城市与社会生活",
-      "description": "近代中国的城市变迁与普通人的生活。"
+      "title": "近代城市與社會生活",
+      "description": "近代中國的城市變遷與普通人的生活。"
     }
   ],
   "works": [
     {
       "id": "work-0",
-      "name": "源氏物语千年纪",
+      "name": "源氏物語千年紀",
       "original": "源氏物語千年紀 Genji",
       "regions": [
         "日本"
@@ -293,20 +293,20 @@
       "image": "/covers/00.webp",
       "imageSource": "https://www.tms-e.co.jp/media/002/202006/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E%E5%8D%83%E5%B9%B4%E7%B4%80Genji_636101_201202_113255.jpg",
       "source": "https://www.tms-e.co.jp/alltitles/2000s/636101.html",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 450,
       "height": 252,
-      "medium": "TV动画",
-      "description": "以平安时代的贵族社会与宫廷生活为背景，改编自《源氏物语》。具体故事年份未明确。",
+      "medium": "TV動畫",
+      "description": "以平安時代的貴族社會與宮廷生活爲背景，改編自《源氏物語》。具體故事年份未明確。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-1",
-      "name": "平家物语",
+      "name": "平家物語",
       "original": "平家物語",
       "regions": [
         "日本"
@@ -320,20 +320,20 @@
       "image": "/covers/01.webp",
       "imageSource": "https://www.asmik-ace.co.jp/wp-content/uploads/2021/12/heike_main_WEBtateolNEW-1.jpg",
       "source": "https://www.asmik-ace.co.jp/works/lineup/7351/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 516,
       "height": 729,
-      "medium": "TV动画",
-      "description": "以12世纪后半的源平争乱为背景，透过平家的兴衰呈现贵族与武家秩序的转折。",
+      "medium": "TV動畫",
+      "description": "能預見未來的少女琵琶，被平重盛帶進平家。她看見這個家族將走向滅亡，卻仍與平家的孩子們一起長大。\n\n故事跨越12世紀後半的源平爭亂。當時朝廷仍在京都，武士勢力逐漸掌權；平家的興衰，也是日本從貴族政治走向武家政治的一段轉折。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-2",
-      "name": "擅长逃跑的殿下",
+      "name": "擅長逃跑的殿下",
       "original": "逃げ上手の若君",
       "regions": [
         "日本"
@@ -348,13 +348,13 @@
       "image": "/covers/02.webp",
       "imageSource": "https://nigewaka.run/ogp.png",
       "source": "https://nigewaka.run/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "故事始于1333年镰仓幕府覆灭之际，围绕北条时行展开，结合史实人物与戏剧化演绎。",
+      "medium": "TV動畫",
+      "description": "1333年，鎌倉幕府在足利高氏的背叛下覆滅。北條時行逃過追殺，在諏訪賴重的幫助下前往信濃，召集夥伴，尋找奪回鎌倉的機會。最拿手的本事，就是逃跑。\n\n時行與諏訪賴重都是歷史人物，故事則把鎌倉末期至南北朝的政權鬥爭，改編成帶有誇張演出與喜劇的少年冒險。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
@@ -375,20 +375,20 @@
       "image": "/covers/03.webp",
       "imageSource": "https://www.aniplex.co.jp/SYS/CONTENTS/keyvisual_inuoh/w700",
       "source": "https://www.aniplex.co.jp/lineup/inuoh/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 700,
       "height": 990,
-      "medium": "剧场版",
-      "description": "以室町时代的猿乐与琵琶法师文化为背景，将平家传说与虚构的音乐演出交织。",
+      "medium": "劇場版",
+      "description": "室町時代的京都，外貌異於常人的犬王遇見失明的琵琶法師友魚。兩人一個跳舞、一個彈唱，把無人傳唱的平家故事搬上舞臺。\n\n犬王取材自歷史上的猿樂藝人。猿樂是能樂發展的重要前身；片中用近乎搖滾現場的演出，重新想像當年的表演。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-4",
-      "name": "信长协奏曲",
+      "name": "信長協奏曲",
       "original": "信長協奏曲",
       "regions": [
         "日本"
@@ -402,13 +402,13 @@
       "image": "/covers/04.webp",
       "imageSource": "https://www.fujitv.com/wp-content/uploads/2018/07/a_14_02.jpg",
       "source": "https://www.fujitv.com/animation/nobunaga-concerto/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 380,
       "height": 261,
-      "medium": "TV动画",
-      "description": "现代高中生穿越至1549年的战国日本，与织田信长交换身份，重新走进历史事件。",
+      "medium": "TV動畫",
+      "description": "不愛讀書的高中生三郎穿越到1549年，遇見與自己長得一模一樣的織田信長。真正的信長身體虛弱，索性把身份交給他，讓一個歷史沒學好的現代人接手戰國人生。\n\n故事沿著織田家的崛起展開，串起戰國時代的人物與事件。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
@@ -429,20 +429,20 @@
       "image": "/covers/05.webp",
       "imageSource": "https://www.ytv.co.jp/inuyasha/ogp.jpg",
       "source": "https://www.ytv.co.jp/inuyasha/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "现代少女与战国时代相连，妖怪传说与乡村、武士社会并置；具体年份未明确。",
+      "medium": "TV動畫",
+      "description": "日暮戈薇跌進家中的古井，來到戰國時代，與半妖犬夜叉一起尋找散落的四魂之玉碎片。旅途中有妖怪、追兵，也有兩個人沒完沒了的拌嘴。\n\n戰亂中的村落、武士與寺院構成故事舞臺。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-6",
-      "name": "多罗罗",
+      "name": "多羅羅",
       "original": "どろろ",
       "regions": [
         "日本"
@@ -456,20 +456,20 @@
       "image": "/covers/06.webp",
       "imageSource": "https://dororo-anime.com/og3.jpg",
       "source": "https://dororo-anime.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "以战国乱世为背景，通过武士、村落与战乱中的民众描绘时代；包含大量妖怪与虚构设定。",
+      "medium": "TV動畫",
+      "description": "父親為了領地的繁榮，將百鬼丸的身體獻給魔神。被遺棄的百鬼丸長大後，與小偷多羅羅同行，逐一討回自己的身體。\n\n故事放在戰亂不斷的日本中世末期。除了妖怪，也寫到村落被毀、饑荒與流民，以及領主的利益如何落到普通人身上。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-7",
-      "name": "薄樱鬼",
+      "name": "薄櫻鬼",
       "original": "薄桜鬼",
       "regions": [
         "日本"
@@ -483,20 +483,20 @@
       "image": "/covers/07.webp",
       "imageSource": "https://www.deen.co.jp/deen/wp-content/uploads/2016/01/hakuouki-key.jpg",
       "source": "https://www.deen.co.jp/works-archives/hakuouki",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 370,
       "height": 500,
-      "medium": "TV动画",
-      "description": "以幕末京都与新选组为背景，将真实组织和历史人物融入带有幻想元素的故事。",
+      "medium": "TV動畫",
+      "description": "幕末，雪村千鶴來到京都尋找失蹤的父親，意外撞見新選組不願外人知道的祕密，自此與這群武士一同行動。\n\n新選組是幕府末年在京都活動的武裝組織，站在幕府一方。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-8",
-      "name": "甲贺忍法帖",
+      "name": "甲賀忍法帖",
       "original": "バジリスク ～甲賀忍法帖～",
       "regions": [
         "日本"
@@ -511,20 +511,20 @@
       "image": "/covers/08.webp",
       "imageSource": "https://www.gonzo.co.jp/uploads/2014/06/0501_img5.jpg",
       "source": "https://www.gonzo.co.jp/works/basilisk/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 250,
       "height": 354,
-      "medium": "TV动画",
-      "description": "以1614年德川政权下的继承纷争为故事设定，围绕甲贺与伊贺忍者展开虚构叙事。",
+      "medium": "TV動畫",
+      "description": "1614年，德川家康為決定繼承人，讓甲賀與伊賀忍者各派十人廝殺。兩族的勝負，成了決定德川家後繼者的賭注。\n\n故事借江戶初期的權力鬥爭，寫兩族忍者被迫相殺的悲劇。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-9",
-      "name": "浪客剑心",
+      "name": "浪客劍心",
       "original": "るろうに剣心",
       "regions": [
         "日本"
@@ -539,20 +539,20 @@
       "image": "/covers/09.webp",
       "imageSource": "https://rurouni-kenshin.com/assets2/img/img_kv03.jpg",
       "source": "https://rurouni-kenshin.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 990,
       "height": 1400,
-      "medium": "TV动画",
-      "description": "主线始于明治十一年（1878年），在维新后的东京描绘旧武士与新社会的相遇。",
+      "medium": "TV動畫",
+      "description": "明治十一年（1878年），緋村劍心帶著逆刃刀來到東京，遇見經營劍術道場的神谷薰。曾是幕末「拔刀齋」的他已立下不殺之誓，舊日的敵人卻陸續找上門。\n\n維新推翻了幕府，武士身分與佩刀特權也逐漸消失。劍心與道場夥伴的生活，就在這個舊秩序退場、新社會尚未安定的時期展開。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-10",
-      "name": "黄金神威",
+      "name": "黃金神威",
       "original": "ゴールデンカムイ",
       "regions": [
         "日本"
@@ -566,20 +566,20 @@
       "image": "/covers/10.webp",
       "imageSource": "https://www.kamuy-anime.com/core_sys/images/main/top/main_img26.jpg",
       "source": "https://www.kamuy-anime.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1036,
       "height": 1400,
-      "medium": "TV动画",
-      "description": "以日俄战争后的北海道为主要舞台，涉及退伍军人、阿伊努文化与当地自然环境。",
+      "medium": "TV動畫",
+      "description": "故事發生在日俄戰爭後的北海道。退伍軍人杉元佐一與阿伊努少女阿席莉帕結伴，尋找藏金，與軍人、越獄犯爭奪線索。嚴肅的劇情中穿插了男同笑話和抽象劇情。\n\n除了尋寶，也能認識阿伊努人的狩獵、飲食與信仰。阿伊努是北海道等地的原住民族，有自己的語言與文化。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-11",
-      "name": "鬼灭之刃",
+      "name": "鬼滅之刃",
       "original": "鬼滅の刃",
       "regions": [
         "日本"
@@ -593,20 +593,20 @@
       "image": "/covers/11.webp",
       "imageSource": "https://kimetsu.com/anime/portal/assets/img/img_kv_1.jpg",
       "source": "https://kimetsu.com/anime/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 990,
       "height": 1400,
-      "medium": "TV动画",
-      "description": "以大正时代日本为背景，传统山村与近代城市并存；具体年份未明确，鬼与鬼杀队为虚构设定。",
+      "medium": "TV動畫",
+      "description": "炭治郎下山賣炭後回家，發現家人遇害，妹妹禰豆子也變成了鬼。他加入鬼殺隊，一邊尋找讓妹妹變回人的方法，一邊追查殺害家人的鬼。\n\n故事發生在大正時代，山村、鐵路與近代都市同時存在。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-12",
-      "name": "大正处女御伽话",
+      "name": "大正處女御伽話",
       "original": "大正オトメ御伽話",
       "regions": [
         "日本"
@@ -620,20 +620,20 @@
       "image": "/covers/12.webp",
       "imageSource": "https://taisho-otome.com/wp/wp-content/themes/taisho-otome/img/common/img_ogp.jpg",
       "source": "https://taisho-otome.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "故事从大正十年（1921年）展开，以千叶的乡间生活呈现当时的家庭观念与社会风貌。",
+      "medium": "TV動畫",
+      "description": "大正十年（1921年），珠彥因車禍失去母親與右手的活動能力，被父親送到千葉的鄉間獨居。夕月被買來做他的妻子，兩人從陌生開始，一起過日子。\n\n故事裡的婚姻安排與家族權威，是理解兩人處境的重要背景；日常雖然溫柔，起點並不輕鬆。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-13",
-      "name": "起风了",
+      "name": "起風了",
       "original": "風立ちぬ",
       "regions": [
         "日本"
@@ -647,20 +647,20 @@
       "image": "/covers/13.webp",
       "imageSource": "https://www.ghibli.jp/images/kazetachinu.jpg",
       "source": "https://www.ghibli.jp/works/kazetachinu/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 750,
       "height": 1061,
-      "medium": "剧场版",
-      "description": "以大正至昭和战前的日本为背景，结合飞机设计者堀越二郎的经历与虚构情节。",
+      "medium": "劇場版",
+      "description": "以大正至昭和戰前的日本為背景，從飛機設計者堀越二郎的經歷展開故事。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-14",
-      "name": "萤火虫之墓",
+      "name": "螢火蟲之墓",
       "original": "火垂るの墓",
       "regions": [
         "日本"
@@ -675,20 +675,20 @@
       "image": "/covers/14.webp",
       "imageSource": "https://www.ghibli.jp/images/hotarunohaka.jpg",
       "source": "https://www.ghibli.jp/works/hotarunohaka/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 750,
       "height": 1061,
-      "medium": "剧场版",
-      "description": "以1945年战争末期的神户及周边为背景，描绘空袭与物资匮乏下的日常生活。",
+      "medium": "劇場版",
+      "description": "1945年，神戶遭到空襲，清太與妹妹節子失去母親和住處。投靠親戚後，兄妹又搬進防空洞，試著靠自己生活。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-15",
-      "name": "在这世界的角落",
+      "name": "在這世界的角落",
       "original": "この世界の片隅に",
       "regions": [
         "日本"
@@ -702,20 +702,20 @@
       "image": "/covers/15.webp",
       "imageSource": "https://konosekai.jp/wp-content/themes/konosekai/images/ogp.jpg",
       "source": "https://konosekai.jp/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 600,
       "height": 315,
-      "medium": "剧场版",
-      "description": "以1930至1940年代的广岛与吴市为舞台，从普通家庭的衣食住行观察战争中的社会。",
+      "medium": "劇場版",
+      "description": "以1930至1940年代的廣島與吳市爲舞臺，從普通家庭的衣食住行觀察戰爭中的社會。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-16",
-      "name": "代号D机关",
+      "name": "代號D機關",
       "original": "ジョーカー・ゲーム",
       "regions": [
         "日本"
@@ -729,20 +729,20 @@
       "image": "/covers/16.webp",
       "imageSource": "https://jokergame.jp/imgs/topimg_sp.jpg",
       "source": "https://jokergame.jp/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 640,
       "height": 916,
-      "medium": "TV动画",
-      "description": "故事始于1937年的日本，以虚构的间谍培训组织连接战前国际关系与情报活动。",
+      "medium": "TV動畫",
+      "description": "故事始於1937年的日本，圍繞間諜培訓組織展開，連接戰前國際關係與情報活動。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-17",
-      "name": "来自虞美人之坡",
+      "name": "來自虞美人之坡",
       "original": "コクリコ坂から",
       "regions": [
         "日本"
@@ -757,20 +757,20 @@
       "image": "/covers/17.webp",
       "imageSource": "https://www.ghibli.jp/images/kokurikozaka.jpg",
       "source": "https://www.ghibli.jp/works/kokurikozaka/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 750,
       "height": 1061,
-      "medium": "剧场版",
-      "description": "以1963年的横滨为舞台，在东京奥运会前夕的社会变化中描绘高中生的校园生活。",
+      "medium": "劇場版",
+      "description": "以1963年的橫濱爲舞臺，在東京奧運會前夕的社會變化中描繪高中生的校園生活。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-18",
-      "name": "坂道上的阿波罗",
+      "name": "坂道上的阿波羅",
       "original": "坂道のアポロン",
       "regions": [
         "日本"
@@ -784,13 +784,13 @@
       "image": "/covers/18.webp",
       "imageSource": "https://www.noitamina-apollon.com/images/thum.jpg",
       "source": "https://www.noitamina-apollon.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 300,
       "height": 400,
-      "medium": "TV动画",
-      "description": "以1966年起的长崎县佐世保为背景，将爵士乐、港口城市与高中生活联系起来。",
+      "medium": "TV動畫",
+      "description": "1966年，西見薰轉學到長崎縣佐世保，認識川淵千太郎與迎律子。原本彈古典鋼琴的他，被千太郎帶進爵士樂，也第一次有了想一起演奏的朋友。\n\n佐世保是港口與基地城市。唱片、爵士樂和高中生的日常，讓故事留下了1960年代日本地方城市的樣子。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
@@ -812,20 +812,20 @@
       "image": "/covers/19.webp",
       "imageSource": "https://tetsujan.com/core_sys/images/others/ogp.jpg",
       "source": "https://tetsujan.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "原作以1995年的日本为舞台，围绕中华料理与厨师较量展开；动画为漫画改编，收录为现代年代锚点。",
+      "medium": "TV動畫",
+      "description": "1995年的東京銀座，秋山醬來到五番町飯莊，堅持「料理就是勝負」，與相信「料理就是心意」的五番町霧子較量。一起來看癲公癲婆做飯。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-20",
-      "name": "咒术回战 第一季",
+      "name": "咒術回戰 第一季",
       "original": "呪術廻戦",
       "regions": [
         "日本"
@@ -840,27 +840,27 @@
       "image": "/covers/20.webp",
       "imageSource": "https://www.mbs.jp/jujutsukaisen/images/og-image_260108_new.jpg",
       "source": "https://www.mbs.jp/jujutsukaisen/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "2018年，虎杖悠仁吞下两面宿傩的手指，进入东京都立咒术高等专门学校。此条目仅收录第一季主线。",
+      "medium": "TV動畫",
+      "description": "2018年，虎杖悠仁為了救學長姐，吞下兩面宿儺的手指，成為詛咒的容器。他進入東京咒術高專，與伏黑惠、釘崎野薔薇一起執行除咒任務。\n\n本條目收錄第一季主線。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "seriesId": "jujutsu-kaisen",
-      "seriesName": "咒术回战",
+      "seriesName": "咒術回戰",
       "edition": "TV版 · 第一季",
       "cardStyle": "poster"
     },
     {
       "id": "work-21",
-      "name": "冰海战记",
+      "name": "冰海戰記",
       "original": "ヴィンランド・サガ",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-0"
@@ -871,23 +871,23 @@
       "image": "/covers/21.webp",
       "imageSource": "https://vinlandsaga.jp/ogp.jpg?v2",
       "source": "https://vinlandsaga.jp/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "以11世纪初的北欧与英格兰为主要舞台，结合维京人的航海、战争与真实历史人物。",
+      "medium": "TV動畫",
+      "description": "父親被殺後，托爾芬跟隨仇人阿謝拉特的隊伍，在戰場上長大，只求有一天親手復仇。\n\n故事從11世紀初的北歐與英格蘭展開，維京人的航海、傭兵活動與王位爭奪都有歷史背景。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-22",
-      "name": "纯洁的玛利亚",
+      "name": "純潔的瑪利亞",
       "original": "純潔のマリア",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-1"
@@ -898,23 +898,23 @@
       "image": "/covers/22.webp",
       "imageSource": "https://junketsu-maria.tv/img/ogp.jpg",
       "source": "https://junketsu-maria.tv/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 200,
       "height": 200,
-      "medium": "TV动画",
-      "description": "以百年战争末期的法国为背景，将佣兵、教会与村落生活融入魔女题材的幻想叙事。",
+      "medium": "TV動畫",
+      "description": "百年戰爭末期，住在法國的魔女瑪利亞看不慣人們打仗，直接用魔法阻止戰鬥。這不只惹怒了靠戰爭吃飯的人，也引來天界干涉。\n\n英法之間的長期戰爭是歷史背景，傭兵、教會與村民各有立場。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-23",
-      "name": "蔷薇王的葬列",
+      "name": "薔薇王的葬列",
       "original": "薔薇王の葬列",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-1"
@@ -925,23 +925,23 @@
       "image": "/covers/23.webp",
       "imageSource": "https://baraou-anime.com/images/ogimage.jpg",
       "source": "https://baraou-anime.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "以15世纪后半英格兰的玫瑰战争为背景，改编莎士比亚相关戏剧，对人物与历史有所重构。",
+      "medium": "TV動畫",
+      "description": "15世紀後半，英格蘭的約克與蘭開斯特兩大家族爭奪王位。理查渴望父親登上王座，自己也一步步捲進權力鬥爭。\n\n這段內戰後來被稱為玫瑰戰爭。作品改編莎士比亞相關戲劇，對理查三世等人物的身世、關係與經歷有大幅重構。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-24",
-      "name": "阿尔蒂",
+      "name": "阿爾蒂",
       "original": "アルテ",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-2"
@@ -952,23 +952,23 @@
       "image": "/covers/24.webp",
       "imageSource": "https://www.ytv.co.jp/arte/images/sp/img_mv.jpg",
       "source": "https://www.ytv.co.jp/arte/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 750,
       "height": 902,
-      "medium": "TV动画",
-      "description": "以16世纪初佛罗伦萨为舞台，通过画坊学徒生活呈现文艺复兴时期的艺术与社会秩序。",
+      "medium": "TV動畫",
+      "description": "16世紀初的佛羅倫薩，貴族少女阿爾蒂想當畫家，卻連進畫坊當學徒都處處碰壁。她離開家，跟隨畫家雷歐，從最基礎的工作學起。\n\n文藝復興的藝術創作依靠畫坊、委託人與師徒制度。故事也寫到性別與出身如何限制一個人能做的工作。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-25",
-      "name": "凡尔赛玫瑰",
+      "name": "凡爾賽玫瑰",
       "original": "ベルサイユのばら",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-3"
@@ -979,23 +979,23 @@
       "image": "/covers/25.webp",
       "imageSource": "https://www.tms-e.co.jp/media/002/202006/%E3%83%98%E3%82%99%E3%83%AB%E3%82%B5%E3%82%A4%E3%83%A6%E3%81%AE%E3%81%AF%E3%82%99%E3%82%89_028101.jpg",
       "source": "https://www.tms-e.co.jp/alltitles/1970s/028101.html",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 450,
       "height": 252,
-      "medium": "TV动画",
-      "description": "以18世纪法国王室与革命前后的社会为背景，将虚构人物与玛丽·安托瓦内特等历史人物并置。",
+      "medium": "TV動畫",
+      "description": "被當作男孩養大的奧斯卡，成為守護法國王室的軍人。她與瑪麗·安託瓦內特、安德烈等人的關係，隨著宮廷內外的變化走向不同方向。\n\n舞臺是18世紀的法國，從凡爾賽宮延伸到革命前後。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-26",
-      "name": "黑执事",
+      "name": "黑執事",
       "original": "黒執事",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-4"
@@ -1006,23 +1006,23 @@
       "image": "/covers/26.webp",
       "imageSource": "https://www.kuroshitsuji.tv/emeraldwitch/assets/og/ogp2.jpg",
       "source": "https://www.kuroshitsuji.tv/emeraldwitch/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "以19世纪末的英国为背景，维多利亚时代的阶级与城市生活融合恶魔等幻想元素。",
+      "medium": "TV動畫",
+      "description": "19世紀末的英國，少年伯爵與惡魔締結契約，讓對方以執事的身分協助復仇，也替女王處理棘手的事件。\n\n貴族宅邸、僕役制度與倫敦街頭取材自維多利亞時代。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-27",
-      "name": "忧国的莫里亚蒂",
+      "name": "憂國的莫里亞蒂",
       "original": "憂国のモリアーティ",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-4"
@@ -1033,23 +1033,23 @@
       "image": "/covers/27.webp",
       "imageSource": "https://moriarty-anime.com/5W6pzO2m/wp-content/themes/moriani_tpl_v7/assets/img/ogp_01.png",
       "source": "https://moriarty-anime.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "以19世纪末英国为背景，通过侦探题材呈现阶级差异、帝国秩序与伦敦城市生活。",
+      "medium": "TV動畫",
+      "description": "在階級森嚴的19世紀末英國，莫里亞蒂以犯罪計畫挑戰貴族秩序，也與偵探福爾摩斯展開較量。\n\n作品把福爾摩斯的宿敵放到主角位置，借用維多利亞時代的倫敦與階級矛盾，重新編寫人物關係和案件。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-28",
-      "name": "英国恋物语艾玛",
+      "name": "英國戀物語艾瑪",
       "original": "英國戀物語エマ",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-4"
@@ -1060,23 +1060,23 @@
       "image": "/covers/28.webp",
       "imageSource": "https://www.emma-victorian.com/images/main_image.jpg",
       "source": "https://www.emma-victorian.com/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 380,
       "height": 530,
-      "medium": "TV动画",
-      "description": "以19世纪末英国为舞台，从女仆与上流社会的生活呈现维多利亚时代的阶级与礼俗。",
+      "medium": "TV動畫",
+      "description": "19世紀末的倫敦，女僕艾瑪與富家青年威廉相識，逐漸相愛。但對威廉的家庭來說，兩人的身分差距足以阻止這段感情。\n\n故事細寫女僕的工作、上流家庭的禮俗與婚姻選擇，呈現維多利亞時代生活中難以跨越的階級界線。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-29",
-      "name": "异国迷宫的十字路口",
+      "name": "異國迷宮的十字路口",
       "original": "異国迷路のクロワーゼ",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-4"
@@ -1090,23 +1090,23 @@
       "image": "/covers/29.webp",
       "imageSource": "https://image2.b-ch.com/ttl2/3035/3035001a.jpg?impolicy=fitin&ww=960&hh=540",
       "source": "https://www.b-ch.com/titles/3035/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 960,
       "height": 540,
-      "medium": "TV动画",
-      "description": "19世纪后半叶，日本少女汤音来到巴黎，在拱廊街的铁器店生活与工作。街区日常展现了东西方文化的相遇。",
+      "medium": "TV動畫",
+      "description": "日本少女湯音來到巴黎，在拱廊街的鐵器店生活與工作。從餐桌禮儀到待人方式，每天都有彼此不習慣的小事。\n\n故事放在19世紀後半葉：日本與西方往來增加，歐洲也對日本文化產生興趣；老拱廊街則面臨新商業形態的競爭。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
-      "evidence": "19世纪后半叶；按用户提供的约1870—1880年代作为参考范围。",
+      "evidence": "19世紀後半葉；按用戶提供的約1870—1880年代作爲參考範圍。",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "work-30",
-      "name": "红猪",
+      "name": "紅豬",
       "original": "紅の豚",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-5"
@@ -1118,13 +1118,13 @@
       "image": "/covers/30.webp",
       "imageSource": "https://www.ghibli.jp/images/porco.jpg",
       "source": "https://www.ghibli.jp/works/porco/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 750,
       "height": 1061,
-      "medium": "剧场版",
-      "description": "以1920年代的亚得里亚海为舞台，结合战后飞行文化与意大利社会背景；角色与部分地理设定为虚构。",
+      "medium": "劇場版",
+      "description": "1920年代的亞得里亞海，長著豬臉的飛行員波魯克靠追捕空賊維生。空賊們找來美國飛行員與他較量，他則帶著受損的飛行艇回到義大利修理。\n\n飛行艇、退伍飛行員與戰後社會構成背景。故事也保留了一戰留下的記憶。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
@@ -1134,7 +1134,7 @@
       "name": "GOSICK",
       "original": "GOSICK -ゴシック-",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-5"
@@ -1146,20 +1146,20 @@
       "image": "/covers/31.webp",
       "imageSource": "https://www.tv-tokyo.co.jp/anime/gosick/images/top_main.jpg",
       "source": "https://www.tv-tokyo.co.jp/anime/gosick/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1000,
       "height": 822,
-      "medium": "TV动画",
-      "description": "故事设于1924年、欧洲虚构国家苏瓦尔；时代有明确锚点，国家与主要事件为架空设定。",
+      "medium": "TV動畫",
+      "description": "1924年，日本留學生久城一彌來到歐洲小國蘇瓦爾，在學園圖書館的塔頂遇見維多利加。她能從零碎線索推理真相，兩人因此捲入接連發生的怪談與案件。\n\n故事帶有兩次世界大戰之間歐洲的氛圍。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
       "evidence": "",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00"
     },
     {
       "id": "cms-kaigyoku",
-      "name": "咒术回战 怀玉·玉折",
+      "name": "咒術回戰 懷玉·玉折",
       "original": "呪術廻戦 懐玉・玉折",
       "regions": [
         "日本"
@@ -1174,24 +1174,24 @@
       "image": "/covers/20.webp",
       "imageSource": "https://www.mbs.jp/jujutsukaisen/images/og-image_260108_new.jpg",
       "source": "https://www.mbs.jp/jujutsukaisen/",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "width": 1200,
       "height": 630,
-      "medium": "TV动画",
-      "description": "故事回到2006年，学生时代的五条悟与夏油杰执行星浆体护卫任务。作为独立回忆篇收录，结尾延伸至2007年。",
+      "medium": "TV動畫",
+      "description": "故事回到2006年，學生時代的五條悟與夏油傑執行星漿體護衛任務。作爲獨立回憶篇收錄，結尾延伸至2007年。",
       "status": "published",
-      "nature": "真实历史背景",
+      "nature": "真實歷史背景",
       "evidenceUrl": "",
-      "evidence": "以2006年作为怀玉篇起点；玉折尾声延伸至2007年。",
+      "evidence": "以2006年作爲懷玉篇起點；玉折尾聲延伸至2007年。",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "seriesId": "jujutsu-kaisen",
-      "seriesName": "咒术回战",
-      "edition": "TV版 · 怀玉·玉折",
+      "seriesName": "咒術回戰",
+      "edition": "TV版 · 懷玉·玉折",
       "cardStyle": "poster"
     },
     {
       "id": "cms-denki",
-      "name": "20世纪电气目录",
+      "name": "20世紀電氣目錄",
       "original": "二十世紀電氣目録 -ユーレカ・エヴリカ-",
       "regions": [
         "日本"
@@ -1206,12 +1206,12 @@
         "approx": true
       },
       "source": "https://denkimokuroku.jp/",
-      "description": "故事发生在20世纪初、走上另一条发展道路的京都。蒸汽技术占据主导，少年少女追寻电气时代的梦想。",
-      "medium": "TV动画",
-      "nature": "架空历史",
-      "imageKind": "官方宣传图",
+      "description": "故事發生在20世紀初、走上另一條發展道路的京都。蒸汽技術佔據主導，少年少女追尋電氣時代的夢想。",
+      "medium": "TV動畫",
+      "nature": "架空歷史",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://denkimokuroku.jp/",
-      "evidence": "动画官网明确为20世纪初的架空京都；按明治附近归组，不将小说年代直接当作动画确切年份。",
+      "evidence": "動畫官網明確爲20世紀初的架空京都；按明治附近歸組，不將小說年代直接當作動畫確切年份。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-denki.webp",
@@ -1224,7 +1224,7 @@
       "name": "MONSTER（怪物）",
       "original": "MONSTER",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-modern"
@@ -1235,12 +1235,12 @@
         "end": 1998
       },
       "source": "https://www.ntv.co.jp/monster/",
-      "description": "浦泽直树原作。1986年，天马贤三在西德杜塞尔多夫救下少年约翰；九年后，追查连环杀人案的旅程扩展至德国与捷克。",
-      "medium": "TV动画",
-      "nature": "真实历史背景",
-      "imageKind": "官方宣传图",
+      "description": "浦澤直樹原作。1986年，天馬賢三在西德杜塞爾多夫救下少年約翰；九年後，追查連環殺人案的旅程擴展至德國與捷克。",
+      "medium": "TV動畫",
+      "nature": "真實歷史背景",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://www.ntv.co.jp/monster/",
-      "evidence": "1986年序章，1995年起为主要追踪线，尾声至1998年；不是动画播出年份。",
+      "evidence": "1986年序章，1995年起爲主要追蹤線，尾聲至1998年；不是動畫播出年份。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-monster.jpg",
@@ -1250,10 +1250,10 @@
     },
     {
       "id": "cms-spy",
-      "name": "间谍过家家",
+      "name": "間諜過家家",
       "original": "SPY×FAMILY",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-coldwar"
@@ -1265,12 +1265,12 @@
         "approx": true
       },
       "source": "https://spy-family.net/",
-      "description": "间谍、杀手与读心少女组成临时家庭，生活在东西对立的架空国家。社会风貌参考20世纪60至70年代的冷战欧洲。",
-      "medium": "TV动画",
+      "description": "間諜黃昏為了接近任務目標，找來妻子與女兒，組成臨時家庭。他不知道妻子是殺手；會讀心的女兒倒是全知道，還得努力把入學考試考過。\n\n東西兩國彼此對立，社會風貌參考1960至1970年代的冷戰歐洲。",
+      "medium": "TV動畫",
       "nature": "架空世界",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://spy-family.net/",
-      "evidence": "依用户提供的1960—1970年代参考范围录入；并非作品内公历确切年份。",
+      "evidence": "依用戶提供的1960—1970年代參考範圍錄入；並非作品內公曆確切年份。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-spy.jpg",
@@ -1280,10 +1280,10 @@
     },
     {
       "id": "cms-wolf",
-      "name": "狼与香辛料",
+      "name": "狼與香辛料",
       "original": "狼と香辛料",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-1"
@@ -1294,12 +1294,12 @@
         "approx": true
       },
       "source": "https://spicy-wolf.com/",
-      "description": "行商人罗伦斯与狼神赫萝穿行于城镇和商路。架空世界参考中世纪中北欧的贸易、货币与教会社会。",
-      "medium": "TV动画",
+      "description": "行商人羅倫斯在馬車的麥堆裡發現一位長著狼耳與尾巴的少女。自稱豐收之神的赫蘿想回北方故鄉，於是與他結伴，沿途做生意、算匯率，也試探彼此的心意。\n\n故事的商路與城鎮參考中世紀中北歐。貨幣、信用、商會與教會如何影響交易，是故事的重要部分。",
+      "medium": "TV動畫",
       "nature": "架空世界",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://spicy-wolf.com/",
-      "evidence": "依用户提供的14世纪前后作为参考时代；不是现实欧洲的确切年代。",
+      "evidence": "依用戶提供的14世紀前後作爲參考時代；不是現實歐洲的確切年代。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-wolf.jpg",
@@ -1309,10 +1309,10 @@
     },
     {
       "id": "cms-xiaofugui",
-      "name": "神厨小福贵",
+      "name": "神廚小福貴",
       "original": "神厨小福贵",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-qing"
@@ -1323,12 +1323,12 @@
         "approx": true
       },
       "source": "https://tv.cctv.com/2013/03/13/VIDA1363161490356157.shtml",
-      "description": "清朝末年，小福贵为营救爷爷苦练厨艺，进入宫廷并卷入政治纷争。故事以八国联军侵华、慈禧出逃前后为背景，含虚构情节。",
-      "medium": "TV动画",
-      "nature": "历史演绎",
-      "imageKind": "官方宣传图",
+      "description": "爺爺被捲入御膳下毒案，小福貴為了救他苦練廚藝，想集齊御賜的金廚具。進了御膳房才發現，菜做得好，未必就能解決眼前的事。\n\n故事以清末八國聯軍侵華、慈禧出逃前後為背景。",
+      "medium": "TV動畫",
+      "nature": "歷史演繹",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://tv.cctv.com/2013/03/13/VIDA1363161490356157.shtml",
-      "evidence": "清末，约1900年前后；仅作故事起点定位，不表示全部情节发生于同一年。",
+      "evidence": "清末，約1900年前後；僅作故事起點定位，不表示全部情節發生於同一年。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-xiaofugui.jpg",
@@ -1338,10 +1338,10 @@
     },
     {
       "id": "cms-sanguo",
-      "name": "三国演义（动画片）",
+      "name": "三國演義（動畫片）",
       "original": "三国演义",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-three"
@@ -1353,12 +1353,12 @@
         "approx": true
       },
       "source": "https://tv.cctv.com/2013/03/13/VIDA1363161129452904.shtml",
-      "description": "2009年中日合制52集动画，改编自罗贯中《三国演义》，讲述汉末群雄至三国归晋的兴亡，包含桃园结义、赤壁之战与诸葛亮北伐等故事。",
-      "medium": "TV动画",
-      "nature": "历史演绎",
-      "imageKind": "官方宣传图",
+      "description": "2009年中日合制52集動畫，改編自羅貫中《三國演義》，講述漢末羣雄至三國歸晉的興亡，包含桃園結義、赤壁之戰與諸葛亮北伐等故事。",
+      "medium": "TV動畫",
+      "nature": "歷史演繹",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://tv.cctv.com/2013/03/13/VIDA1363161129452904.shtml",
-      "evidence": "选用2009年二维动画版；184—280为汉末三国叙事参考范围，并非每集精确起止考证。",
+      "evidence": "選用2009年二維動畫版；184—280爲漢末三國敘事參考範圍，並非每集精確起止考證。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-sanguo.jpg",
@@ -1368,10 +1368,10 @@
     },
     {
       "id": "cms-qin",
-      "name": "秦时明月",
+      "name": "秦時明月",
       "original": "秦时明月",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-qin"
@@ -1383,12 +1383,12 @@
         "approx": true
       },
       "source": "https://donghua.cctv.com/special/qsmy/shouye/",
-      "description": "秦统一六国之后，荆天明随盖聂踏入江湖，与诸子百家及秦帝国势力相遇。以秦代为历史框架，结合武侠、机关术与幻想。",
-      "medium": "TV动画",
-      "nature": "历史幻想",
-      "imageKind": "官方宣传图",
+      "description": "秦統一六國後，蓋聶帶著荊天明逃離追殺。天明在旅途中結識少羽、高月與墨家眾人，逐漸接觸諸子百家和秦帝國之間的衝突。\n\n作品以秦代為歷史框架，加入武俠、機關術與奇幻設定。諸子百家是先秦不同思想流派的統稱，片中的組織與能力則經過重新想像。",
+      "medium": "TV動畫",
+      "nature": "歷史幻想",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://donghua.cctv.com/special/qsmy/shouye/",
-      "evidence": "以秦代前221—前207年为参考背景区间；不是动画主线的确切起止年份。",
+      "evidence": "以秦代前221—前207年爲參考背景區間；不是動畫主線的確切起止年份。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-qin.jpg",
@@ -1411,12 +1411,12 @@
         "start": 2012
       },
       "source": "https://www.kyotoanimation.co.jp/works/hyouka/",
-      "description": "折木奉太郎加入神山高中古典部，与千反田爱瑠等人解开校园日常中的谜团。这里采用动画版的2012年背景。",
-      "medium": "TV动画",
-      "nature": "现代虚构",
-      "imageKind": "官方宣传图",
+      "description": "奉行節能主義的折木奉太郎加入古典部，遇上什麼都想弄明白的千反田愛瑠。四名社員從校園裡的小疑問查起，也翻出了舊社刊《冰菓》背後的往事。\n\n此處採用動畫版的2012年背景。故事主要是日常推理，校園裡留下的舊資料則連接到更早一代學生的經歷。",
+      "medium": "TV動畫",
+      "nature": "現代虛構",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://www.kyotoanimation.co.jp/works/hyouka/",
-      "evidence": "依用户指定的动画版2012年录入，区别于原作的2000年设定。",
+      "evidence": "依用戶指定的動畫版2012年錄入，區別於原作的2000年設定。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-hyouka.jpg",
@@ -1426,7 +1426,7 @@
     },
     {
       "id": "cms-steins",
-      "name": "命运石之门",
+      "name": "命運石之門",
       "original": "STEINS;GATE",
       "regions": [
         "日本"
@@ -1441,12 +1441,12 @@
         "day": 28
       },
       "source": "https://kadokawa-animation.jp/lineup/steinsgate",
-      "description": "2010年7月28日，秋叶原的一场发表会与一封短信成为世界线变化的起点。冈部伦太郎与伙伴们卷入时间机器实验。",
-      "medium": "TV动画",
-      "nature": "现代科幻",
-      "imageKind": "官方宣传图",
+      "description": "2010年7月28日，秋葉原的一場發表會與一封短信成爲世界線變化的起點。岡部倫太郎與夥伴們捲入時間機器實驗。",
+      "medium": "TV動畫",
+      "nature": "現代科幻",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://kadokawa-animation.jp/lineup/steinsgate",
-      "evidence": "此日期为故事开端；作品涉及多条世界线与后续日期，不代表全篇只发生在当天。",
+      "evidence": "此日期爲故事開端；作品涉及多條世界線與後續日期，不代表全篇只發生在當天。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-steins.jpg",
@@ -1459,7 +1459,7 @@
       "name": "91Days",
       "original": "91Days",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-5"
@@ -1471,12 +1471,12 @@
         "approx": true
       },
       "source": "https://sh-anime.shochiku.co.jp/91days/story/",
-      "description": "美国禁酒令时期，阿维里奥回到黑手党控制的城镇劳雷斯，接近仇人家族并展开复仇。酒类走私与帮派冲突构成故事背景。",
-      "medium": "TV动画",
-      "nature": "真实历史背景",
-      "imageKind": "官方宣传图",
+      "description": "一封來信讓阿維里奧回到勞雷斯。他隱瞞身分，接近殺害家人的黑手黨瓦內蒂家族，與仇人之子尼祿來往，等待復仇的機會。\n\n舞臺是美國禁酒令時期。禁酒並未讓酒消失，私釀與走私反而成了幫派爭奪的生意。",
+      "medium": "TV動畫",
+      "nature": "真實歷史背景",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://sh-anime.shochiku.co.jp/91days/story/",
-      "evidence": "官网确认美国禁酒令时期；以1920—1933年作为参考范围，不将其误写为故事持续时长。",
+      "evidence": "官網確認美國禁酒令時期；以1920—1933年作爲參考範圍，不將其誤寫爲故事持續時長。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-91days.jpg",
@@ -1489,7 +1489,7 @@
       "name": "永生之酒",
       "original": "BACCANO! -バッカーノ!-",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-5"
@@ -1500,12 +1500,12 @@
         "end": 1932
       },
       "source": "https://www.baccano.jp/intro/index.html",
-      "description": "禁酒令时期的美国，黑手党、盗贼与不死者的命运交错。动画主要并行描绘1930、1931及1932年的事件。",
-      "medium": "TV动画",
-      "nature": "历史幻想",
-      "imageKind": "官方宣传图",
+      "description": "1930年代的美國，黑手黨、盜賊與喝過永生之酒的人捲在一起。列車上的劫案、街頭的追逐與更早的煉金術往事，從不同人物的視角拼成一場大騷動。\n\n動畫主要並行描寫1930、1931與1932年的事件，背景是禁酒令時期的私酒生意與幫派活動；不死者設定屬於奇幻。",
+      "medium": "TV動畫",
+      "nature": "歷史幻想",
+      "imageKind": "官方宣傳圖",
       "evidenceUrl": "https://www.baccano.jp/intro/index.html",
-      "evidence": "主线1930—1932年；另有1711年的不死者起源回溯，不合并成跨越两百年的连续主线。",
+      "evidence": "主線1930—1932年；另有1711年的不死者起源回溯，不合併成跨越兩百年的連續主線。",
       "status": "published",
       "updatedAt": "2026-10-05T14:38:45.996497+00:00",
       "image": "/covers/cms-baccano.jpg",
@@ -1522,7 +1522,7 @@
       "edition": "第1部",
       "cardStyle": "poster",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-4"
@@ -1534,12 +1534,12 @@
         "approx": false
       },
       "source": "https://jojo-portal.com/anime/pb-bt/",
-      "description": "19世纪末的英国，乔纳森·乔斯达与迪奥的相遇开启了围绕石鬼面的家族故事。少年时代与成年后的事件分阶段展开。",
-      "evidence": "1880年代至1889年；不将更早的石鬼面序幕纳入主线跨度。",
+      "description": "19世紀末的英國，迪奧住進喬斯達家，與喬納森從少年時代便互相對立。一張能讓人變成吸血鬼的石鬼面，把家族爭端變成了波紋戰士與吸血鬼的戰鬥。\n\n這是喬斯達家族故事的起點，舞臺是維多利亞時代的英國。",
+      "evidence": "1880年代至1889年；不將更早的石鬼面序幕納入主線跨度。",
       "evidenceUrl": "https://jojowiki.com/Timeline",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-pb.jpg",
@@ -1549,14 +1549,14 @@
     },
     {
       "id": "series-bt",
-      "name": "JOJO · 战斗潮流",
+      "name": "JOJO · 戰鬥潮流",
       "original": "JOJO · 战斗潮流",
       "seriesId": "jojo",
       "seriesName": "JOJO",
       "edition": "第2部",
       "cardStyle": "poster",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-5"
@@ -1568,12 +1568,12 @@
         "approx": false
       },
       "source": "https://jojo-portal.com/anime/pb-bt/",
-      "description": "二战前夕，乔瑟夫·乔斯达从纽约出发，卷入与柱之男有关的事件，旅程延伸至欧洲。",
-      "evidence": "主线1938—1939年；尾声通往下一代的片段不单独扩大本部跨度。",
+      "description": "1938年，喬瑟夫·喬斯達從紐約出發，與西撒等波紋戰士對抗甦醒的柱之男，爭奪艾哲紅石。這位JOJO很會打，也很會騙。\n\n旅程延伸至二戰前夕的歐洲。",
+      "evidence": "主線1938—1939年；尾聲通往下一代的片段不單獨擴大本部跨度。",
       "evidenceUrl": "https://jojowiki.com/Timeline",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-bt.jpg",
@@ -1583,7 +1583,7 @@
     },
     {
       "id": "series-sc",
-      "name": "JOJO · 星尘斗士",
+      "name": "JOJO · 星塵鬥士",
       "original": "JOJO · 星尘斗士",
       "seriesId": "jojo",
       "seriesName": "JOJO",
@@ -1602,12 +1602,12 @@
         "approx": false
       },
       "source": "https://jojo-portal.com/anime/sc/",
-      "description": "空条承太郎从日本出发，与伙伴们前往埃及寻找DIO。此处以TV动画的1987—1988年口径定位，旅程同时经过亚洲多地。",
-      "evidence": "采用动画1987—1988年口径；漫画修订资料常用1988—1989年。当前地域按日本出发点收录，并不表示全篇只发生在日本。",
+      "description": "為了救下病危的母親，空條承太郎與外祖父喬瑟夫等人從日本前往埃及，沿途迎戰DIO派來的替身使者。\n\n本條目採TV動畫的1987至1988年定位。旅程經過亞洲多地，現實地理與當時的旅行方式，組成了這趟充滿意外的長途遠征。",
+      "evidence": "採用動畫1987—1988年口徑；漫畫修訂資料常用1988—1989年。當前地域按日本出發點收錄，並不表示全篇只發生在日本。",
       "evidenceUrl": "https://jojowiki.com/Timeline/Inconsistencies",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-sc.png",
@@ -1617,7 +1617,7 @@
     },
     {
       "id": "series-du",
-      "name": "JOJO · 不灭钻石",
+      "name": "JOJO · 不滅鑽石",
       "original": "JOJO · 不灭钻石",
       "seriesId": "jojo",
       "seriesName": "JOJO",
@@ -1635,12 +1635,12 @@
         "approx": false
       },
       "source": "https://jojo-portal.com/anime/du/",
-      "description": "1999年，日本杜王町。东方仗助与伙伴们在看似平静的小镇中遭遇新的替身使者。",
-      "evidence": "动画官网明确1999年，杜王町为虚构日本城镇。",
+      "description": "1999年，日本杜王町。東方仗助、他的大外甥承太郎和愉快的小夥伴們，與神祕上班族鬥智鬥勇的故事。\n\n故事從逛街、吃飯、上學等日常裡長出怪事，整部的活動範圍也比前幾部集中得多。",
+      "evidence": "動畫官網明確1999年，杜王町爲虛構日本城鎮。",
       "evidenceUrl": "https://jojo-portal.com/anime/du/",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-du.jpg",
@@ -1650,14 +1650,14 @@
     },
     {
       "id": "series-gw",
-      "name": "JOJO · 黄金之风",
+      "name": "JOJO · 黃金之風",
       "original": "JOJO · 黄金之风",
       "seriesId": "jojo",
       "seriesName": "JOJO",
       "edition": "第5部",
       "cardStyle": "poster",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-21"
@@ -1668,12 +1668,12 @@
         "approx": false
       },
       "source": "https://jojo-portal.com/anime/gw/",
-      "description": "2001年的意大利，乔鲁诺·乔巴拿加入帮派，沿着那不勒斯至罗马的旅程追寻自己的理想。",
-      "evidence": "主线2001年；以故事背景而非2018年动画开播时间定位。",
+      "description": "2001年的義大利，喬魯諾·喬巴拿加入幫派，想從內部改變組織。保護老闆女兒的任務，讓他與布加拉提小隊一路遭到追殺。\n\n旅程從那不勒斯延伸至羅馬，沿途經過多座城市與地標。",
+      "evidence": "主線2001年；以故事背景而非2018年動畫開播時間定位。",
       "evidenceUrl": "https://jojowiki.com/Timeline",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-gw.jpg",
@@ -1690,7 +1690,7 @@
       "edition": "第6部",
       "cardStyle": "poster",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-21"
@@ -1702,12 +1702,12 @@
         "approx": false
       },
       "source": "https://jojo-portal.com/anime/so/",
-      "description": "美国佛罗里达州，空条徐伦被送进绿海豚街监狱。家族命运与新的替身事件在这里交织。",
-      "evidence": "主线始于2011年，延伸至2012年；不将后续世界变化视为普通公历延续。",
+      "description": "2011年，美國佛羅里達州。空條徐倫被陷害入獄，在父親送來的護身符影響下覺醒替身能力，也逐漸發現監獄裡有人盯上了喬斯達家族。\n\n故事承接前幾部的家族關係，主要在綠海豚街監獄中展開。",
+      "evidence": "主線始於2011年，延伸至2012年；不將後續世界變化視爲普通公曆延續。",
       "evidenceUrl": "https://jojowiki.com/Timeline",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-so.png",
@@ -1717,14 +1717,14 @@
     },
     {
       "id": "series-sbr",
-      "name": "JOJO · 飙马野郎",
+      "name": "JOJO · 飆馬野郎",
       "original": "JOJO · 飙马野郎",
       "seriesId": "jojo",
       "seriesName": "JOJO",
-      "edition": "第7部 · 独立世界线",
+      "edition": "第7部 · 獨立世界線",
       "cardStyle": "poster",
       "regions": [
-        "欧美"
+        "歐美"
       ],
       "periodIds": [
         "eu-4"
@@ -1735,12 +1735,12 @@
         "approx": false
       },
       "source": "https://jojo-portal.com/anime/sbr/",
-      "description": "1890年的美国，乔尼·乔斯达与杰洛·齐贝林参加横跨北美大陆的赛马。属于与前六部不同的世界线。",
-      "evidence": "动画官网明确起点为1890年美国；按比赛起点定位。",
+      "description": "1890年，失去行走能力的前騎手喬尼，遇見使用旋轉鐵球的傑洛。為了找出讓自己重新站起來的方法，他跟著傑洛參加橫跨北美大陸的賽馬。\n\n本部開始於與前六部不同的世界線。舞臺是19世紀末的美國。",
+      "evidence": "動畫官網明確起點爲1890年美國；按比賽起點定位。",
       "evidenceUrl": "https://jojo-portal.com/anime/sbr/",
-      "medium": "网络动画",
+      "medium": "網絡動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-sbr.png",
@@ -1750,11 +1750,11 @@
     },
     {
       "id": "series-mono-tv",
-      "name": "怪化猫 · 江户诸篇",
+      "name": "怪化貓 · 江戶諸篇",
       "original": "怪化猫 · 江户诸篇",
       "seriesId": "mononoke",
-      "seriesName": "怪化猫",
-      "edition": "TV版 · 座敷童子／海坊主／无脸怪／鵺",
+      "seriesName": "怪化貓",
+      "edition": "TV版 · 座敷童子／海坊主／無臉怪／鵺",
       "cardStyle": "poster",
       "regions": [
         "日本"
@@ -1767,12 +1767,12 @@
         "approx": true
       },
       "source": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/",
-      "description": "卖药郎行走于参考江户社会的怪异世界。包含座敷童子、海坊主、无脸怪与鵺四篇；同属近世背景，具体年份与四篇之间的年代先后未明确。",
-      "evidence": "参考江户背景归组，不为四篇编造具体年份；本节点是TV版最早可定位的时期组。",
+      "description": "賣藥郎帶著退魔之劍行走各地。要斬除物怪，他得先查清它的「形、真、理」：如何形成、發生過什麼，以及人們藏著什麼。\n\n本條目包含座敷童子、海坊主、無臉怪與鵺四篇，借用江戶社會的生活與身分秩序。各篇的確切年份及先後未明確。",
+      "evidence": "參考江戶背景歸組，不爲四篇編造具體年份；本節點是TV版最早可定位的時期組。",
       "evidenceUrl": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-mono-tv.jpg",
@@ -1782,10 +1782,10 @@
     },
     {
       "id": "series-mono-bakeneko",
-      "name": "怪化猫 · 化猫",
+      "name": "怪化貓 · 化貓",
       "original": "怪化猫 · 化猫",
       "seriesId": "mononoke",
-      "seriesName": "怪化猫",
+      "seriesName": "怪化貓",
       "edition": "TV版 · 第10—12集",
       "cardStyle": "chapter",
       "regions": [
@@ -1799,12 +1799,12 @@
         "approx": true
       },
       "source": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/episode/10/",
-      "description": "故事转入近代城市，一列新开通的地下铁带出被隐瞒的往事。以大正时期为参考定位，具体公历年份尚未明确。",
-      "evidence": "官方剧情明确地下铁与近代城市；暂按大正风貌就近归组，具体公历年份未确认。不同于2006年《怪～ayakashi～》的化猫篇。",
+      "description": "故事轉入近代城市，一列新開通的地下鐵帶出被隱瞞的往事。以大正時期爲參考定位，具體公曆年份尚未明確。",
+      "evidence": "官方劇情明確地下鐵與近代城市；暫按大正風貌就近歸組，具體公曆年份未確認。不同於2006年《怪～ayakashi～》的化貓篇。",
       "evidenceUrl": "https://lineup.toei-anim.co.jp/ja/tv/mononoke/episode/10/",
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-mono-tv.jpg",
@@ -1814,11 +1814,11 @@
     },
     {
       "id": "series-mono-film1",
-      "name": "怪化猫 剧场版 · 唐伞",
+      "name": "怪化貓 劇場版 · 唐傘",
       "original": "怪化猫 剧场版 · 唐伞",
       "seriesId": "mononoke",
-      "seriesName": "怪化猫",
-      "edition": "剧场版 · 第1章",
+      "seriesName": "怪化貓",
+      "edition": "劇場版 · 第1章",
       "cardStyle": "poster",
       "regions": [
         "日本"
@@ -1831,12 +1831,12 @@
         "approx": true
       },
       "source": "https://www.mononoke-movie.com/about/?season=1",
-      "description": "独立剧场版三部曲的大奥故事。新人女中进入封闭的大奥，卖药郎追查唐伞怪异。架空的大奥参考江户社会，并非确切历史事件。",
-      "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+      "description": "獨立劇場版三部曲的大奧故事。新人女中進入封閉的大奧，賣藥郎追查唐傘怪異。大奧的生活與制度參考江戶社會。",
+      "evidence": "官網確認大奧舞臺和三部曲順序；江戶爲參考時期，官方未給出確切公曆年份。",
       "evidenceUrl": "https://www.mononoke-movie.com/about/?season=1",
-      "medium": "剧场版",
+      "medium": "劇場版",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-mono-film1.jpg",
@@ -1846,11 +1846,11 @@
     },
     {
       "id": "series-mono-film2",
-      "name": "怪化猫 剧场版 · 火鼠",
+      "name": "怪化貓 劇場版 · 火鼠",
       "original": "怪化猫 剧场版 · 火鼠",
       "seriesId": "mononoke",
-      "seriesName": "怪化猫",
-      "edition": "剧场版 · 第2章",
+      "seriesName": "怪化貓",
+      "edition": "劇場版 · 第2章",
       "cardStyle": "poster",
       "regions": [
         "日本"
@@ -1863,12 +1863,12 @@
         "approx": true
       },
       "source": "https://www.mononoke-movie.com/about/?season=2",
-      "description": "独立剧场版三部曲的大奥故事。唐伞事件之后，新的纷争与火鼠怪异在大奥出现。架空的大奥参考江户社会，并非确切历史事件。",
-      "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+      "description": "獨立劇場版三部曲的大奧故事。唐傘事件之後，新的紛爭與火鼠怪異在大奧出現。大奧的生活與制度參考江戶社會。",
+      "evidence": "官網確認大奧舞臺和三部曲順序；江戶爲參考時期，官方未給出確切公曆年份。",
       "evidenceUrl": "https://www.mononoke-movie.com/about/?season=2",
-      "medium": "剧场版",
+      "medium": "劇場版",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-mono-film2.jpg",
@@ -1878,11 +1878,11 @@
     },
     {
       "id": "series-mono-film3",
-      "name": "怪化猫 剧场版 · 蛇神",
+      "name": "怪化貓 劇場版 · 蛇神",
       "original": "怪化猫 剧场版 · 蛇神",
       "seriesId": "mononoke",
-      "seriesName": "怪化猫",
-      "edition": "剧场版 · 第3章",
+      "seriesName": "怪化貓",
+      "edition": "劇場版 · 第3章",
       "cardStyle": "poster",
       "regions": [
         "日本"
@@ -1895,12 +1895,12 @@
         "approx": true
       },
       "source": "https://www.mononoke-movie.com/about/?season=3",
-      "description": "独立剧场版三部曲的大奥故事。卖药郎继续追寻大奥的秘密，面对蛇神带来的危机。架空的大奥参考江户社会，并非确切历史事件。",
-      "evidence": "官网确认大奥舞台和三部曲顺序；江户为参考时期，官方未给出确切公历年份。",
+      "description": "獨立劇場版三部曲的大奧故事。賣藥郎繼續追尋大奧的祕密，面對蛇神帶來的危機。大奧的生活與制度參考江戶社會。",
+      "evidence": "官網確認大奧舞臺和三部曲順序；江戶爲參考時期，官方未給出確切公曆年份。",
       "evidenceUrl": "https://www.mononoke-movie.com/about/?season=3",
-      "medium": "剧场版",
+      "medium": "劇場版",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-05T15:05:23.344597+00:00",
       "image": "/covers/series-mono-film3.jpg",
@@ -1910,10 +1910,10 @@
     },
     {
       "id": "add-biao",
-      "name": "镖人",
+      "name": "鏢人",
       "original": "镖人",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-sui"
@@ -1922,17 +1922,17 @@
         "type": "year",
         "start": 607
       },
-      "medium": "网络动画",
+      "medium": "網絡動畫",
       "source": "https://wetv.vip/zh-cn/play/yznc7ghpuuezbgo",
-      "description": "大业三年，镖客刀马行走于西域大漠，接下一趟前往长安的护送任务，卷入乱世纷争。",
-      "evidence": "用户提供607年（大业三年），与作品资料一致；不将动画播出年作为故事年代。",
+      "description": "大業三年（607年），刀馬帶著孩子小七行走西域，為還債接下護送知世郎前往長安的差事，卻被捲進朝廷追捕與各方勢力的衝突。\n\n故事放在隋煬帝統治時期，西域商路與隋朝政局提供歷史背景。",
+      "evidence": "用戶提供607年（大業三年），與作品資料一致；不將動畫播出年作爲故事年代。",
       "evidenceUrl": "https://zh.wikipedia.org/wiki/鏢人",
-      "edition": "动画版",
+      "edition": "動畫版",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-biao.jpg",
@@ -1942,10 +1942,10 @@
     },
     {
       "id": "add-dali",
-      "name": "大理寺日志",
+      "name": "大理寺日誌",
       "original": "大理寺日志",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-wuzhou"
@@ -1953,17 +1953,17 @@
       "date": {
         "type": "period"
       },
-      "medium": "网络动画",
+      "medium": "網絡動畫",
       "source": "https://www.bilibili.com/bangumi/media/md28227527/",
-      "description": "武明空统治下的洛阳，白猫少卿李饼带领大理寺众人追查奇案，守护心中的正义。",
-      "evidence": "发行方简介写唐朝武明空统治时期；参照武周690—705年定位，未指定某一年。",
+      "description": "鄉下青年陳拾到洛陽尋找兄長，進入大理寺，跟著長得像白貓的少卿李餅辦案。衙門裡的人各有脾氣，查到的案子卻不只是鬧笑話。\n\n舞臺參考武則天統治時期。大理寺是古代負責司法審理的重要機構。",
+      "evidence": "發行方簡介寫唐朝武明空統治時期；參照武周690—705年定位，未指定某一年。",
       "evidenceUrl": "https://www.bilibili.com/bangumi/media/md28227527/",
-      "edition": "动画版",
+      "edition": "動畫版",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-dali.jpg",
@@ -1973,7 +1973,7 @@
     },
     {
       "id": "add-suzume",
-      "name": "铃芽之旅",
+      "name": "鈴芽之旅",
       "original": "すずめの戸締まり",
       "regions": [
         "日本"
@@ -1987,17 +1987,17 @@
         "month": 9,
         "day": 25
       },
-      "medium": "剧场版",
+      "medium": "劇場版",
       "source": "https://suzume-tojimari-movie.jp/",
-      "description": "少女铃芽与闭门师草太相遇，踏上穿越日本、关闭灾厄之门的旅程。",
-      "evidence": "2023年9月25日为主线旅程起点，影片中的文化祭海报、日历及手机日期可互相印证；并非整部故事只发生在一天。",
+      "description": "九州少女鈴芽在廢墟中打開一扇門，讓災厄有了進入現世的機會。她與閉門師草太踏上旅程，沿著日本各地的廢棄場所把門關上。\n\n現代日本的地景與地震記憶是故事的重要背景。",
+      "evidence": "2023年9月25日爲主線旅程起點，影片中的文化祭海報、日曆及手機日期可互相印證；並非整部故事只發生在一天。",
       "evidenceUrl": "https://www.gcores.com/articles/163919",
       "edition": "",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-suzume.jpg",
@@ -2007,7 +2007,7 @@
     },
     {
       "id": "add-kurumi",
-      "name": "FX战士久留美",
+      "name": "FX戰士久留美",
       "original": "FX戦士くるみちゃん",
       "regions": [
         "日本"
@@ -2021,17 +2021,17 @@
         "end": 2015,
         "approx": true
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://fxkurumi-info.com/",
-      "description": "大学生久留美进入外汇交易市场，试图挽回母亲曾经失去的两千万日元，却面对不断变化的风险与人性。",
-      "evidence": "依用户提供及原作时间线，以约2014—2015年定位；动画官网未直接确认完整改编内容的年份范围。",
+      "description": "久留美想靠外匯交易，賺回母親曾經賠掉的兩千萬日圓。進場之後，帳面盈虧開始牽動她和朋友們的每一天。看著像可愛女生的日常，實際上是盯盤、加碼和扛單。\n\n作品以金融危機與外匯市場為背景。",
+      "evidence": "依用戶提供及原作時間線，以約2014—2015年定位；動畫官網未直接確認完整改編內容的年份範圍。",
       "evidenceUrl": "https://w.atwiki.jp/aniwotawiki/pages/51907.html",
-      "edition": "TV动画",
+      "edition": "TV動畫",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-kurumi.jpg",
@@ -2041,7 +2041,7 @@
     },
     {
       "id": "add-digimon",
-      "name": "数码宝贝大冒险",
+      "name": "數碼寶貝大冒險",
       "original": "デジモンアドベンチャー",
       "regions": [
         "日本"
@@ -2055,17 +2055,17 @@
         "month": 8,
         "day": 1
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://lineup.toei-anim.co.jp/ja/tv/dejimon/",
-      "description": "1999年夏令营中的七名孩子进入数码世界，与各自的数码宝贝伙伴共同冒险。",
-      "evidence": "1999年8月1日为初代TV版冒险起点；与2020年重启版区分。",
+      "description": "1999年8月1日，夏令營裡的七名孩子遭遇異常天氣，醒來時已身在陌生的數碼世界。等在那裡的數碼寶貝成為他們的搭檔，孩子們一邊冒險，一邊尋找回家的路。\n\n現實世界的場景保留了1990年代末日本的生活與科技面貌。",
+      "evidence": "1999年8月1日爲初代TV版冒險起點；與2020年重啓版區分。",
       "evidenceUrl": "https://wikimon.net/Odaiba_Memorial",
       "edition": "初代TV版（1999版）",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方剧照",
+      "imageKind": "官方劇照",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-digimon.jpg",
@@ -2075,7 +2075,7 @@
     },
     {
       "id": "add-atom",
-      "name": "铁臂阿童木",
+      "name": "鐵臂阿童木",
       "original": "鉄腕アトム",
       "regions": [
         "日本"
@@ -2089,17 +2089,17 @@
         "month": 4,
         "day": 7
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://tezukaosamu.net/jp/anime/30.html",
-      "description": "拥有十万马力的少年机器人阿童木，在人类与机器人的世界中追求理解与和平。以原作设定的诞生日作为时间定位。",
-      "evidence": "手塚官方原作页明确2003年4月7日为阿童木诞生日；该日期是原作参考事件，不代表1963版每集的剧情日期。",
+      "description": "天馬博士為了代替死去的兒子，造出了機器人阿童木，卻因他不會長大而將他拋棄。後來，茶水博士幫助阿童木獲得自由，他開始在人類與機器人之間生活、戰鬥。\n\n原作把誕生日定在2003年4月7日。對1950年代開始連載的作品而言，2003年還是想像中的未來。",
+      "evidence": "手塚官方原作頁明確2003年4月7日爲阿童木誕生日；該日期是原作參考事件，不代表1963版每集的劇情日期。",
       "evidenceUrl": "https://tezukaosamu.net/jp/manga/291.html",
-      "edition": "1963版 · 原作诞生日定位",
+      "edition": "1963版 · 原作誕生日定位",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方剧照",
+      "imageKind": "官方劇照",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-atom.jpg",
@@ -2123,17 +2123,17 @@
         "end": 1989,
         "approx": true
       },
-      "medium": "剧场版",
+      "medium": "劇場版",
       "source": "https://mahoyo-movie.com/",
-      "description": "山坡上的洋馆住着两位魔女。见习魔法使苍崎青子与久远寺有珠的生活，因为少年静希草十郎的到来而改变。",
-      "evidence": "原作官方明确1980年代后半，转写为约1985—1989年；电影官网未确认确切年份，暂不采用1989单年。",
+      "description": "1980年代末的三咲町，山坡洋館住著蒼崎青子與久遠寺有珠。從山裡來到城市的靜希草十郎，意外闖進她們不能讓外人知道的魔術世界。\n\n三人的共同生活帶有當時日本地方城市的面貌。",
+      "evidence": "原作官方明確1980年代後半，轉寫爲約1985—1989年；電影官網未確認確切年份，暫不採用1989單年。",
       "evidenceUrl": "https://typemoon.com/contents/z4fb2s/",
-      "edition": "剧场动画 · 原作年代参考",
+      "edition": "劇場動畫 · 原作年代參考",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-mahoyo.jpg",
@@ -2156,17 +2156,17 @@
         "start": 1995,
         "end": 1999
       },
-      "medium": "剧场版",
+      "medium": "劇場版",
       "source": "https://www.karanokyoukai.com/",
-      "description": "两仪式与黑桐干也在一连串异常事件中相遇、分离与重逢，追索生死之间的边界。",
-      "evidence": "官方放送故事介绍列1995年初遇及1999年2月事件；本条收录主线七章，不含《未来福音》的后续年代。",
+      "description": "兩儀式昏睡兩年後醒來，開始看見事物的「死」。她與黑桐幹也在接連發生的怪異事件中，追查失落的記憶與殺人案。\n\n故事主要發生在1990年代的日本都市，各章並不完全按故事時間排列。",
+      "evidence": "官方放送故事介紹列1995年初遇及1999年2月事件；本條收錄主線七章，不含《未來福音》的後續年代。",
       "evidenceUrl": "https://www.karanokyoukai.com/onair/index.html",
-      "edition": "剧场版 · 主线七章",
+      "edition": "劇場版 · 主線七章",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:00:00+08:00",
       "image": "/covers/eight-kara.jpg",
@@ -2176,10 +2176,10 @@
     },
     {
       "id": "add-six-xia",
-      "name": "中华小子",
+      "name": "中華小子",
       "original": "中华小子",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-late-ming"
@@ -2187,17 +2187,17 @@
       "date": {
         "type": "period"
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://shaoer.cntv.cn/chinacartoon/zhonghuaxiaozi/videopage/index.shtml",
-      "description": "明朝末年，少林寺的三名少年踏上对抗黑狐王的冒险之旅。",
-      "evidence": "央视简介明确十七世纪、明朝末年；时期边界用于导航，不代表剧情起止年份。",
+      "description": "少林弟子花小蘭、唐小龍與陳小虎，被捲入黑狐王重返人間的危機。三個孩子一邊學功夫，一邊對付妖怪，也沒少闖禍。\n\n故事以17世紀、明末的中國為舞臺，融入少林功夫與民間傳說。",
+      "evidence": "央視簡介明確十七世紀、明朝末年；時期邊界用於導航，不代表劇情起止年份。",
       "evidenceUrl": "https://shaoer.cntv.cn/chinacartoon/zhonghuaxiaozi/videopage/index.shtml",
       "edition": "中法合拍",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:45:45.222437+00:00",
       "image": "/covers/six-xia.jpg",
@@ -2207,10 +2207,10 @@
     },
     {
       "id": "add-six-wei",
-      "name": "围棋少年",
+      "name": "圍棋少年",
       "original": "围棋少年",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-late-ming"
@@ -2218,17 +2218,17 @@
       "date": {
         "type": "period"
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://big5.cctv.com/gate/big5/www.cctv.cn/program/dhc/topic/cartoon/C14451/20050817/100836.shtml",
-      "description": "明末江南，围棋少年江流儿在乱世中磨炼棋艺，结识伙伴，追寻棋道。",
-      "evidence": "央视故事简介明确明朝末年，未确认具体年份。",
+      "description": "明末江南，江流兒在凌雲寺被發現有圍棋天分，隨後踏上拜師學棋之路。各家棋院、江湖棋手與日本棋手，讓他的對局一路與身世和紛爭相連。\n\n沿海倭患與明末社會構成故事背景。",
+      "evidence": "央視故事簡介明確明朝末年，未確認具體年份。",
       "evidenceUrl": "https://big5.cctv.com/gate/big5/www.cctv.cn/program/dhc/topic/cartoon/C14451/20050817/100836.shtml",
-      "edition": "2005年动画版",
+      "edition": "2005年動畫版",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方剧照",
+      "imageKind": "官方劇照",
       "status": "published",
       "updatedAt": "2026-10-07T00:45:45.222437+00:00",
       "image": "/covers/six-wei.jpg",
@@ -2238,10 +2238,10 @@
     },
     {
       "id": "add-six-chang",
-      "name": "长安三万里",
+      "name": "長安三萬里",
       "original": "长安三万里",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-tang"
@@ -2250,17 +2250,17 @@
         "type": "century",
         "start": 8
       },
-      "medium": "剧场版",
+      "medium": "劇場版",
       "source": "https://www.qdsnqwhg.cn/html/ysxs/2023/0726/2636.html",
-      "description": "高适回望与李白相识相交的往事，在盛唐至安史之乱前后的山河中，重现诗人们的人生与理想。",
-      "evidence": "根据高适、李白生平及盛唐至安史之乱前后的叙事定位8世纪；回忆横跨数十年，不以某次战役年份代表全片。",
+      "description": "安史之亂後，高適困守孤城，向監軍回憶自己與李白相識相交的往事。少年時的遠遊、求仕與詩酒，逐漸連到戰亂中的各自選擇。\n\n影片從盛唐寫到唐朝由盛轉衰，串起李白、高適、杜甫等詩人的人生；人物對話與部分相遇經過藝術改編。",
+      "evidence": "根據高適、李白生平及盛唐至安史之亂前後的敘事定位8世紀；回憶橫跨數十年，不以某次戰役年份代表全片。",
       "evidenceUrl": "https://www.qdsnqwhg.cn/html/ysxs/2023/0726/2636.html",
       "edition": "",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
-      "nature": "真实历史背景",
-      "imageKind": "官方宣传图",
+      "nature": "真實歷史背景",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:45:45.222437+00:00",
       "image": "/covers/six-chang.jpg",
@@ -2270,10 +2270,10 @@
     },
     {
       "id": "add-six-san",
-      "name": "三毛流浪记",
+      "name": "三毛流浪記",
       "original": "三毛流浪记",
       "regions": [
-        "中国"
+        "中國"
       ],
       "periodIds": [
         "cn-republic"
@@ -2284,17 +2284,17 @@
         "end": 1944,
         "approx": true
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://shaoer.cntv.cn/program/sanmao/index.shtml",
-      "description": "20世纪30年代至40年代初的上海，孤儿三毛在街头艰难谋生，仍保有善良与对生活的希望。",
-      "evidence": "用户指定30年代至40年代初；央视简介明确旧中国三十年代上海。约1930—1944为年代范围的宽泛转写，不是剧情已证实起止年。",
+      "description": "1930年代至1940年代初的上海，無家可歸的三毛在街頭找工作、找吃的，也不斷遭到欺負。他遇見願意幫忙的人，卻很難有一個能長久留下的地方。\n\n作品改編張樂平的三毛故事，從孩子的處境描寫舊上海的貧富差距與戰亂下的生活，各版本情節有所不同。",
+      "evidence": "用戶指定30年代至40年代初；央視簡介明確舊中國三十年代上海。約1930—1944爲年代範圍的寬泛轉寫，不是劇情已證實起止年。",
       "evidenceUrl": "https://shaoer.cntv.cn/program/sanmao/index.shtml",
-      "edition": "2006年央视动画版",
+      "edition": "2006年央視動畫版",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
-      "nature": "真实历史背景",
-      "imageKind": "官方剧照",
+      "nature": "真實歷史背景",
+      "imageKind": "官方劇照",
       "status": "published",
       "updatedAt": "2026-10-07T00:45:45.222437+00:00",
       "image": "/covers/six-san.jpg",
@@ -2316,17 +2316,17 @@
         "type": "century",
         "start": 21
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://www.pa-works.jp/works/canaan/",
-      "description": "少女雇佣兵迦南与摄影师大泽玛丽亚在上海重逢，卷入围绕反恐峰会展开的阴谋。",
-      "evidence": "故事发生于《428》事件两年后，主要舞台为上海；未确认绝对年份。按现代背景暂置平成，2009年为播出年，不当作故事年。",
+      "description": "迦南在上海與攝影師大澤瑪麗亞重逢，兩人捲入武裝組織「蛇」策劃的陰謀。病毒事件與反恐峰會，讓這座城市成為多方勢力交手的現場。\n\n片中的上海街景取材自現實城市。",
+      "evidence": "故事發生於《428》事件兩年後，主要舞臺爲上海；未確認絕對年份。按現代背景暫置平成，2009年爲播出年，不當作故事年。",
       "evidenceUrl": "https://www.pa-works.jp/works/canaan/",
       "edition": "",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:45:45.222437+00:00",
       "image": "/covers/six-canaan.jpg",
@@ -2336,7 +2336,7 @@
     },
     {
       "id": "add-six-kong",
-      "name": "派对咖孔明",
+      "name": "派對咖孔明",
       "original": "パリピ孔明",
       "regions": [
         "日本"
@@ -2348,17 +2348,17 @@
         "type": "century",
         "start": 21
       },
-      "medium": "TV动画",
+      "medium": "TV動畫",
       "source": "https://paripikoumei-anime.com/tv/story/",
-      "description": "诸葛孔明转生到万圣节的现代涩谷，成为歌手月见英子的军师，以谋略助她追逐音乐梦想。",
-      "evidence": "动画官方仅明确现代涩谷与万圣节，未明确平成或令和。暂置令和附近，卡片保留21世纪；不引用真人剧2023年的设定。",
+      "description": "孔明在五丈原去世後，醒來竟到了萬聖節的澀谷。他聽見月見英子的歌聲，決定當她的軍師，把兵法用在演出、宣傳與音樂比賽上。\n\n故事以現代東京為主舞臺，三國經歷和典故變成孔明的計策來源。丞相這次要打的，是音樂圈。",
+      "evidence": "動畫官方僅明確現代澀谷與萬聖節，未明確平成或令和。暫置令和附近，卡片保留21世紀；不引用真人劇2023年的設定。",
       "evidenceUrl": "https://paripikoumei-anime.com/tv/story/",
-      "edition": "TV动画版",
+      "edition": "TV動畫版",
       "seriesId": "",
       "seriesName": "",
       "cardStyle": "poster",
       "nature": "架空",
-      "imageKind": "官方宣传图",
+      "imageKind": "官方宣傳圖",
       "status": "published",
       "updatedAt": "2026-10-07T00:45:45.222437+00:00",
       "image": "/covers/six-kong.jpg",

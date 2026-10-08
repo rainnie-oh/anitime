@@ -64,5 +64,25 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Approved multitrack styling: top whitespace 64px, period type 14px, caption type 12px, year type 42px, time width 105%, artwork 164px and collection gap 12px. Dashboard is removed; both Timeline and Overview share these fixed tokens. Keep functional state feedback and readable year spacing.
 - This experiment belongs to the multitrack-view worktree and /multitrack page. Preserve shared year coordinates, compact baselines, bounded collections, outlined brand wordmark and quiet hover feedback.
 
-## Work detail layouts
-- Default to the restored original work detail. Offer only one alternate layout based on the supplied Mavericks reference: a white editorial sheet on gray surround, title at left center, date/description bottom left, image center, region/period/media upper right, century center right and source link bottom right. The prior four-layout experiment was rejected; do not reuse it.
+## Work detail layout
+- Keep only the original work detail layout. The reference variant and layout switcher were rejected and removed; do not reintroduce them.
+
+## UI and editorial polish
+- Treat UI design and copywriting as separate passes; do not rewrite catalog descriptions during UI polish.
+- Overview reserves measured space for each whole period name and count, on one baseline, using shared coordinates across regions. Prefer horizontal browsing over splitting names or shrinking type.
+- Original work detail uses an opaque white background. Replace source metadata labels with one official-link CTA: small-radius black rectangle with white text and a dotted right arrow, matching the user screenshot; no circular icon or sliding effect. Keep keyboard focus visible and disable nonessential movement with reduced-motion preferences. Preserve the existing React/CSS stack.
+
+- Official-link CTA motion uses two copies of the label: left copy scales out as the right copy scales in on hover, reversing on leave, in rhythm with the staggered dots. Pressing scales the whole button. Keep duplicate text aria-hidden and respect reduced motion.
+
+## Editorial voice
+- Use Traditional Chinese throughout public pages and the editor; preserve original Japanese titles and stable IDs/URLs.
+- Work descriptions should read like a personally curated animation guide: concrete story hooks and selective recommendation, with playful language only where the work supports it. Serious historical and dramatic works remain restrained. Avoid repetitive “set against / presents” formulas, generic praise, spoilers, and unsupported historical precision. Preserve date evidence, adaptation distinctions, and fictional-setting qualifications.
+
+- The first full editorial rewrite was rejected as too AI-like. Restore factual original descriptions in Traditional Chinese. Do not bulk-expand them with recommendation formulas, emotional conclusions, or invented personal opinions. Future tone edits should be short, specific, and close to the user’s own wording.
+
+- Do not append explanations of which characters, settings, or events are fictional to work descriptions. Keep useful historical context and edition details, and let the story introduction read naturally.
+
+## Copy versions
+- CMS keeps immutable V1 (complete original generated text) and V2 (the edited copy as of 2026-10-08) in server/copy-versions.json. Preserve V1 verbatim, including its original script.
+- Named copy versions store descriptions only, keyed by stable work IDs. Loading a version changes drafts only, preserves published snapshots and other metadata, and automatically saves the preceding descriptions. Public API must never expose version history.
+- User rejected the editorial conclusions about the children’s daily needs in Grave of the Fireflies, the “hotter than the stove” joke and broadcast-date explanation in Iron Wok Jan. Remove those phrases from the final V2; avoid this tone in future writing.

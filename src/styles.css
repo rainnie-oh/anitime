@@ -31,6 +31,9 @@
 
 /* Outlined Archivo wordmark: the asset includes half-cap-height clear space. */
 header{mix-blend-mode:normal;color:#000}
-.brand{display:flex;flex-shrink:0;gap:0;background:#fff;line-height:0;min-height:44px}
+.brand{display:flex;flex-shrink:0;gap:0;background:transparent;line-height:0;min-height:44px}
 .brand-wordmark{display:block;width:auto;height:48px;max-width:none}
 @media(max-width:700px){.brand-wordmark{height:40px}.mt-header{gap:12px}}
+
+/* Preserve editorial paragraph breaks in work introductions. */
+.detail .description{white-space:pre-line}

@@ -24,7 +24,7 @@ export default function Public() {
     return () => window.removeEventListener('focus', load);
   }, []);
 
-  if (!data) return <p style={{ padding: 50 }}>正在载入时间线…</p>;
+  if (!data) return <p style={{ padding: 50 }}>正在載入時間線…</p>;
 
   const search = new URLSearchParams(location.search);
   const isSingle = search.get('view') === 'single' || location.pathname.endsWith('/single');
