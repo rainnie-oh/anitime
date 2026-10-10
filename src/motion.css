@@ -1,0 +1,28 @@
+/* ANITIME rhythm: feedback → navigation → editorial reveal. */
+:root {
+ --ani-feedback:140ms;
+ --ani-switch:240ms;
+ --ani-reveal:360ms;
+ --ani-layout:440ms;
+ --ani-exit:180ms;
+ --ani-stagger:45ms;
+ --ani-ease:cubic-bezier(.22,1,.36,1);
+}
+.multitrack .mt-lane {transition:opacity var(--ani-switch) var(--ani-ease),filter var(--ani-switch) var(--ani-ease),background-color var(--ani-feedback) ease-out}
+.multitrack .mt-ruler span {transition:color var(--ani-feedback) ease-out,scale var(--ani-switch) var(--ani-ease)}
+.multitrack .mt-stack-open {transition:scale var(--ani-feedback) var(--ani-ease)}
+.multitrack .mt-art img.progressive-cover {transition:filter var(--ani-switch) ease-out,transform var(--ani-feedback) var(--ani-ease)}
+.multitrack .mt-stack-art img.progressive-cover {transition:filter var(--ani-switch) ease-out,transform var(--ani-switch) var(--ani-ease)}
+.detail {animation:none}
+.detail .official-cta {transition:scale var(--ani-feedback) var(--ani-ease),background-color var(--ani-feedback) ease-out}
+.detail .official-cta-label {transition-duration:var(--ani-reveal);transition-timing-function:var(--ani-ease)}
+.detail .arrow-dot {transition-duration:var(--ani-reveal);transition-timing-function:var(--ani-ease)}
+@media(prefers-reduced-motion:reduce) {
+ .multitrack .mt-lane,.multitrack .mt-ruler span,.multitrack .mt-stack-open,
+ .multitrack .mt-art img.progressive-cover,.multitrack .mt-stack-art img.progressive-cover,
+ .detail .official-cta,.detail .official-cta-label,.detail .arrow-dot {transition:none}
+ .multitrack .mt-stack-open:active {scale:1}
+ .multitrack .mt-stack-open:hover .mt-stack-art img:first-child {transform:rotate(-5deg)}
+ .multitrack .mt-stack-open:hover .mt-stack-art img:nth-child(2) {transform:rotate(4deg)}
+ .multitrack .mt-stack-open:hover .mt-stack-art img:last-child {transform:rotate(-2deg)}
+}

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef,useLayoutEffect} from 'react';
 import {RiLayoutGridLine, RiTimeLine} from '@remixicon/react';
 import './segmented-control-tabs.css';
 
@@ -8,7 +8,21 @@ const options = [
 ];
 
 export default function SegmentedControlTabs({value, onValueChange}) {
-  const buttons = useRef([]);
+  const buttons = useRef([]),indicator=useRef(null),ready=useRef(false);
+  useLayoutEffect(()=>{
+    const update=(animate=false)=>{
+      const button=buttons.current[options.findIndex(option=>option.value===value)];
+      if(!button)return;
+      indicator.current.style.transition=animate?'':'none';
+      indicator.current.style.width=button.offsetWidth+'px';
+      indicator.current.style.transform=`translateX(${button.offsetLeft}px)`;
+    };
+    update(ready.current);ready.current=true;
+    let initial=true;
+    const observer=new ResizeObserver(()=>{if(initial){initial=false;return;}update(false);});
+    buttons.current.forEach(button=>observer.observe(button));
+    return()=>observer.disconnect();
+  },[value]);
   function handleKeyDown(event, index) {
     let next;
     if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % options.length;
@@ -21,6 +35,7 @@ export default function SegmentedControlTabs({value, onValueChange}) {
     onValueChange(options[next].value);
   }
   return <nav className="view-segments" aria-label="檢視模式" role="radiogroup">
+    <span ref={indicator} className="view-segment-indicator" aria-hidden="true"/>
     {options.map(({value: option, label, Icon}, index) => <button
       key={option} type="button" role="radio" aria-checked={value === option}
       tabIndex={value === option ? 0 : -1} ref={el => {buttons.current[index] = el;}}

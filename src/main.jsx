@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import Public from "./Public.jsx";
 import Admin from "./Admin.jsx";
 import "./styles.css";
+import "./motion.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

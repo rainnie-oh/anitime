@@ -2,6 +2,8 @@ import ProgressiveCover from './components/ui/progressive-cover.jsx';
 import SegmentedControlTabs from './components/ui/segmented-control-tabs.jsx';
 import {stackSeries,stackPreview} from './series-stacks.mjs';
 import {capturePosters,animatePosters} from './stack-motion.mjs';
+import {motionTiming} from './motion.mjs';
+import {useTimelineEntrance} from './use-timeline-entrance.jsx';
 import './series-stack.css';
 import {makeOverviewLayout} from './overview-layout.mjs';
 import {resolveAsset} from './asset.mjs';
@@ -31,6 +33,7 @@ export function Multitrack({catalog}) {
  const [mode,setMode]=useState('detail'),[year,setYear]=useState(1868),[scrollX,setScrollX]=useState(0),[progress,setProgress]=useState(0),[selected,setSelected]=useState(null),[viewport,setViewport]=useState(1000);
  const scale=useMemo(()=>{const original=seriesId?makeSeriesScale(visibleCatalog,viewport):makeScale(catalog,{minTickGap:132,cardWidth:164,cardGap:12});if(seriesId)return original;const ratio=settings.width/100;return {...original,width:original.width*ratio,end:original.end*ratio,x:y=>original.x(y)*ratio,yearAt:x=>original.yearAt(x/ratio)};},[catalog,visibleCatalog,seriesId,viewport,settings.width]);
  const ruler=useRef(null),tracks=useRef(null),lanes=useRef({}),root=useRef(null),remembered=useRef(null),pending=useRef(null),transitionFrom=useRef(null),modeAnimations=useRef([]);
+ useTimelineEntrance(root);
  const allGroups=useMemo(()=>Object.fromEntries(regions.map(region=>[region,arrangeGroups(periodGroups(seriesId&&!visibleCatalog.regions.includes(region)?catalog:visibleCatalog,region).filter(g=>!seriesId||g.works.length),scale)])),[visibleCatalog,regions,scale,seriesId]);
  function filterBySeries(work,region) {
   if(seriesId===work.seriesId){setSelected(null);clearSeries();return;}
@@ -69,7 +72,7 @@ export function Multitrack({catalog}) {
  }
  function captureTransition(){transitionFrom.current=new Map([...root.current.querySelectorAll('[data-motion]')].map(el=>[el.dataset.motion,el.getBoundingClientRect()]));modeAnimations.current.forEach(a=>a.cancel());}
  function switchMode(next){if(next===mode)return;if(seriesId){if(beforeSeries.current)beforeSeries.current.mode=next;clearSeries();return;}captureTransition();if(mode==='detail')remembered.current=ruler.current.scrollLeft;setMode(next);}
- useLayoutEffect(()=>{const from=transitionFrom.current;transitionFrom.current=null;const posters=posterTransition.current;posterTransition.current=null;if(!from||reduced())return;modeAnimations.current=[...root.current.querySelectorAll('[data-motion]')].flatMap(el=>{const old=from.get(el.dataset.motion);if(!old||(posters&&el.dataset.motion.startsWith('work-')))return [];const now=el.getBoundingClientRect();return [el.animate([{transform:`translate(${old.left-now.left}px,${old.top-now.top}px)`},{transform:'translate(0,0)'}],{duration:620,easing:'cubic-bezier(.22,1,.36,1)'})];});if(posters)modeAnimations.current.push(...animatePosters(root.current,posters,!!seriesId));},[mode,seriesId]);
+ useLayoutEffect(()=>{const from=transitionFrom.current;transitionFrom.current=null;const posters=posterTransition.current;posterTransition.current=null;if(!from||reduced())return;const timing=motionTiming();modeAnimations.current=[...root.current.querySelectorAll('[data-motion]')].flatMap(el=>{const old=from.get(el.dataset.motion);if(!old||(posters&&el.dataset.motion.startsWith('work-')))return [];const now=el.getBoundingClientRect();return [el.animate([{transform:`translate(${old.left-now.left}px,${old.top-now.top}px)`},{transform:'translate(0,0)'}],{duration:timing.layout,easing:timing.easing})];});if(posters)modeAnimations.current.push(...animatePosters(root.current,posters,!!seriesId));},[mode,seriesId]);
  useEffect(()=>()=>modeAnimations.current.forEach(a=>a.cancel()),[]);
  useEffect(()=>{if(!seriesId)return;const escape=e=>{if(e.key==='Escape'&&!selected){e.preventDefault();clearSeries();}};window.addEventListener('keydown',escape);return()=>window.removeEventListener('keydown',escape);},[seriesId,selected]);
  function enter(region,group){setFocus(region);const left=Math.max(0,group.left-96);if(mode==='overview'){captureTransition();pending.current=left;setMode('detail');}else moveTo(left,true);}

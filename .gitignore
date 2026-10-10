@@ -9,3 +9,9 @@ dist/
 
 .cms/
 public/uploads/
+
+# Local agent instructions and configuration
+AGENTS.md
+.agents/
+.codex/
+skills-lock.json
