@@ -4739,10 +4739,492 @@
         "width": 1280,
         "height": 1630
       }
+    },
+    {
+      "id": "fate-zero",
+      "name": "Fate/Zero",
+      "original": "Fate/Zero",
+      "seriesId": "fate",
+      "seriesName": "Fate",
+      "edition": "TV動畫 · 第四次聖杯戰爭",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 1994,
+        "approx": true
+      },
+      "source": "https://www.fate-zero.jp/",
+      "description": "衛宮切嗣召喚 Saber，參與冬木市的第四次聖杯戰爭。七組御主與從者，為各自的願望爭奪聖杯。",
+      "evidence": "官方定位為 stay night 十年前；系列資料通常以1994年定位第四次聖杯戰爭，但動畫道具與不同作品存在年份差異，因此標約1994年。只定位主線，不包含更早的回憶。",
+      "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/Fate/Zero",
+      "notes": "官方定位為 stay night 十年前；系列資料通常以1994年定位第四次聖杯戰爭，但動畫道具與不同作品存在年份差異，因此標約1994年。只定位主線，不包含更早的回憶。",
+      "medium": "TV動畫",
+      "nature": "架空",
+      "imageKind": "官方宣傳圖",
+      "status": "published",
+      "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+      "image": "/covers/fate-zero.jpg",
+      "imageSource": "https://www.fate-zero.jp/img/top/top.jpg",
+      "width": 1006,
+      "height": 1439,
+      "published": {
+        "id": "fate-zero",
+        "name": "Fate/Zero",
+        "original": "Fate/Zero",
+        "seriesId": "fate",
+        "seriesName": "Fate",
+        "edition": "TV動畫 · 第四次聖杯戰爭",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 1994,
+          "approx": true
+        },
+        "source": "https://www.fate-zero.jp/",
+        "description": "衛宮切嗣召喚 Saber，參與冬木市的第四次聖杯戰爭。七組御主與從者，為各自的願望爭奪聖杯。",
+        "evidence": "官方定位為 stay night 十年前；系列資料通常以1994年定位第四次聖杯戰爭，但動畫道具與不同作品存在年份差異，因此標約1994年。只定位主線，不包含更早的回憶。",
+        "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/Fate/Zero",
+        "notes": "官方定位為 stay night 十年前；系列資料通常以1994年定位第四次聖杯戰爭，但動畫道具與不同作品存在年份差異，因此標約1994年。只定位主線，不包含更早的回憶。",
+        "medium": "TV動畫",
+        "nature": "架空",
+        "imageKind": "官方宣傳圖",
+        "status": "published",
+        "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+        "image": "/covers/fate-zero.jpg",
+        "imageSource": "https://www.fate-zero.jp/img/top/top.jpg",
+        "width": 1006,
+        "height": 1439
+      }
+    },
+    {
+      "id": "fate-stay",
+      "name": "Fate/stay night",
+      "original": "Fate/stay night",
+      "seriesId": "fate",
+      "seriesName": "Fate",
+      "edition": "2006 TV版 · Saber 路線",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2004,
+        "approx": true
+      },
+      "source": "https://www.nbcuni.co.jp/rondorobe/anime/staynight/top.html",
+      "description": "衛宮士郎意外捲入第五次聖杯戰爭，與劍士 Saber 締結契約。以 Saber 路線為主，亦融入其他路線的部分情節。",
+      "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+      "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "medium": "TV動畫",
+      "nature": "架空",
+      "imageKind": "官方DVD封面",
+      "status": "published",
+      "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+      "image": "/covers/fate-stay.jpg",
+      "imageSource": "https://www.nbcuni.co.jp/rondorobe/anime/staynight/item/img/info_dvd01l.jpg",
+      "width": 75,
+      "height": 100,
+      "published": {
+        "id": "fate-stay",
+        "name": "Fate/stay night",
+        "original": "Fate/stay night",
+        "seriesId": "fate",
+        "seriesName": "Fate",
+        "edition": "2006 TV版 · Saber 路線",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2004,
+          "approx": true
+        },
+        "source": "https://www.nbcuni.co.jp/rondorobe/anime/staynight/top.html",
+        "description": "衛宮士郎意外捲入第五次聖杯戰爭，與劍士 Saber 締結契約。以 Saber 路線為主，亦融入其他路線的部分情節。",
+        "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+        "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "medium": "TV動畫",
+        "nature": "架空",
+        "imageKind": "官方DVD封面",
+        "status": "published",
+        "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+        "image": "/covers/fate-stay.jpg",
+        "imageSource": "https://www.nbcuni.co.jp/rondorobe/anime/staynight/item/img/info_dvd01l.jpg",
+        "width": 75,
+        "height": 100
+      }
+    },
+    {
+      "id": "fate-ubw-movie",
+      "name": "Fate/stay night [Unlimited Blade Works]",
+      "original": "Fate/stay night [Unlimited Blade Works]",
+      "seriesId": "fate",
+      "seriesName": "Fate",
+      "edition": "2010 劇場版 · 凜路線",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2004,
+        "approx": true
+      },
+      "source": "https://www.deen.co.jp/works-archives/fateubw-movie",
+      "description": "士郎與遠坂凜結盟，在第五次聖杯戰爭中共同迎敵。Studio DEEN 製作的劇場版，改編自 Unlimited Blade Works 路線。",
+      "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+      "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "medium": "劇場版",
+      "nature": "架空",
+      "imageKind": "官方宣傳圖",
+      "status": "published",
+      "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+      "image": "/covers/fate-ubw-movie.jpg",
+      "imageSource": "https://www.deen.co.jp/deen/wp-content/uploads/2016/02/fateubw-movie-key.jpg",
+      "width": 400,
+      "height": 533,
+      "published": {
+        "id": "fate-ubw-movie",
+        "name": "Fate/stay night [Unlimited Blade Works]",
+        "original": "Fate/stay night [Unlimited Blade Works]",
+        "seriesId": "fate",
+        "seriesName": "Fate",
+        "edition": "2010 劇場版 · 凜路線",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2004,
+          "approx": true
+        },
+        "source": "https://www.deen.co.jp/works-archives/fateubw-movie",
+        "description": "士郎與遠坂凜結盟，在第五次聖杯戰爭中共同迎敵。Studio DEEN 製作的劇場版，改編自 Unlimited Blade Works 路線。",
+        "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+        "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "medium": "劇場版",
+        "nature": "架空",
+        "imageKind": "官方宣傳圖",
+        "status": "published",
+        "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+        "image": "/covers/fate-ubw-movie.jpg",
+        "imageSource": "https://www.deen.co.jp/deen/wp-content/uploads/2016/02/fateubw-movie-key.jpg",
+        "width": 400,
+        "height": 533
+      }
+    },
+    {
+      "id": "fate-ubw-tv",
+      "name": "Fate/stay night [Unlimited Blade Works]",
+      "original": "Fate/stay night [Unlimited Blade Works]",
+      "seriesId": "fate",
+      "seriesName": "Fate",
+      "edition": "2014–2015 TV版 · 凜路線",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2004,
+        "approx": true
+      },
+      "source": "https://www.fate-sn.com/ubw/",
+      "description": "士郎與遠坂凜結盟，卻與凜的從者 Archer 屢生衝突。ufotable 製作的 TV 版，描寫士郎對「正義的夥伴」這個理想的追尋。",
+      "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+      "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "medium": "TV動畫",
+      "nature": "架空",
+      "imageKind": "官方宣傳圖",
+      "status": "published",
+      "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+      "image": "/covers/fate-ubw-tv.jpg",
+      "imageSource": "https://www.fate-sn.com/ubw/img/key2.jpg",
+      "width": 1700,
+      "height": 2209,
+      "published": {
+        "id": "fate-ubw-tv",
+        "name": "Fate/stay night [Unlimited Blade Works]",
+        "original": "Fate/stay night [Unlimited Blade Works]",
+        "seriesId": "fate",
+        "seriesName": "Fate",
+        "edition": "2014–2015 TV版 · 凜路線",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2004,
+          "approx": true
+        },
+        "source": "https://www.fate-sn.com/ubw/",
+        "description": "士郎與遠坂凜結盟，卻與凜的從者 Archer 屢生衝突。ufotable 製作的 TV 版，描寫士郎對「正義的夥伴」這個理想的追尋。",
+        "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+        "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "medium": "TV動畫",
+        "nature": "架空",
+        "imageKind": "官方宣傳圖",
+        "status": "published",
+        "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+        "image": "/covers/fate-ubw-tv.jpg",
+        "imageSource": "https://www.fate-sn.com/ubw/img/key2.jpg",
+        "width": 1700,
+        "height": 2209
+      }
+    },
+    {
+      "id": "fate-hf1",
+      "name": "Fate/stay night [Heaven's Feel] I. presage flower",
+      "original": "Fate/stay night [Heaven's Feel] I. presage flower",
+      "seriesId": "fate",
+      "seriesName": "Fate",
+      "edition": "劇場三部曲 · 第一章 · 櫻路線",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2004,
+        "approx": true
+      },
+      "source": "https://www.fate-sn.com/1st/",
+      "description": "第五次聖杯戰爭開始，衛宮士郎與間桐櫻原本平靜的日常逐漸改變。冬木市接連出現異常，另一條聖杯戰爭的故事由此展開。",
+      "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+      "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "medium": "劇場版",
+      "nature": "架空",
+      "imageKind": "官方宣傳圖",
+      "status": "published",
+      "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+      "image": "/covers/fate-hf1.jpg",
+      "imageSource": "https://www.fate-sn.com/1st/assets/img/top/main_01.jpg",
+      "width": 1800,
+      "height": 2084,
+      "published": {
+        "id": "fate-hf1",
+        "name": "Fate/stay night [Heaven's Feel] I. presage flower",
+        "original": "Fate/stay night [Heaven's Feel] I. presage flower",
+        "seriesId": "fate",
+        "seriesName": "Fate",
+        "edition": "劇場三部曲 · 第一章 · 櫻路線",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2004,
+          "approx": true
+        },
+        "source": "https://www.fate-sn.com/1st/",
+        "description": "第五次聖杯戰爭開始，衛宮士郎與間桐櫻原本平靜的日常逐漸改變。冬木市接連出現異常，另一條聖杯戰爭的故事由此展開。",
+        "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+        "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "medium": "劇場版",
+        "nature": "架空",
+        "imageKind": "官方宣傳圖",
+        "status": "published",
+        "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+        "image": "/covers/fate-hf1.jpg",
+        "imageSource": "https://www.fate-sn.com/1st/assets/img/top/main_01.jpg",
+        "width": 1800,
+        "height": 2084
+      }
+    },
+    {
+      "id": "fate-hf2",
+      "name": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+      "original": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+      "seriesId": "fate",
+      "seriesName": "Fate",
+      "edition": "劇場三部曲 · 第二章 · 櫻路線",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2004,
+        "approx": true
+      },
+      "source": "https://www.fate-sn.com/2nd/",
+      "description": "冬木市的異變持續擴大，櫻隱藏的過往逐漸浮現。士郎在自己的理想與守護櫻的決心之間面臨選擇。",
+      "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+      "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "medium": "劇場版",
+      "nature": "架空",
+      "imageKind": "官方宣傳圖",
+      "status": "published",
+      "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+      "image": "/covers/fate-hf2.jpg",
+      "imageSource": "https://www.fate-sn.com/2nd/assets/img/2nd/top/pc/kv2.jpg",
+      "width": 1200,
+      "height": 1693,
+      "published": {
+        "id": "fate-hf2",
+        "name": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "original": "Fate/stay night [Heaven's Feel] II. lost butterfly",
+        "seriesId": "fate",
+        "seriesName": "Fate",
+        "edition": "劇場三部曲 · 第二章 · 櫻路線",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2004,
+          "approx": true
+        },
+        "source": "https://www.fate-sn.com/2nd/",
+        "description": "冬木市的異變持續擴大，櫻隱藏的過往逐漸浮現。士郎在自己的理想與守護櫻的決心之間面臨選擇。",
+        "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+        "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "medium": "劇場版",
+        "nature": "架空",
+        "imageKind": "官方宣傳圖",
+        "status": "published",
+        "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+        "image": "/covers/fate-hf2.jpg",
+        "imageSource": "https://www.fate-sn.com/2nd/assets/img/2nd/top/pc/kv2.jpg",
+        "width": 1200,
+        "height": 1693
+      }
+    },
+    {
+      "id": "fate-hf3",
+      "name": "Fate/stay night [Heaven's Feel] III. spring song",
+      "original": "Fate/stay night [Heaven's Feel] III. spring song",
+      "seriesId": "fate",
+      "seriesName": "Fate",
+      "edition": "劇場三部曲 · 第三章 · 櫻路線",
+      "cardStyle": "poster",
+      "regions": [
+        "日本"
+      ],
+      "periodIds": [
+        "jp-7"
+      ],
+      "date": {
+        "type": "year",
+        "start": 2004,
+        "approx": true
+      },
+      "source": "https://www.fate-sn.com/",
+      "description": "Heaven’s Feel 路線的終章。士郎、凜與伊莉雅走向聖杯戰爭的核心，試圖結束冬木市的災厄。",
+      "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+      "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+      "medium": "劇場版",
+      "nature": "架空",
+      "imageKind": "官方宣傳圖",
+      "status": "published",
+      "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+      "image": "/covers/fate-hf3.jpg",
+      "imageSource": "https://www.fate-sn.com/assets_hf3/img/top/main_sp.jpg",
+      "width": 750,
+      "height": 1393,
+      "published": {
+        "id": "fate-hf3",
+        "name": "Fate/stay night [Heaven's Feel] III. spring song",
+        "original": "Fate/stay night [Heaven's Feel] III. spring song",
+        "seriesId": "fate",
+        "seriesName": "Fate",
+        "edition": "劇場三部曲 · 第三章 · 櫻路線",
+        "cardStyle": "poster",
+        "regions": [
+          "日本"
+        ],
+        "periodIds": [
+          "jp-7"
+        ],
+        "date": {
+          "type": "year",
+          "start": 2004,
+          "approx": true
+        },
+        "source": "https://www.fate-sn.com/",
+        "description": "Heaven’s Feel 路線的終章。士郎、凜與伊莉雅走向聖杯戰爭的核心，試圖結束冬木市的災厄。",
+        "evidence": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "evidenceUrl": "https://typemoon.wiki.cre.jp/wiki/聖杯戦争",
+        "notes": "依第五次聖杯戰爭通常採用的2004年2月前後定位，動畫改編未逐一確認絕對年份，因此標約2004年。此處只定位聖杯戰爭主線，不把序幕、尾聲或播映年份當成主線日期。不同路線為分歧故事，不是依次發生的續集。",
+        "medium": "劇場版",
+        "nature": "架空",
+        "imageKind": "官方宣傳圖",
+        "status": "published",
+        "updatedAt": "2026-10-09T13:43:33.219772+00:00",
+        "image": "/covers/fate-hf3.jpg",
+        "imageSource": "https://www.fate-sn.com/assets_hf3/img/top/main_sp.jpg",
+        "width": 750,
+        "height": 1393
+      }
     }
   ],
-  "revision": 6,
+  "revision": 7,
   "history": [
+    {
+      "at": "2026-10-09T13:43:33.219772+00:00",
+      "action": "content-update",
+      "name": "新增 Fate 系列七部動畫版本與故事年代",
+      "id": "fate-20261009"
+    },
     {
       "at": "2026-10-07T00:45:45.222437+00:00",
       "action": "content-update",
