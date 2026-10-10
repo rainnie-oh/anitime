@@ -1,0 +1,12 @@
+img.progressive-cover {
+  background-size:cover;
+  background-position:center;
+  transition:filter 240ms ease-out;
+}
+img.progressive-cover.is-loading {filter:blur(8px)}
+img.progressive-cover.is-loaded {filter:blur(0)}
+@media(prefers-reduced-motion:reduce) {img.progressive-cover {transition:none}}
+.mt-art img.progressive-cover {transition:filter 240ms ease-out,transform 150ms ease-out}
+@media(prefers-reduced-motion:reduce) {.mt-art img.progressive-cover {transition:none}}
+.mt-stack-art img.progressive-cover {transition:filter 240ms ease-out,transform 200ms ease-out}
+@media(prefers-reduced-motion:reduce) {.mt-stack-art img.progressive-cover {transition:none}}

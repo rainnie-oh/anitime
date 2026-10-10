@@ -10,13 +10,17 @@
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "start": "node server/start.mjs",
     "test:cms": "node --test tests/cms.test.mjs",
-    "test:multitrack": "node --test tests/multitrack.test.mjs"
+    "test:multitrack": "node --test tests/multitrack.test.mjs",
+    "images:prepare": "node scripts/prepare-cover-images.mjs"
   },
   "dependencies": {
+    "@remixicon/react": "^4.9.0",
     "@vitejs/plugin-react": "5.0.4",
-    "vite": "6.4.2",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "vite": "6.4.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
 }

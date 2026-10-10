@@ -1,3 +1,5 @@
+import ProgressiveCover from './components/ui/progressive-cover.jsx';
+import SegmentedControlTabs from './components/ui/segmented-control-tabs.jsx';
 import {stackSeries,stackPreview} from './series-stacks.mjs';
 import {capturePosters,animatePosters} from './stack-motion.mjs';
 import './series-stack.css';
@@ -78,7 +80,7 @@ export function Multitrack({catalog}) {
   const work=item.work,portrait=work.height>work.width,chapter=work.cardStyle==='chapter',open=region===focus;
   return <article key={work.id} className={'mt-work '+(chapter?'chapter':portrait?'portrait':'landscape')} data-motion={'work-'+work.id} data-node-style={chapter?'chapter':'poster'}>
    <button className="mt-work-open" data-work={work.id} aria-label={`${work.name}，${formatDate(work.date,item.periods)}${open?'':'，展開'+region}`} title={work.name} onFocus={e=>{const rect=e.currentTarget.getBoundingClientRect(),bounds=tracks.current.getBoundingClientRect();if(rect.right<bounds.left||rect.left>bounds.right)moveTo(Math.max(0,group.left-96));}} onClick={()=>pick(region,item,group)}>
-    {!chapter&&<span className="mt-art"><img data-poster={region+':'+work.id} data-poster-series={work.seriesId||undefined} src={resolveAsset(work.image)} alt="" loading="eager" decoding="async"/></span>}
+    {!chapter&&<span className="mt-art"><ProgressiveCover key={work.image} compact={!open} data-poster={region+':'+work.id} data-poster-series={work.seriesId||undefined} src={work.image} alt=""/></span>}
     {(open||chapter)&&<span className="mt-caption">{work.edition&&<small>{work.edition}</small>}<b>{work.name}</b><span>{formatDate(work.date,item.periods)}</span></span>}
    </button>
    {open&&!seriesId&&work.seriesId&&<a className="series-link" href={seriesId===work.seriesId?'#timeline':'#series-'+work.seriesId} aria-label={seriesId===work.seriesId?`返回全部作品：${work.name}`:`只看${work.seriesName}系列：${work.name}`} onClick={e=>{e.preventDefault();filterBySeries(work,region);}}>{seriesId===work.seriesId?'返回':`${work.seriesName}系列 ↗`}</a>}
@@ -90,7 +92,7 @@ export function Multitrack({catalog}) {
   const layers=preview.length===2?[preview[1],preview[0]]:[preview[1],preview[2],preview[0]];
   return <article key={'stack-'+group.id+'-'+work.seriesId} className="mt-work mt-series-stack">
    <button className="mt-stack-open" data-stack-key={region+':'+group.id+':'+work.seriesId} aria-label={`展開${work.seriesName}系列，${group.name}，${items.length}部作品`} aria-expanded="false" onFocus={e=>{const rect=e.currentTarget.getBoundingClientRect();if(rect.left<0||rect.right>viewport)moveTo(Math.max(0,group.left-96));}} onClick={()=>filterBySeries(work,region)}>
-    <span className="mt-stack-art">{layers.map(i=><img key={i.work.id} data-poster={region+':'+i.work.id} data-poster-series={work.seriesId} src={resolveAsset(i.work.image)} alt=""/>)}</span>
+    <span className="mt-stack-art">{layers.map(i=><ProgressiveCover key={i.work.id+":"+i.work.image} compact={!open} data-poster={region+':'+i.work.id} data-poster-series={work.seriesId} src={i.work.image} alt=""/>)}</span>
     {open&&<><span className="mt-caption"><b className="mt-stack-title">{work.seriesName}<span className="mt-stack-count">{items.length} 部</span></b><span>{dates}</span></span><span className="mt-stack-hint">展開系列 ↗</span></>}
    </button>
   </article>;
@@ -109,7 +111,7 @@ export function Multitrack({catalog}) {
  const displayWidth=mode==='overview'?overviewWidth:scale.width;
  const displayGroups=region=>mode==='overview'?allGroups[region].map(g=>({...g,left:g.undated?overviewWidth-160:overviewX(g.start),width:Math.ceil(overviewLayout.labelWidth(g)),row:0})):allGroups[region];
  return <div className="mt-design-workspace"><main className={'multitrack '+(mode==='overview'?'mt-overview-mode':'')+(seriesId?' has-series-filter':'')} ref={root}>
-  <header className="mt-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();switchMode('overview');}}><img className="brand-wordmark" src={resolveAsset('/brand/anitime-transparent.svg')} alt="ANITIME" width="166" height="48" /></a><nav aria-label="展開地域">{regions.map(region=><button key={region} aria-pressed={region===focus} disabled={!!seriesId&&!visibleCatalog.regions.includes(region)} onClick={()=>choose(region)}>{region}</button>)}</nav><nav aria-label="模式"><button aria-pressed={mode==='overview'} onClick={()=>switchMode('overview')}>OVERVIEW</button><button aria-pressed={mode==='detail'} onClick={()=>switchMode('detail')}>TIMELINE</button></nav></header>
+  <header className="mt-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();switchMode('overview');}}><img className="brand-wordmark" src={resolveAsset('/brand/anitime-transparent.svg')} alt="ANITIME" width="166" height="48" /></a><nav className="region-tabs" aria-label="展開地域">{regions.map(region=><button key={region} aria-pressed={region===focus} disabled={!!seriesId&&!visibleCatalog.regions.includes(region)} onClick={()=>choose(region)}>{region}</button>)}</nav><SegmentedControlTabs value={mode} onValueChange={switchMode}/></header>
   <div className="mt-context" aria-hidden="true" />
   <>
    <div className="mt-ruler" ref={ruler} onScroll={track} tabIndex={0} aria-label="共享年份尺"><div style={{width:displayWidth}}>{scale.ticks.map((t,i)=><span className={mode==='detail'&&t===focusedTick?'is-focused':''} aria-current={mode==='detail'&&t===focusedTick?'true':undefined} data-motion={'tick-'+t} key={t} style={{left:mode==='overview'?overviewX(t):scale.x(t),visibility:mode==='overview'&&!overviewTicks.has(t)?'hidden':undefined}}>{yearLabel(t)}</span>)}</div></div>
