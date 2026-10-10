@@ -86,3 +86,9 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - CMS keeps immutable V1 (complete original generated text) and V2 (the edited copy as of 2026-10-08) in server/copy-versions.json. Preserve V1 verbatim, including its original script.
 - Named copy versions store descriptions only, keyed by stable work IDs. Loading a version changes drafts only, preserves published snapshots and other metadata, and automatically saves the preceding descriptions. Public API must never expose version history.
 - User rejected the editorial conclusions about the children’s daily needs in Grave of the Fireflies, the “hotter than the stove” joke and broadcast-date explanation in Iron Wok Jan. Remove those phrases from the final V2; avoid this tone in future writing.
+
+## Series poster stacks
+- In the multitrack timeline, group multiple entries only within the same region, historical period and series. Single entries stay ordinary cards. Keep separate eras separate, even if their collections overlap.
+- Use up to three overlapping posters with side artwork exposed and slight rotations (-5°, -2°, +4°). No white frame; use a fine translucent black outline and light shadow. Dates and labels stay horizontal.
+- Clicking a stack enters existing series focus; all entries expand with their individual posters and dates. Use reversible movement and fading, respect reduced motion, and keep one return beside the region heading. Restore scroll and keyboard focus on return.
+- Individual cards must open the existing WorkDetail template, never the concept demo dialog.

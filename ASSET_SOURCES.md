@@ -92,3 +92,12 @@
 - 三毛流浪记: https://p2.img.cctvpic.com/nettv/children/program/sanmao/20101104/images/100937_1288863897186.jpg (source: https://shaoer.cntv.cn/program/sanmao/index.shtml)
 - CANAAN: https://www.pa-works.jp/wp-content/uploads/2010/07/02_cannan-209x300.jpg (source: https://www.pa-works.jp/works/canaan/)
 - 派对咖孔明: https://paripikoumei-anime.com/tv/assets/images/top/kv.jpg?220115 (source: https://paripikoumei-anime.com/tv/story/)
+
+## Fate animation editions (2026-10-09)
+- Fate/Zero (TV動畫 · 第四次聖杯戰爭): https://www.fate-zero.jp/img/top/top.jpg — https://www.fate-zero.jp/
+- Fate/stay night (2006 TV版 · Saber 路線): https://www.nbcuni.co.jp/rondorobe/anime/staynight/item/img/info_dvd01l.jpg — https://www.nbcuni.co.jp/rondorobe/anime/staynight/top.html
+- Fate/stay night [Unlimited Blade Works] (2010 劇場版 · 凜路線): https://www.deen.co.jp/deen/wp-content/uploads/2016/02/fateubw-movie-key.jpg — https://www.deen.co.jp/works-archives/fateubw-movie
+- Fate/stay night [Unlimited Blade Works] (2014–2015 TV版 · 凜路線): https://www.fate-sn.com/ubw/img/key2.jpg — https://www.fate-sn.com/ubw/
+- Fate/stay night [Heaven's Feel] I. presage flower (劇場三部曲 · 第一章 · 櫻路線): https://www.fate-sn.com/1st/assets/img/top/main_01.jpg — https://www.fate-sn.com/1st/
+- Fate/stay night [Heaven's Feel] II. lost butterfly (劇場三部曲 · 第二章 · 櫻路線): https://www.fate-sn.com/2nd/assets/img/2nd/top/pc/kv2.jpg — https://www.fate-sn.com/2nd/
+- Fate/stay night [Heaven's Feel] III. spring song (劇場三部曲 · 第三章 · 櫻路線): https://www.fate-sn.com/assets_hf3/img/top/main_sp.jpg — https://www.fate-sn.com/
