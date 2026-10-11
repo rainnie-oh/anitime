@@ -1,3 +1,4 @@
+import ShareButton from './components/ui/share-button.jsx';
 import ProgressiveCover from './components/ui/progressive-cover.jsx';
 import SegmentedControlTabs from './components/ui/segmented-control-tabs.jsx';
 import {stackSeries,stackPreview} from './series-stacks.mjs';
@@ -114,7 +115,7 @@ export function Multitrack({catalog}) {
  const displayWidth=mode==='overview'?overviewWidth:scale.width;
  const displayGroups=region=>mode==='overview'?allGroups[region].map(g=>({...g,left:g.undated?overviewWidth-160:overviewX(g.start),width:Math.ceil(overviewLayout.labelWidth(g)),row:0})):allGroups[region];
  return <div className="mt-design-workspace"><main className={'multitrack '+(mode==='overview'?'mt-overview-mode':'')+(seriesId?' has-series-filter':'')} ref={root}>
-  <header className="mt-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();switchMode('overview');}}><img className="brand-wordmark" src={resolveAsset('/brand/anitime-transparent.svg')} alt="ANITIME" width="166" height="48" /></a><nav className="region-tabs" aria-label="展開地域">{regions.map(region=><button key={region} aria-pressed={region===focus} disabled={!!seriesId&&!visibleCatalog.regions.includes(region)} onClick={()=>choose(region)}>{region}</button>)}</nav><SegmentedControlTabs value={mode} onValueChange={switchMode}/></header>
+  <header className="mt-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();switchMode('overview');}}><img className="brand-wordmark" src={resolveAsset('/brand/anitime-transparent.svg')} alt="ANITIME" width="166" height="48" /></a><div className="mt-navigation"><SegmentedControlTabs value={mode} onValueChange={switchMode}/><nav className="region-tabs" aria-label="展開地域">{regions.map(region=><button key={region} aria-pressed={region===focus} disabled={!!seriesId&&!visibleCatalog.regions.includes(region)} onClick={()=>choose(region)}>{region}</button>)}</nav></div><ShareButton/></header>
   <div className="mt-context" aria-hidden="true" />
   <>
    <div className="mt-ruler" ref={ruler} onScroll={track} tabIndex={0} aria-label="共享年份尺"><div style={{width:displayWidth}}>{scale.ticks.map((t,i)=><span className={mode==='detail'&&t===focusedTick?'is-focused':''} aria-current={mode==='detail'&&t===focusedTick?'true':undefined} data-motion={'tick-'+t} key={t} style={{left:mode==='overview'?overviewX(t):scale.x(t),visibility:mode==='overview'&&!overviewTicks.has(t)?'hidden':undefined}}>{yearLabel(t)}</span>)}</div></div>
