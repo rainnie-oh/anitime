@@ -11,3 +11,31 @@ node_modules
 .cms/
 server/
 src/Admin*
+
+# Private planning, working notes, and local previews
+.agents/
+.codex/
+skills-lock.json
+AGENTS.md
+docs/PRD.md
+docs/design-system.md
+docs/editorial-copy-zh-hant.md
+*-qa.md
+reference/
+screenshots/
+audit-ui/
+/*-preview.*
+/detail-*.png
+/overview-polished.png
+/swiss-*.png
+/share-navigation-preview.png
+# Credentials and local exports
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+public/uploads/
