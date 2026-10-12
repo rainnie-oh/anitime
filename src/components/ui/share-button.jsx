@@ -73,7 +73,7 @@ export default function ShareButton() {
   }}>
     <button ref={trigger} type="button" className="share-button" onClick={toggle}
       aria-label="分享" aria-expanded={open} aria-controls={panelId}>
-      <RiShareLine size={16} aria-hidden="true"/><span>SHARE</span>
+      <RiShareLine size={16} aria-hidden="true"/><span>分享</span>
     </button>
     <span className="share-announcement" role="status">{state === 'copied' ? '連結已複製' : state === 'error' ? '無法自動複製，請選取下方連結複製。' : ''}</span>
     {open && <div className="share-panel" id={panelId} role="group" aria-label="分享選項">

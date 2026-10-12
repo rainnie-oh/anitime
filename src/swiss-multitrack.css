@@ -33,3 +33,35 @@
  .mt-navigation{grid-column:1/-1;grid-row:2;justify-self:center;gap:24px}
 }
 @media(max-width:360px){.mt-navigation{gap:12px}}
+
+/* Compact navigation and an in-flow author credit share a reserved footer row. */
+.mt-design-workspace .multitrack{grid-template-rows:88px var(--design-axis) 62px minmax(0,1fr) 56px}
+.mt-design-workspace .mt-footer{height:56px;padding:6px 40px;gap:24px;overflow:visible;min-width:0}
+.mt-footer-navigation{display:flex;align-items:center;gap:16px;flex:1;min-width:0;max-width:440px}
+.mt-footer-navigation .arrows{gap:0;flex:none}
+.mt-footer-navigation .arrows button{border:0;background:transparent;color:#737373;border-radius:4px}
+.mt-footer-navigation .arrows button:hover:not(:disabled){background:#f4f4f4;color:#e53e3e}
+.mt-footer-navigation .arrows svg{width:16px;height:16px;stroke-width:1.5}
+.mt-footer-navigation .progress{min-width:40px}
+.mt-footer-navigation .current{font-size:11px;letter-spacing:0;color:#737373;min-width:4ch}
+.mt-credit{display:flex;align-items:center;gap:4px;flex:none;margin-left:auto;white-space:nowrap;font-size:11px;line-height:20px;color:#737373}
+.mt-credit a{display:inline-flex;align-items:center;min-height:40px;color:#333;text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:3px}
+.mt-credit a:hover,.mt-credit a:focus-visible{color:#e53e3e;text-decoration-color:currentColor}
+.mt-credit a:focus-visible{outline-offset:2px}
+@media(max-width:700px){
+ .mt-design-workspace .multitrack{grid-template-rows:100px var(--design-axis) 62px minmax(0,1fr) 56px}
+ .mt-design-workspace .mt-footer{padding-inline:16px;gap:16px}
+ .mt-footer-navigation{gap:8px}
+ .mt-footer-navigation .arrows button{width:44px;height:44px}
+ .mt-credit a{min-height:44px}
+}
+@media(max-width:520px){
+ .mt-footer-navigation .progress{display:none}
+ .mt-footer-navigation{flex:none;gap:4px}
+ .mt-design-workspace .mt-footer{gap:8px}
+}
+@media(max-width:359px){
+ .mt-design-workspace .multitrack{grid-template-rows:100px var(--design-axis) 62px minmax(0,1fr) 96px}
+ .mt-design-workspace .mt-footer{height:96px;flex-wrap:wrap;align-content:center;gap:0 12px}
+ .mt-credit{justify-content:flex-end;width:100%}
+}

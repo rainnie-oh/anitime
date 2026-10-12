@@ -4,6 +4,7 @@ import Public from "./Public.jsx";
 import Admin from "./Admin.jsx";
 import "./styles.css";
 import "./motion.css";
+import "./typography.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
