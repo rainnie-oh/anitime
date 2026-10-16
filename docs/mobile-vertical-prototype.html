@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ANITIME 縱向原型</title>
+<!--
+ 低保真設計原型，僅供選定移動端縱向方向（見 docs/mobile-vertical.md）。
+ 不是生產實現：資料規則（periodGroups、formatDate、stackSeries）在此為獨立複製，正式實現必須直接匯入 src/ 中的同名模組。
+ 在 multitrack-view 根目錄啟動任一靜態伺服器或 `npm run dev`，開啟 /docs/mobile-vertical-prototype.html。
+-->
+<style>
+:root{
+ --font-text:Helvetica,Arial,'PingFang TC','Microsoft JhengHei',sans-serif;
+ --text-caption:12px;--text-ui:13px;--text-label:14px;--text-body:16px;--text-subheading:24px;--text-section:28px;--text-display:42px;
+ --ink-primary:#111;--ink-secondary:#666;--ink-muted:#737373;--ink-accent:#e53e3e;
+ --line:rgba(17,17,17,.12);--pale:#f0f0f0;
+ font-family:var(--font-text);-webkit-font-smoothing:antialiased;color:var(--ink-primary);
+}
+*{box-sizing:border-box}
+body{margin:0;background:#e9e9e9}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:inherit}
+:focus-visible{outline:2px solid var(--ink-accent);outline-offset:2px}
+
+/* Prototype stage (outside the phone) */
+.stage{min-height:100dvh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px 16px 40px}
+.proto-bar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:center;font-size:13px;color:var(--ink-secondary)}
+.proto-bar .seg{display:inline-flex;background:#fff;border-radius:7px;padding:3px;gap:2px}
+.proto-bar .seg button{height:30px;padding:0 12px;border-radius:4px;color:var(--ink-muted);font-weight:500}
+.proto-bar .seg button[aria-pressed=true]{background:var(--ink-primary);color:#fff}
+.proto-note{max-width:640px;font-size:12px;line-height:1.6;color:var(--ink-secondary);text-align:center;margin:0}
+.phone{position:relative;background:#fff;overflow:hidden;border-radius:28px;box-shadow:0 0 0 10px #111,0 20px 60px rgba(0,0,0,.25);flex:none}
+@media (max-width:560px){
+ .stage{padding:0;gap:0}
+ .proto-bar{padding:8px;background:#fff;width:100%;border-bottom:1px solid var(--line)}
+ .proto-note{display:none}
+ .phone{width:100vw!important;height:calc(100dvh - 92px)!important;border-radius:0;box-shadow:none}
+}
+
+/* App */
+.screen{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none}
+.screen::-webkit-scrollbar{display:none}
+.chrome{position:sticky;top:0;z-index:20;background:#fff}
+.top{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.top img{height:22px;display:block}
+.share{position:relative}
+.share>button{height:44px;display:inline-flex;align-items:center;gap:4px;font-size:var(--text-ui);font-weight:500}
+.share svg{width:16px;height:16px}
+.share-menu{position:absolute;right:0;top:44px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.12);min-width:150px;padding:4px;display:none;z-index:40}
+.share-menu.open{display:block}
+.share-menu button,.share-menu a{display:flex;width:100%;height:44px;align-items:center;padding:0 12px;font-size:var(--text-ui);font-weight:500;color:inherit;text-decoration:none}
+.share-menu .ok{color:var(--ink-accent)}
+.controls{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;gap:8px}
+.views{display:inline-flex;height:32px;padding:3px;gap:2px;border-radius:7px;background:var(--pale);color:var(--ink-muted)}
+.views button{height:26px;padding:0 10px;border-radius:4px;font-size:var(--text-ui);font-weight:500;white-space:nowrap}
+.views button[aria-pressed=true]{background:#fff;color:var(--ink-primary);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.regions{display:flex;gap:2px}
+.regions button{height:44px;padding:0 8px;font-size:var(--text-ui);font-weight:500;color:var(--ink-muted);position:relative}
+.regions button[aria-pressed=true]{color:var(--ink-accent)}
+.regions button[aria-pressed=true]:after{content:"";position:absolute;left:8px;right:8px;bottom:6px;height:2px;background:var(--ink-accent)}
+.regions button:disabled{opacity:.3;cursor:default}
+.context{height:56px;display:flex;align-items:center;gap:12px;padding:0 16px;border-bottom:1px solid var(--line)}
+.context .year{font-size:var(--text-display);font-weight:700;line-height:1;color:var(--ink-accent);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.context .period{font-size:var(--text-label);font-weight:600}
+.context .period small{display:block;font-size:var(--text-caption);font-weight:400;color:var(--ink-secondary)}
+.series-bar{height:56px;display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid var(--line);font-size:var(--text-ui);font-weight:500}
+.series-bar button{height:44px;display:inline-flex;align-items:center;gap:2px;color:var(--ink-accent)}
+.series-bar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.series-bar span{color:var(--ink-secondary)}
+.colhead{position:relative;height:28px;border-bottom:1px solid var(--line);font-size:var(--text-caption);font-weight:600}
+.colhead span{position:absolute;top:0;height:28px;line-height:28px;white-space:nowrap;overflow:hidden}
+.colhead .on{color:var(--ink-accent)}
+.colhead .muted{opacity:.3}
+
+.body{position:relative}
+.spine{position:absolute;left:0;top:0;bottom:0;width:52px;border-right:1px solid var(--line)}
+.tick{position:absolute;right:8px;transform:translateY(-50%);font-size:var(--text-caption);color:var(--ink-muted);font-variant-numeric:tabular-nums;transition:font-size .2s,color .2s}
+.tick:after{content:"";position:absolute;right:-8px;top:50%;width:4px;height:1px;background:var(--ink-muted)}
+.tick.on{color:var(--ink-accent);font-size:var(--text-label);font-weight:700}
+@media (prefers-reduced-motion:reduce){.tick{transition:none}}
+
+.grp{position:absolute}
+.grp-head{display:block;width:100%;height:52px;padding-top:4px}
+.grp-head h3{margin:0;display:flex;align-items:center;gap:6px;font-size:var(--text-label);font-weight:600;line-height:1.5}
+.grp-head h3 i{width:8px;height:8px;background:var(--ink-primary);flex:none}
+.grp-head span{display:block;font-size:var(--text-caption);color:var(--ink-secondary);line-height:1.5;padding-left:14px}
+.grp.empty .grp-head{color:var(--ink-muted)}.grp.empty .grp-head h3 i{background:#bbb}
+.chips{height:30px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;height:24px;padding:0 8px;border:1px solid var(--line);font-size:var(--text-caption);display:inline-flex;align-items:center;gap:4px;white-space:nowrap;color:var(--ink-secondary)}
+.chip b{font-weight:600;color:var(--ink-primary)}
+.chip:after{content:attr(data-n);font-variant-numeric:tabular-nums;background:var(--pale);padding:0 4px;color:var(--ink-secondary)}
+.grid{display:grid;gap:12px;align-items:start}
+.card{display:block;width:100%}
+.art{display:block;width:100%;background:#eee center/cover;overflow:hidden}
+.art img{width:100%;height:100%;object-fit:cover;display:block}
+.cap{display:block;height:58px;padding-top:6px;font-size:var(--text-caption);line-height:1.5}
+.cap b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600}
+.cap small{display:block;font-size:var(--text-caption);color:var(--ink-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card.chapter{height:72px;border-left:2px solid var(--ink-primary);padding-left:8px}
+.card.chapter .cap{height:auto}
+.stack-art{position:relative;display:block;width:100%}
+.stack-art img{position:absolute;width:62%;height:86%;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,.18);outline:1px solid rgba(0,0,0,.15)}
+.stack-art img:nth-child(1){left:2%;top:8%;rotate:-5deg}
+.stack-art img:nth-child(2){left:20%;top:4%;rotate:-2deg}
+.stack-art img:nth-child(3){left:36%;top:10%;rotate:4deg}
+.stack-cap b em{font-style:normal;font-weight:400;color:var(--ink-secondary);margin-left:4px}
+.muted-col{opacity:.28;filter:blur(1px);pointer-events:none}
+
+/* B: compact columns */
+.cgrp{position:absolute;display:flex;flex-direction:column;align-items:center;gap:4px}
+.vname{writing-mode:vertical-rl;font-size:var(--text-caption);font-weight:600;line-height:1.2;padding:4px 0;display:flex;align-items:center;gap:4px}
+.vname i{width:6px;height:6px;background:var(--ink-primary)}
+.thumb{width:44px;height:30px;object-fit:cover;display:block;background:#eee}
+.more{font-size:11px;color:var(--ink-secondary);font-variant-numeric:tabular-nums}
+.cgrp.empty .vname{color:var(--ink-muted)}
+
+/* C: reference rail */
+.rail-band{position:absolute;width:28px;border-left:2px solid #cfcfcf}
+.rail-band.now{border-left-color:var(--ink-primary)}
+.rail-label{position:absolute;writing-mode:vertical-rl;font-size:var(--text-caption);font-weight:600;line-height:1.2;padding:2px 0 2px 4px;color:var(--ink-secondary);text-align:start}
+.rail-label .n{writing-mode:horizontal-tb;display:block;font-weight:400;font-variant-numeric:tabular-nums;background:var(--pale);padding:0 3px;margin-top:4px}
+.rail-band.now+.rail-label,.rail-label.now{color:var(--ink-primary)}
+.rail-sep{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+
+/* Overview */
+.ov-col{position:absolute;top:0;bottom:0}
+.ov-col+.ov-col{border-left:1px solid var(--line)}
+.ov-band{position:absolute;left:8px;width:1px;background:var(--ink-primary);opacity:.25}
+.ov-label{position:absolute;left:8px;right:4px;min-height:44px;text-align:left;padding-left:8px}
+.ov-label h3{margin:0;font-size:var(--text-label);font-weight:600;line-height:1.5;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 6px}
+.ov-label h3 i{width:8px;height:8px;background:var(--ink-primary);display:inline-block;margin-left:-12px;margin-right:-2px;align-self:center}
+.ov-label small{font-size:var(--text-caption);font-weight:400;font-variant-numeric:tabular-nums;background:var(--pale);padding:0 4px;color:var(--ink-secondary)}
+.ov-label:active h3,.ov-label:hover h3{color:var(--ink-accent)}
+.ov-head{position:absolute;top:0;height:40px;line-height:40px;padding-left:16px;font-size:var(--text-label);font-weight:600}
+
+.credit{padding:24px 16px 40px;text-align:right;font-size:var(--text-ui);font-weight:500;line-height:1.5}
+.credit a{color:inherit}
+
+/* Detail sheet */
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.35);z-index:50;opacity:0;pointer-events:none;transition:opacity .2s}
+.scrim.open{opacity:1;pointer-events:auto}
+.sheet{position:absolute;left:0;right:0;bottom:0;top:24px;background:#fff;z-index:60;transform:translateY(100%);transition:transform .28s cubic-bezier(.2,.8,.2,1);overflow-y:auto;border-radius:12px 12px 0 0;overscroll-behavior:contain}
+.sheet.open{transform:none}
+@media (prefers-reduced-motion:reduce){.sheet,.scrim{transition:none}}
+.sheet .grab{position:sticky;top:0;height:44px;display:flex;justify-content:center;align-items:center;background:#fff;z-index:2}
+.sheet .grab:before{content:"";width:36px;height:4px;border-radius:2px;background:#ccc}
+.sheet .close{position:absolute;right:8px;top:0;width:44px;height:44px;font-size:22px}
+.sheet .cover{width:100%;display:block;max-height:52vh;object-fit:contain;background:#f5f5f5}
+.sheet .inner{padding:20px 16px 48px}
+.sheet h2{margin:0;font-size:28px;line-height:1.2;text-wrap:balance}
+.sheet .red-rule{width:32px;height:3px;background:var(--ink-accent);margin:12px 0}
+.sheet .year{font-size:var(--text-subheading);font-weight:600;line-height:1.3;font-variant-numeric:tabular-nums}
+.sheet .meta{font-size:var(--text-caption);color:var(--ink-secondary);line-height:1.5;margin:8px 0 0}
+.sheet .desc{font-size:var(--text-body);line-height:1.8;max-width:36em;margin:16px 0}
+.sheet .slink{display:inline-flex;align-items:center;min-height:44px;color:var(--ink-accent);font-size:var(--text-ui);font-weight:500}
+.sheet .cta{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;background:#111;color:#fff;border-radius:3px;font-size:var(--text-ui);font-weight:500;text-decoration:none;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="stage">
+ <div class="proto-bar">
+  <span>方向</span>
+  <span class="seg" id="dirs"><button data-dir="A">A 地區分頁</button><button data-dir="B">B 並列窄列</button><button data-dir="C">C 主列＋參照欄</button></span>
+  <span class="seg" id="sizes"><button data-w="360">360</button><button data-w="390">390</button><button data-w="430">430</button></span>
+ </div>
+ <div class="phone" id="phone"><div class="screen" id="screen"></div><div class="scrim" id="scrim"></div><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="作品詳情"></div></div>
+ <p class="proto-note">低保真原型：真實目錄資料與封面。可點地區標籤、總覽時期、海報堆疊（系列聚焦）、作品（詳情）、分享。B 點窄列切換展開地區；C 點右側參照欄；A 點「同期」標籤。切換地區或方向時保持目前年份。</p>
+</div>
+<script type="module">
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// ---- Data rules: copied from src/date.mjs, src/multitrack.mjs, src/series-stacks.mjs for this standalone sketch only ----
+const yearLabel=y=>y<0?`前${Math.abs(y)}`:String(y);
+function dateSpan(d={}){const n=Number(d.start);if(d.start==null||d.start===''||!Number.isFinite(n))return null;if(d.type==='year')return[n,n];if(d.type==='range')return[n,Number(d.end)];if(d.type==='decade')return[n,n+9];if(d.type==='century'){const s=n>0?(n-1)*100+1:n*100;return[s,s+99];}return null;}
+const yy=n=>Number(n)<0?`公元前${Math.abs(Number(n))}`:String(n);
+function formatDate(d={type:'unknown'},periods=[]){const p=d.approx?'約':'';switch(d.type){case'year':return d.start!==''&&d.start!=null?`${p}${yy(d.start)}年${d.month?`${Number(d.month)}月`:''}${d.day?`${Number(d.day)}日`:''}`:'UNKNOWN';case'range':return`${p}${yy(d.start)}—${yy(d.end)}年`;case'decade':return`${p}${yy(d.start)}年代`;case'century':return`${p}${yy(d.start)}世紀${d.part||''}`;case'period':return periods.length?p+periods.map(x=>x.name).join('、'):'UNKNOWN';default:return'UNKNOWN';}}
+function periodGroups(cat,region){const periods=cat.periods.filter(p=>p.region===region).sort((a,b)=>a.start-b.start);const groups=periods.map(p=>({...p,works:[]}));const undated={id:'undated-'+region,name:'年代待定',region,works:[],undated:true};for(const work of cat.works.filter(w=>w.regions.includes(region))){const related=periods.filter(p=>work.periodIds.includes(p.id));const span=dateSpan(work.date);const item={work,periods:related,span};if(!span&&!related.length){undated.works.push(item);continue;}const period=related.find(p=>span&&span[0]>=p.start&&span[0]<p.end)||related[0]||periods.find(p=>span&&span[0]>=p.start&&span[0]<p.end);if(period)groups.find(g=>g.id===period.id).works.push(item);else if(span)groups.push({id:'date-'+work.id,region,name:yearLabel(span[0]),start:span[0],end:Math.max(span[0]+1,span[1]),works:[item]});}for(const g of groups)g.works.sort((a,b)=>(a.span?.[0]??(g.start+g.end)/2)-(b.span?.[0]??(g.start+g.end)/2));return[...groups,...(undated.works.length?[undated]:[])];}
+function stackSeries(items){const m=new Map(),out=[];for(const it of items){const k=it.work.seriesId;if(!k){out.push(it);continue;}if(!m.has(k)){const g={...it,stackItems:[]};m.set(k,g);out.push(g);}m.get(k).stackItems.push(it);}return out.map(i=>i.stackItems?.length===1?i.stackItems[0]:i);}
+const filterSeries=(cat,id)=>{if(!id)return cat;const works=cat.works.filter(w=>w.seriesId===id);return{...cat,works,regions:cat.regions.filter(r=>works.some(w=>w.regions.includes(r)))};};
+
+// ---- Assets (works with a static server at the project root, or with Vite) ----
+const brandProbe=await fetch('../public/brand/anitime-transparent.svg',{method:'HEAD'}).catch(()=>null);
+const PUB=brandProbe?.ok&&(brandProbe.headers.get('content-type')||'').includes('svg')?'../public':'';
+const catalog=await fetch('../src/catalog.json').then(r=>r.json());
+const covers=await fetch('../src/cover-images.json').then(r=>r.json()).catch(()=>({}));
+const asset=p=>p?.startsWith('/')?PUB+p:p;
+const cover=(w,min=328)=>{const c=covers[w.image];const v=c?.variants?.find(v=>v.width>=min)||c?.variants?.at(-1);return asset(v?.src||w.image);};
+const preview=w=>covers[w.image]?.preview||'';
+
+// ---- State ----
+const S={dir:new URLSearchParams(location.search).get('dir')||'C',W:390,mode:'timeline',focus:'日本',seriesId:'',before:null,selected:null,opener:null};
+const screen=$('#screen'),phone=$('#phone');
+const W=()=>phone.clientWidth;
+
+// ---- Vertical scale: the horizontal makeScale idea rotated; period boundaries set rhythm, content reserves room ----
+const CAP=58,HEAD=52,CHIPS=30,GAP=12,BLOCK_GAP=20;
+function metrics(){const w=W(),spine=52,pad=16;
+ if(S.dir==='B'){const compact=44,cg=8,wide=w-spine-pad-2*compact-3*cg;return{spine,pad,compact,cg,wide,cols:1,colW:wide};}
+ if(S.dir==='C'){const rail=68,content=w-spine-pad-rail-8;return{spine,pad,rail,content,cols:2,colW:(content-GAP)/2};}
+ const content=w-spine-pad-12;return{spine,pad,content,cols:2,colW:(content-GAP)/2};}
+function itemH(item,colW){if(item.stackItems)return Math.round(colW*.9)+CAP;const w=item.work;if(w.cardStyle==='chapter')return 72;return Math.round(colW*Math.min(1.5,(w.height||3)/(w.width||2)))+CAP;}
+function itemsOf(g){return S.seriesId?g.works:stackSeries(g.works);}
+function expandedH(g,m,chips){const items=itemsOf(g);let h=HEAD+(chips?CHIPS:0);for(let i=0;i<items.length;i+=m.cols){h+=Math.max(...items.slice(i,i+m.cols).map(it=>itemH(it,m.colW)))+GAP;}return h;}
+function compactH(g){const name=g.name.length*14+20;const n=g.works.length;return name+(n?Math.min(n,4)*34+(n>4?18:0):0);}
+function collections(groups){const out=[];for(const g of groups.filter(g=>!g.undated)){const c=out.at(-1);if(c&&g.start<c.end){c.groups.push(g);c.end=Math.max(c.end,g.end);}else out.push({start:g.start,end:g.end,groups:[g]});}const und=groups.find(g=>g.undated);if(und)out.push({undated:true,groups:[und]});return out;}
+
+function build(){
+ const cat=filterSeries(catalog,S.seriesId),m=metrics();
+ const regionGroups={};
+ const occupied=catalog.regions.flatMap(r=>periodGroups(cat,r)).filter(g=>!g.undated&&g.works.length);
+ const start=Math.min(...occupied.map(g=>g.start));
+ for(const r of catalog.regions){regionGroups[r]=periodGroups(cat,r).filter(g=>(g.undated||g.end>start)&&(!S.seriesId||g.works.length));}
+ let ticks=S.seriesId?[...new Set(occupied.flatMap(g=>[g.start,g.end]))]:[...new Set([start,...catalog.periods.flatMap(p=>[p.start,p.end]).filter(y=>y>=start)])];
+ ticks.sort((a,b)=>a-b);
+ const pos=[24];
+ for(let i=1;i<ticks.length;i++)pos.push(pos[i-1]+(S.seriesId?40:Math.max(40,Math.min(300,(ticks[i]-ticks[i-1])*1.1))));
+ const heightOf=(r,g)=>{if(S.dir==='B'&&r!==S.focus)return compactH(g);return g.works.length||!S.seriesId?(g.works.length?expandedH(g,m,S.dir==='A'&&chipsFor(r,g).length):HEAD):HEAD;};
+ // Which regions reserve vertical room: A/C only the focused region (others are text references); B every column.
+ const reserving=S.dir==='B'?catalog.regions:[S.focus];
+ for(const r of reserving)for(const c of collections(regionGroups[r])){if(c.undated)continue;
+  const a=ticks.indexOf(Math.max(c.start,start)),b=ticks.indexOf(c.end);if(a<0||b<=a)continue;
+  const need=c.groups.reduce((s,g)=>s+heightOf(r,g)+BLOCK_GAP,0);const missing=need-(pos[b]-pos[a]);
+  if(missing>0)for(let i=a+1;i<pos.length;i++)pos[i]+=missing*Math.min(1,(i-a)/(b-a));}
+ const interp=(v,f,t)=>{let i=0;while(i<f.length-2&&v>f[i+1])i++;return t[i]+(v-f[i])/((f[i+1]-f[i])||1)*(t[i+1]-t[i]);};
+ const scale={ticks,pos,start,y:yr=>interp(Math.max(yr,start),ticks,pos),yearAt:p=>Math.round(interp(Math.min(Math.max(p,pos[0]),pos.at(-1)),pos,ticks)),undatedY:pos.at(-1)+64};
+ // Lay out blocks per region
+ const layout={};let bottom=scale.undatedY;
+ for(const r of catalog.regions){let prev=-Infinity;const blocks=[];
+  for(const c of collections(regionGroups[r])){let top=c.undated?Math.max(scale.undatedY,prev+BLOCK_GAP):Math.max(scale.y(c.start),prev+BLOCK_GAP);
+   for(const g of c.groups){const h=heightOf(r,g);blocks.push({g,top,h});top+=h+BLOCK_GAP;}prev=top-BLOCK_GAP;}
+  layout[r]=blocks;if(reserving.includes(r))bottom=Math.max(bottom,prev);}
+ return {cat,m,scale,layout,regionGroups,height:bottom+64};
+}
+function chipsFor(region,g){if(g.undated)return[];const out=[];for(const r of catalog.regions){if(r===region)continue;for(const o of periodGroups(filterSeries(catalog,S.seriesId),r)){if(!o.undated&&o.works.length&&o.start<g.end&&o.end>g.start)out.push({r,o});}}return out;}
+
+// ---- Rendering ----
+let V=null;
+const icon={share:'<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.12 17.023 8.921 14.73a4 4 0 1 1 0-5.458l4.199-2.291a4 4 0 1 1 .959 1.755L9.88 11.027a4.01 4.01 0 0 1 0 1.946l4.198 2.29a4 4 0 1 1-.959 1.755ZM6 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm11-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>',back:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>'};
+function chromeHTML(){
+ const muted=r=>S.seriesId&&!V.cat.regions.includes(r);
+ let ctx;
+ if(S.seriesId){const name=catalog.works.find(w=>w.seriesId===S.seriesId)?.seriesName;ctx=`<div class="series-bar"><button id="ret">${icon.back}返回全部作品</button><span>/ ${esc(name)}系列</span></div>`;}
+ else if(S.mode==='timeline')ctx=`<div class="context"><span class="year" id="cy"></span><span class="period" id="cp"></span></div>`;
+ else ctx='';
+ let colhead='';const m=V.m;
+ if(S.mode==='overview'){const cw=(W()-m.spine)/3;colhead=`<div class="colhead">${catalog.regions.map((r,i)=>`<span style="left:${m.spine+i*cw+16}px">${r}</span>`).join('')}</div>`;}
+ else if(S.dir==='B'){let x=m.spine+m.cg;colhead=`<div class="colhead">${catalog.regions.map(r=>{const w=r===S.focus?m.wide:m.compact;const s=`<span class="${r===S.focus?'on':''} ${muted(r)?'muted':''}" style="left:${x}px;width:${w}px">${r}</span>`;x+=w+m.cg;return s;}).join('')}</div>`;}
+ else if(S.dir==='C'){const others=catalog.regions.filter(r=>r!==S.focus);const x=W()-m.pad-m.rail;colhead=`<div class="colhead"><span style="left:${m.spine+8}px">${S.focus}</span>${others.map((r,i)=>`<span class="${muted(r)?'muted':''}" style="left:${x+i*36+4}px">${r}</span>`).join('')}</div>`;}
+ return `<div class="chrome"><div class="top"><img src="${asset('/brand/anitime-transparent.svg')}" alt="ANITIME"><div class="share"><button id="shareBtn" aria-haspopup="menu" aria-expanded="false">${icon.share}分享</button><div class="share-menu" id="shareMenu" role="menu"><button role="menuitem" id="copy">複製連結</button><a role="menuitem" target="_blank" rel="noopener" href="https://x.com/intent/post?url=${encodeURIComponent(location.origin+location.pathname)}">分享到 X</a></div></div></div>
+ <div class="controls"><nav class="views" aria-label="視圖"><button data-mode="overview" aria-pressed="${S.mode==='overview'}">總覽</button><button data-mode="timeline" aria-pressed="${S.mode==='timeline'}">時間線</button></nav>
+ <nav class="regions" aria-label="展開地域">${catalog.regions.map(r=>`<button data-region="${r}" aria-pressed="${r===S.focus&&S.mode==='timeline'}" ${muted(r)?'disabled':''}>${r}</button>`).join('')}</nav></div>${ctx}${colhead}</div>`;
+}
+function spineHTML(scale,height){let last=-99;return `<div class="spine" style="height:${height}px">${scale.ticks.map((t,i)=>{const y=scale.pos[i];if(y-last<20)return'';last=y;return `<span class="tick" data-y="${y}" style="top:${y}px">${yearLabel(t)}</span>`;}).join('')}</div>`;}
+function cardHTML(item,g,colW,region){
+ if(item.stackItems){const it=item.stackItems,w=it[0].work;const pv=it.length<=3?it:[it[0],it[Math.floor(it.length/2)],it.at(-1)];
+  const dates=[...new Set(it.map(i=>formatDate(i.work.date,i.periods)))].join('／');
+  return `<button class="card" data-stack="${esc(w.seriesId)}" data-region="${region}" aria-label="展開${esc(w.seriesName)}系列，${esc(g.name)}，${it.length}部作品"><span class="stack-art" style="height:${Math.round(colW*.9)}px">${pv.map(i=>`<img loading="lazy" src="${cover(i.work,164)}" alt="">`).join('')}</span><span class="cap stack-cap"><b>${esc(w.seriesName)}<em>${it.length} 部</em></b><small>${esc(dates)}</small></span></button>`;}
+ const w=item.work,date=formatDate(w.date,item.periods);
+ if(w.cardStyle==='chapter')return `<button class="card chapter" data-work="${w.id}" data-region="${region}"><span class="cap">${w.edition?`<small>${esc(w.edition)}</small>`:''}<b>${esc(w.name)}</b><small>${esc(date)}</small></span></button>`;
+ const h=Math.round(colW*Math.min(1.5,(w.height||3)/(w.width||2)));
+ return `<button class="card" data-work="${w.id}" data-region="${region}" aria-label="${esc(w.name)}，${esc(date)}"><span class="art" style="height:${h}px;background-image:url('${preview(w)}')"><img loading="lazy" src="${cover(w)}" alt=""></span><span class="cap"><b>${esc(w.name)}</b><small>${esc(date)}</small></span></button>`;
+}
+function expandedBlocks(region,x,width,m,withChips){
+ return V.layout[region].map(({g,top})=>{const items=itemsOf(g);const chips=withChips?chipsFor(region,g):[];
+  return `<section class="grp ${g.works.length?'':'empty'}" style="left:${x}px;top:${top}px;width:${width}px" data-gid="${g.id}" data-top="${top}">
+  <button class="grp-head" data-enter="${region}|${g.id}"><h3><i></i>${esc(g.name)}</h3><span>${esc(g.undated?'位置不代表史實年份':g.range||'具體年代未明確')}${g.works.length?'':' · 暫無作品'}</span></button>
+  ${chips.length?`<div class="chips">${chips.map(({r,o})=>`<button class="chip" data-jump="${r}|${o.start}|${Math.max(o.start,g.start)}" data-n="${o.works.length}">同期 <b>${r}</b>${esc(o.name)}</button>`).join('')}</div>`:''}
+  ${items.length?`<div class="grid" style="grid-template-columns:repeat(${m.cols},1fr)">${items.map(it=>cardHTML(it,g,m.colW,region)).join('')}</div>`:''}</section>`;}).join('');
+}
+function render(anchorYear){
+ V=build();const m=V.m;let body='';
+ if(S.mode==='overview')return renderOverview();
+ if(S.dir==='A'){body=expandedBlocks(S.focus,m.spine+12,m.content,m,true);}
+ if(S.dir==='C'){body=expandedBlocks(S.focus,m.spine+8,m.content,m,false);
+  const others=catalog.regions.filter(r=>r!==S.focus);const x0=W()-m.pad-m.rail;
+  body+=`<div class="rail-sep" style="left:${x0-6}px"></div>`;
+  others.forEach((r,i)=>{const muted=S.seriesId&&!V.cat.regions.includes(r);let prevBottom=-Infinity;
+   body+=`<div class="${muted?'muted-col':''}">`+V.regionGroups[r].filter(g=>!g.undated&&(g.works.length||!S.seriesId)).map(g=>{const top=V.scale.y(g.start),bot=Math.max(top+44,V.scale.y(g.end));const lt=Math.max(top,prevBottom+4);prevBottom=lt+g.name.length*14+30;
+    return `<button class="rail-band" data-band="${r}|${g.id}" style="left:${x0+i*36}px;top:${top}px;height:${bot-top}px" aria-label="${r} ${esc(g.name)}，${g.works.length}部作品，切換到此地域"></button><span class="rail-label" data-top="${lt}" data-bottom="${bot}" data-h="${g.name.length*14+30}" style="left:${x0+i*36+2}px;top:${lt}px;pointer-events:none">${esc(g.name)}<span class="n">${g.works.length}</span></span>`;}).join('')+'</div>';});}
+ if(S.dir==='B'){let x=m.spine+m.cg;for(const r of catalog.regions){const muted=S.seriesId&&!V.cat.regions.includes(r);
+  if(r===S.focus)body+=expandedBlocks(r,x,m.wide,m,false);
+  else body+=`<div class="${muted?'muted-col':''}">`+V.layout[r].map(({g,top})=>`<button class="cgrp ${g.works.length?'':'empty'}" data-band="${r}|${g.id}" style="left:${x}px;top:${top}px;width:${m.compact}px" aria-label="${r} ${esc(g.name)}，展開${r}"><span class="vname"><i></i>${esc(g.name)}</span>${g.works.slice(0,4).map(it=>`<img class="thumb" loading="lazy" src="${cover(it.work,80)}" alt="">`).join('')}${g.works.length>4?`<span class="more">+${g.works.length-4}</span>`:''}</button>`).join('')+'</div>';
+  x+=(r===S.focus?m.wide:m.compact)+m.cg;}}
+ screen.innerHTML=chromeHTML()+`<div class="body" style="height:${V.height}px">${spineHTML(V.scale,V.height)}${body}</div><footer class="credit">Made by <a href="https://github.com/rainnie-oh" target="_blank" rel="noopener">Rainnie</a> with ❤️</footer>`;
+ if(anchorYear!=null)screen.scrollTop=Math.max(0,V.scale.y(anchorYear)-8);
+ onScroll();
+}
+function renderOverview(){
+ const cw=(W()-V.m.spine)/3,LABEL=48;
+ const groups=Object.fromEntries(catalog.regions.map(r=>[r,periodGroups(catalog,r).filter(g=>!g.undated&&g.end>V.scale.start)]));
+ const ticks=[...new Set(Object.values(groups).flat().flatMap(g=>[g.start,g.end]))].sort((a,b)=>a-b);
+ // Compressed shared coordinates: each tick only moves far enough to keep every region's labels whole.
+ const pos=[],bottom=Object.fromEntries(catalog.regions.map(r=>[r,0]));
+ ticks.forEach((t,i)=>{let y=i?pos[i-1]+14:16;for(const r of catalog.regions)if(groups[r].some(g=>g.start===t))y=Math.max(y,bottom[r]+6);pos.push(y);for(const r of catalog.regions)if(groups[r].some(g=>g.start===t))bottom[r]=y+LABEL;});
+ const Y=t=>pos[ticks.indexOf(t)];const height=Math.max(...pos,...Object.values(bottom))+48;
+ let body='';catalog.regions.forEach((r,i)=>{body+=`<div class="ov-col" style="left:${V.m.spine+i*cw}px;width:${cw}px">`+groups[r].map(g=>`<span class="ov-band" style="top:${Y(g.start)}px;height:${Math.max(LABEL,Y(g.end)-Y(g.start))}px"></span><button class="ov-label" data-enter="${r}|${g.id}" style="top:${Y(g.start)}px" aria-label="${r} ${esc(g.name)}，${g.works.length}部作品"><h3><i></i>${esc(g.name)}<small>${g.works.length}</small></h3></button>`).join('')+'</div>';});
+ screen.innerHTML=chromeHTML()+`<div class="body" style="height:${height}px">${spineHTML({ticks,pos},height)}${body}</div><footer class="credit">Made by <a href="https://github.com/rainnie-oh" target="_blank" rel="noopener">Rainnie</a> with ❤️</footer>`;
+ screen.scrollTop=0;
+}
+function currentYear(){return V&&S.mode==='timeline'?V.scale.yearAt(screen.scrollTop+8):null;}
+function onScroll(){if(S.mode!=='timeline'||!V)return;const top=screen.scrollTop+8;let best=null;
+ for(const el of screen.querySelectorAll('.tick')){const y=+el.dataset.y;el.classList.remove('on');if(y<=top+40)best=el;}best?.classList.add('on');
+ const yr=V.scale.yearAt(top);const cy=$('#cy');if(cy){cy.textContent=yearLabel(yr);const g=V.regionGroups[S.focus].find(g=>!g.undated&&yr>=g.start&&yr<g.end);$('#cp').innerHTML=g?`${esc(g.name)}<small>${S.focus} · ${esc(g.range||'')}</small>`:`<small>${S.focus}</small>`;}
+ if(S.dir==='C')for(const l of screen.querySelectorAll('.rail-label')){const t=+l.dataset.top,b=+l.dataset.bottom,h=+l.dataset.h;l.style.top=Math.max(t,Math.min(top,b-h))+'px';}
+ if(S.dir==='C')for(const b of screen.querySelectorAll('.rail-band')){const t=parseFloat(b.style.top),h=parseFloat(b.style.height);b.classList.toggle('now',t<=top+120&&t+h>=top);}}
+screen.addEventListener('scroll',onScroll,{passive:true});
+
+// ---- Behaviour shared by all directions ----
+function setFocus(region,year){if(S.seriesId&&!V.cat.regions.includes(region))return;const y=year??currentYear();S.focus=region;S.mode='timeline';render(y);}
+function enterGroup(region,gid){S.focus=region;S.mode='timeline';render();const blk=V.layout[region].find(b=>b.g.id===gid);screen.scrollTop=blk?Math.max(0,blk.top-8):0;onScroll();}
+function enterSeries(seriesId,region,opener){S.before={top:screen.scrollTop,year:currentYear(),focus:S.focus,mode:S.mode,opener:opener?.dataset.stack||opener?.dataset.work};S.seriesId=seriesId;S.focus=region;S.mode='timeline';closeDetail(false);render();screen.scrollTop=0;onScroll();$('#ret')?.focus({preventScroll:true});}
+function clearSeries(){const b=S.before;S.seriesId='';S.before=null;S.focus=b.focus;S.mode=b.mode;render(b.year);screen.scrollTop=b.top;onScroll();const sel=b.opener&&screen.querySelector(`[data-stack="${CSS.escape(b.opener)}"],[data-work="${CSS.escape(b.opener)}"]`);sel?.focus({preventScroll:true});}
+function openDetail(id,region,opener){const w=catalog.works.find(w=>w.id===id);const periods=catalog.periods.filter(p=>w.periodIds.includes(p.id));S.opener=opener;
+ $('#sheet').innerHTML=`<div class="grab"></div><button class="close" id="close" aria-label="關閉詳情">×</button><img class="cover" src="${asset(w.image)}" alt=""><div class="inner"><h2>${esc(w.name)}</h2><div class="red-rule"></div><div class="year">${esc(formatDate(w.date,periods))}</div>${w.edition?`<p class="meta">${esc(w.edition)}</p>`:''}<p class="meta">${esc(w.original||'')}<br>${esc(region)} · ${esc(periods.map(p=>p.name).join('、'))} · ${esc(w.medium||'')}</p>${w.seriesId&&!S.seriesId?`<button class="slink" data-series="${esc(w.seriesId)}" data-region="${region}">${esc(w.seriesName)}系列 ↗</button>`:''}<p class="desc">${esc(w.description)}</p>${w.source?`<a class="cta" href="${esc(w.source)}" target="_blank" rel="noreferrer">訪問官網 <span aria-hidden="true">···›</span></a>`:''}</div>`;
+ $('#sheet').scrollTop=0;$('#sheet').classList.add('open');$('#scrim').classList.add('open');$('#close').focus({preventScroll:true});}
+function closeDetail(restore=true){if(!$('#sheet').classList.contains('open'))return;$('#sheet').classList.remove('open');$('#scrim').classList.remove('open');if(restore)S.opener?.focus({preventScroll:true});}
+$('#scrim').onclick=()=>closeDetail();
+$('#sheet').addEventListener('click',e=>{if(e.target.closest('#close'))closeDetail();const s=e.target.closest('[data-series]');if(s)enterSeries(s.dataset.series,s.dataset.region,S.opener);});
+// Pull-down to dismiss when the sheet is at its top.
+{let y0=null;const sh=$('#sheet');sh.addEventListener('touchstart',e=>{y0=sh.scrollTop<=0?e.touches[0].clientY:null;},{passive:true});sh.addEventListener('touchend',e=>{if(y0!=null&&e.changedTouches[0].clientY-y0>90)closeDetail();y0=null;});}
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if($('#sheet').classList.contains('open'))closeDetail();else if(S.seriesId)clearSeries();});
+screen.addEventListener('click',async e=>{
+ const t=e.target.closest('button,a');if(!t)return;
+ if(t.id==='shareBtn'){const m=$('#shareMenu');m.classList.toggle('open');t.setAttribute('aria-expanded',m.classList.contains('open'));return;}
+ if(t.id==='copy'){try{await navigator.clipboard.writeText(location.origin+location.pathname);t.textContent='已複製';t.classList.add('ok');}catch{t.textContent='無法自動複製';}return;}
+ if(t.id==='ret')return clearSeries();
+ if(t.dataset.mode){if(t.dataset.mode===S.mode)return;if(S.seriesId){S.before.mode=t.dataset.mode;return clearSeries();}const y=currentYear();S.mode=t.dataset.mode;S.mode==='timeline'?render(S.lastYear??y):(S.lastYear=y,render());return;}
+ if(t.dataset.region&&t.closest('.regions'))return setFocus(t.dataset.region,S.mode==='overview'?S.lastYear:undefined);
+ if(t.dataset.enter){const[r,g]=t.dataset.enter.split('|');return enterGroup(r,g);}
+ if(t.dataset.jump){const[r,,y]=t.dataset.jump.split('|');return setFocus(r,+y);}
+ if(t.dataset.band){const[r,gid]=t.dataset.band.split('|');const g=V.regionGroups[r].find(g=>g.id===gid);return setFocus(r,Math.max(g.start,currentYear()<g.end&&currentYear()>=g.start?currentYear():g.start));}
+ if(t.dataset.stack)return enterSeries(t.dataset.stack,t.dataset.region,t);
+ if(t.dataset.work)return openDetail(t.dataset.work,t.dataset.region,t);
+});
+
+// ---- Prototype controls ----
+const sizes={360:780,390:844,430:932};
+function frame(w){S.W=w;phone.style.width=w+'px';phone.style.height=sizes[w]+'px';document.querySelectorAll('#sizes button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.w===w));}
+function dir(d){const y=currentYear();S.dir=d;document.querySelectorAll('#dirs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.dir===d));render(S.mode==='timeline'?y??1868:undefined);}
+$('#dirs').onclick=e=>{const b=e.target.closest('button');if(b)dir(b.dataset.dir);};
+$('#sizes').onclick=e=>{const b=e.target.closest('button');if(!b)return;const y=currentYear();frame(+b.dataset.w);render(y);};
+new ResizeObserver(()=>{if(V){const y=currentYear();render(y);}}).observe(phone);
+frame(390);dir(S.dir);render(1868);
+</script>
+</body>
+</html>

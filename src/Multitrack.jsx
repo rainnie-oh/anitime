@@ -24,14 +24,15 @@ function WorkCollection({style,children,collectionId}) {
  return <div className={'mt-collection '+(more?'has-more':'')} style={style}><div className="mt-work-group" data-collection={collectionId} ref={content} onScroll={measure} style={{gridTemplateColumns:style.gridTemplateColumns}}>{children}</div></div>;
 }
 
-export function Multitrack({catalog}) {
+export function Multitrack({catalog,position}) {
+ const saved=position?.current,startYear=useRef(saved?.year??1868);
  const settings={axis:64,width:105,text:14,caption:12,year:42,gap:12,poster:164};
  const [seriesId,setSeriesId]=useState('');
  const visibleCatalog=useMemo(()=>filterSeries(catalog,seriesId),[catalog,seriesId]);
  const beforeSeries=useRef(null),restoreSeries=useRef(null),posterTransition=useRef(null);
  const regions=catalog.regions;
- const [focus,setFocus]=useState(()=>regions.includes('日本')?'日本':regions.find(r=>catalog.works.some(w=>w.regions.includes(r)))||regions[0]);
- const [mode,setMode]=useState('detail'),[year,setYear]=useState(1868),[scrollX,setScrollX]=useState(0),[progress,setProgress]=useState(0),[selected,setSelected]=useState(null),[viewport,setViewport]=useState(1000);
+ const [focus,setFocus]=useState(()=>saved?.focus&&regions.includes(saved.focus)?saved.focus:regions.includes('日本')?'日本':regions.find(r=>catalog.works.some(w=>w.regions.includes(r)))||regions[0]);
+ const [mode,setMode]=useState(saved?.mode==='overview'?'overview':'detail'),[year,setYear]=useState(startYear.current),[scrollX,setScrollX]=useState(0),[progress,setProgress]=useState(0),[selected,setSelected]=useState(null),[viewport,setViewport]=useState(1000);
  const scale=useMemo(()=>{const original=seriesId?makeSeriesScale(visibleCatalog,viewport):makeScale(catalog,{minTickGap:132,cardWidth:164,cardGap:12});if(seriesId)return original;const ratio=settings.width/100;return {...original,width:original.width*ratio,end:original.end*ratio,x:y=>original.x(y)*ratio,yearAt:x=>original.yearAt(x/ratio)};},[catalog,visibleCatalog,seriesId,viewport,settings.width]);
  const ruler=useRef(null),tracks=useRef(null),lanes=useRef({}),root=useRef(null),remembered=useRef(null),pending=useRef(null),transitionFrom=useRef(null),modeAnimations=useRef([]);
  useTimelineEntrance(root);
@@ -46,7 +47,7 @@ export function Multitrack({catalog}) {
  function clearSeries(){captureTransition();posterTransition.current=capturePosters(root.current,seriesId);restoreSeries.current=beforeSeries.current;beforeSeries.current=null;setSeriesId('');if(restoreSeries.current){setFocus(restoreSeries.current.focus);setMode(restoreSeries.current.mode);remembered.current=restoreSeries.current.remembered;}}
  function track(){if(mode==='overview'){setScrollX(ruler.current?.scrollLeft||0);return;}const el=ruler.current;if(!el)return;const left=el.scrollLeft;remembered.current=left;setScrollX(left);setProgress(left/Math.max(1,el.scrollWidth-el.clientWidth));setYear(Math.max(scale.ticks[0],Math.min(scale.ticks.at(-1),scale.yearAt(left+96))));}
  function moveTo(left,smooth=false){ruler.current?.scrollTo({left,behavior:smooth&&!reduced()?'smooth':'instant'});}
- useLayoutEffect(()=>{if(mode==='detail'){moveTo(seriesId?0:pending.current??remembered.current??Math.max(0,scale.x(1868)-96));pending.current=null;if(seriesId)tracks.current.scrollTop=0;track();}else{moveTo(0);setScrollX(0);}},[mode,scale]);
+ useLayoutEffect(()=>{if(mode==='detail'){moveTo(seriesId?0:pending.current??remembered.current??Math.max(0,scale.x(startYear.current)-96));pending.current=null;if(seriesId)tracks.current.scrollTop=0;track();}else{moveTo(0);setScrollX(0);}},[mode,scale]);
  useLayoutEffect(()=>{const previous=restoreSeries.current;if(!previous)return;restoreSeries.current=null;moveTo(previous.left);tracks.current.scrollTop=previous.top;previous.collections.forEach(([id,top])=>{const el=root.current.querySelector(`[data-collection="${CSS.escape(id)}"]`);if(el)el.scrollTop=top;});const opener=previous.opener?.isConnected?previous.opener:previous.openerKey?root.current.querySelector(`[data-stack-key="${CSS.escape(previous.openerKey)}"]`):null;opener?.focus({preventScroll:true});track();},[seriesId,mode]);
  useEffect(()=>{const element=root.current;const observer=new ResizeObserver(()=>{setViewport(element.clientWidth);if(ruler.current)track();});observer.observe(element);return()=>observer.disconnect();},[scale]);
  useEffect(()=>{
@@ -75,6 +76,7 @@ export function Multitrack({catalog}) {
  function switchMode(next){if(next===mode)return;if(seriesId){if(beforeSeries.current)beforeSeries.current.mode=next;clearSeries();return;}captureTransition();if(mode==='detail')remembered.current=ruler.current.scrollLeft;setMode(next);}
  useLayoutEffect(()=>{const from=transitionFrom.current;transitionFrom.current=null;const posters=posterTransition.current;posterTransition.current=null;if(!from||reduced())return;const timing=motionTiming();modeAnimations.current=[...root.current.querySelectorAll('[data-motion]')].flatMap(el=>{const old=from.get(el.dataset.motion);if(!old||(posters&&el.dataset.motion.startsWith('work-')))return [];const now=el.getBoundingClientRect();return [el.animate([{transform:`translate(${old.left-now.left}px,${old.top-now.top}px)`},{transform:'translate(0,0)'}],{duration:timing.layout,easing:timing.easing})];});if(posters)modeAnimations.current.push(...animatePosters(root.current,posters,!!seriesId));},[mode,seriesId]);
  useEffect(()=>()=>modeAnimations.current.forEach(a=>a.cancel()),[]);
+ useEffect(()=>{if(position)position.current={year,focus,mode};},[year,focus,mode]);
  useEffect(()=>{if(!seriesId)return;const escape=e=>{if(e.key==='Escape'&&!selected){e.preventDefault();clearSeries();}};window.addEventListener('keydown',escape);return()=>window.removeEventListener('keydown',escape);},[seriesId,selected]);
  function enter(region,group){setFocus(region);const left=Math.max(0,group.left-96);if(mode==='overview'){captureTransition();pending.current=left;setMode('detail');}else moveTo(left,true);}
  function pick(region,item,group){if(region!==focus){choose(region,{...item,group});return;}setSelected({...item.work,dateData:item.work.date,date:formatDate(item.work.date,item.periods),period:item.periods.map(p=>p.name).join('、')||group.name,region});}

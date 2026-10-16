@@ -1,0 +1,95 @@
+/* Vertical timeline (mobile). Uses the shared type roles in typography.css; no new sizes. */
+.vt-root{min-height:100dvh;background:#fff;color:var(--ink-primary);font-family:var(--font-text)}
+html.vt-locked{overflow:hidden}
+
+.vt-chrome{position:sticky;top:0;z-index:20;background:#fff}
+.vt-root header.vt-header{position:static;inset:auto;z-index:auto;display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 8px;padding:0 16px;color:var(--ink-primary);mix-blend-mode:normal;pointer-events:auto}
+.vt-header .brand{min-height:48px;align-items:center}
+.vt-header .brand-wordmark{width:110px;height:auto}
+.vt-header .share-button{min-height:44px;padding-right:0}
+.vt-controls{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;height:44px}
+.vt-root header nav.region-tabs{gap:0;margin-right:-8px}
+
+.vt-context{display:flex;align-items:center;gap:12px;height:56px;padding:0 16px;border-top:1px solid #eee}
+.vt-year{font-size:var(--text-display);font-weight:var(--weight-bold);line-height:1;letter-spacing:-.02em;color:var(--ink-accent);font-variant-numeric:tabular-nums}
+.vt-current{display:grid;font-size:var(--text-label);font-weight:var(--weight-semibold);line-height:var(--leading-ui);min-width:0}
+.vt-current small{font-size:var(--text-caption);font-weight:var(--weight-regular);color:var(--ink-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vt-series-bar{gap:4px;font-size:var(--text-ui);font-weight:var(--weight-medium);color:var(--ink-secondary)}
+.vt-root .vt-series-return{min-height:44px;padding:0;color:var(--ink-accent);gap:2px}
+.vt-series-return svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vt-series-bar>span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.vt-columns{position:relative;height:28px;border-top:1px solid #eee;border-bottom:1px solid #eee;font-size:var(--text-caption);font-weight:var(--weight-semibold);line-height:27px}
+.vt-columns span{position:absolute;top:0;white-space:nowrap;color:var(--ink-secondary)}
+.vt-columns .is-focus{color:var(--ink-accent)}
+.vt-columns .is-muted{opacity:.3}
+
+.vt-body{position:relative;overflow:hidden}
+.vt-spine{position:absolute;left:0;top:0;width:52px;border-right:1px solid #eee}
+.vt-tick{position:absolute;right:10px;translate:0 -50%;font-size:var(--text-caption);line-height:var(--leading-ui);color:var(--ink-muted);font-variant-numeric:tabular-nums;white-space:nowrap;transform-origin:right center;transition:scale var(--ani-feedback,140ms) ease-out,color var(--ani-feedback,140ms) ease-out}
+.vt-tick::after{content:"";position:absolute;right:-10px;top:50%;width:5px;height:1px;background:currentColor}
+.vt-tick.is-focused{color:var(--ink-accent);font-weight:var(--weight-bold);scale:1.17}
+
+.vt-period{position:absolute}
+.vt-period-heading{overflow:hidden;padding-top:6px}
+.vt-period-heading h3{display:flex;align-items:center;gap:6px;font-size:var(--text-label);font-weight:var(--weight-semibold);line-height:var(--leading-ui)}
+.vt-period-heading h3 i{width:8px;height:8px;flex:none;background:var(--ink-primary)}
+.vt-period-heading span,.vt-period-heading p{display:block;padding-left:14px;font-size:var(--text-caption);line-height:var(--leading-ui);color:var(--ink-secondary)}
+.vt-period.is-empty h3{color:var(--ink-muted)}
+.vt-period.is-empty h3 i{background:#bbb}
+.vt-grid{display:grid;gap:12px;align-items:start}
+
+.vt-card{min-width:0}
+.vt-card-open,.vt-card .mt-stack-open{display:block;width:100%;text-align:left;transition:scale var(--ani-feedback,140ms) ease-out}
+.vt-card-open:active,.vt-card .mt-stack-open:active{scale:.97}
+.vt-card-open:focus-visible{outline:2px solid var(--ink-accent);outline-offset:3px}
+.vt-art{display:block;overflow:hidden;background:#f5f5f5}
+.vt-art img{display:block;width:100%;height:100%;object-fit:cover}
+.vt-caption{display:block;overflow:hidden;padding-top:6px;font-size:var(--text-caption);line-height:var(--leading-ui)}
+.vt-caption b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:var(--weight-semibold);color:var(--ink-primary)}
+.vt-caption small,.vt-caption>span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink-secondary)}
+.vt-card.chapter .vt-card-open{border-left:2px solid var(--ink-primary);padding-left:8px;margin-bottom:12px}
+.vt-root .vt-card .series-link{display:flex;min-height:44px;padding:0;color:var(--ink-secondary)}
+.vt-root .vt-card .series-link:hover,.vt-root .vt-card .series-link:focus-visible{color:var(--ink-accent)}
+.vt-root .vt-stack .mt-stack-art img{height:84%;top:10%;width:62%}
+.vt-root .vt-stack .mt-stack-art img:last-child{top:4%}
+.vt-stack .mt-stack-title{display:flex;justify-content:flex-start;gap:6px;-webkit-line-clamp:1}
+.vt-stack .mt-stack-hint{color:var(--ink-accent)}
+
+/* Reference rail: other regions on the same years, period names set vertically. */
+.vt-rail{position:absolute;top:0;bottom:0;border-left:1px solid #eee}
+.vt-lane{position:absolute;top:0;bottom:0;margin-left:6px}
+.vt-lane.is-muted{opacity:.28;filter:blur(1px)}
+.vt-band{position:absolute;left:0;width:100%;border-left:2px solid #d4d4d4;text-align:left}
+.vt-band.is-current{border-left-color:var(--ink-primary)}
+.vt-band:active,.vt-band:focus-visible{border-left-color:var(--ink-accent)}
+.vt-band:focus-visible{outline:2px solid var(--ink-accent);outline-offset:1px}
+.vt-band-label{position:absolute;left:4px;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:var(--text-caption);font-weight:var(--weight-semibold);line-height:1.2;color:var(--ink-secondary)}
+.vt-band-label>span{writing-mode:vertical-rl;text-orientation:mixed}
+.vt-band-label small{font-size:var(--text-caption);font-weight:var(--weight-regular);font-variant-numeric:tabular-nums;background:#f0f0f0;padding:0 3px}
+.vt-band.is-current .vt-band-label,.vt-band:active .vt-band-label{color:var(--ink-primary)}
+.vt-band:active .vt-band-label{color:var(--ink-accent)}
+
+/* Overview: one column per region on compressed shared years. */
+.vt-ov-lane{position:absolute;top:0;bottom:0}
+.vt-ov-lane+.vt-ov-lane{border-left:1px solid #eee}
+.vt-ov-band{position:absolute;left:12px;width:1px;background:var(--ink-primary);opacity:.2}
+.vt-ov-period{position:absolute;left:8px;right:4px;min-height:44px;padding:0 0 0 12px;text-align:left}
+.vt-ov-period h3{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;font-size:var(--text-label);font-weight:var(--weight-semibold);line-height:var(--leading-ui)}
+.vt-ov-period h3 i{width:8px;height:8px;margin-left:-14px;margin-right:-2px;align-self:center;background:var(--ink-primary)}
+.vt-ov-period .mt-count{border-radius:0;background:#f0f0f0;padding:0 4px}
+.vt-ov-period:active h3,.vt-ov-period:focus-visible h3{color:var(--ink-accent)}
+.vt-ov-period:active h3 i,.vt-ov-period:focus-visible h3 i{background:var(--ink-accent)}
+.vt-ov-period:focus-visible{outline:2px solid var(--ink-accent);outline-offset:2px}
+
+.vt-root .vt-credit{display:flex;justify-content:flex-end;gap:4px;padding:24px 16px calc(32px + env(safe-area-inset-bottom));white-space:nowrap}
+
+/* Work detail as a bottom sheet; content and template are unchanged. */
+.mt-design-workspace .vt-root .detail{top:auto;bottom:0;width:100vw;height:calc(100dvh - 24px);margin:0;padding:0 0 calc(40px + env(safe-area-inset-bottom));border-radius:12px 12px 0 0;background:#fff;overflow-y:auto;overscroll-behavior:contain}
+.vt-root .detail::backdrop{background:rgba(0,0,0,.35)}
+.vt-root .detail::before{content:"";position:sticky;top:0;z-index:2;display:block;height:24px;background:linear-gradient(#ccc,#ccc) center/36px 4px no-repeat,#fff}
+.mt-design-workspace .vt-root .detail .close{position:sticky;top:0;float:right;z-index:3;margin:-24px 8px 0 0;right:auto;width:44px;height:44px}
+.vt-root .detail .modal-grid{display:block;min-height:0;gap:0}
+.vt-root .detail .modal-image{max-width:none}
+.vt-root .detail article{padding:20px 16px 0}
+@media(prefers-reduced-motion:reduce){.vt-tick,.vt-card-open,.vt-card .mt-stack-open{transition:none}}

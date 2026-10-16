@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { App } from './App.jsx';
 import { Multitrack } from './Multitrack.jsx';
+import { VerticalTimeline } from './vertical/VerticalTimeline.jsx';
+import { useVerticalLayout } from './vertical/use-vertical-layout.js';
 import staticCatalog from './catalog.json';
 
 export default function Public() {
   const [data, setData] = useState(staticCatalog);
+  // Shared browsing position (year, region, mode) handed over when the layout orientation changes.
+  const position = useRef(null);
+  const vertical = useVerticalLayout();
 
   useEffect(() => {
     const load = () => {
@@ -29,5 +34,6 @@ export default function Public() {
   const search = new URLSearchParams(location.search);
   const isSingle = search.get('view') === 'single' || location.pathname.endsWith('/single');
 
-  return isSingle ? <App catalog={data} /> : <Multitrack catalog={data} />;
+  if (isSingle) return <App catalog={data} />;
+  return vertical ? <VerticalTimeline catalog={data} position={position} /> : <Multitrack catalog={data} position={position} />;
 }

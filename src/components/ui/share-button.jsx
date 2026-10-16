@@ -1,8 +1,8 @@
 import React, {useEffect, useRef, useState, useId} from 'react';
-import {RiShareLine, RiCheckLine, RiTwitterXLine, RiLink} from '@remixicon/react';
+import {RiShareLine, RiCheckLine, RiTwitterXLine, RiLink, RiMoreLine} from '@remixicon/react';
 import './share-button.css';
 
-export default function ShareButton() {
+export default function ShareButton({systemShare=false}) {
   const [open, setOpen] = useState(false);
   const root = useRef(null), trigger = useRef(null);
   const panelId = useId();
@@ -83,6 +83,12 @@ export default function ShareButton() {
       <a className="share-option" href={xUrl} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
         <RiTwitterXLine size={16} aria-hidden="true"/><span>分享到 X</span>
       </a>
+      {systemShare && typeof navigator.share === 'function' && <button className="share-option" type="button" onClick={() => {
+        setOpen(false);
+        navigator.share({title:'ANITIME 番年史', text:'ANITIME 番年史 — 探索動畫故事中的歷史年代。', url}).catch(() => {});
+      }}>
+        <RiMoreLine size={16} aria-hidden="true"/><span>更多…</span>
+      </button>}
       {state === 'error' && <div className="share-fallback">
         <label htmlFor={`${panelId}-link`}>請手動複製連結</label>
         <input id={`${panelId}-link`} value={url} readOnly autoFocus onFocus={event => event.target.select()}/>
