@@ -3,10 +3,10 @@ import ProgressiveCover from '../components/ui/progressive-cover.jsx';
 import {DetailArticle} from '../WorkDetail.jsx';
 import {motionTiming,reducedMotion} from '../motion.mjs';
 
-// Poster box in the left half, sized for a 1:√2 portrait; the reading column takes the right half.
-export function detailLayout(width,height) {
- let h=Math.min(height-200,680),w=h*.707;
- if(w>width*.38){w=width*.38;h=w/.707;}
+// Poster box in the left half at the poster's own ratio; the reading column takes the right half.
+export function detailLayout(width,height,ratio=.707) {
+ let h=Math.min(height-200,680),w=h*ratio;
+ if(w>width*.42){w=width*.42;h=w/ratio;}
  return {w,h,x:Math.max(48,width*.27-w/2),y:(height-h)/2+12};
 }
 
@@ -14,7 +14,7 @@ export function detailLayout(width,height) {
 // `from(w,h)` returns the CSS transform that places a w×h box exactly on the card's front face.
 export function Detail3D({selected,from,onClose}) {
  const dialog=useRef(null),opener=useRef(document.activeElement),closeButton=useRef(null),poster=useRef(null),veil=useRef(null),article=useRef(null),animations=useRef([]),closing=useRef(false);
- const box=detailLayout(innerWidth,innerHeight);
+ const box=detailLayout(innerWidth,innerHeight,selected.width&&selected.height?selected.width/selected.height:.707);
  const to=`translate(${box.x}px,${box.y}px)`;
  useLayoutEffect(()=>{
   const node=dialog.current;node.showModal();closeButton.current.focus({preventScroll:true});

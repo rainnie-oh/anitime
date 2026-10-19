@@ -11,8 +11,8 @@
 .s3d-readout-year{font:var(--weight-bold) var(--text-display)/1.05 var(--font-text);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--ink-accent)}
 .s3d-overview .s3d-readout-year{color:var(--ink-primary)}
 
-.s3d-stage{position:absolute;inset:0}
-.s3d-camera{position:absolute;left:50%;top:56%;width:0;height:0;transform-style:preserve-3d;transition:transform .9s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
+.s3d-stage{position:absolute;inset:0;transform-style:preserve-3d}
+.s3d-camera{position:absolute;width:0;height:0;transform-style:preserve-3d;transition:transform .9s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
 .s3d-camera *{transform-style:preserve-3d}
 
 .s3d-tick,.s3d-slot,.s3d-band,.s3d-rail-name,.s3d-axis{position:absolute;left:0;top:0;transition:transform .6s var(--ani-ease,cubic-bezier(.22,1,.36,1)),width .6s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
@@ -58,7 +58,9 @@
 .s3d-edge-top{top:calc(var(--case-depth) / -2);transform:rotateX(90deg);background-position:0 0,0 0}
 .s3d-edge-bottom{bottom:calc(var(--case-depth) / -2);transform:rotateX(-90deg);background-position:0 0,0 100%}
 .s3d-rail:not(.front) :is(.s3d-face,.s3d-edge){opacity:.6}
-.s3d-detail .s3d-rail:not(.front) :is(.s3d-face,.s3d-edge){opacity:.08;filter:grayscale(1)}
+.s3d-detail .s3d-rail:not(.front) :is(.s3d-face,.s3d-edge){opacity:.3;filter:grayscale(.7)}
+/* rails nearer the camera than the focused one loom larger under perspective, so they recede further */
+.s3d-detail .s3d-rail.ahead :is(.s3d-face,.s3d-edge){opacity:.12}
 .s3d-detail .s3d-rail:not(.front) :is(.s3d-band,.s3d-rail-name){opacity:.3}
 /* hover nudges a case up; the strip below keeps the vacated space hoverable so it never flickers */
 .s3d-card::before{content:'';position:absolute;left:0;right:0;top:100%;height:20px}
@@ -101,3 +103,16 @@
 .s3d-index button:hover,.s3d-index button:focus-visible{color:var(--ink-accent)}
 .s3d-nav .share-button{min-width:0;min-height:32px;padding:0 14px;border-radius:7px;background:var(--ink-primary);color:#fff}
 .s3d-nav .share-button:hover,.s3d-nav .share-button[aria-expanded=true]{background:#333;color:#fff}
+
+/* Region flight: the camera follows its own keyframed path, so its CSS transition must not compete. */
+.s3d-flying .s3d-camera{transition:none}
+/* In Timeline the other regions are faint context only; they never catch the pointer. */
+.s3d-detail .s3d-rail:not(.front) :is(.s3d-card,.s3d-band){pointer-events:none}
+
+/* Legibility scrims: the paper colour softly washes the top-left readout and the bottom-right index,
+   so neighbouring rails can stay visible without fighting the text. */
+.s3d-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+ radial-gradient(ellipse 560px 400px at 0 0,var(--s3d-ground) 42%,color-mix(in srgb,var(--s3d-ground) 70%,transparent) 62%,transparent 100%),
+ radial-gradient(ellipse 380px 480px at 100% 100%,var(--s3d-ground) 36%,color-mix(in srgb,var(--s3d-ground) 70%,transparent) 58%,transparent 100%)}
+.s3d-overview .s3d-scrim{opacity:0}
+.s3d-scrim{transition:opacity .4s}

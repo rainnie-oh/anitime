@@ -1,4 +1,4 @@
-import React,{useEffect,useMemo,useRef,useState} from 'react';
+import React,{useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import SegmentedControlTabs from '../components/ui/segmented-control-tabs.jsx';
 import ShareButton from '../components/ui/share-button.jsx';
 import ProgressiveCover from '../components/ui/progressive-cover.jsx';
@@ -12,12 +12,22 @@ import {sceneLayout,groundTicks,lens,nearestCard} from '../scene3d.mjs';
 import './scene3d.css';
 
 // Ground units: x runs along time, y is depth between rails, z rises off the ground.
-// Every work is a portrait BD case: poster ratio 1:√2 (as 鬼滅之刃 / 20世紀電氣目錄), with a frosted plastic shell.
 // LINE: the rail's time line runs just in front of the cases' footprint.
-const LINE=52,RAIL_GAP=210,CARD_H=128,CARD_W=Math.round(CARD_H*.707),CASE_DEPTH=3,TILT=60,TURN=-50;
+// Overview packs the rails together; Timeline spaces them a little wider, close enough to glimpse neighbouring
+// regions and keep a region change a short hop across the floor.
+// A long, gentle perspective so far rails and years converge naturally (orthographic read as diverging).
+// ?flat restores the pure isometric camera for comparison.
+const PERSPECTIVE=new URLSearchParams(location.search).has('flat')?0:2600;
+// Camera aim point within the stage: nudged right and down from centre to leave breathing room for the top-left readout.
+const CAM_X=.53,CAM_Y=.6;
+const LINE=52,RAIL_GAP=210,RAIL_GAP_FAR=300,CARD_H=128,CARD_MAX_W=150,CASE_DEPTH=3,TILT=60,TURN=-50;
 // Cards never rotate: nearness to the time cursor lifts them along Z, highest = selected.
-const FOCUS={zoom:1.6,spread:340,width:110,far:.4,lift:64};
+// scale: the focused region's cases grow in place (others keep their size); the lens widens to match.
+const FOCUS={zoom:1.6,spread:390,width:125,far:.4,lift:72,scale:1.15};
 
+// Each case keeps its poster's own ratio, fitted inside a 150×128 box (portrait 1:√2 → 90×128, OGP landscape → 150×79).
+function posterRatio(work){return work.width&&work.height?work.width/work.height:.707;}
+function caseSize(work){const r=posterRatio(work);return r*CARD_H>CARD_MAX_W?{w:CARD_MAX_W,h:Math.round(CARD_MAX_W/r)}:{w:Math.round(CARD_H*r),h:CARD_H};}
 function toSelected(card){const {work,periods}=card.item;return {...work,dateData:work.date,date:formatDate(work.date,periods),period:periods.map(p=>p.name).join('、')||card.group.name,region:card.region};}
 
 export function Scene3D({catalog,position}) {
@@ -40,9 +50,9 @@ export function Scene3D({catalog,position}) {
  useEffect(()=>{if(position)position.current={year:active?Number(active.item.span?.[0]??active.group.start):activeBand?.start,focus,mode};},[active,activeBand,focus,mode]);
 
  // Focused region stands in front; the others recede behind it on the same years.
- const order=[...regions.filter(r=>r!==focus),focus];
- const railY=region=>order.indexOf(region)*RAIL_GAP;
- const depth=(regions.length-1)*RAIL_GAP;
+ const gap=mode==='detail'?RAIL_GAP_FAR:RAIL_GAP;
+ const railY=region=>regions.indexOf(region)*gap;
+ const depth=(regions.length-1)*gap;
  const lensOptions=mode==='detail'?FOCUS:{spread:0};
  const warp=x=>lens(x,cursor,lensOptions).x;
 
@@ -50,19 +60,33 @@ export function Scene3D({catalog,position}) {
  const projected=Math.hypot(Math.cos(TURN*Math.PI/180),Math.cos(TILT*Math.PI/180)*Math.sin(TURN*Math.PI/180));
  const fit=Math.min(viewport.w*.86/(layout.axis.length*projected+120),1);
  const zoom=mode==='detail'?FOCUS.zoom:fit;
- const center=mode==='detail'?{x:warp(cursor),y:depth}:{x:layout.axis.length/2,y:depth/2};
+ const center=mode==='detail'?{x:warp(cursor),y:railY(focus)}:{x:layout.axis.length/2,y:depth/2};
  const camera=`scale(${zoom}) rotateX(${TILT}deg) rotateZ(${TURN}deg) translate(${-center.x}px,${-center.y}px)`;
  const ticks=groundTicks(layout.axis,90/zoom,warp);
 
  function move(delta){setCursor(c=>Math.max(0,Math.min(layout.axis.length,c+delta)));}
  function step(direction){const cards=rail.cards;const index=active?cards.indexOf(active):-1;const next=cards[Math.max(0,Math.min(cards.length-1,index+direction))];if(next)setCursor(next.x);}
+ // Region change in Timeline: remember where the camera was, then fly (see the layout effect below).
+ const [flight,setFlight]=useState(null);
+ const cameraRef=useRef(null);
+ function switchRegion(region){if(region===focus)return;if(mode==='detail'&&!reducedMotion())setFlight({camera,center});setFocus(region);}
+ useLayoutEffect(()=>{
+  if(!flight)return;
+  const mid={x:(flight.center.x+center.x)/2,y:(flight.center.y+center.y)/2};
+  // lift off (zoom out, look further down, bank a little), cross over, settle on the new rail
+  const hops=Math.max(1,Math.round(Math.abs(center.y-flight.center.y)/RAIL_GAP_FAR));
+  const hop=`scale(${zoom*(.86-.06*hops)}) rotateX(${TILT-4-2*hops}deg) rotateZ(${TURN+4+2*hops}deg) translate(${-mid.x}px,${-mid.y}px)`;
+  const animation=cameraRef.current.animate([{transform:flight.camera},{transform:hop,offset:.5},{transform:camera}],{duration:620+180*hops,easing:'cubic-bezier(.65,0,.35,1)'});
+  animation.onfinish=animation.oncancel=()=>setFlight(null);
+  return()=>animation.cancel();
+ },[flight]);
  function enterBand(region,band){setFocus(region);setCursor(band.x0+(band.x1-band.x0)/2);setMode('detail');}
- function pick(card){if(mode==='overview'){setFocus(card.region);setCursor(card.x);setMode('detail');return;}if(card.region!==focus){setFocus(card.region);setCursor(card.x);return;}if(active?.key===card.key)openDetail(card);else setCursor(card.x);}
+ function pick(card){if(mode==='overview'){setFocus(card.region);setCursor(card.x);setMode('detail');return;}if(card.region!==focus){switchRegion(card.region);setCursor(card.x);return;}if(active?.key===card.key)openDetail(card);else setCursor(card.x);}
  function openDetail(card){setDetail({key:card.key,selected:toSelected(card)});}
  // Screen transform of a card's front face (camera · slot · stand-up · face), ending with a scale so a w×h box lands on it.
  function frontFace(card,w,h){
-  const rect=stage.current.getBoundingClientRect(),l=lens(card.x,cursor,lensOptions),rise=mode==='detail'?l.rise:0;
-  return `translate(${rect.left+rect.width/2}px,${rect.top+rect.height*.56}px) ${camera} translate3d(${l.x}px,${railY(card.region)}px,0px) translateZ(${FOCUS.lift*rise}px) rotateZ(90deg) rotateX(-90deg) translate3d(${-CARD_W/2}px,${-CARD_H}px,${CASE_DEPTH/2}px) scale(${CARD_W/w},${CARD_H/h})`;
+  const size=caseSize(card.item.work),rect=stage.current.getBoundingClientRect(),l=lens(card.x,cursor,lensOptions),rise=mode==='detail'?l.rise:0;
+  return `translate(${rect.left+rect.width*CAM_X}px,${rect.top+rect.height*CAM_Y}px) ${PERSPECTIVE?`perspective(${PERSPECTIVE}px) `:''}${camera} translate3d(${l.x}px,${railY(card.region)}px,0px) translateZ(${FOCUS.lift*rise}px) rotateZ(90deg) rotateX(-90deg) scale(${mode==='detail'?FOCUS.scale:1}) translate3d(${-size.w/2}px,${-size.h}px,${CASE_DEPTH/2}px) scale(${size.w/w},${size.h/h})`;
  }
 
  useEffect(()=>{
@@ -80,7 +104,7 @@ export function Scene3D({catalog,position}) {
  },[mode,active,rail,selected]);
 
  const readoutYear=active?formatDate(active.item.work.date,active.item.periods):`${yearLabel(layout.axis.ticks[0])} — ${yearLabel(layout.axis.ticks.at(-1))}`;
- return <div className={'s3d s3d-'+mode+(detail?' s3d-reading':'')+(scrolling?' s3d-scrolling':'')+(reducedMotion()?' s3d-still':'')}>
+ return <div className={'s3d s3d-'+mode+(flight?' s3d-flying':'')+(detail?' s3d-reading':'')+(scrolling?' s3d-scrolling':'')+(reducedMotion()?' s3d-still':'')}>
   <header className="s3d-header">
    <img className="brand-wordmark" src={resolveAsset('/brand/anitime-transparent.svg')} alt="ANITIME" width="166" height="48"/>
    <div className="s3d-nav">
@@ -93,22 +117,23 @@ export function Scene3D({catalog,position}) {
    <strong className="s3d-readout-year">{readoutYear}</strong>
    {active&&<div className="s3d-caption"><strong>{active.item.work.name}</strong><span>{active.item.work.medium}</span><button onClick={()=>openDetail(active)}>查看詳情</button></div>}
   </div>
-  <div className="s3d-stage" ref={stage}>
-   <div className="s3d-camera" style={{transform:camera,'--s3d-zoom':zoom}}>
-    {ticks.map(t=><div key={t.year} className={'s3d-tick'+(mode==='detail'&&activeBand&&t.year>=activeBand.start&&t.year<activeBand.end?' is-current':'')} style={{transform:`translate3d(${t.x}px,${depth+LINE}px,0)`}}><i/><span>{t.label}</span></div>)}
+  <div className="s3d-scrim" aria-hidden="true"/>
+  <div className="s3d-stage" ref={stage} style={{perspective:PERSPECTIVE?PERSPECTIVE+'px':undefined,perspectiveOrigin:`${CAM_X*100}% ${CAM_Y*100}%`}}>
+   <div className="s3d-camera" ref={cameraRef} style={{left:CAM_X*100+'%',top:CAM_Y*100+'%',transform:camera,'--s3d-zoom':zoom}}>
+    {ticks.map(t=><div key={t.year} className={'s3d-tick'+(mode==='detail'&&activeBand&&t.year>=activeBand.start&&t.year<activeBand.end?' is-current':'')} style={{transform:`translate3d(${t.x}px,${(mode==='detail'?railY(focus):depth)+LINE}px,0)`}}><i/><span>{t.label}</span></div>)}
     {layout.rails.map(r=>{
      const y=railY(r.region),front=r.region===focus;
-     return <div key={r.region} className={'s3d-rail'+(front?' front':'')}>
+     return <div key={r.region} className={'s3d-rail'+(front?' front':'')+(regions.indexOf(r.region)>regions.indexOf(focus)?' ahead':'')}>
       <div className="s3d-axis" style={{width:warp(layout.axis.length)-warp(0),transform:`translate3d(${warp(0)}px,${y+LINE}px,0)`}}/>
-      <button className="s3d-rail-name" style={{transform:`translate3d(${warp(0)-60}px,${y+LINE}px,0)`}} onClick={()=>setFocus(r.region)}>{r.region}</button>
-      {r.bands.map(b=>{const x0=warp(b.x0),x1=warp(b.x1);return <button key={b.id} className={'s3d-band'+(front&&activeBand?.id===b.id?' is-current':'')} disabled={!b.count} style={{width:Math.max(2,x1-x0-4),transform:`translate3d(${x0}px,${y+LINE}px,0)`}} onClick={()=>enterBand(r.region,b)}><span>{b.name}</span></button>;})}
+      <button className="s3d-rail-name" style={{transform:`translate3d(${warp(0)-60}px,${y+LINE}px,0)`}} onClick={()=>switchRegion(r.region)}>{r.region}</button>
+      {r.bands.map(b=>{const x0=warp(b.x0),x1=warp(b.x1);return <button key={b.id} className={'s3d-band'+(front&&mode==='detail'&&activeBand?.id===b.id?' is-current':'')} disabled={!b.count} style={{width:Math.max(2,x1-x0-4),transform:`translate3d(${x0}px,${y+LINE}px,0)`}} onClick={()=>enterBand(r.region,b)}><span>{b.name}</span></button>;})}
       {r.cards.map(card=>{
        const l=front?lens(card.x,cursor,lensOptions):{x:warp(card.x),rise:0};
        const isActive=active?.key===card.key;
-       const rise=front&&mode==='detail'?l.rise:0,lift=FOCUS.lift*rise;
+       const size=caseSize(card.item.work),rise=front&&mode==='detail'?l.rise:0,lift=FOCUS.lift*rise,grow=front&&mode==='detail'?FOCUS.scale:1;
        return <div key={card.key} className="s3d-slot" style={{transform:`translate3d(${l.x}px,${y}px,0)`}}>
-        <div className="s3d-shadow" style={{height:CARD_W,top:-CARD_W/2,opacity:1-rise*.55,transform:`scale(${1+rise*.6},${1+rise*.12})`}}/>
-        <button className={'s3d-card'+(isActive?' active':'')+(detail?.key===card.key?' is-open':'')} aria-current={isActive||undefined} style={{width:CARD_W,height:CARD_H,left:-CARD_W/2,top:-CARD_H,'--case-depth':CASE_DEPTH+'px','--cover':`url("${coverImages[card.item.work.image]?.preview??resolveAsset(card.item.work.image)}")`,transform:`translateZ(calc(${lift}px + var(--hover-lift,0px))) rotateZ(90deg) rotateX(-90deg)`}}
+        <div className="s3d-shadow" style={{height:size.w,top:-size.w/2,opacity:1-rise*.55,transform:`scale(${(1+rise*.6)*grow},${(1+rise*.12)*grow})`}}/>
+        <button className={'s3d-card'+(isActive?' active':'')+(detail?.key===card.key?' is-open':'')} aria-current={isActive||undefined} style={{width:size.w,height:size.h,left:-size.w/2,top:-size.h,'--case-depth':CASE_DEPTH+'px','--cover':`url("${coverImages[card.item.work.image]?.preview??resolveAsset(card.item.work.image)}")`,transform:`translateZ(calc(${lift}px + var(--hover-lift,0px))) rotateZ(90deg) rotateX(-90deg) scale(${grow})`}}
          tabIndex={front?0:-1} aria-label={`${card.item.work.name}，${formatDate(card.item.work.date,card.item.periods)}`} onClick={()=>pick(card)} onFocus={()=>front&&mode==='detail'&&setCursor(card.x)}>
          <span className="s3d-face s3d-front"><ProgressiveCover src={card.item.work.image} eager alt="" draggable="false"/></span>
          <span className="s3d-face s3d-back"/>
@@ -125,7 +150,7 @@ export function Scene3D({catalog,position}) {
     <div className="s3d-index" role="group" aria-label={focus+'時期'}>
      {rail.bands.filter(b=>b.count).map(b=><button key={b.id} className={activeBand?.id===b.id&&mode==='detail'?'is-current':''} aria-current={activeBand?.id===b.id&&mode==='detail'||undefined} onClick={()=>enterBand(focus,b)}><span>{b.name}</span><sup>{b.count}</sup></button>)}
     </div>
-    <SegmentedControlTabs label="地區" orientation="vertical" value={focus} onValueChange={setFocus} options={regions.map(r=>({value:r,label:r}))}/>
+    <SegmentedControlTabs label="地區" orientation="vertical" value={focus} onValueChange={switchRegion} options={regions.map(r=>({value:r,label:r}))}/>
    </div>
   </aside>
   {detail&&(()=>{const card=rail.cards.find(c=>c.key===detail.key);return <Detail3D selected={detail.selected} from={(w,h)=>frontFace(card,w,h)} onClose={()=>setDetail(null)}/>;})()}
