@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { App } from './App.jsx';
 import { Multitrack } from './Multitrack.jsx';
+import { Scene3D } from './scene3d/Scene3D.jsx';
 import { VerticalTimeline } from './vertical/VerticalTimeline.jsx';
 import { useVerticalLayout } from './vertical/use-vertical-layout.js';
 import staticCatalog from './catalog.json';
@@ -35,5 +36,7 @@ export default function Public() {
   const isSingle = search.get('view') === 'single' || location.pathname.endsWith('/single');
 
   if (isSingle) return <App catalog={data} />;
-  return vertical ? <VerticalTimeline catalog={data} position={position} /> : <Multitrack catalog={data} position={position} />;
+  if (vertical) return <VerticalTimeline catalog={data} position={position} />;
+  // 2.0: the 3D scene is the desktop default; ?view=2d keeps the 1.x multitrack for comparison.
+  return search.get('view') === '2d' ? <Multitrack catalog={data} position={position} /> : <Scene3D catalog={data} position={position} />;
 }

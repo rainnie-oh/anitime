@@ -3,9 +3,9 @@ import images from '../../cover-images.json';
 import {resolveAsset} from '../../asset.mjs';
 import './progressive-cover.css';
 
-export default function ProgressiveCover({src, compact=false, original=false, sizes, alt='', ...props}) {
+export default function ProgressiveCover({src, compact=false, original=false, eager=false, sizes, alt='', ...props}) {
   const image = useRef(null);
-  const [nearby, setNearby] = useState(original);
+  const [nearby, setNearby] = useState(original || eager);
   const [loaded, setLoaded] = useState(false);
   const [fallback, setFallback] = useState(false);
   const asset = images[src];

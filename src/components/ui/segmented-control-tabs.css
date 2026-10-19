@@ -1,5 +1,5 @@
 /* Scoped to stay independent of the region navigation. */
-header nav.view-segments {
+nav.view-segments {
   display:inline-flex;
   align-items:center;
   gap:2px;
@@ -13,7 +13,7 @@ header nav.view-segments {
   letter-spacing:.4px;
   flex-shrink:0;
 }
-header nav.view-segments button {
+nav.view-segments button {
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -31,29 +31,36 @@ header nav.view-segments button {
   font-weight:500;
   transition:background-color 150ms ease-out,color 150ms ease-out,box-shadow 150ms ease-out;
 }
-header nav.view-segments button:hover {color:#111;background:#e7e7e7}
-header nav.view-segments button[aria-checked=true] {
+nav.view-segments button:hover {color:#111;background:#e7e7e7}
+nav.view-segments button[aria-checked=true] {
   background:#fff;
   color:#111;
   box-shadow:0 1px 2px #0000000d,0 1px 4px #0000000a;
 }
-header nav.view-segments button:focus-visible {outline:2px solid #e53e3e;outline-offset:1px}
-header nav.view-segments svg {flex-shrink:0}
+nav.view-segments button:focus-visible {outline:2px solid #e53e3e;outline-offset:1px}
+nav.view-segments svg {flex-shrink:0}
 @media(max-width:700px) {
-  header nav.view-segments {font-size:var(--navigation-font-size, 9px)}
-  header nav.view-segments button {min-height:0;padding-inline:10px}
+  nav.view-segments {font-size:var(--navigation-font-size, 9px)}
+  nav.view-segments button {min-height:0;padding-inline:10px}
 }
 @media(prefers-reduced-motion:reduce) {
-  header nav.view-segments button {transition:none}
+  nav.view-segments button {transition:none}
 }
 
-header nav.view-segments {position:relative;isolation:isolate}
-header nav.view-segments .view-segment-indicator {
+nav.view-segments {position:relative;isolation:isolate}
+nav.view-segments .view-segment-indicator {
  position:absolute;left:0;top:3px;height:26px;z-index:-1;pointer-events:none;
  border-radius:4px;background:#fff;box-shadow:0 1px 2px #0000000d,0 1px 4px #0000000a;
  transition:transform var(--ani-switch) var(--ani-ease),width var(--ani-switch) var(--ani-ease);
 }
-header nav.view-segments button[aria-checked=true] {background:transparent;box-shadow:none}
-header nav.view-segments button:hover {background:transparent}
-header nav.view-segments button {transition:color var(--ani-feedback) ease-out}
-@media(prefers-reduced-motion:reduce) {header nav.view-segments .view-segment-indicator {transition:none}}
+nav.view-segments button[aria-checked=true] {background:transparent;box-shadow:none}
+nav.view-segments button:hover {background:transparent}
+nav.view-segments button {transition:color var(--ani-feedback) ease-out}
+@media(prefers-reduced-motion:reduce) {nav.view-segments .view-segment-indicator {transition:none}}
+
+/* Vertical variant: stacked segments with upright vertical CJK labels. */
+nav.view-segments.vertical {flex-direction:column;height:auto;width:max-content}
+nav.view-segments.vertical button {height:auto;width:26px;padding:10px 0}
+nav.view-segments.vertical button span {writing-mode:vertical-rl;text-orientation:upright;letter-spacing:.12em}
+nav.view-segments.vertical .view-segment-indicator {top:0}
+@media(max-width:700px) {nav.view-segments.vertical button {padding-inline:0}}

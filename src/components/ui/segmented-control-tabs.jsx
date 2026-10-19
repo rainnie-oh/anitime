@@ -2,12 +2,14 @@ import React, {useRef,useLayoutEffect} from 'react';
 import {RiLayoutGridLine, RiTimeLine} from '@remixicon/react';
 import './segmented-control-tabs.css';
 
-const options = [
+const viewOptions = [
   {value: 'overview', label: '總覽', Icon: RiLayoutGridLine},
   {value: 'detail', label: '時間線', Icon: RiTimeLine},
 ];
 
-export default function SegmentedControlTabs({value, onValueChange}) {
+// Default options are the Overview / Timeline switch; other groups (e.g. regions) pass their own, icons optional.
+export default function SegmentedControlTabs({value, onValueChange, options = viewOptions, label = '檢視模式', orientation = 'horizontal'}) {
+  const vertical = orientation === 'vertical';
   const buttons = useRef([]),indicator=useRef(null),ready=useRef(false);
   useLayoutEffect(()=>{
     const update=(animate=false)=>{
@@ -15,7 +17,8 @@ export default function SegmentedControlTabs({value, onValueChange}) {
       if(!button)return;
       indicator.current.style.transition=animate?'':'none';
       indicator.current.style.width=button.offsetWidth+'px';
-      indicator.current.style.transform=`translateX(${button.offsetLeft}px)`;
+      if(vertical)indicator.current.style.height=button.offsetHeight+'px';
+      indicator.current.style.transform=vertical?`translate(${button.offsetLeft}px,${button.offsetTop}px)`:`translateX(${button.offsetLeft}px)`;
     };
     update(ready.current);ready.current=true;
     let initial=true;
@@ -34,13 +37,13 @@ export default function SegmentedControlTabs({value, onValueChange}) {
     buttons.current[next]?.focus();
     onValueChange(options[next].value);
   }
-  return <nav className="view-segments" aria-label="檢視模式" role="radiogroup">
+  return <nav className={"view-segments"+(vertical?" vertical":"")} aria-label={label} aria-orientation={orientation} role="radiogroup">
     <span ref={indicator} className="view-segment-indicator" aria-hidden="true"/>
-    {options.map(({value: option, label, Icon}, index) => <button
+    {options.map(({value: option, label: text, Icon}, index) => <button
       key={option} type="button" role="radio" aria-checked={value === option}
       tabIndex={value === option ? 0 : -1} ref={el => {buttons.current[index] = el;}}
       onClick={() => onValueChange(option)} onKeyDown={event => handleKeyDown(event, index)}>
-      <Icon size={16} aria-hidden="true"/><span>{label}</span>
+      {Icon && <Icon size={16} aria-hidden="true"/>}<span>{text}</span>
     </button>)}
   </nav>;
 }

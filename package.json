@@ -11,6 +11,7 @@
     "start": "node server/start.mjs",
     "test:cms": "node --test tests/cms.test.mjs",
     "test:multitrack": "node --test tests/multitrack.test.mjs",
+    "test:scene3d": "node --test tests/scene3d.test.mjs",
     "test:vertical": "node --test tests/vertical.test.mjs",
     "images:prepare": "node scripts/prepare-cover-images.mjs"
   },

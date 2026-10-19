@@ -32,7 +32,7 @@
   --design-year:var(--text-display);
 }
 .mt-design-workspace nav,
-header nav.view-segments,
+nav.view-segments,
 .mt-design-workspace .share-button,
 .share-option,
 .mt-design-workspace .mt-credit,
