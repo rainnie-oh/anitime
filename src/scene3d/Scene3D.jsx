@@ -5,6 +5,7 @@ import ProgressiveCover from '../components/ui/progressive-cover.jsx';
 import {Detail3D} from './Detail3D.jsx';
 import {resolveAsset} from '../asset.mjs';
 import coverImages from '../cover-images.json';
+import releaseYears from './release-years.json';
 import {formatDate} from '../date.mjs';
 import {yearLabel} from '../multitrack.mjs';
 import {reducedMotion} from '../motion.mjs';
@@ -20,7 +21,7 @@ import './scene3d.css';
 const PERSPECTIVE=new URLSearchParams(location.search).has('flat')?0:2600;
 // Camera aim point within the stage: nudged right and down from centre to leave breathing room for the top-left readout.
 const CAM_X=.53,CAM_Y=.6;
-const LINE=52,RAIL_GAP=210,RAIL_GAP_FAR=300,CARD_H=128,CARD_MAX_W=150,CASE_DEPTH=3,TILT=60,TURN=-50;
+const LINE=52,RAIL_GAP=210,RAIL_GAP_FAR=300,CARD_H=128,CARD_MAX_W=150,TILT=60,TURN=-50;
 // Cards never rotate: nearness to the time cursor lifts them along Z, highest = selected.
 // scale: the focused region's cases grow in place (others keep their size); the lens widens to match.
 const FOCUS={zoom:1.6,spread:390,width:125,far:.4,lift:72,scale:1.15};
@@ -28,6 +29,11 @@ const FOCUS={zoom:1.6,spread:390,width:125,far:.4,lift:72,scale:1.15};
 // Each case keeps its poster's own ratio, fitted inside a 150×128 box (portrait 1:√2 → 90×128, OGP landscape → 150×79).
 function posterRatio(work){return work.width&&work.height?work.width/work.height:.707;}
 function caseSize(work){const r=posterRatio(work);return r*CARD_H>CARD_MAX_W?{w:CARD_MAX_W,h:Math.round(CARD_MAX_W/r)}:{w:Math.round(CARD_H*r),h:CARD_H};}
+// The case follows the format the work first came out on: VHS before 2000, Blu-ray after (unknown years count as BD).
+const CARRIERS={vhs:{depth:9},bd:{depth:5}};
+// Rounded corners: the four side strips stop short of each corner and a 45° facet closes the gap.
+const CORNERS=['tl','tr','br','bl'];
+function carrier(work){return (releaseYears[work.id]??2000)<2000?'vhs':'bd';}
 function toSelected(card){const {work,periods}=card.item;return {...work,dateData:work.date,date:formatDate(work.date,periods),period:periods.map(p=>p.name).join('、')||card.group.name,region:card.region};}
 
 export function Scene3D({catalog,position}) {
@@ -86,7 +92,7 @@ export function Scene3D({catalog,position}) {
  // Screen transform of a card's front face (camera · slot · stand-up · face), ending with a scale so a w×h box lands on it.
  function frontFace(card,w,h){
   const size=caseSize(card.item.work),rect=stage.current.getBoundingClientRect(),l=lens(card.x,cursor,lensOptions),rise=mode==='detail'?l.rise:0;
-  return `translate(${rect.left+rect.width*CAM_X}px,${rect.top+rect.height*CAM_Y}px) ${PERSPECTIVE?`perspective(${PERSPECTIVE}px) `:''}${camera} translate3d(${l.x}px,${railY(card.region)}px,0px) translateZ(${FOCUS.lift*rise}px) rotateZ(90deg) rotateX(-90deg) scale(${mode==='detail'?FOCUS.scale:1}) translate3d(${-size.w/2}px,${-size.h}px,${CASE_DEPTH/2}px) scale(${size.w/w},${size.h/h})`;
+  return `translate(${rect.left+rect.width*CAM_X}px,${rect.top+rect.height*CAM_Y}px) ${PERSPECTIVE?`perspective(${PERSPECTIVE}px) `:''}${camera} translate3d(${l.x}px,${railY(card.region)}px,0px) translateZ(${FOCUS.lift*rise}px) rotateZ(90deg) rotateX(-90deg) scale(${mode==='detail'?FOCUS.scale:1}) translate3d(${-size.w/2}px,${-size.h}px,${CARRIERS[carrier(card.item.work)].depth/2}px) scale(${size.w/w},${size.h/h})`;
  }
 
  useEffect(()=>{
@@ -130,14 +136,15 @@ export function Scene3D({catalog,position}) {
       {r.cards.map(card=>{
        const l=front?lens(card.x,cursor,lensOptions):{x:warp(card.x),rise:0};
        const isActive=active?.key===card.key;
-       const size=caseSize(card.item.work),rise=front&&mode==='detail'?l.rise:0,lift=FOCUS.lift*rise,grow=front&&mode==='detail'?FOCUS.scale:1;
+       const kind=carrier(card.item.work),size=caseSize(card.item.work),rise=front&&mode==='detail'?l.rise:0,lift=FOCUS.lift*rise,grow=front&&mode==='detail'?FOCUS.scale:1;
        return <div key={card.key} className="s3d-slot" style={{transform:`translate3d(${l.x}px,${y}px,0)`}}>
         <div className="s3d-shadow" style={{height:size.w,top:-size.w/2,opacity:1-rise*.55,transform:`scale(${(1+rise*.6)*grow},${(1+rise*.12)*grow})`}}/>
-        <button className={'s3d-card'+(isActive?' active':'')+(detail?.key===card.key?' is-open':'')} aria-current={isActive||undefined} style={{width:size.w,height:size.h,left:-size.w/2,top:-size.h,'--case-depth':CASE_DEPTH+'px','--cover':`url("${coverImages[card.item.work.image]?.preview??resolveAsset(card.item.work.image)}")`,transform:`translateZ(calc(${lift}px + var(--hover-lift,0px))) rotateZ(90deg) rotateX(-90deg) scale(${grow})`}}
+        <button className={'s3d-card s3d-'+kind+(isActive?' active':'')+(detail?.key===card.key&&detail.hidden?' is-open':'')} aria-current={isActive||undefined} style={{width:size.w,height:size.h,left:-size.w/2,top:-size.h,'--case-depth':CARRIERS[kind].depth+'px','--cover':`url("${coverImages[card.item.work.image]?.preview??resolveAsset(card.item.work.image)}")`,transform:`translateZ(calc(${lift}px + var(--hover-lift,0px))) rotateZ(90deg) rotateX(-90deg) scale(${grow})`}}
          tabIndex={front?0:-1} aria-label={`${card.item.work.name}，${formatDate(card.item.work.date,card.item.periods)}`} onClick={()=>pick(card)} onFocus={()=>front&&mode==='detail'&&setCursor(card.x)}>
          <span className="s3d-face s3d-front"><ProgressiveCover src={card.item.work.image} eager alt="" draggable="false"/></span>
          <span className="s3d-face s3d-back"/>
          <span className="s3d-edge s3d-edge-spine"/><span className="s3d-edge s3d-edge-open"/><span className="s3d-edge s3d-edge-top"/><span className="s3d-edge s3d-edge-bottom"/>
+         {CORNERS.map(c=><span key={c} className={"s3d-edge s3d-bevel s3d-bevel-"+c}/>)}
         </button>
        </div>;
       })}
@@ -153,6 +160,6 @@ export function Scene3D({catalog,position}) {
     <SegmentedControlTabs label="地區" orientation="vertical" value={focus} onValueChange={switchRegion} options={regions.map(r=>({value:r,label:r}))}/>
    </div>
   </aside>
-  {detail&&(()=>{const card=rail.cards.find(c=>c.key===detail.key);return <Detail3D selected={detail.selected} from={(w,h)=>frontFace(card,w,h)} onClose={()=>setDetail(null)}/>;})()}
+  {detail&&(()=>{const card=rail.cards.find(c=>c.key===detail.key);return <Detail3D selected={detail.selected} from={(w,h)=>frontFace(card,w,h)} onCase={visible=>setDetail(d=>d&&{...d,hidden:!visible})} onClose={()=>setDetail(null)}/>;})()}
  </div>;
 }

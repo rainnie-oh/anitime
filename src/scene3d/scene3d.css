@@ -36,31 +36,59 @@
 .s3d-band:hover span{color:var(--ink-accent)!important}
 .s3d-band:disabled{cursor:default;opacity:.5}
 
-.s3d-shadow{position:absolute;left:-12px;width:24px;background:radial-gradient(closest-side,rgba(0,0,0,.16),transparent);filter:blur(2px)}
+.s3d-shadow{position:absolute;left:-14px;width:28px;background:radial-gradient(closest-side,rgba(0,0,0,.06),transparent);filter:blur(3px)} /* barely there: darker shadows read as dirt */
 
-/* BD case: the poster fills the front; frosted glass lives in the thickness.
-   3D needs opacity/filter on faces, never on the case (that would flatten it). */
+/* Video cases: a paper insert behind a clear sleeve. The format follows the release year (see Scene3D):
+   Blu-ray from 2000 is a clear glass-like case whose rim and thickness diffuse the poster's own colours;
+   VHS before 2000 is a matte black clamshell. 3D needs opacity/filter on faces, never on the case (that would flatten it). */
 .s3d-shadow{transition:transform .6s var(--ani-ease,cubic-bezier(.22,1,.36,1)),opacity .6s}
-.s3d-card{--case-radius:3px;position:absolute;display:block;padding:0;border:0;background:none;transform-origin:50% 100%;cursor:pointer;outline:none;transition:transform .6s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
+.s3d-card{--case-radius:2px;--rim:3px;--shell:#232325;--shell-dark:#141415;position:absolute;display:block;padding:0;border:0;background:none;transform-origin:50% 100%;cursor:pointer;outline:none;transition:transform .6s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
+.s3d-card.s3d-vhs{--rim:2.5px}
 .s3d-face,.s3d-edge{position:absolute;display:block;transition:opacity .4s,filter .4s}
 .s3d-face{inset:0;border-radius:var(--case-radius);overflow:hidden;backface-visibility:hidden}
-.s3d-front{transform:translateZ(calc(var(--case-depth) / 2));background:#e6e6e6;box-shadow:0 0 0 .5px rgba(0,0,0,.18)}
-.s3d-front::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.55),inset 0 0 3px 1px rgba(255,255,255,.45),inset 0 0 8px 2px rgba(255,255,255,.18)} /* soft frosted rim on the poster edge */
-.s3d-front img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
-.s3d-back{transform:rotateY(180deg) translateZ(calc(var(--case-depth) / 2));background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),var(--cover) center/cover;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 0 0 .5px rgba(0,0,0,.16)}
-/* Glass edges diffuse the poster's own border colours (tiny blurred preview, stretched from that side),
-   under a milky veil with bright rims where they meet the faces. Full-length strips close the corners. */
-.s3d-edge{background-image:linear-gradient(var(--edge-dir),rgba(255,255,255,.75) 0 1px,rgba(255,255,255,.28) 2px,rgba(255,255,255,.12) 50%,rgba(255,255,255,.28) calc(100% - 2px),rgba(255,255,255,.75) calc(100% - 1px)),var(--cover);background-repeat:no-repeat;filter:saturate(1.15) brightness(1.06);box-shadow:inset 0 0 0 .5px rgba(0,0,0,.1)}
-.s3d-edge-spine,.s3d-edge-open{--edge-dir:90deg;top:0;bottom:0;width:var(--case-depth);background-size:100% 100%,1400% 100%}
-.s3d-edge-spine{left:calc(var(--case-depth) / -2);transform:rotateY(-90deg);background-position:0 0,0 0}
-.s3d-edge-open{right:calc(var(--case-depth) / -2);transform:rotateY(90deg);background-position:0 0,100% 0}
-.s3d-edge-top,.s3d-edge-bottom{--edge-dir:180deg;left:0;right:0;height:var(--case-depth);background-size:100% 100%,100% 1400%}
-.s3d-edge-top{top:calc(var(--case-depth) / -2);transform:rotateX(90deg);background-position:0 0,0 0}
-.s3d-edge-bottom{bottom:calc(var(--case-depth) / -2);transform:rotateX(-90deg);background-position:0 0,0 100%}
+.s3d-front{transform:translateZ(calc(var(--case-depth) / 2));padding:var(--rim);box-shadow:0 0 0 .5px rgba(0,0,0,.14)}
+/* the rim: frosted glass over a blurred copy of the poster, so the insert seems to dissolve into the case */
+.s3d-front::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),var(--cover) center/cover;opacity:.9}
+.s3d-vhs .s3d-front::before{background:linear-gradient(160deg,var(--shell),var(--shell-dark));opacity:1}
+.s3d-front img{position:relative;display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;border-radius:1px;box-shadow:0 0 0 .5px rgba(255,255,255,.45)}
+.s3d-vhs .s3d-front img{filter:saturate(.86) contrast(.95) brightness(.98);box-shadow:none}
+.s3d-vhs .s3d-front img.is-loading{filter:blur(8px) saturate(.86)} /* keep the progressive-cover blur-up */
+/* the clear sleeve: a bright lip all round, stronger on top, and a gloss streak across the insert */
+.s3d-front::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+ background:linear-gradient(112deg,transparent 28%,rgba(255,255,255,.28) 36%,rgba(255,255,255,.06) 41%,transparent 47%),linear-gradient(rgba(255,255,255,.12),transparent 35%);
+ box-shadow:inset 0 0 0 .5px rgba(255,255,255,.75),inset 0 1px 0 rgba(255,255,255,.5)}
+/* VHS sleeve is softer vinyl over matte paper: a broad dull sheen plus fine grain */
+.s3d-vhs .s3d-front::after{background:linear-gradient(125deg,rgba(255,255,255,.16),transparent 48%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='96' height='96' filter='url(%23n)'/%3E%3C/svg%3E");background-size:auto,96px;box-shadow:inset 0 .5px 0 rgba(255,255,255,.3)}
+.s3d-back{transform:rotateY(180deg) translateZ(calc(var(--case-depth) / 2));background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),var(--cover) center/cover;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.7),0 0 0 .5px rgba(0,0,0,.14)}
+.s3d-vhs .s3d-back{background:linear-gradient(200deg,var(--shell),var(--shell-dark))}
+/* Thickness, shaded by which way it faces (light falls from above: top brightest, bottom darkest), with bright
+   lips where it meets the faces. Glass diffuses the poster's matching border (a tiny preview stretched from
+   that side) under a milky veil; VHS is bare plastic with faint moulded ribs. Full-length strips close the corners. */
+.s3d-edge{--lip:rgba(255,255,255,.8);background-image:linear-gradient(var(--edge-dir),var(--lip) 0 .5px,transparent 1.5px,transparent calc(100% - 1.5px),var(--lip) calc(100% - .5px)),linear-gradient(var(--edge-light),var(--edge-light)),linear-gradient(rgba(255,255,255,.34),rgba(255,255,255,.34)),var(--cover);background-repeat:no-repeat;filter:saturate(1.1);box-shadow:inset 0 0 0 .5px rgba(0,0,0,.08)}
+.s3d-edge-spine,.s3d-edge-open{--edge-dir:90deg;top:var(--case-radius);bottom:var(--case-radius);width:var(--case-depth);background-size:100% 100%,100% 100%,100% 100%,1400% 100%}
+.s3d-edge-spine{--edge-light:rgba(255,255,255,.06);left:calc(var(--case-depth) / -2);transform:rotateY(-90deg);background-position:0 0}
+.s3d-edge-open{--edge-light:rgba(0,0,0,.1);right:calc(var(--case-depth) / -2);transform:rotateY(90deg);background-position:0 0,0 0,0 0,100% 0}
+.s3d-edge-top,.s3d-edge-bottom{--edge-dir:180deg;left:var(--case-radius);right:var(--case-radius);height:var(--case-depth);background-size:100% 100%,100% 100%,100% 100%,100% 1400%}
+.s3d-edge-top{--edge-light:rgba(255,255,255,.22);top:calc(var(--case-depth) / -2);transform:rotateX(90deg);background-position:0 0}
+.s3d-edge-bottom{--edge-light:rgba(0,0,0,.2);bottom:calc(var(--case-depth) / -2);transform:rotateX(-90deg);background-position:0 0,0 0,0 0,0 100%}
+.s3d-vhs .s3d-edge{--lip:rgba(255,255,255,.22);background-image:linear-gradient(var(--edge-dir),var(--lip) 0 .5px,transparent 1.5px,transparent calc(100% - 1.5px),var(--lip) calc(100% - .5px)),linear-gradient(var(--edge-light),var(--edge-light)),linear-gradient(var(--shell),var(--shell));background-size:100% 100%;filter:none;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.12)}
+.s3d-vhs :is(.s3d-edge-spine,.s3d-edge-open){background-image:linear-gradient(var(--edge-dir),var(--lip) 0 .5px,transparent 1.5px,transparent calc(100% - 1.5px),var(--lip) calc(100% - .5px)),repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px),linear-gradient(var(--edge-light),var(--edge-light)),linear-gradient(var(--shell),var(--shell))}
+.s3d-vhs .s3d-edge-bottom{--edge-light:rgba(0,0,0,.32)}
+/* corner facets: chord of each rounded corner (radius r → length r·√2, plus a hair of overlap so no seam shows),
+   centred at (r/2, r/2) from the corner */
+.s3d-bevel{--edge-dir:180deg;width:calc(var(--case-radius) * 1.4142 + 1.2px);height:var(--case-depth);margin:calc(var(--case-depth) / -2) 0 0 calc(var(--case-radius) * -.7071 - .6px);box-shadow:none!important;background-size:100% 100%,100% 100%,100% 100%,1400% 1400%}
+.s3d-bevel-tl{--edge-light:rgba(255,255,255,.14);left:calc(var(--case-radius) / 2);top:calc(var(--case-radius) / 2);transform:rotateZ(-45deg) rotateX(90deg);background-position:0 0}
+.s3d-bevel-tr{--edge-light:rgba(255,255,255,.06);left:calc(100% - var(--case-radius) / 2);top:calc(var(--case-radius) / 2);transform:rotateZ(45deg) rotateX(90deg);background-position:0 0,0 0,0 0,100% 0}
+.s3d-bevel-br{--edge-light:rgba(0,0,0,.15);left:calc(100% - var(--case-radius) / 2);top:calc(100% - var(--case-radius) / 2);transform:rotateZ(-45deg) rotateX(90deg);background-position:0 0,0 0,0 0,100% 100%}
+.s3d-bevel-bl{--edge-light:rgba(0,0,0,.15);left:calc(var(--case-radius) / 2);top:calc(100% - var(--case-radius) / 2);transform:rotateZ(45deg) rotateX(90deg);background-position:0 0,0 0,0 0,0 100%}
 .s3d-rail:not(.front) :is(.s3d-face,.s3d-edge){opacity:.6}
-.s3d-detail .s3d-rail:not(.front) :is(.s3d-face,.s3d-edge){opacity:.3;filter:grayscale(.7)}
+/* Other regions in Timeline become empty glass: the insert fades out of the case instead of turning grey,
+   so the context reads as faint silhouettes, not muddy ghost posters. */
+.s3d-detail .s3d-rail:not(.front) :is(.s3d-face,.s3d-edge){opacity:.42}
+.s3d-detail .s3d-rail:not(.front) .s3d-front img{opacity:.12;transition:filter 240ms ease-out,opacity .4s}
+.s3d-detail .s3d-rail:not(.front) .s3d-shadow{visibility:hidden}
 /* rails nearer the camera than the focused one loom larger under perspective, so they recede further */
-.s3d-detail .s3d-rail.ahead :is(.s3d-face,.s3d-edge){opacity:.12}
+.s3d-detail .s3d-rail.ahead :is(.s3d-face,.s3d-edge){opacity:.18}
 .s3d-detail .s3d-rail:not(.front) :is(.s3d-band,.s3d-rail-name){opacity:.3}
 /* hover nudges a case up; the strip below keeps the vacated space hoverable so it never flickers */
 .s3d-card::before{content:'';position:absolute;left:0;right:0;top:100%;height:20px}
