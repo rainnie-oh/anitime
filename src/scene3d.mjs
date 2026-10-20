@@ -40,6 +40,38 @@ export function groundTicks(axis,minDistance=56,map=x=>x) {
  return out;
 }
 
+// Ruler marks between the axis ticks. Each segment picks the finest year step whose marks stay at least
+// `minSpacing` apart once compressed by `squeeze` (the lens's far factor), so the set never changes while scrolling.
+// Decades get a stronger mark when the step is finer than ten years.
+export function rulerMarks(axis,{minSpacing=6,squeeze=1}={}) {
+ const steps=[1,2,5,10,25,50,100,200,500];
+ const out=[];
+ for(let i=0;i<axis.ticks.length-1;i++){
+  const start=axis.ticks[i],end=axis.ticks[i+1],perYear=(axis.x(end)-axis.x(start))/(end-start);
+  const step=steps.find(s=>perYear*s*squeeze>=minSpacing)??steps.at(-1);
+  for(let year=Math.ceil((start+1)/step)*step;year<end;year+=step)out.push({year,x:axis.x(year),level:step<10&&year%10===0?'decade':'minor'});
+ }
+ return out;
+}
+
+// Works per stretch of axis, as a smooth profile sampled every `step` units (0–1, shared max across rails).
+// Dated works count at their first year; period-only works spread evenly over their period.
+export function densityProfiles(layout,{step=6,sigma=14}={}) {
+ const {axis,rails}=layout,n=Math.ceil(axis.length/step)+1;
+ const profiles=rails.map(rail=>{
+  const values=new Float64Array(n);
+  const add=(x,weight)=>{const lo=Math.max(0,Math.floor((x-3*sigma)/step)),hi=Math.min(n-1,Math.ceil((x+3*sigma)/step));for(let i=lo;i<=hi;i++){const d=(i*step-x)/sigma;values[i]+=weight*Math.exp(-d*d/2);}};
+  for(const card of rail.cards){
+   const span=card.item.span;
+   if(span)add(axis.x(span[0]),1);
+   else{const x0=axis.x(card.group.start),x1=axis.x(card.group.end),k=9;for(let j=0;j<k;j++)add(x0+(x1-x0)*(j+.5)/k,1/k);}
+  }
+  return values;
+ });
+ const max=Math.max(1e-9,...profiles.flatMap(v=>[...v]));
+ return rails.map((rail,r)=>({region:rail.region,step,values:[...profiles[r]].map(v=>v/max)}));
+}
+
 // Accordion lens around the cursor: sparse in the middle, compressed (by `far`) towards both sides so the
 // scrolling range reads at a glance. Monotonic, so story order and cross-region alignment survive; rise peaks at the cursor.
 export function lens(x,cursor,{spread=0,width=140,far=1}={}) {

@@ -9,7 +9,7 @@ import releaseYears from './release-years.json';
 import {formatDate} from '../date.mjs';
 import {yearLabel} from '../multitrack.mjs';
 import {reducedMotion} from '../motion.mjs';
-import {sceneLayout,groundTicks,lens,nearestCard} from '../scene3d.mjs';
+import {sceneLayout,groundTicks,lens,nearestCard,rulerMarks,densityProfiles} from '../scene3d.mjs';
 import './scene3d.css';
 
 // Ground units: x runs along time, y is depth between rails, z rises off the ground.
@@ -34,6 +34,8 @@ const CARRIERS={vhs:{depth:9},bd:{depth:5}};
 // Rounded corners: the four side strips stop short of each corner and a 45° facet closes the gap.
 const CORNERS=['tl','tr','br','bl'];
 function carrier(work){return (releaseYears[work.id]??2000)<2000?'vhs':'bd';}
+// The time "line" is drawn only as ruler marks over a works-density silhouette (no continuous stroke).
+const WAVE_H=64;
 function toSelected(card){const {work,periods}=card.item;return {...work,dateData:work.date,date:formatDate(work.date,periods),period:periods.map(p=>p.name).join('、')||card.group.name,region:card.region};}
 
 export function Scene3D({catalog,position}) {
@@ -69,6 +71,18 @@ export function Scene3D({catalog,position}) {
  const center=mode==='detail'?{x:warp(cursor),y:railY(focus)}:{x:layout.axis.length/2,y:depth/2};
  const camera=`scale(${zoom}) rotateX(${TILT}deg) rotateZ(${TURN}deg) translate(${-center.x}px,${-center.y}px)`;
  const ticks=groundTicks(layout.axis,90/zoom,warp);
+ // ticks and marks float half a pixel above the floor so the silhouette never paints over them
+ const tickY=(mode==='detail'?railY(focus):depth)+LINE;
+ const squeeze=mode==='detail'?FOCUS.far:1;
+ const marks=useMemo(()=>rulerMarks(layout.axis,{minSpacing:8/zoom,squeeze}),[layout,zoom,squeeze]);
+ const densities=useMemo(()=>densityProfiles(layout),[layout]);
+ // Mirrored silhouette around the time line, sampled in axis units and bent by the same lens as the cases
+ // (a gentle power curve so small clusters still register next to the busiest era).
+ function wavePath(values,step){
+  const top=[],bottom=[];
+  values.forEach((v,i)=>{const x=warp(i*step).toFixed(1),h=(v**.6*WAVE_H+.6).toFixed(1);top.push(x+','+(-h));bottom.unshift(x+','+h);});
+  return 'M'+top.join('L')+'L'+bottom.join('L')+'Z';
+ }
 
  function move(delta){setCursor(c=>Math.max(0,Math.min(layout.axis.length,c+delta)));}
  function step(direction){const cards=rail.cards;const index=active?cards.indexOf(active):-1;const next=cards[Math.max(0,Math.min(cards.length-1,index+direction))];if(next)setCursor(next.x);}
@@ -126,12 +140,12 @@ export function Scene3D({catalog,position}) {
   <div className="s3d-scrim" aria-hidden="true"/>
   <div className="s3d-stage" ref={stage} style={{perspective:PERSPECTIVE?PERSPECTIVE+'px':undefined,perspectiveOrigin:`${CAM_X*100}% ${CAM_Y*100}%`}}>
    <div className="s3d-camera" ref={cameraRef} style={{left:CAM_X*100+'%',top:CAM_Y*100+'%',transform:camera,'--s3d-zoom':zoom}}>
-    {ticks.map(t=><div key={t.year} className={'s3d-tick'+(mode==='detail'&&activeBand&&t.year>=activeBand.start&&t.year<activeBand.end?' is-current':'')} style={{transform:`translate3d(${t.x}px,${(mode==='detail'?railY(focus):depth)+LINE}px,0)`}}><i/><span>{t.label}</span></div>)}
+    {marks.map(m=><i key={m.year} className={'s3d-mark '+m.level+(mode==='detail'&&activeBand&&m.year>activeBand.start&&m.year<activeBand.end?' is-current':'')} style={{transform:`translate3d(${warp(m.x)}px,${tickY}px,.5px)`}}/>)}
+    {ticks.map(t=><div key={t.year} className={'s3d-tick'+(mode==='detail'&&activeBand&&t.year>=activeBand.start&&t.year<activeBand.end?' is-current':'')} style={{transform:`translate3d(${t.x}px,${tickY}px,.5px)`}}><i/><span>{t.label}</span></div>)}
     {layout.rails.map(r=>{
      const y=railY(r.region),front=r.region===focus;
      return <div key={r.region} className={'s3d-rail'+(front?' front':'')+(regions.indexOf(r.region)>regions.indexOf(focus)?' ahead':'')}>
-      <div className="s3d-axis" style={{width:warp(layout.axis.length)-warp(0),transform:`translate3d(${warp(0)}px,${y+LINE}px,0)`}}/>
-      <button className="s3d-rail-name" style={{transform:`translate3d(${warp(0)-60}px,${y+LINE}px,0)`}} onClick={()=>switchRegion(r.region)}>{r.region}</button>
+      <svg className="s3d-wave" style={{transform:`translate3d(0px,${y+LINE}px,0)`}} aria-hidden="true">{(()=>{const p=densities.find(d=>d.region===r.region),d=wavePath(p.values,p.step);return <path d={d} style={{d:`path("${d}")`}}/>;})()}</svg>      <button className="s3d-rail-name" style={{transform:`translate3d(${warp(0)-60}px,${y+LINE}px,0)`}} onClick={()=>switchRegion(r.region)}>{r.region}</button>
       {r.bands.map(b=>{const x0=warp(b.x0),x1=warp(b.x1);return <button key={b.id} className={'s3d-band'+(front&&mode==='detail'&&activeBand?.id===b.id?' is-current':'')} disabled={!b.count} style={{width:Math.max(2,x1-x0-4),transform:`translate3d(${x0}px,${y+LINE}px,0)`}} onClick={()=>enterBand(r.region,b)}><span>{b.name}</span></button>;})}
       {r.cards.map(card=>{
        const l=front?lens(card.x,cursor,lensOptions):{x:warp(card.x),rise:0};

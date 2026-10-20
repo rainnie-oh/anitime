@@ -1,5 +1,5 @@
 /* 2.0 probe: orthographic CSS 3D scene. Ground is the year axis; posters stand on it. */
-.s3d{--s3d-ground:#f4f4f3;--s3d-line:rgba(17,17,17,.18);position:fixed;inset:0;overflow:hidden;background:var(--s3d-ground);color:var(--ink-primary);font-family:var(--font-text)}
+.s3d{--s3d-ground:#f4f4f3;position:fixed;inset:0;overflow:hidden;background:var(--s3d-ground);color:var(--ink-primary);font-family:var(--font-text)}
 .s3d-header{position:absolute;z-index:3;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:28px 52px;pointer-events:none}
 .s3d-header>*{pointer-events:auto}
 .s3d-header .brand-wordmark{height:32px;width:auto;margin-left:-8px} /* cancel the wordmark's built-in clear space so the A aligns with the text column */
@@ -15,26 +15,37 @@
 .s3d-camera{position:absolute;width:0;height:0;transform-style:preserve-3d;transition:transform .9s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
 .s3d-camera *{transform-style:preserve-3d}
 
-.s3d-tick,.s3d-slot,.s3d-band,.s3d-rail-name,.s3d-axis{position:absolute;left:0;top:0;transition:transform .6s var(--ani-ease,cubic-bezier(.22,1,.36,1)),width .6s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
-.s3d-tick i{position:absolute;left:0;top:0;width:calc(1px / var(--s3d-zoom));height:calc(10px / var(--s3d-zoom));background:var(--ink-primary)}
+.s3d-tick,.s3d-slot,.s3d-band,.s3d-rail-name{position:absolute;left:0;top:0;transition:transform .6s var(--ani-ease,cubic-bezier(.22,1,.36,1)),width .6s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
+/* The time line is never stroked: period-boundary ticks, decade and year marks are centred on where it runs. */
+.s3d-tick i{position:absolute;left:0;top:0;width:calc(1px / var(--s3d-zoom));height:calc(14px / var(--s3d-zoom));margin-top:calc(-7px / var(--s3d-zoom));background:var(--ink-primary)}
 .s3d-tick span{position:absolute;left:calc(4px / var(--s3d-zoom));top:calc(12px / var(--s3d-zoom));white-space:nowrap;font:var(--weight-bold) calc(var(--text-subheading) / var(--s3d-zoom))/1 var(--font-text);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 
 .s3d-rail-name{border:0;background:none;padding:0;transform-origin:0 0;font:var(--weight-semibold) calc(var(--text-section) / var(--s3d-zoom))/1 var(--font-text);color:var(--ink-muted);white-space:nowrap;cursor:pointer;translate:-100% 0}
 .s3d-rail.front .s3d-rail-name{color:var(--ink-primary)}
-/* continuous base line: periods missing from the catalog (e.g. 室町 1392–1467) never break the axis */
-.s3d-axis{height:0;border-top:calc(1px / var(--s3d-zoom)) solid var(--s3d-line);pointer-events:none}
-.s3d-band{height:calc(24px / var(--s3d-zoom));border:0;border-top:calc(1px / var(--s3d-zoom)) solid var(--s3d-line);background:none;padding:calc(6px / var(--s3d-zoom)) 0 0;text-align:left;cursor:pointer;overflow:visible}
+.s3d-band{height:calc(24px / var(--s3d-zoom));border:0;background:none;padding:calc(6px / var(--s3d-zoom)) 0 0;text-align:left;cursor:pointer;overflow:visible}
 .s3d-band span{display:block;white-space:nowrap;font:var(--weight-semibold) calc(var(--text-label) / var(--s3d-zoom))/1.2 var(--font-text);color:var(--ink-muted)}
 .s3d-band span::before{content:'';display:inline-block;width:.43em;height:.43em;margin-right:.43em;vertical-align:.12em;background:currentColor}
 .s3d-rail.front .s3d-band span{color:var(--ink-primary)}
-.s3d-band.is-current{border-top:calc(2px / var(--s3d-zoom)) solid var(--ink-accent)}
-/* Front rail: tick marks hang from the line, years sit right under them, period names below the years. */
+/* Front rail: years sit right under the ticks, period names below the years. */
 .s3d-rail.front .s3d-band{padding-top:calc(44px / var(--s3d-zoom))}
-/* The focused period is marked on the line and its years (they sit together); its name keeps the default ink. */
+/* The focused period is marked by its ticks and years turning red together; its name keeps the default ink. */
 .s3d-tick.is-current{color:var(--ink-accent)}
 .s3d-tick.is-current i{background:var(--ink-accent)}
 .s3d-band:hover span{color:var(--ink-accent)!important}
 .s3d-band:disabled{cursor:default;opacity:.5}
+
+/* Works-density silhouette, mirrored around each rail's time line; it swells where stories cluster. */
+.s3d-wave,.s3d-mark{position:absolute;left:0;top:0;pointer-events:none;transition:transform .6s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
+.s3d-wave{width:1px;height:1px;overflow:visible}
+.s3d-wave path{fill:rgba(17,17,17,.05);transition:d .6s var(--ani-ease,cubic-bezier(.22,1,.36,1))}
+.s3d-rail.front .s3d-wave path{fill:rgba(17,17,17,.08)}
+/* decade and year marks; inside the focused period they turn red with its boundary ticks and years */
+.s3d-mark{width:calc(1px / var(--s3d-zoom));height:calc(5px / var(--s3d-zoom));margin-top:calc(-2.5px / var(--s3d-zoom));background:rgba(17,17,17,.3)}
+.s3d-mark.decade{height:calc(9px / var(--s3d-zoom));margin-top:calc(-4.5px / var(--s3d-zoom));background:rgba(17,17,17,.55)}
+.s3d-mark.is-current{background:var(--ink-accent)}
+.s3d-scrolling .s3d-mark{transition-duration:.14s;transition-timing-function:linear}
+.s3d-scrolling .s3d-wave path{transition-duration:.14s;transition-timing-function:linear}
+@media (prefers-reduced-motion:reduce){.s3d-wave path{transition:none}}
 
 .s3d-shadow{position:absolute;left:-14px;width:28px;background:radial-gradient(closest-side,rgba(0,0,0,.06),transparent);filter:blur(3px)} /* barely there: darker shadows read as dirt */
 

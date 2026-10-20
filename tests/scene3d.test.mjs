@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {makeAxis,sceneLayout,groundTicks,lens,nearestCard} from '../src/scene3d.mjs';
+import {makeAxis,sceneLayout,groundTicks,lens,nearestCard,rulerMarks,densityProfiles} from '../src/scene3d.mjs';
 
 const catalog=JSON.parse(await readFile(new URL('../src/catalog.json',import.meta.url),'utf8'));
 
@@ -31,6 +31,26 @@ test('ground ticks never crowd and keep the final year',()=>{
  const axis=makeAxis(catalog),ticks=groundTicks(axis,56);
  for(let i=1;i<ticks.length;i++)assert.ok(ticks[i].x-ticks[i-1].x>=56);
  assert.equal(ticks.at(-1).year,axis.ticks.at(-1));
+});
+
+test('ruler marks stay apart, inside their segments, and mark decades only on fine steps',()=>{
+ const axis=makeAxis(catalog),marks=rulerMarks(axis,{minSpacing:6,squeeze:.4});
+ assert.ok(marks.length>20);
+ for(let i=1;i<marks.length;i++)assert.ok(marks[i].x>marks[i-1].x);
+ for(const m of marks)assert.ok(!axis.ticks.includes(m.year),'boundaries belong to the major ticks: '+m.year);
+ for(let i=0;i<axis.ticks.length-1;i++){
+  const inside=marks.filter(m=>m.year>axis.ticks[i]&&m.year<axis.ticks[i+1]);
+  for(let j=1;j<inside.length;j++)assert.ok((inside[j].x-inside[j-1].x)*.4>=6-1e-9);
+ }
+ assert.ok(marks.some(m=>m.level==='decade'));
+});
+
+test('density profiles are normalised and peak where works cluster',()=>{
+ const layout=sceneLayout(catalog),profiles=densityProfiles(layout);
+ assert.equal(profiles.length,layout.rails.length);
+ const all=profiles.flatMap(p=>p.values);
+ assert.equal(Math.max(...all),1);assert.ok(Math.min(...all)>=0);
+ for(const p of profiles)assert.equal(p.values.length,Math.ceil(layout.axis.length/p.step)+1);
 });
 
 test('lens keeps order, lifts the nearest cards most, and is identity without spread',()=>{
