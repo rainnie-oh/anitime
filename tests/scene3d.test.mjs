@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {makeAxis,sceneLayout,groundTicks,lens,nearestCard,rulerMarks,densityProfiles} from '../src/scene3d.mjs';
+import {makeAxis,sceneLayout,groundTicks,lens,nearestCard,rulerMarks,densityProfiles,fitLabels} from '../src/scene3d.mjs';
 
 const catalog=JSON.parse(await readFile(new URL('../src/catalog.json',import.meta.url),'utf8'));
 
@@ -51,6 +51,17 @@ test('density profiles are normalised and peak where works cluster',()=>{
  const all=profiles.flatMap(p=>p.values);
  assert.equal(Math.max(...all),1);assert.ok(Math.min(...all)>=0);
  for(const p of profiles)assert.equal(p.values.length,Math.ceil(layout.axis.length/p.step)+1);
+});
+
+test('period labels never collide and busier periods win',()=>{
+ const bands=[{id:'a',name:'平安',x0:0,x1:30,count:1},{id:'b',name:'鎌倉・南北朝',x0:30,x1:60,count:5},{id:'c',name:'戰國',x0:200,x1:260,count:0}];
+ assert.deepEqual([...fitLabels(bands,10)].sort(),['b','c']);
+ assert.deepEqual([...fitLabels(bands,1)].sort(),['a','b','c']);
+ const {rails}=sceneLayout(catalog);
+ for(const rail of rails){
+  const shown=rail.bands.filter(b=>fitLabels(rail.bands,40).has(b.id)).sort((a,b)=>a.x0-b.x0);
+  for(let i=1;i<shown.length;i++)assert.ok(shown[i].x0>=shown[i-1].x0+([...shown[i-1].name].length+1.4)*40,shown[i].name);
+ }
 });
 
 test('lens keeps order, lifts the nearest cards most, and is identity without spread',()=>{

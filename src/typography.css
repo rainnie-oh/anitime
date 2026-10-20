@@ -18,6 +18,8 @@
   --ink-secondary: #666;
   --ink-muted: #737373;
   --ink-accent: #e53e3e;
+  /* every filled primary button (official-site CTA, Share, 查看詳情, CMS primary) shares this corner */
+  --radius-primary: 5px;
   font-family: var(--font-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,6 +38,7 @@ nav.view-segments,
 .mt-design-workspace .share-button,
 .share-option,
 .mt-design-workspace .mt-credit,
+.s3d-credit,
 .mt-design-workspace .series-link,
 .series-link,
 .official-cta-label {

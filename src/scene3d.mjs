@@ -72,6 +72,19 @@ export function densityProfiles(layout,{step=6,sigma=14}={}) {
  return rails.map((rail,r)=>({region:rail.region,step,values:[...profiles[r]].map(v=>v/max)}));
 }
 
+// Which period names fit on a rail without colliding: each label runs from its band's start for about
+// (characters + marker) × em. Busier periods claim space first; the rest keep only their square marker.
+export function fitLabels(bands,em,{gap=.6}={}) {
+ const placed=[],shown=new Set();
+ const order=[...bands].sort((a,b)=>b.count-a.count||(b.x1-b.x0)-(a.x1-a.x0));
+ for(const band of order){
+  const start=band.x0,end=start+([...band.name].length+1.4)*em;
+  if(placed.some(p=>start<p.end+gap*em&&end+gap*em>p.start))continue;
+  placed.push({start,end});shown.add(band.id);
+ }
+ return shown;
+}
+
 // Accordion lens around the cursor: sparse in the middle, compressed (by `far`) towards both sides so the
 // scrolling range reads at a glance. Monotonic, so story order and cross-region alignment survive; rise peaks at the cursor.
 export function lens(x,cursor,{spread=0,width=140,far=1}={}) {

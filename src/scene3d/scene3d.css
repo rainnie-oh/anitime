@@ -26,8 +26,8 @@
 .s3d-band span{display:block;white-space:nowrap;font:var(--weight-semibold) calc(var(--text-label) / var(--s3d-zoom))/1.2 var(--font-text);color:var(--ink-muted)}
 .s3d-band span::before{content:'';display:inline-block;width:.43em;height:.43em;margin-right:.43em;vertical-align:.12em;background:currentColor}
 .s3d-rail.front .s3d-band span{color:var(--ink-primary)}
-/* Front rail: years sit right under the ticks, period names below the years. */
-.s3d-rail.front .s3d-band{padding-top:calc(44px / var(--s3d-zoom))}
+/* Timeline front rail: years sit right under the ticks, period names below the years. (Overview has no years.) */
+.s3d-detail .s3d-rail.front .s3d-band{padding-top:calc(44px / var(--s3d-zoom))}
 /* The focused period is marked by its ticks and years turning red together; its name keeps the default ink. */
 .s3d-tick.is-current{color:var(--ink-accent)}
 .s3d-tick.is-current i{background:var(--ink-accent)}
@@ -44,7 +44,7 @@
 .s3d-mark.decade{height:calc(9px / var(--s3d-zoom));margin-top:calc(-4.5px / var(--s3d-zoom));background:rgba(17,17,17,.55)}
 .s3d-mark.is-current{background:var(--ink-accent)}
 .s3d-scrolling .s3d-mark{transition-duration:.14s;transition-timing-function:linear}
-.s3d-scrolling .s3d-wave path{transition-duration:.14s;transition-timing-function:linear}
+.s3d-scrolling .s3d-wave path{transition:none} /* interpolating the whole outline every frame is the costliest part of a scroll */
 @media (prefers-reduced-motion:reduce){.s3d-wave path{transition:none}}
 
 .s3d-shadow{position:absolute;left:-14px;width:28px;background:radial-gradient(closest-side,rgba(0,0,0,.06),transparent);filter:blur(3px)} /* barely there: darker shadows read as dirt */
@@ -113,7 +113,7 @@
 .s3d-caption{display:grid;gap:2px;margin-top:20px}
 .s3d-caption strong{font:var(--weight-semibold) var(--text-subheading)/1.3 var(--font-text)}
 .s3d-caption span{font:var(--text-caption)/1.5 var(--font-text);color:var(--ink-secondary)}
-.s3d-caption button{justify-self:start;margin-top:8px;min-height:36px;padding:0 14px;border:0;border-radius:3px;background:var(--ink-primary);color:#fff;font:var(--weight-medium) var(--text-ui)/1 var(--font-text);cursor:pointer}
+.s3d-caption button{justify-self:start;margin-top:8px;min-height:36px;padding:0 14px;border:0;border-radius:var(--radius-primary);background:var(--ink-primary);color:#fff;font:var(--weight-medium) var(--text-ui)/1 var(--font-text);cursor:pointer}
 .s3d-caption button:focus-visible{outline:2px solid var(--ink-accent);outline-offset:2px}
 
 
@@ -140,8 +140,16 @@
 .s3d-index sup{font-size:9px;line-height:1;text-align:left;vertical-align:baseline;position:relative;top:-.5em;font-variant-numeric:tabular-nums}
 .s3d-index button.is-current{color:var(--ink-primary);font-weight:var(--weight-semibold)}
 .s3d-index button:hover,.s3d-index button:focus-visible{color:var(--ink-accent)}
-.s3d-nav .share-button{min-width:0;min-height:32px;padding:0 14px;border-radius:7px;background:var(--ink-primary);color:#fff}
+.s3d-nav .share-button{min-width:0;min-height:32px;padding:0 14px;border-radius:var(--radius-primary);background:var(--ink-primary);color:#fff}
 .s3d-nav .share-button:hover,.s3d-nav .share-button[aria-expanded=true]{background:#333;color:#fff}
+/* The segmented controls' pale track nearly vanished on this page's paper ground, so only the 26px pill read and
+   Share looked taller; a slightly deeper track lets the full 32px control line up with it. */
+.s3d nav.view-segments{background:#e5e5e3}
+
+/* author credit, bottom centre (the bottom-right corner belongs to the period index) */
+.s3d-credit{position:absolute;z-index:2;left:50%;bottom:28px;translate:-50% 0;display:flex;align-items:center;gap:4px;white-space:nowrap;color:var(--ink-muted)}
+.s3d-credit a{text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:3px}
+.s3d-credit a:hover,.s3d-credit a:focus-visible{text-decoration-color:currentColor}
 
 /* Region flight: the camera follows its own keyframed path, so its CSS transition must not compete. */
 .s3d-flying .s3d-camera{transition:none}
