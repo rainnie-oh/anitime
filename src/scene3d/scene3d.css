@@ -146,6 +146,12 @@
    Share looked taller; a slightly deeper track lets the full 32px control line up with it. */
 .s3d nav.view-segments{background:#e5e5e3}
 
+/* The 1.x site forces a crosshair everywhere (styles.css); the 3D page uses ordinary cursors instead:
+   system default on the scene, text where there is text, a hand on anything clickable. */
+.s3d,.s3d *{cursor:auto!important}
+.s3d :is(button,a,[role=button],[role=radio],[role=tab],label):not(:disabled){cursor:pointer!important}
+.s3d :is(button,a):disabled{cursor:default!important}
+
 /* author credit, bottom centre (the bottom-right corner belongs to the period index) */
 .s3d-credit{position:absolute;z-index:2;left:50%;bottom:28px;translate:-50% 0;display:flex;align-items:center;gap:4px;white-space:nowrap;color:var(--ink-muted)}
 .s3d-credit a{text-decoration:underline;text-decoration-color:#ccc;text-underline-offset:3px}
