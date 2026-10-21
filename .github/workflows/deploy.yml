@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
+      - feature/v2-3d
       - feature/multitrack-view
       - main
   workflow_dispatch:
