@@ -47,7 +47,7 @@
 .s3d-scrolling .s3d-wave path{transition:none} /* interpolating the whole outline every frame is the costliest part of a scroll */
 @media (prefers-reduced-motion:reduce){.s3d-wave path{transition:none}}
 
-.s3d-shadow{position:absolute;left:-14px;width:28px;background:radial-gradient(closest-side,rgba(0,0,0,.06),transparent);filter:blur(3px)} /* barely there: darker shadows read as dirt */
+.s3d-shadow{position:absolute;left:-14px;width:28px;background:radial-gradient(closest-side,rgba(0,0,0,.06),transparent)} /* barely there: darker shadows read as dirt */
 
 /* Video cases: a paper insert behind a clear sleeve. The format follows the release year (see Scene3D):
    Blu-ray from 2000 is a clear glass-like case whose rim and thickness diffuse the poster's own colours;
@@ -75,7 +75,7 @@
 /* Thickness, shaded by which way it faces (light falls from above: top brightest, bottom darkest), with bright
    lips where it meets the faces. Glass diffuses the poster's matching border (a tiny preview stretched from
    that side) under a milky veil; VHS is bare plastic with faint moulded ribs. Full-length strips close the corners. */
-.s3d-edge{--lip:rgba(255,255,255,.8);background-image:linear-gradient(var(--edge-dir),var(--lip) 0 .5px,transparent 1.5px,transparent calc(100% - 1.5px),var(--lip) calc(100% - .5px)),linear-gradient(var(--edge-light),var(--edge-light)),linear-gradient(rgba(255,255,255,.34),rgba(255,255,255,.34)),var(--cover);background-repeat:no-repeat;filter:saturate(1.1);box-shadow:inset 0 0 0 .5px rgba(0,0,0,.08)}
+.s3d-edge{--lip:rgba(255,255,255,.8);background-image:linear-gradient(var(--edge-dir),var(--lip) 0 .5px,transparent 1.5px,transparent calc(100% - 1.5px),var(--lip) calc(100% - .5px)),linear-gradient(var(--edge-light),var(--edge-light)),linear-gradient(rgba(255,255,255,.34),rgba(255,255,255,.34)),var(--cover);background-repeat:no-repeat;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.08)}
 .s3d-edge-spine,.s3d-edge-open{--edge-dir:90deg;top:var(--case-radius);bottom:var(--case-radius);width:var(--case-depth);background-size:100% 100%,100% 100%,100% 100%,1400% 100%}
 .s3d-edge-spine{--edge-light:rgba(255,255,255,.06);left:calc(var(--case-depth) / -2);transform:rotateY(-90deg);background-position:0 0}
 .s3d-edge-open{--edge-light:rgba(0,0,0,.1);right:calc(var(--case-depth) / -2);transform:rotateY(90deg);background-position:0 0,0 0,0 0,100% 0}

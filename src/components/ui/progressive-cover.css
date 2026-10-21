@@ -4,7 +4,8 @@ img.progressive-cover {
   transition:filter 240ms ease-out;
 }
 img.progressive-cover.is-loading {filter:blur(8px)}
-img.progressive-cover.is-loaded {filter:blur(0)}
+/* none, not blur(0): any filter keeps a costly render surface, notably inside the 3D scene */
+img.progressive-cover.is-loaded {filter:none}
 @media(prefers-reduced-motion:reduce) {img.progressive-cover {transition:none}}
 .mt-art img.progressive-cover {transition:filter 240ms ease-out,transform 150ms ease-out}
 @media(prefers-reduced-motion:reduce) {.mt-art img.progressive-cover {transition:none}}
